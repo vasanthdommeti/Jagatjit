@@ -1,0 +1,96 @@
+/* Base styles */
+.headerNavBar {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    flex-wrap: wrap;
+    width: 70%;
+    align-self: center;
+    /* font-family: 'Montserrat-Regular'; */
+    /* font-family: 'Montserrat'; */
+    font-family: 'Montserrat';
+    /* font-family: 'Josefin Sans'; */
+}
+
+.navItem {
+    position: relative;
+    text-align: center;
+    flex-grow: 1;
+    align-self: center;
+}
+
+.navItem h4 {
+    cursor: pointer;
+    padding: 10px;
+    margin: 0;
+    font-size: 12px;
+    font-family: 'Montserrat';
+    font-weight: bold;
+}
+
+.navItem h4:hover {
+    color: #ECA533;
+}
+
+.subItems {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    min-width: 150px;
+    top: 100%;
+    left: 0;
+}
+
+.navItem:hover .subItems {
+    display: block;
+}
+
+.subItems a {
+    color: black;
+    padding: 10px;
+    text-align: left;
+    display: block;
+    text-decoration: none;
+    border-bottom: 1px solid #ddd;
+}
+
+.subItems a:last-child {
+    border-bottom: none;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+    .headerNavBar {
+        flex-direction: column;
+        width: 100%;
+
+    }
+
+    .navItem {
+        text-align: center;
+    }
+
+    .navItem h4 {
+        width: 100%;
+    }
+
+    .subItems {
+        position: relative;
+        left: 30%;
+        top: 0;
+        width: 50%;
+    }
+}
+
+@media (max-width: 480px) {
+    .headerNavBar {
+        padding: 5px;
+    }
+
+    .navItem h4,
+    .subItems a {
+        padding: 8px;
+    }
+}

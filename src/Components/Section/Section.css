@@ -1,0 +1,6 @@
+.sectionImage {
+    background-image: url('../../Assests/sectionBgImage.jpeg');
+    height: 100vh;
+    background-size: cover;
+    opacity: 2;
+}
