@@ -1,6 +1,79 @@
-.sectionImage {
-    background-image: url('../../Assests/sectionBgImage.jpeg');
+.sectionImage1 {
+    background-image: url('../../Assests/sectionBg1.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
     height: 100vh;
-    background-size: cover;
-    opacity: 2;
+    margin: 3px auto 0;
+    position: relative;
+}
+
+.sectionImage2 {
+    background-image: url('../../Assests/sectionBg2.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 100vh;
+    margin: 3px auto 0;
+    position: relative;
+}
+
+.sectionImage3 {
+    background-image: url('../../Assests/sectionBg3.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 100vh;
+    margin: 3px auto 0;
+    position: relative;
+}
+
+.sectionImage4 {
+    background-image: url('../../Assests/sectionBg4.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 100vh;
+    margin: 3px auto 0;
+    position: relative;
+}
+
+.sectionImage5 {
+    background-image: url('../../Assests/sectionBg5.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 100vh;
+    margin: 3px auto 0;
+    position: relative;
+}
+
+.sectionImage6 {
+    background-image: url('../../Assests/sectionBg6.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 100vh;
+    margin: 3px auto 0;
+        position: relative;
+    }
+    
+    @media (max-width: 768px) {
+        .sectionImage1 {
+            height: 50vh;
+        }
+    
+        .sectionImage2 {
+            height: 50vh;
+        }
+    
+        .sectionImage3 {
+            height: 50vh;
+        }
+    
+        .sectionImage4 {
+            height: 50vh;
+        }
+    
+        .sectionImage5 {
+            height: 50vh;
+        }
+    
+        .sectionImage6 {
+            height: 50vh;
+        }
 }

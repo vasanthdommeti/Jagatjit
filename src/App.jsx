@@ -12,7 +12,7 @@ function App() {
     <div style={{ display: 'flex', flexDirection: 'column', backgroundColor: 'black', color: 'white' }}>
       <Navbar />
       <Section />
-      <Header />
+      {/* <Header /> */}
       <Footer />
     </div>
   )

@@ -13,8 +13,30 @@ import './Section.css'
 function Section() {
 
     return (
-        <div className='sectionImage'>
-            <div>
+        <div>
+            <div className='sectionImage1'>
+
+            </div>
+            <div className='sectionImage2'>
+            </div>
+            <div className='sectionImage3'>
+            </div>
+            <div className='sectionImage4'>
+            </div>
+            <div className='sectionImage5'>
+            </div>
+            <div className='sectionImage6'>
+            </div>
+        </div>
+
+    )
+}
+
+export default Section;
+
+
+
+
                 {/* <div style={{ width: 40, height: 50 }}>
                     <img src={vodka} alt='fisrst' />
                 </div> */}
@@ -29,10 +51,3 @@ function Section() {
                         list of bottles
                     </div>
                 </div> */}
-            </div>
-        </div>
-
-    )
-}
-
-export default Section;
