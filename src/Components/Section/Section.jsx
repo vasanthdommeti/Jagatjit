@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useRef, useEffect , useLayoutEffect} from "react";
 import './Section.css'
 import section3Image from '../../Assests/section3Image.png';
 import distilImage from '../../Assests/distilImage.png';
 import brewImage from '../../Assests/brewingImage.png';
 import storageImage from '../../Assests/storageImage.png';
+import gsap from 'gsap-trial';
+import ScrollTrigger from 'gsap-trial/ScrollTrigger';
 // import LogoIcon from '../../Assests/LogoIcon.png'
 // import royalbrandy from '../../Assests/royalbrandy.jpeg';
 // import scotch from '../../Assests/scotch.jpeg';
@@ -15,11 +17,41 @@ import storageImage from '../../Assests/storageImage.png';
 
 
 function Section() {
+  gsap.registerPlugin(ScrollTrigger);
+
+  const ref = useRef(null);
+
+  useEffect(() => {
+      const element = ref.current;
+      gsap.fromTo(
+        element.querySelector(".imageContainer1"),
+        {
+          scale: 1.4,
+          rotation: 30,
+          x: 500,
+          y: 200,
+        },
+        {
+          scale: 0.8,
+          rotation: 0,
+          x: 1000,
+          y: 0,
+          scrollTrigger: {
+            trigger: element.querySelector("#sectionImage1"),
+            start: "top top",
+            end: "bottom bottom",
+            scrub: 1.5,
+            pin: true
+          },
+        }
+      );
+  
+    }, []);
 
     return (
-        <div>
+        <div className="App" ref={ref}>
             <div id='sectionImage1' className='section'>
-
+              <img className="imageContainer1" src="/acpNewBottle.png" alt="hell"/>
             </div>
             <div id='sectionImage2' className='section'>
             </div>
