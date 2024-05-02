@@ -1,5 +1,6 @@
 import React from 'react';
 import './Section.css'
+import section3Image from '../../Assests/section3Image.png';
 // import LogoIcon from '../../Assests/LogoIcon.png'
 // import royalbrandy from '../../Assests/royalbrandy.jpeg';
 // import scotch from '../../Assests/scotch.jpeg';
@@ -14,18 +15,31 @@ function Section() {
 
     return (
         <div>
-            <div className='sectionImage1'>
+            <div id='sectionImage1' className='section'>
 
             </div>
-            <div className='sectionImage2'>
+            <div id='sectionImage2' className='section'>
             </div>
-            <div className='sectionImage3'>
+            <div id='sectionImage3' className='section'>
+                <div className='section3MainDiv'>
+                    <div className='section3GroupHeaderDiv'>
+                        <h1>We sold over</h1>
+                            <h3>30 Billion Cases</h3> 
+                            <h1>of our favorite </h1>
+                            <h1>Whiskey.</h1>
+                        <p>Explore our history to find out how we did it.</p>
+                        <button>OUR STORY</button>
+                    </div>
+                    <div className='section3GroupImagesDiv'>
+                        <img src={section3Image} alt='Img' className='section3Image'/>
+                    </div>
+                </div>
             </div>
-            <div className='sectionImage4'>
+            <div id='sectionImage4' className='section'>
             </div>
-            <div className='sectionImage5'>
+            <div id='sectionImage5' className='section'>
             </div>
-            <div className='sectionImage6'>
+            <div id='sectionImage6' className='section'>
             </div>
         </div>
 
