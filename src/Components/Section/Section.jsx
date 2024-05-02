@@ -1,6 +1,9 @@
 import React from 'react';
 import './Section.css'
 import section3Image from '../../Assests/section3Image.png';
+import distilImage from '../../Assests/distilImage.png';
+import brewImage from '../../Assests/brewingImage.png';
+import storageImage from '../../Assests/storageImage.png';
 // import LogoIcon from '../../Assests/LogoIcon.png'
 // import royalbrandy from '../../Assests/royalbrandy.jpeg';
 // import scotch from '../../Assests/scotch.jpeg';
@@ -23,12 +26,12 @@ function Section() {
             <div id='sectionImage3' className='section'>
                 <div className='section3MainDiv'>
                     <div className='section3GroupHeaderDiv'>
-                        <h1>We sold over</h1>
-                            <h3>30 Billion Cases</h3> 
-                            <h1>of our favorite </h1>
-                            <h1>Whiskey.</h1>
-                        <p>Explore our history to find out how we did it.</p>
-                        <button>OUR STORY</button>
+                        <h1 className='section3Header'>We sold over</h1>
+                        <h1 style={{ color: '#ECA533' }} className='section3Header'>30 Billion Cases</h1> 
+                            <h1 className='section3Header'>of our favorite </h1>
+                            <h1 className='section3Header'>Whiskey.</h1>
+                        <p className='section3Paragraph'>Explore our history to find out how we did it.</p>
+                        <button className='section3Button'>OUR STORY</button>
                     </div>
                     <div className='section3GroupImagesDiv'>
                         <img src={section3Image} alt='Img' className='section3Image'/>
@@ -38,7 +41,24 @@ function Section() {
             <div id='sectionImage4' className='section'>
             </div>
             <div id='sectionImage5' className='section'>
+            <div className='section3MainDiv'>
+                    <div className='section3GroupHeaderDiv'>
+                        <h1 className='section5Header'>Where does all the</h1>
+                        <h1 className='section5Header'>magic come from ?</h1>
+                        <button className='section3Button'>OUR PROCESS</button>
+                    </div>
+                    <div className='section5GroupImagesDiv'>
+                        <div className='section5firstImage'>
+                            <img src={brewImage} alt='Img' className='section5Image' />
+                        </div>
+                        <div className='section5secondImage'>
+                            <img src={distilImage} alt='Img' className='section5Image' />
+                            <img src={storageImage} alt='Img' className='section5Image' />
+                        </div>
+                    </div>
+                </div>
             </div>
+            <h1 className='section6Header'>JIL's Presence & Reach</h1>
             <div id='sectionImage6' className='section'>
             </div>
         </div>
