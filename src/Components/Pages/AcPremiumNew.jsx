@@ -49,7 +49,7 @@ export const AcpremiumNew = () => {
                 <div><img src={curtainImg} alt="rightCurtain" className="curtainImage image" /></div>
             </section>
             <section className="acpsecondfourthSectionImage">
-                <div className="pagesTextbetween">
+                <div className="pagesTextbetween"> 
                     <h2 className="pagesTextFavorDivHeader">BEYOND LUXURY LIES LEGACY.</h2>
                     <div style={{ width: '30%' }}>
                         <div className="imageText">

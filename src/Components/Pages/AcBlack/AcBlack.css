@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+
+.acblackFirstDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: center;
+}
+
+.acblackRowContent {
+    align-self: center;
+}
+
+.acblackColumnContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    /* padding: 10%; */
+}
+
+.acblackSecondDiv {
+    background-image: url('../../../Assests/Products/AcBlackWhiskey/acblacksecondimg.png');
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+    aspect-ratio: 16/7.41;
+}
+
+.acblackThirdDiv {
+    background-image: url('../../../Assests/Products/AcBlackWhiskey/acblackthridimg.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    aspect-ratio: 16/8.81;
+
+}
+
+.candleimage {
+    height: 50%;
+    width: 50%;
+    display: flex;
+}
+
+.acblackSecondDivHeading {
+    font-family: 'Lobster', cursive;
+}
+
+.acblackSecondDivParagraph {
+    width: 30%;
+    text-align: right;
+}
+
+.acblackThirdDivContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10%;
+    width: 60%;
+}
+
+.candleimagehide {
+    display: none;
+}
+
+.acblackThirdDivContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* //Royal Pride */
+.royalPrideSecondDiv {
+    background-image: url('../../../Assests/Products/RoyalPride/royalpridesecondimg.png');
+    background-position: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+    aspect-ratio: 15/7.2;
+}
+
+.royalPrideThirdDiv {
+    background-image: url('../../../Assests/Products/RoyalPride/royalpridethirdimg.png');
+    background-position: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+    aspect-ratio: 16/8.81;
+}
+
+.royalPrideFourthDiv {
+    background-image: url('../../../Assests/Products/RoyalPride/royalpridefourthimg.png');
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    aspect-ratio: 16/8.81;
+}
+
+.royalprideThirdDivContent {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    align-self: flex-end;
+    padding: 10%;
+}
+
+.royalpridehide {
+    display: none;
+}
+
+.candleimagesingle {
+    margin: 5%;
+    object-fit: cover;
+}
+
+.rowdiv {
+    display: flex;
+    width: 60%;
+    align-self: flex-end;
+}
+
+.imageText {
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    margin-top: 5%;
+    margin-bottom: 5%;
+    align-self: center;
+}
+
+.logoimage {
+
+    margin-right: 3%;
+}
+
+@media (max-width: 768px) {
+    .acblackFirstDiv {
+        flex-direction: column;
+        align-self: center;
+    }
+
+    .acblackRowContent {
+        text-align: center;
+    }
+
+    .acblackColumnContent {
+        align-items: center;
+        padding: 10%;
+        text-align: center;
+    }
+
+    .acblackSecondDiv {
+        aspect-ratio: 9/7.41;
+    }
+
+    .acblackThirdDiv {
+        aspect-ratio: 4/2.20;
+    }
+
+    .acblackSecondDivParagraph {
+        width: 60%;
+        text-align: right;
+    }
+
+    .acblackThirdDivContent {
+        flex-direction: column-reverse;
+        align-items: flex-end;
+    }
+
+    .candleimagehide {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-self: center;
+        padding: 5%;
+    }
+
+    .candleimage {
+        display: none;
+    }
+
+    /* //royalpride */
+    .rowdiv {
+        display: none;
+    }
+
+    .royalpridehide {
+        display: flex;
+        align-self: center;
+        flex-direction: column;
+        align-items: center;
+        margin: 10%;
+    }
+
+    .royalprideshow {
+        display: none;
+    }
+
+}

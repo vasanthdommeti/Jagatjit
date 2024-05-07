@@ -1,11 +1,11 @@
 .pagesRowDiv {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+    /* flex-direction: row;
+        justify-content: flex-start; */
 }
 
 .pagesTextDiv {
-    margin-top: -30%;
+    /* margin-top: -30%; */
     width: 70%;
     padding-left: 60px;
 }
@@ -76,38 +76,97 @@
     text-decoration: none;
 }
 
+/* <style>
+.acpremiumfirstSectionImage {
+    background-image: url(/src/Assests/acpremiumfirstsection.png);
+    width: 100%;
+    height: auto;
+    /* background-size: 10%; */
+/* background-repeat: no-repeat; */
+/* max-width: 100vw; */
+/* max-height: 100vh; */
+/* background-size: contain; */
+/* background-position: right; */
+/* place-items: center; */
+/* display: block; */
+/* text-align: center; */
+/* object-fit: cover; */
+/* aspect-ratio: 16 / 8.71; */
 .acpremiumfirstSectionImage {
     background-image: url('../../Assests/acpremiumfirstsection.png');
-    width: 100vw;
+    /* width: 100vw;
+        height: 100vh;
+        max-width: 100vw;
+        max-height: 100vh;
+        background-size: cover;
+        background-position: right;
+        place-items: center; */
+        width: 100%;
     height: auto;
-    padding-top: 50%;
+    background-repeat: no-repeat;
+        background-size: contain;
+        place-items: center;
+        aspect-ratio: 16 / 8.71;
+        /* display: block; */
+        /* background-position: ; */
+        /* padding-top: 50%;
     background-position: right;
     background-size: contain;
     background-repeat: no-repeat;
-    text-align: center;
+        */
+        /* text-align: center; */
 }
 
 .acpremiumsecondSectionImage {
     background-image: url('../../Assests/acpremiumsecontiontwoBg.png');
-    width: 100vw;
+    /* width: 100vw;
     height: auto;
     padding-top: 50%;
     background-position: left;
     background-size: cover;
     background-repeat: no-repeat;
-    text-align: center;
+        */
+        /* width: 100vw;
+        height: 100vh;
+        max-width: 100vw;
+        max-height: 100vh;
+        background-size: cover;
+        background-position: left;
+        place-items: center; */
+        width: 100%;
+        height: auto;
+    background-repeat: no-repeat;
+    background-size: contain;
+        place-items: center;
+        aspect-ratio: 16 / 8.71;
 }
 
 .acpremiumfourthSectionImage {
-    background-image: url('../../Assests/Products/aristoprembg.png');
-    width: 100vw;
+    /* background-image: url('../../Assests/Products/aristoprembg.png'); */
+        background-image: url('../../Assests/aristoprembg1.png');
+        /* width: 100vw;
     height: auto;
     padding-top: 45%;
-    /* padding-bottom: 40%; */
     background-position: right;
     background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
+        */
+        /* width: 100vw;
+        height: 100vh;
+        max-width: 100vw;
+        max-height: 100vh;
+        background-size: auto;
+        background-position:right;
+        background-repeat: no-repeat;
+        place-items: center; */
+        width: 100%;
+        height: auto;
+        background-repeat: no-repeat;
+        background-size: contain;
+        place-items: center;
+        /* aspect-ratio: 16 / 8.71; */
+        aspect-ratio: 16 / 8.71;
 }
 
 .sectionThree {
@@ -181,24 +240,31 @@
 /* secondpage styles */
 .acpSecondPageSectionOneImage {
     background-image: url('../../Assests/AcpremiumNew/acpfirstsection.png');
-    width: 100vw;
+    /* width: 100vw;
     height: auto;
     padding-top: 50%;
     background-position: right;
     background-size: contain;
     background-repeat: no-repeat;
     text-align: center;
+        */ width: 100%;
+        height: auto;
+        background-repeat: no-repeat;
+        background-size: contain;
+        place-items: center;
+        aspect-ratio: 16 / 8.71;
 }
 
 .acpScondSectionTwoImage {
     background-image: url('../../Assests/AcpremiumNew/sectiontwoBg.png');
-    width: 100vw;
+    /* width: 100vw;
     height: auto;
     padding-top: 50%;
     background-position: left;
     background-size: contain;
     background-repeat: no-repeat;
     text-align: center;
+        */
     /* width: 100vw;
     height: 100vh;
     background-repeat: no-repeat;
@@ -207,24 +273,36 @@
     flex-direction: row;
     justify-content: center;
     align-items: center; */
+    width: 100%;
+        height: auto;
+        background-repeat: no-repeat;
+        background-size: contain;
+        place-items: center;
+        aspect-ratio: 16 / 8.71;
 }
 
 .acpsecondfourthSectionImage {
     background-image: url('../../Assests/AcpremiumNew/acpThirdSection.png');
-    width: 100vw;
+    /* width: 100vw;
     height: auto;
     padding-top: 30%;
     background-position: right;
     background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
+        */ width: 100%;
+        height: auto;
+        background-repeat: no-repeat;
+        background-size: contain;
+        place-items: center;
+        aspect-ratio: 16 / 8.71;
 }
 
 /* acpsecondfourthSectionImage */
 @media (max-width: 768px) {
-    .pagesTextDiv {
+    /* .pagesTextDiv {
         margin-top: -48%;
-    }
+    */
 
     .sectionTwoHeading {
         font-size: 21px;

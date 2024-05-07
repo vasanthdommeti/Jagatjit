@@ -29,7 +29,7 @@ function Navbar() {
                     <div class="subItems">
                             <a href='/aboutUs/heritage'>HERITAGE</a>
                             <a href='/aboutUs/ourTeam'>OUR TEAM</a>
-                            <a href='/aboutUs/values'>VALUES</a>
+                            <Link to={'/aboutUs/values'}>VALUES</Link>
                             <a href='/aboutUs/press'>PRESS</a>
                         </div>
                     </div>
@@ -40,8 +40,8 @@ function Navbar() {
                                 <div className="liquorSubItems">
                                     <Link to={'/products/liquor/ACpremiumOld'}>AC PREMIUM (OLD)</Link>
                                     <Link to='/products/liquor/ACpremiumNew'>AC PREMIUM (NEW)</Link>
-                                    <a href='/linkpage'>AC BLACK</a>
-                                    <a href='/linkpage'>ROYAL PRIDE</a>
+                                    <Link to={'/products/liquor/ACpremiumBlack'}>AC BLACK</Link>
+                                    <Link to={'/products/liquor/RoyalPride'}>ROYAL PRIDE</Link>
                                     <a href='/linkpage'>DAMN GOOD SCOTCH</a>
                                     <a href='/linkpage'>IICE VODKA</a>
                                     <a href='/linkpage'>AC DRY GIN</a>

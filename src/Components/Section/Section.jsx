@@ -6,6 +6,7 @@ import brewImage from '../../Assests/brewingImage.png';
 import storageImage from '../../Assests/storageImage.png';
 import gsap from 'gsap-trial';
 import ScrollTrigger from 'gsap-trial/ScrollTrigger';
+import acpproduct from '../../Assests/AcpremiumNew/acpSecondpageend.png';
 // import LogoIcon from '../../Assests/LogoIcon.png'
 // import royalbrandy from '../../Assests/royalbrandy.jpeg';
 // import scotch from '../../Assests/scotch.jpeg';
@@ -54,6 +55,7 @@ function Section() {
               <img className="imageContainer1" src="/acpNewBottle.png" alt="hell"/>
             </div>
             <div id='sectionImage2' className='section'>
+                <img src={acpproduct} alt='Img' className='section3Image' />
             </div>
             <div id='sectionImage3' className='section'>
                 <div className='section3MainDiv'>

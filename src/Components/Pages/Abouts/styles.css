@@ -1,0 +1,72 @@
+
+
+.mainDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.firstDiv{
+    text-align: center;
+}
+
+.logoDiv{
+    text-align: center;
+    margin: 5%;
+    width: 100%;
+}
+.logoTextDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.logoTxtHeader{
+    color: #ECA533;
+    font-size: 36px;
+    font-family: 'Josefin Sans';
+    /* font-family: 'Montserrat'; */
+    font-weight: 600;
+    margin-top: 20px;
+}
+.logoTxtParagraph{
+    font-size: 21px;
+    font-family: 'Montserrat';
+    margin-top: -30px;
+}
+.firstDivHeader{
+    font-family: 'Josefin Sans';
+    font-weight: 700;
+    font-size: 45px;
+}
+
+.firstDivParagraph{
+    font-family: 'Montserrat';
+    font-weight: 100;
+    font-size: 24px;
+    margin-top: -30px;
+}
+
+
+/* @media (max-width:481px)  { 
+    .logoTextDiv{
+        flex-direction: column;
+    }
+    .logoDiv{
+        align-self: center;
+
+    }
+} */
+
+@media (max-width:641px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
+    .logoTextDiv{
+        flex-direction: column;
+    }
+    .logoDiv{
+        align-self: center;
+    }
+    .firstDivHeader{
+        font-size: 32px;
+    }
+    .firstDivParagraph{
+        font-size: 21px;
+    }
+}
