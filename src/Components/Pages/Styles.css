@@ -1,0 +1,261 @@
+.pagesRowDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.pagesTextDiv {
+    margin-top: -30%;
+    width: 70%;
+    padding-left: 60px;
+}
+
+.pagesTextFavorDiv {
+    width: 60%;
+    padding-left: 60px;
+}
+
+.pagesTextbetween {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-self: center;
+}
+
+.pagesTextDivTwo {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+}
+
+.aristocratSecondHeading {
+    color: #9A1112;
+    font-family: "Krona One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 28px;
+    letter-spacing: 3px;
+    line-height: 30px;
+}
+
+.aristocratParagraph {
+    color: #FFFFFF;
+    font-weight: 100;
+    font-style: normal;
+    font-family: "Fredoka", sans-serif;
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 15px;
+}
+
+.sectionTwoHeading {
+    color: #FFFFFF;
+    font-weight: 400;
+    font-style: normal;
+    font-family: "Krona One", sans-serif;
+    font-size: 30px;
+    letter-spacing: 1px;
+    line-height: 10px;
+}
+
+.sectionTwoParagraph {
+    color: #FFFFFF;
+    font-weight: 100;
+    font-style: normal;
+    font-family: 'Josefin Sans';
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 15px;
+}
+
+.sectionTwoParagraph span {
+    font-weight: 400;
+    font-size: 16px;
+    font-family: 'Josefin Sans';
+    text-decoration: none;
+}
+
+.acpremiumfirstSectionImage {
+    background-image: url('../../Assests/acpremiumfirstsection.png');
+    width: 100vw;
+    height: auto;
+    padding-top: 50%;
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.acpremiumsecondSectionImage {
+    background-image: url('../../Assests/acpremiumsecontiontwoBg.png');
+    width: 100vw;
+    height: auto;
+    padding-top: 50%;
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.acpremiumfourthSectionImage {
+    background-image: url('../../Assests/Products/aristoprembg.png');
+    width: 100vw;
+    height: auto;
+    padding-top: 45%;
+    /* padding-bottom: 40%; */
+    background-position: right;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.sectionThree {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.flavourDiv {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.curtainImage {
+    transform: scaleX(-1);
+}
+
+.image {
+    width: 100%;
+    height: auto;
+}
+
+.imageText {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.logoText {
+    height: 7%;
+    width: 7%;
+    margin-right: 3%;
+}
+
+.logoTextParagraph {
+    text-align: left;
+    color: #FFFFFF;
+    font-weight: 100;
+    font-style: normal;
+    font-family: 'Josefin Sans';
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 15px;
+    opacity: 0.6;
+}
+
+.flavourDivHeader {
+    color: #FF0002;
+    font-family: "Krona One", sans-serif;
+    font-size: 40px;
+    opacity: 0.2;
+    letter-spacing: 1px;
+}
+
+.pagesTextFavorDivHeader {
+    color: #FFFFFF;
+    font-family: "Krona One", sans-serif;
+    font-size: 40px;
+    width: 60%;
+    letter-spacing: 1px;
+    text-align: left;
+    line-height: 35px;
+}
+
+
+/* secondpage styles */
+.acpSecondPageSectionOneImage {
+    background-image: url('../../Assests/AcpremiumNew/acpfirstsection.png');
+    width: 100vw;
+    height: auto;
+    padding-top: 50%;
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.acpScondSectionTwoImage {
+    background-image: url('../../Assests/AcpremiumNew/sectiontwoBg.png');
+    width: 100vw;
+    height: auto;
+    padding-top: 50%;
+    background-position: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-align: center;
+    /* width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; */
+}
+
+.acpsecondfourthSectionImage {
+    background-image: url('../../Assests/AcpremiumNew/acpThirdSection.png');
+    width: 100vw;
+    height: auto;
+    padding-top: 30%;
+    background-position: right;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+/* acpsecondfourthSectionImage */
+@media (max-width: 768px) {
+    .pagesTextDiv {
+        margin-top: -48%;
+    }
+
+    .sectionTwoHeading {
+        font-size: 21px;
+        line-height: 5px;
+    }
+
+    .sectionTwoParagraph {
+        font-size: 12px;
+        line-height: 12px;
+    }
+
+    .pageSecondText {
+        margin-top: 10%;
+    }
+
+    .pagesTextFavorDivHeader {
+        font-size: 25px;
+        line-height: 25px;
+    }
+
+    .logoTextParagraph {
+        font-size: 12px;
+    }
+
+    .acpremiumfourthSectionImage {
+        padding-top: 20%;
+    }
+
+    .pagesTextFavorDiv {
+        margin-top: 5%;
+        padding-left: 60px;
+        padding-bottom: 5%;
+    }
+}

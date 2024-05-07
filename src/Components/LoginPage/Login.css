@@ -1,0 +1,63 @@
+.loginMainDiv {
+    height: 100vh;
+    color: #fff;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 100px 10px 100px 10px;
+    text-align: center;
+}
+
+.loginDiv {
+    text-align: center;
+}
+
+.logo {
+    height: 300px;
+    width: 300px;
+}
+
+.remeberBoxDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.dateDiv {
+    width: 100%;
+    font-size: 65px;
+    text-align: center;
+    background-color: transparent;
+    border-style: none;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.dateDiv::-webkit-datetime-edit-text {
+    color: black;
+    padding: 0 0.1em;
+}
+
+.dateDiv::-webkit-datetime-edit-month-field {
+    text-decoration: underline;
+    letter-spacing: 4px;
+}
+
+.dateDiv::-webkit-datetime-edit-day-field {
+    text-decoration: underline;
+    letter-spacing: 4px;
+}
+
+.dateDiv::-webkit-datetime-edit-year-field {
+    text-decoration: underline;
+    letter-spacing: 4px;
+}
+
+.dateDiv::-webkit-inner-spin-button {
+    display: none;
+}
+
+.dateDiv::-webkit-calendar-picker-indicator {
+    display: none;
+}
