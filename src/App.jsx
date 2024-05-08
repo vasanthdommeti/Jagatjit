@@ -4,17 +4,17 @@ import { Route, Routes } from "react-router-dom";
 
 import './index.css'
 import Navbar from "./Components/Navbar/Navbar";
-import Section from "./Components/Section/Section";
+import Home from "./Components/Home/Home";
 import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
-import { About, Contact, Home, Services } from "../src/Components/Pages";
-import Acpremiumold from '../src/Components/Pages/AcPremiumOld'
-import { AcpremiumNew } from "./Components/Pages/AcPremiumNew";
+import { About, Contact, Services } from "../src/Components/Pages";
 import { Malt } from "./Components/Pages/MaltProducts/Malt";
 import { Ethanol } from "./Components/Pages/MaltProducts/Ethanol";
 import { Values } from "./Components/Pages/Abouts/Values";
 import { AcBlack } from "./Components/Pages/AcBlack/AcBlack";
 import { RoyalPride } from "./Components/Pages/RoyalPride/RoyalPride";
+import { AcpremiumNew } from "./Components/Pages/AcpremiumNew/AcPremiumNew";
+import Acpremiumold from "./Components/Pages/AcPremiumOld/AcPremiumOld";
 function App() {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', backgroundColor: 'black', color: 'white' }}>
@@ -24,8 +24,8 @@ function App() {
       <Footer /> */}
       <div style={{ backgroundColor: 'transperent', color: 'white' }}>
         <Routes>
-          <Route path="/" element={<Section />} />
-          <Route path="/section" element={<Section />} />
+          <Route path="/" element={<Home />} />
+          {/* <Route path="/section" element={<Section />} /> */}
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />

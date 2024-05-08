@@ -1,3 +1,6 @@
+
+
+
 import React, { useState } from 'react';
 import './Navbar.css'
 import logo from '../../Assests/LogoIcon.png'
@@ -8,9 +11,10 @@ function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
     return (
         <nav>
-            <div className="firstLogo">
-                <Link to="/section" className="title">
-                    <img src={logo} alt="logo" />
+<div className='mainNavDiv'>
+<div className="firstLogo">
+                <Link to="/" className="title">
+                    <img src={logo} alt="logo" className='imagelogo'/>
                 </Link>
             </div>
             <div className="menu" onClick={() => setMenuOpen(!menuOpen)}>
@@ -18,61 +22,77 @@ function Navbar() {
                 <span></span>
                 <span></span>
             </div>
-        <div className='headerNavBar'>
-                {/* <div className={!menuOpen ? "mainNavDiv" : "close"}> */}
-                <div className="mainNavDiv">
-                <div class="navItem">
-                        <h4>HOME</h4>
-                    </div>
-                    <div class="navItem">
-                        <h4>ABOUT US</h4>
-                    <div class="subItems">
-                            <a href='/aboutUs/heritage'>HERITAGE</a>
-                            <a href='/aboutUs/ourTeam'>OUR TEAM</a>
-                            <Link to={'/aboutUs/values'}>VALUES</Link>
-                            <a href='/aboutUs/press'>PRESS</a>
-                        </div>
-                    </div>
-                <div class="navItem">
-                        <h4>PRODUCTS</h4>
-                        <div class="subItems">
-                            <a href='/products/liquor'>LIQUOR
-                                <div className="liquorSubItems">
-                                    <Link to={'/products/liquor/ACpremiumOld'}>AC PREMIUM (OLD)</Link>
-                                    <Link to='/products/liquor/ACpremiumNew'>AC PREMIUM (NEW)</Link>
-                                    <Link to={'/products/liquor/ACpremiumBlack'}>AC BLACK</Link>
-                                    <Link to={'/products/liquor/RoyalPride'}>ROYAL PRIDE</Link>
-                                    <a href='/linkpage'>DAMN GOOD SCOTCH</a>
-                                    <a href='/linkpage'>IICE VODKA</a>
-                                    <a href='/linkpage'>AC DRY GIN</a>
-                                </div>
-                            </a>
-                            <div className='liquor'>
-                                <Link to={'/products/mff'}>MFF</Link>
-                                <Link to={'/products/ethnol'}>ETHNOL</Link>
-                            </div>
-                        </div>
-                    </div>
+</div>
+            <div>
+                {/* <ul className={menuOpen ? "open" : "close"}>
+                    <li>
+                        <Link to={'/'}>HOME</Link>
+                    </li>
+                    <li>
+                        <Link to="/services">Services</Link>
+                    </li>
+                    <li>
+                        <Link to="/contact">Contact</Link>
+                    </li>
+                    <li className="secondLogo">
+                        <img src={logo} alt="logo" />
+                    </li>
+                    <li>
+                        <Link to="/about">About</Link>
+                    </li>
+                    <li>
+                        <Link to="/services">Services</Link>
+                    </li>
+                    <li>
+                        <Link to="/contact">Contact</Link>
+                    </li>
+                </ul> */}
+                <ul className={menuOpen ? "open" : "close"}>
+                    <li className='dropdown-li'>
+                        <Link to={'/'}>HOME</Link>
+                    </li>
+                    <li>
+                        <DropdownButton id="dropdown-basic-button" className="dropdown-about" title="ABOUT US">
+                            <Dropdown.Item as={Link} to="/aboutUs/heritage">HERITAGE</Dropdown.Item>
+                            <Dropdown.Item as={Link} to="/aboutUs/ourTeam">OUR TEAM</Dropdown.Item>
+                            <Dropdown.Item as={Link} to="/aboutUs/values">VALUES</Dropdown.Item>
+                            <Dropdown.Item as={Link} to="/aboutUs/press">PRESS</Dropdown.Item>
+                        </DropdownButton>
+                    </li>
+                    <li>
+                        <DropdownButton id="dropdown-basic-button" drop='down' className="dropdown-about" title="PRODUCTS">
+                        <DropdownButton id="dropdown-basic-button" drop='left' className="dropdown-about" title="LIQUOR">
+                                <Dropdown.Item as={Link} to="/products/liquor/ACpremiumOld">AC PREMIUM (OLD)</Dropdown.Item>
+                                <Dropdown.Item as={Link} to="/products/liquor/ACpremiumNew">AC PREMIUM (NEW)</Dropdown.Item>
+                                <Dropdown.Item as={Link} to="/products/liquor/ACpremiumBlack">AC BLACK</Dropdown.Item>
+                                <Dropdown.Item as={Link} to="/products/liquor/RoyalPride">ROYAL PRIDE</Dropdown.Item>
+                                <Dropdown.Item as={Link} to="/products/liquor/DamnGoodScotch">DAMN GOOD SCOTCH</Dropdown.Item>
+                                <Dropdown.Item as={Link} to="/products/liquor/IiceVodka">IICE VODKA</Dropdown.Item>
+                                <Dropdown.Item as={Link} to="/products/liquor/AcDryGin">AC DRY GIN</Dropdown.Item>
+                            </DropdownButton>
+                            <Dropdown.Item as={Link} to="/products/mff">MFF</Dropdown.Item>
+                            <Dropdown.Item as={Link} to="/products/ethnol">ETHNOL</Dropdown.Item>
+                        </DropdownButton>
+                    </li>
+                    <li className="secondLogo">
+                        <img src={logo} alt="logo" />
+                    </li>
+                    <li className='dropdown-li'>
+                        <Link to="/" >OUR PROCESS</Link>
+                    </li>
+                    <li>
+                        <DropdownButton id="dropdown-basic-button" className="dropdown-about" title="INVESTORS">
+                            <Dropdown.Item as={Link} to="/investors/financial">FINANCIAL</Dropdown.Item>
+                            <Dropdown.Item as={Link} to="/investors/reports">REPORTS</Dropdown.Item>
+                            <Dropdown.Item as={Link} to="/investors/csr">CSR</Dropdown.Item>
+                            <Dropdown.Item as={Link} to="/investors/codeOfCunduct">CODE OF CUNDUCT</Dropdown.Item>
+                        </DropdownButton>
+                    </li>
+                    <li className='dropdown-li'>
+                        <Link to="/" >CONTACT US</Link>
+                    </li>
+                </ul>
 
-                    <div class="secondLogo">
-                        <Link to="/section"><img src={logo} alt='logo' /></Link>
-                </div>
-                <div class="navItem">
-                        <h4>OUR PROCESS</h4>
-                </div>
-                <div class="navItem">
-                    <h4>INVESTORS</h4>
-                    <div class="subItems">
-                            <a href='/investors/financial'>FINANCIAL</a>
-                            <a href='/investors/reports'>REPORTS</a>
-                            <a href='/investors/csr'>CSR</a>
-                            <a href='/investors/codeOfCunduct'>CODE OF CUNDUCT</a>
-                    </div>
-                </div>
-                <div class="navItem">
-                        <h4>CONTACT US</h4>
-                    </div>
-                </div>
             </div>
         </nav>
     )

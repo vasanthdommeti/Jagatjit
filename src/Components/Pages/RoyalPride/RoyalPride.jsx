@@ -12,9 +12,9 @@ import hotglass from '../../../Assests/Products/RoyalPride/hotglass.png';
 import lipglass from '../../../Assests/Products/RoyalPride/lipglass.png';
 import glass from '../../../Assests/Products/RoyalPride/glass.png';
 
-import bottle from '../../../Assests/Products/bottles.png';
-import distik from '../../../Assests/Products/distik.png';
-import glasss from '../../../Assests/Products/glass.png';
+import bottle from '../../../Assests/Products/AcpremiumOld/bottles.png';
+import distik from '../../../Assests/Products/AcpremiumOld/distik.png';
+import glasss from '../../../Assests/Products/AcpremiumOld/glass.png';
 export const RoyalPride = () => {
     return (
         <section>
