@@ -1,6 +1,6 @@
-import './AcpremiumOld.css'
-import sc1logo from '../../../../Assets/Products/Liquor/AcPremiumOld/sc1logo.png'
-import sc1bottle from '../../../../Assets/Products/Liquor/AcPremiumOld/sc1bottle.png'
+import '../AcpremiumOld/AcpremiumOld.css'
+import sc1logo from '../../../../Assets/Products/Liquor/AcpremiumOld/sc1logo.png'
+import sc1bottle from '../../../../Assets/Products/Liquor/AcpremiumOld/sc1bottle.png'
 
 const AcPremiumOld = () => {
     return (

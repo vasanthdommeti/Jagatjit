@@ -1,22 +1,22 @@
 .wide-image-back {
-    background-image: url('../../../../Assets/Products/Liquor/AcPremiumOld/sc1background.png');
+    background-image: url('../../../../Assets/Products/Liquor/AcpremiumOld/sc1background.png');
     background-repeat: no-repeat;
     background-position-x: right;
     background-color: black;
     background-size: cover;
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: auto;
     aspect-ratio: 16 / 9;
     right: 0;
     top: 0;
-    z-index: -1;
 }
 
 .top-image-container {
     width: 100%;
     height: auto;
     display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
 }

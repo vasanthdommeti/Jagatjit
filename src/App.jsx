@@ -11,8 +11,8 @@ import { Ethanol } from "./Components/Products/Ethnol/Ethnol";
 import { Malt } from "./Components/Products/Mff/Malt";
 import { RoyalPride } from "./Components/Products/Liquor/RoyalPride/RoyalPride";
 import { AcBlack } from "./Components/Products/Liquor/AcBlack/AcBlack";
-import { AcpremiumOld } from "./Components/Products/Liquor/AcpremiumOld/AcpremiumOld";
 import { AcPremiumNew } from "./Components/Products/Liquor/AcpremiumNew/AcpremiumNew";
+import AcPremiumOld from "./Components/Products/Liquor/AcpremiumOld/AcpremiumOld";
 function App() {
   return (
     <div style={{ backgroundColor: 'black', color: 'white', width:'100%' }}>
@@ -20,7 +20,7 @@ function App() {
       <div style={{ backgroundColor: 'transperent', color: 'white' }}>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/products/liquor/ACpremiumOld" element={<AcpremiumOld />} />
+          <Route path="/products/liquor/ACpremiumOld" element={<AcPremiumOld />} />
           <Route path="/products/liquor/ACpremiumNew" element={<AcPremiumNew />} />
           <Route path="/products/liquor/ACpremiumBlack" element={<AcBlack />} />
           <Route path="/products/liquor/RoyalPride" element={<RoyalPride />} />
