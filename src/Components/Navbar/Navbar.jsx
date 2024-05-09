@@ -53,7 +53,7 @@ function Navbar() {
                         <img src={logo} alt="logo" />
                     </li>
                     <li className='dropdown-li'>
-                        <Link to="/" >OUR PROCESS</Link>
+                        <Link to="/our-Process" >OUR PROCESS</Link>
                     </li>
                     <li>
                         <DropdownButton id="dropdown-basic-button" className="dropdown-about" title="INVESTORS">
@@ -64,7 +64,7 @@ function Navbar() {
                         </DropdownButton>
                     </li>
                     <li className='dropdown-li'>
-                        <Link to="/" >CONTACT US</Link>
+                        <Link to="/contact-us" >CONTACT US</Link>
                     </li>
                 </ul>
 
