@@ -1,6 +1,3 @@
-/* .active {
-    background-color: #1d4ed8;
-} */
 
 nav {
     display: flex;
@@ -13,13 +10,6 @@ nav {
 
 }
 
-/* .mainNavDiv{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background-color: #D38A14;
-} */
-
 nav .title {
     font-size: 1.5rem;
     margin: 1rem;
@@ -28,11 +18,6 @@ nav .title {
     color: white;
 }
 
-/* nav ul.open {
-    animation: slide-in 2.9s reverse;
-    -webkit-animation: slide-in 0.9s reverse;
-} */
-
 nav ul {
     display: flex;
 }
@@ -40,6 +25,7 @@ nav ul {
 nav ul li {
     list-style: none;
 }
+
 nav ul li a {
     display: block;
     text-decoration: none;
@@ -49,10 +35,6 @@ nav ul li a {
     border-radius: 0.5rem;
 }
 
-/* nav ul li a:not(.active):hover {
-    background-color: red;
-    border-color: green;
-} */
 nav .menu {
     display: none;
     position: absolute;
@@ -91,25 +73,27 @@ nav .menu span {
     border-color: black;
     display: flex;
 }
+
 .dropdown-about .dropdown-toggle:hover {
     color: #D38A14;
 
 }
-.dropdown-li{
-   background-color: transparent;
+
+.dropdown-li {
+    background-color: transparent;
     border-color: black;
     display: flex;
-    /* justify-content: flex-end; */
 }
-nav ul.dropdown-li:hover{
+
+nav ul.dropdown-li:hover {
     border-color: white;
     background-color: black;
 
 }
+
 .dropdown-toggle :hover {
-    /* background-color: rgb(115, 200, 19); */
     border-color: white;
-    
+
 }
 
 .dropdown-about .dropdown-toggle:after {
@@ -117,113 +101,75 @@ nav ul.dropdown-li:hover{
 }
 
 .dropdown-about .dropdown-menu {
-    /* background-color: rgb(233, 23, 23); */
     background-color: black;
     border-color: #fff;
 }
 
-  .dropdown-about .dropdown-item {
-      color: white;
-      text-align: left;
-      border-color: black;
-  }
-
-  .dropdown-about .dropdown-item:hover {
-      background-color: white;
-      color: black;
-  }
-
-  .imagelogo{
-    height: 300px;
-    width: 300px;
-  }
-
-  @media (max-width: 480px) {
-    nav .menu {
-            display: flex;
-            top: 30%;
-        }
-    
-        .firstLogo {
-            display: flex;
-        }
-    
-        .secondLogo {
-            display: none;
-        }
-    
-        nav ul {
-            display: none;
-            flex-direction: column;
-            width: 100%;
-            margin-bottom: 0.25rem;
-        }
-
-        nav ul.open {
-                position: fixed;
-                top: 15%;
-                right: -10%;
-                display: flex;
-                background-color: transparent;
-                backdrop-filter: blur(16px);
-                -webkit-backdrop-filter: blur(16px);
-                width: 70%;
-                transition: right 0.4s;
-                z-index: 1;
-        }
-        .imagelogo{
-            height: 100px;
-            width: 100px;
-          }
-        nav {
-            z-index: 5;
-        }
-
-        nav ul li {
-            width: 100%;
-            text-align: center;
-        }
-
-        nav ul li a {
-            margin: 0.2rem 0.5rem;
-        }
+.dropdown-about .dropdown-item {
+    color: white;
+    text-align: left;
+    border-color: black;
 }
 
-/* @media (max-width: 480px) {
+.dropdown-about .dropdown-item:hover {
+    background-color: white;
+    color: black;
+}
+
+.imagelogo {
+    height: 300px;
+    width: 300px;
+}
+
+@media (max-width: 480px) {
     nav .menu {
+        display: flex;
+        top: 30%;
+    }
+
+    .firstLogo {
         display: flex;
     }
 
-                                                                                                                                                                                                                                                                .firstLogo {
-                                                                                                                                                                                                                                                                    display: flex;
-                                                                                                                                                                                                                                                                }
-                                                                                                                                
-                                                                                                                                                                                                                                                                .secondLogo {
-                                                                                                                                                                                                                                                                    display: none;
-                                                                                                                                                                                                                                                                }
-                                                                                                                                                                                                                                                                nav {
-                                                                                                                                                                                                                                                                    flex-direction: column;
-                                                                                                                                                                                                                                                                    align-items: flex-start;
-                                                                                                                                                                                                                                                                }
-                                                                                                                                
-                                                                                                                                                                                                                                                                nav ul {
-                                                                                                                                                                                                                                                                    display: none;
-                                                                                                                                                                                                                                                                    flex-direction: column;
-                                                                                                                                                                                                                                                                    width: 100%;
-                                                                                                                                                                                                                                                                    margin-bottom: 0.25rem;
-                                                                                                                                                                                                                                                                }
-    
-                                                                                                                                                                                                                                                                nav ul.open {
-                                                                                                                                                                                                                                                                    display: flex;
-                                                                                                                                                                                                                                                                }
-
-                                                                                                                                                                                                                                                                nav ul li {
-                                                                                                                                                                                                                                                                    width: 100%;
-                                                                                                                                                                                                                                                                    text-align: center;
+    .secondLogo {
+        display: none;
     }
 
-                                                                                                                                                                                                                                                                nav ul li a {
-                                                                                                                                                                                                                                                                    margin: 0.2rem 0.5rem;
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 0.25rem;
+    }
+
+    nav ul.open {
+        position: fixed;
+        top: 15%;
+        right: -10%;
+        display: flex;
+        background-color: transparent;
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        width: 70%;
+        transition: right 0.4s;
+        z-index: 1;
+    }
+
+    .imagelogo {
+        height: 100px;
+        width: 100px;
+    }
+
+    nav {
+        z-index: 5;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        margin: 0.2rem 0.5rem;
     }
 }
-*/

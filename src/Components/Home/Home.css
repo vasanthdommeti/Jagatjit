@@ -1,12 +1,9 @@
+
+
 #sectionImage1 {
-    background-image: url('../../Assests/sectionBg1.png');
+    background-image: url('../../Assets/Home/sec1backgroundImg.png');
 }
 .sectionBottleDiv{
-    /* height: auto;
-    background-repeat: no-repeat;
-    background-size: contain;
-    place-items: left;
-    aspect-ratio: 16 / 8.71; */
     position: relative;
     min-height: 100vh;
     background-size: contain;
@@ -15,41 +12,51 @@
 }
 
 #sectionImage2 {
-    background-image: url('../../Assests/sectionBg2.png');
+    background-image: url('../../Assets/Home/sec2backgroundImg.png');
 }
 
 #sectionImage3 {
-    background-image: url('../../Assests/sectionBg3.png');
-    display: flex;
+    background-image: url('../../Assets/Home/sec3backgroundImg.png');
+    /* display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center; */
 }
 
 #sectionImage4 {
-    background-image: url('../../Assests/sectionBg4.png');
+    background-image: url('../../Assets/Home/sec4backgroundImg.png');
 }
 
 #sectionImage5 {
-    background-image: url('../../Assests/sectionBg5.png');
+    background-image: url('../../Assets/Home/sec5backgroundImg.png');
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 #sectionImage6 {
-    background-image: url('../../Assests/sectionBg6.png');
+    background-image: url('../../Assets/Home/sec6backgroundImg.png');
 }
 
 .section {
+    width: 100%;
+    height: auto;
     background-repeat: no-repeat;
-    background-size: 100% 100%;
-    height: 100vh;
-    margin: 3px auto 0;
-    position: relative;
+    background-size: contain;
+    place-items: center;
+    aspect-ratio: 16 / 8.71;
+
 }
 
+.section2{
+    width: 100%;
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: contain;
+    place-items: center;
+    aspect-ratio: 16 / 8.71;
+}
 .section3GroupHeaderDiv {
-    width: 400px;
+    /* width: 400px; */
     align-self: center;
     justify-content: center;
 }
@@ -57,12 +64,16 @@
 .section3Image {
     width: 500px;
     height: 300px;
+    /* margin: 10%; */
 }
 
 .section3MainDiv {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-self: center;
+    /* padding: 10%; */
+    /* width: 70%; */
 }
 
 .section3Header {
@@ -139,57 +150,15 @@
 
 .mainDiv {
     padding-left: 5%;
-    /* width: 100%; */
 }
 
 .transformText {
     font-size: 200px;
-    /* position: fixed; */
     font-family: 'Josefin Sans';
     -webkit-text-stroke-width: 2;
     -webkit-text-stroke-color: 'white';
-    /* -webkit-text-fill-color: '#333333'; */
     opacity: 0.6;
 }
-
-/* .section {
-    max-width: 100%;
-    width: 100%;
-    height: auto !important;
-    object-fit: cover;
-} */
-
-/* @media (max-width: 768px) {
-        .section {
-            height: 100vh;
-            background-size:auto;
-            position:-ms-page;
-        }
-} */
-
-/* @media (max-width:767px) {
-    .section {
-        height: 25vh;
-    }
-}
-
-@media (min-width:768px) {
-    .section {
-        height: 50vh;
-    }
-}
-
-@media (min-width:992px) {
-    .section {
-        height: 75vh;
-    }
-}
-
-@media (min-width:1200px) {
-    .section {
-        height: 100vh;
-    }
-} */
 
 @media (min-width:320px) {
 
@@ -199,29 +168,33 @@
     }
 }
 
-/* @media (min-width:481px)  { 
-    portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. 
+@media (min-width:481px)  { 
+    /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide.  */
     .section {
         height: 45vh;
+    }
+}
+/* @media (min-width:641px) {
+
+    portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones
+    .section {
+        height: 45vh;
+    }
+    .section3MainDiv {
+        flex-direction: column;
+        justify-content: flex-end;
     }
 } */
-@media (min-width:641px) {
-
-    /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
-    .section {
-        height: 45vh;
-    }
-    /* .sectionBottleDiv{
-        aspect-ratio: 3 / 1.71;
-    } */
-
-}
 
 @media (min-width:961px) {
 
     /* tablet, landscape iPad, lo-res laptops ands desktops */
     .section {
         height: 65vh;
+    }
+    .section3MainDiv {
+        flex-direction: column;
+        justify-content: flex-end;
     }
 }
 
@@ -239,4 +212,13 @@
     .section {
         height: 100vh;
     }
+}
+
+@media (max-width: 641px) {
+    .section3MainDiv {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
 }

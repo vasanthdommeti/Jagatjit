@@ -1,9 +1,7 @@
 
-
-
 import React, { useState } from 'react';
-import './Navbar.css'
-import logo from '../../Assests/LogoIcon.png'
+import '../Navbar/Navbar.css'
+import logo from '../../Assets/LogoIcon.png'
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import { Link } from 'react-router-dom';
@@ -11,42 +9,19 @@ function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
     return (
         <nav>
-<div className='mainNavDiv'>
-<div className="firstLogo">
-                <Link to="/" className="title">
-                    <img src={logo} alt="logo" className='imagelogo'/>
-                </Link>
+            <div className='mainNavDiv'>
+                <div className="firstLogo">
+                    <Link to="/" className="title">
+                        <img src={logo} alt="logo" className='imagelogo' />
+                    </Link>
+                </div>
+                <div className="menu" onClick={() => setMenuOpen(!menuOpen)}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
-            <div className="menu" onClick={() => setMenuOpen(!menuOpen)}>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-</div>
             <div>
-                {/* <ul className={menuOpen ? "open" : "close"}>
-                    <li>
-                        <Link to={'/'}>HOME</Link>
-                    </li>
-                    <li>
-                        <Link to="/services">Services</Link>
-                    </li>
-                    <li>
-                        <Link to="/contact">Contact</Link>
-                    </li>
-                    <li className="secondLogo">
-                        <img src={logo} alt="logo" />
-                    </li>
-                    <li>
-                        <Link to="/about">About</Link>
-                    </li>
-                    <li>
-                        <Link to="/services">Services</Link>
-                    </li>
-                    <li>
-                        <Link to="/contact">Contact</Link>
-                    </li>
-                </ul> */}
                 <ul className={menuOpen ? "open" : "close"}>
                     <li className='dropdown-li'>
                         <Link to={'/'}>HOME</Link>
@@ -61,7 +36,7 @@ function Navbar() {
                     </li>
                     <li>
                         <DropdownButton id="dropdown-basic-button" drop='down' className="dropdown-about" title="PRODUCTS">
-                        <DropdownButton id="dropdown-basic-button" drop='left' className="dropdown-about" title="LIQUOR">
+                            <DropdownButton id="dropdown-basic-button" drop='left' className="dropdown-about" title="LIQUOR">
                                 <Dropdown.Item as={Link} to="/products/liquor/ACpremiumOld">AC PREMIUM (OLD)</Dropdown.Item>
                                 <Dropdown.Item as={Link} to="/products/liquor/ACpremiumNew">AC PREMIUM (NEW)</Dropdown.Item>
                                 <Dropdown.Item as={Link} to="/products/liquor/ACpremiumBlack">AC BLACK</Dropdown.Item>

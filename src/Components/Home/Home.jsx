@@ -1,9 +1,10 @@
+
 import React, { useRef, useLayoutEffect } from "react";
-import './Home.css'
-import section3Image from '../../Assests/section3Image.png';
-import distilImage from '../../Assests/distilImage.png';
-import brewImage from '../../Assests/brewingImage.png';
-import storageImage from '../../Assests/storageImage.png';
+import '../Home/Home.css';
+import section3Image from '../../Assets/Home/sec3bottleImg.png';
+import distilImage from '../../Assets/Home/distilImage.png';
+import brewImage from '../../Assets/Home/brewingImage.png';
+import storageImage from '../../Assets/Home/storageImage.png';
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 // import LogoIcon from '../../Assests/LogoIcon.png'
@@ -13,7 +14,6 @@ function Home() {
     gsap.registerPlugin(ScrollTrigger);
 
     const firstRef = useRef(null);
-    const secondRef = useRef(null);
 
     const wrapperRef = useRef(null);
 
@@ -59,7 +59,7 @@ function Home() {
 
     return (
         <div className="App" ref={wrapperRef}>
-            <section className="main" data-pin="true">
+            {/* <section className="main" data-pin="true">
                 <div id='sectionImage1' className='sectionBottleDiv'>
                     <img
                         ref={firstRef}
@@ -68,13 +68,15 @@ function Home() {
                         alt="hell"
                     />
                 </div>
-            </section>
-            <section>
-                <div id='sectionImage2' className='section'>
+            </section> */}
+            {/* //2 */}
+            {/* <section>
+                <div id='sectionImage2' className='section2'>
                 </div>
-            </section>
-            <section>
-                <div id='sectionImage3' className='section'>
+            </section> */}
+            {/* /3/ */}
+            <section id='sectionImage3' className='section'>
+                {/* <div > */}
                     <div className='section3MainDiv'>
                         <div className='section3GroupHeaderDiv'>
                             <h1 className='section3Header'>We sold over</h1>
@@ -84,17 +86,19 @@ function Home() {
                             <p className='section3Paragraph'>Explore our history to find out how we did it.</p>
                             <button className='section3Button'>OUR STORY</button>
                         </div>
-                        <div className='section3GroupImagesDiv'>
+                        {/* <div className='section3GroupImagesDiv'> */}
                             <img src={section3Image} alt='Img' className='section3Image' />
-                        </div>
+                        {/* </div> */}
                     </div>
-                </div>
+                {/* </div> */}
             </section>
-            <section>
+            {/* //4 */}
+            {/* <section>
                 <div id='sectionImage4' className='section'>
                 </div>
-            </section>
-            <section>
+            </section> */}
+            {/* //5 */}
+            {/* <section>
                 <div id='sectionImage5' className='section'>
                     <div className='section3MainDiv'>
                         <div className='section3GroupHeaderDiv'>
@@ -113,12 +117,12 @@ function Home() {
                         </div>
                     </div>
                 </div>
-            </section>
-            <h1 className='section6Header'>JIL's Presence & Reach</h1>
-            <section>
+            </section> */}
+            {/* <h1 className='section6Header'>JIL's Presence & Reach</h1> */}
+            {/* <section>
                 <div id='sectionImage6' className='section'>
                 </div>
-            </section>
+            </section> */}
         </div>
     )
 }

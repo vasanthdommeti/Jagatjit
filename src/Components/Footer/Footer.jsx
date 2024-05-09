@@ -1,6 +1,7 @@
+
 import React from 'react';
 import './Footer.css';
-import logo from '../../Assests/LogoIcon.png'
+import logo from '../../Assets/LogoIcon.png'
 import { CiLocationOn } from "react-icons/ci";
 import { FiMail } from "react-icons/fi";
 import { GrPhone } from "react-icons/gr";
