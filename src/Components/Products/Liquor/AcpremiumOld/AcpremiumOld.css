@@ -6,7 +6,7 @@
     background-size: cover;
     position: absolute;
     width: 100%;
-    height: auto;
+    height: 100%;
     aspect-ratio: 16 / 9;
     right: 0;
     top: 0;
@@ -75,14 +75,15 @@
     .wide-image-wrap>img {
         width: 100%;
         height: auto;
+        padding-left: 8%;
     }
 
     .banner-summary {
         color: #ffffff;
         font-family: Fredoka;
-        font-size: 22px;
+        font-size: 20px;
         font-weight: 300;
-        line-height: 22px;
+        line-height: 20px;
         letter-spacing: 0.09em;
     }
 }
