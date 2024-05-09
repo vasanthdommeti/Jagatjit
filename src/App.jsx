@@ -13,6 +13,9 @@ import { RoyalPride } from "./Components/Products/Liquor/RoyalPride/RoyalPride";
 import { AcBlack } from "./Components/Products/Liquor/AcBlack/AcBlack";
 import { AcPremiumNew } from "./Components/Products/Liquor/AcpremiumNew/AcpremiumNew";
 import AcPremiumOld from "./Components/Products/Liquor/AcpremiumOld/AcpremiumOld";
+import { Sustainability } from "./Components/Sustainability/Sustainability";
+import { PrivacyPolicy } from "./Components/PrivacyPolicy/PrivacyPolicy";
+import { Csr } from "./Components/Csr/Csr";
 function App() {
   return (
     <div style={{ backgroundColor: 'black', color: 'white', width:'100%' }}>
@@ -27,6 +30,9 @@ function App() {
           <Route path="/products/mff" element={<Malt />} />
           <Route path="/products/ethnol" element={<Ethanol />} />
           <Route path="/aboutUs/values" element={<Values />} />
+          <Route path="/Sustainability" element={<Sustainability />} />
+          <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
+          <Route path="/investors/csr" element={<Csr />} />
         </Routes>
       </div>
       <Footer />

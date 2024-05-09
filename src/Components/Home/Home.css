@@ -28,9 +28,14 @@
 
 #sectionImage5 {
     background-image: url('../../Assets/Home/sec5backgroundImg.png');
-    display: flex;
+    /* width: 100%; */
+    background-size: cover;
+    background-position: right;
+    place-items: center;
+    /* aspect-ratio: 16 / 8.71; */
+    /* display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center; */
 }
 
 #sectionImage6 {
@@ -56,22 +61,23 @@
     aspect-ratio: 16 / 8.71;
 }
 .section3GroupHeaderDiv {
-    /* width: 400px; */
+    width: 100%;
     align-self: center;
     justify-content: center;
 }
 
 .section3Image {
-    width: 500px;
-    height: 300px;
-    /* margin: 10%; */
+   width: 100%;
+   height: auto; 
+   /* margin: 5%; */
 }
 
 .section3MainDiv {
     display: flex;
+    padding: 8% 5% 5% 5%;
     flex-direction: row;
-    justify-content: center;
-    align-self: center;
+    justify-content: space-around;
+    align-items: center;
     /* padding: 10%; */
     /* width: 70%; */
 }
@@ -81,7 +87,8 @@
     font-family: 'Josefin Sans';
     font-weight: 100;
     letter-spacing: 4px;
-    line-height: 7px;
+    text-decoration: none;
+    margin-bottom: 0%;
     opacity: 0.9;
 }
 
@@ -105,7 +112,7 @@
 }
 
 .section5GroupImagesDiv {
-    width: 420px;
+    /* width: 420px; */
 }
 
 .section5firstImage {
@@ -130,10 +137,9 @@
 .section5Header {
     font-size: 35px;
     font-family: 'Josefin Sans';
-    font-weight: 100;
+    font-weight: bold;
     letter-spacing: 4px;
-    line-height: 7px;
-    opacity: 0.6;
+    margin-bottom: 0;
 }
 
 .section6Header {
@@ -142,16 +148,16 @@
     font-weight: 100;
     opacity: 0.6;
     letter-spacing: 4px;
-    line-height: 7px;
+    margin-bottom: 0%;
     text-align: center;
-    margin: 80px 0 60px 0;
+    margin: 80px 0 20px 0;
 
 }
 
 .mainDiv {
     padding-left: 5%;
 }
-
+ 
 .transformText {
     font-size: 200px;
     font-family: 'Josefin Sans';
@@ -160,20 +166,63 @@
     opacity: 0.6;
 }
 
-@media (min-width:320px) {
+/* @media (min-width:320px) {
 
-    /* smartphones, iPhone, portrait 480x320 phones */
+    smartphones, iPhone, portrait 480x320 phones
     .section {
         height: 35vh;
     }
 }
 
 @media (min-width:481px)  { 
-    /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide.  */
+    portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. 
     .section {
         height: 45vh;
     }
-}
+} */
+@media only screen and (max-width: 600px) {
+    .section3MainDiv {
+        display: flex;
+        padding: 8% 5% 5% 5%;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        /* padding: 10%; */
+        /* width: 70%; */
+    }
+    .section {
+        background-repeat: no-repeat;
+        background-size: cover;
+        place-items: center;
+        height: auto;
+        background-position: center;    
+    }
+    #sectionImage5 {
+    opacity: 0.6;
+    }
+    
+    .section3GroupHeaderDiv {
+        padding-left: 7%;
+        margin-bottom: 5%;
+    }
+    .section5Image {
+        width: 150px;
+        height: 150px;
+        margin: 6px 6px 6px 5px;
+        border-radius: 12px;
+    }
+    #sectionImage6 {
+        background-size: cover;
+        background-color: #ECA533;
+    }
+  }
+
+  @media only screen and (max-width: 1200px) {
+    .section3Header {
+        font-size: 30px;
+        font-family: 'Josefin Sans';
+    }
+  }
 /* @media (min-width:641px) {
 
     portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones
@@ -186,9 +235,9 @@
     }
 } */
 
-@media (min-width:961px) {
+/* @media (min-width:961px) {
 
-    /* tablet, landscape iPad, lo-res laptops ands desktops */
+    tablet, landscape iPad, lo-res laptops ands desktops
     .section {
         height: 65vh;
     }
@@ -196,7 +245,7 @@
         flex-direction: column;
         justify-content: flex-end;
     }
-}
+} */
 
 @media (min-width:1025px) {
 
@@ -214,11 +263,11 @@
     }
 }
 
-@media (max-width: 641px) {
+/* @media (max-width: 641px) {
     .section3MainDiv {
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
 
-}
+} */

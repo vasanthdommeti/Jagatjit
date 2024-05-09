@@ -19,6 +19,7 @@ nav .title {
 
 nav ul {
     display: flex;
+    align-items: center;
 }
 
 nav ul li {
@@ -65,11 +66,19 @@ nav .menu span {
 .secondLogo {
     display: flex;
 }
+.nav__toggle,
+.nav__close {
+  font-size: 1.5rem;
+  color: var(--title-color);
+  cursor: pointer;
+}
+
+
 
 /* ///dddd */
 .dropdown-about .dropdown-toggle {
     background-color: transparent;
-    border-color: black;
+    border-color:transparent;
     display: flex;
 }
 
@@ -120,7 +129,7 @@ nav ul.dropdown-li:hover {
     width: 300px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 802px){
     nav .menu {
         display: flex;
         top: 30%;
@@ -129,7 +138,8 @@ nav ul.dropdown-li:hover {
 
     .firstLogo {
         display: flex;
-        height: 75px
+        height: 75px;
+        align-items: center;
     }
 
     .secondLogo {
@@ -145,7 +155,7 @@ nav ul.dropdown-li:hover {
 
     nav ul.open {
         position: absolute;
-        top: 87%;
+        top: 0%;
         right: 1%;
         display: flex;
         background-color: transparent;
@@ -154,7 +164,14 @@ nav ul.dropdown-li:hover {
         transition: right 0.4s;
         z-index: 2;
         height: 100vh;
+        -webkit-text-fill-color: #fff;
+        -webkit-text-stroke: 1;
     }
+    .nav__close {
+        position: absolute;
+        top: 1rem;
+        right: 1.5rem;
+      }
 
     .imagelogo {
         height: 70px;
@@ -174,3 +191,15 @@ nav ul.dropdown-li:hover {
         margin: 0.2rem 0.5rem;
     }
 }
+
+@media only screen and (max-width: 1200px) {
+    .section3Header {
+        font-size: 30px;
+        font-family: 'Josefin Sans';
+    }
+    .nav__toggle,
+    .nav__close {
+      display: none;
+    }
+    
+  }

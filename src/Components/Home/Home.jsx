@@ -56,9 +56,9 @@ function Home() {
 
         return () => ctx.revert();
     }, []);
-
+    // ref={wrapperRef}
     return (
-        <div className="App" ref={wrapperRef}>
+        <div className="App" >
             {/* <section className="main" data-pin="true">
                 <div id='sectionImage1' className='sectionBottleDiv'>
                     <img
@@ -74,9 +74,8 @@ function Home() {
                 <div id='sectionImage2' className='section2'>
                 </div>
             </section> */}
-            {/* /3/ */}
+            {/* /3/  completed*/} 
             <section id='sectionImage3' className='section'>
-                {/* <div > */}
                     <div className='section3MainDiv'>
                         <div className='section3GroupHeaderDiv'>
                             <h1 className='section3Header'>We sold over</h1>
@@ -90,16 +89,15 @@ function Home() {
                             <img src={section3Image} alt='Img' className='section3Image' />
                         </div>
                     </div>
-                {/* </div> */}
             </section>
             {/* //4 */}
             {/* <section>
                 <div id='sectionImage4' className='section'>
                 </div>
             </section> */}
-            {/* //5 */}
-            {/* <section>
-                <div id='sectionImage5' className='section'>
+            {/* //5 complete */}
+            <section>
+                <div id='sectionImage5' >
                     <div className='section3MainDiv'>
                         <div className='section3GroupHeaderDiv'>
                             <h1 className='section5Header'>Where does all the</h1>
@@ -117,12 +115,12 @@ function Home() {
                         </div>
                     </div>
                 </div>
-            </section> */}
-            {/* <h1 className='section6Header'>JIL's Presence & Reach</h1> */}
-            {/* <section>
+            </section>
+            <h1 className='section6Header'>JIL's Presence & Reach</h1>
+            <section>
                 <div id='sectionImage6' className='section'>
                 </div>
-            </section> */}
+            </section>
         </div>
     )
 }

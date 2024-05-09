@@ -1,0 +1,33 @@
+
+
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #010101; /* Set background color to black (optional) */
+  font-family: 'Montserrat', sans-serif;
+  }
+  
+  .sustainability {
+  width: 80%; /* Adjust width as needed (optional) */
+  margin:  auto; /* Use vh for vertical margin */
+  padding: 30px;
+  color: #fff; /* Set text color to white */
+  }
+  
+  .headingmain {
+  text-align: center; /* Center align headingmain */
+    color: #ECA533; /* Set color to orange */
+    font-size: 2.8rem; /* Adjust font size (28px = 2.8rem) */
+  }
+  
+  .heading {
+  color: #ECA533; /* Set color to orange for all headings */
+    font-size: 1.8rem; /* Adjust font size (28px = 2.8rem) */
+  }
+  
+  .sustainability p {
+  text-align: left; /* Center align all paragraphs (optional, adjust if needed) */
+  line-height: 1.5;
+  margin-bottom: 15px;
+  }

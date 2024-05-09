@@ -3,7 +3,9 @@ import React, { useState } from 'react';
 import '../Navbar/Navbar.css'
 import logo from '../../Assets/LogoIcon.png'
 import Dropdown from 'react-bootstrap/Dropdown';
+import { MdClose } from "react-icons/md";
 import DropdownButton from 'react-bootstrap/DropdownButton';
+import { IoClose, IoMenu } from "react-icons/io5";
 import { Link } from 'react-router-dom';
 function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -67,7 +69,9 @@ function Navbar() {
                         <Link to="/contact-us" >CONTACT US</Link>
                     </li>
                 </ul>
-
+                <div className="menu" style={{zIndex:2, marginRight:'7%'}} id="nav-close" onClick={() => setMenuOpen(!menuOpen)}>
+          {menuOpen &&<IoClose fontSize={75}/>}
+          </div>
             </div>
         </nav>
     )

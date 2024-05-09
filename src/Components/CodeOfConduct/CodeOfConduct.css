@@ -1,0 +1,48 @@
+
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #010101; /* Set background color to black */
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+/* Styles for all headings except 'code-of-conduct' */
+.heading {
+  font-family: 'Josefin Sans', serif; /* Use Josefin Sans for headings */
+  font-size: 2.4rem; /* Adjust heading font size if needed */
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #ECA533; /* Set color for headings */
+}
+
+/* Style for 'code-of-conduct' heading only */
+.code-of-conduct .headingmain {
+  font-family: 'Josefin Sans', serif;
+  font-size: 3.4rem;
+  text-align: center; /* Center align 'code-of-conduct' heading */
+  color: white; /* Set color to white for 'code-of-conduct' heading */
+}
+
+.code-of-conduct {
+  font-family: 'Josefin Sans', serif;
+  color: white;
+  margin: 40px auto; /* Use 'auto' for horizontal centering */
+  padding: 30px;
+  width: 80%; /* Set width to 80% */
+}
+
+.code-of-conduct p {
+  color: white;
+  margin-bottom: 15px;
+  text-align: justify; /* Left align paragraphs */
+  line-height: 1.5; /* Adjust line spacing if needed */
+}
+
+.code-of-conduct .ph {
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  color: #ECA533;
+}
