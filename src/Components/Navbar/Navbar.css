@@ -143,16 +143,16 @@ nav ul.dropdown-li:hover {
     }
 
     nav ul.open {
-        position: fixed;
-        top: 15%;
-        right: -10%;
+        position: absolute;
+        top: 87%;
+        right: 1%;
         display: flex;
         background-color: transparent;
         backdrop-filter: blur(16px);
         -webkit-backdrop-filter: blur(16px);
-        width: 70%;
-        transition: right 0.4s;
-        z-index: 1;
+        transition: right  0.4s;
+        z-index: 2;
+        height: 100vh;
     }
 
     .imagelogo {

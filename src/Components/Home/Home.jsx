@@ -86,9 +86,9 @@ function Home() {
                             <p className='section3Paragraph'>Explore our history to find out how we did it.</p>
                             <button className='section3Button'>OUR STORY</button>
                         </div>
-                        {/* <div className='section3GroupImagesDiv'> */}
+                        <div className='section3GroupImagesDiv'>
                             <img src={section3Image} alt='Img' className='section3Image' />
-                        {/* </div> */}
+                        </div>
                     </div>
                 {/* </div> */}
             </section>
