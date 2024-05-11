@@ -20,7 +20,7 @@ class TeamResource extends JsonResource
             'order' => $this->order,
             'education' => $this->education,
             'joined_at' => $this->joined_at,
-            'team_image' => $this->getFirstMediaUrl('team_image'),
+            'team_image' => $this->team_image,
         ];
     }
 }
