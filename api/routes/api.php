@@ -8,21 +8,29 @@ use App\Models\Contact;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Validator;
 
 Route::post('contact', function (Request $request) {
 
-    $request->validate([
-        'name' => 'required',
+    $validator = Validator::make($request->all(), [
+        'name' => 'required|string',
         'email' => 'required|email',
-        'body' => 'required',
+        'body' => 'required|string',
     ]);
+
+    if ($validator->fails()) {
+        return response()->json([
+            'message' => 'The given data was invalid.',
+            'errors' => $validator->errors(),
+        ])->setStatusCode(422);
+    }
 
     Contact::create($request->all());
 
     return response()->json([
         'message' => 'Your message has been sent!',
         'data' => $request->all(),
-    ]);
+    ])->setStatusCode(200);
 
 });
 
