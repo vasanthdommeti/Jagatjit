@@ -3,9 +3,10 @@ nav {
     justify-content: center;
     align-items: center;
     color: white;
-    position: sticky;
+    position:absolute;
+    width: 100%;
     top: 0;
-    z-index: 2;
+    /* z-index: ; */
 
 }
 
@@ -54,7 +55,7 @@ nav .menu span {
 }
 
 .close {
-    background-color: black;
+    background-color: transparent;
     align-items: center;
     justify-content: space-between;
 }
