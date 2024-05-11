@@ -123,6 +123,13 @@ nav ul.dropdown-li:hover {
     background-color: white;
     color: black;
 }
+/* nav ul .open:active{
+    display: none;
+    background-color: #D38A14;
+} */
+nav ul.open:selection{
+    display: none;
+}
 
 .imagelogo {
     height: 300px;
@@ -155,9 +162,12 @@ nav ul.dropdown-li:hover {
 
     nav ul.open {
         position: absolute;
-        top: 0%;
-        right: 1%;
+        top:0;
+        right: 0%;
         display: flex;
+        flex-direction: column;
+        padding-top: 20%;
+        justify-content: space-around;
         background-color: transparent;
         backdrop-filter: blur(16px);
         -webkit-backdrop-filter: blur(16px);
@@ -167,6 +177,7 @@ nav ul.dropdown-li:hover {
         -webkit-text-fill-color: #fff;
         -webkit-text-stroke: 1;
     }
+
     .nav__close {
         position: absolute;
         top: 1rem;
