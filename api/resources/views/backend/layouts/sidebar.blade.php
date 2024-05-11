@@ -31,6 +31,32 @@
             <li>
                 <a href="{{ route('new.index')}}"><i class="material-icons-two-tone">people</i>News Table</a>
             </li>
+
+            <li>
+                <a href="#"><i class="material-icons-two-tone">currency_rupee</i>Financials<i
+                        class="material-icons has-sub-menu">keyboard_arrow_right</i></a>
+                <ul class="sub-menu">
+                    <li>
+                        <a href="{{ route('category.index',['financials'])}}">Category</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('financial.index')}}">Files</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#"><i class="material-icons-two-tone">picture_as_pdf</i>Reports and Policies<i
+                        class="material-icons has-sub-menu">keyboard_arrow_right</i></a>
+                <ul class="sub-menu">
+                    <li>
+                        <a href="{{ route('category.index',['reports'])}}">Category</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('report.index')}}">Files</a>
+                    </li>
+                </ul>
+            </li>
         </ul>
     </div>
 </div>

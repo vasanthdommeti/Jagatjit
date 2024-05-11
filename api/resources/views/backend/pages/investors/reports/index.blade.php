@@ -28,7 +28,7 @@ JIL - Files
                                         <th>Files Name</th>
                                         <th>Files Link</th>
                                         <th>Files Description</th>
-                                        <th>Files Category</th>
+                                        <th>Category</th>
                                         <th>Date</th>
                                         <th>Action</th>
                                     </tr>
@@ -40,7 +40,7 @@ JIL - Files
                                         <td>{{ $item->file_name }}</td>
                                         <td>{{ $item->report_policy_file }}</td>
                                         <td>{{ $item->file_description}}</td>
-                                        <td>{{ $item->file_category_id }}</td>
+                                        <td>{{ $item->category->name }}</td>
                                         <td>{{ $item->file_date}}</td>
                                         <td class="d-flex">
                                             {{-- <a href="{{ route('report.edit',[$item->id]) }}"><i class="material-icons">edit</i></a> --}}

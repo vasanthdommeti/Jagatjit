@@ -42,9 +42,9 @@ JIL - Reports Policies Upload
                                             </div>
                                         </div>
                                         <div class="mb-3 row">
-                                            <label for="inputName" class="col-sm-2 col-form-label">File Category Select</label>
+                                            <label for="inputName" class="col-sm-2 col-form-label">Category Select</label>
                                             <div class="col-sm-10">
-                                                <select name="file_category_id" class="form-control" id="inputName">
+                                                <select name="category_id" class="form-control" id="inputName">
                                                     <option value="">Select Category</option>
                                                     @foreach ($category as $item)
                                                     <option value="{{ $item->id }}">{{$item->name}}</option>

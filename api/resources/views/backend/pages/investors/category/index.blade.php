@@ -19,7 +19,7 @@ JIL - {{ $name}}  Category
                         <div class="card-header"
                             style="display: flex; justify-content:space-between; align-items: center;">
                             <h5 class="card-title">{{ $name }} Category Table</h5>
-                            <a href="{{ route('file.category.create',[$name])}}" class="btn btn-primary">Add {{ $name}} Category</a>
+                            <a href="{{ route('category.create',[$name])}}" class="btn btn-primary">Add {{ $name}} Category</a>
                         </div>
                         <div class="card-body">
                             <table id="datatable1" class="display" style="width:100%">
@@ -37,7 +37,7 @@ JIL - {{ $name}}  Category
                                         <td>{{ $item->name }}</td>
                                         <td>{{ $item->slug }}</td>
                                         <td>
-                                            <form action="{{ route('file.category.destroy',[$item->id]) }}" method="POST">
+                                            <form action="{{ route('category.destroy',[$item->id]) }}" method="POST">
                                                 @csrf
                                                 @method('DELETE')
                                                 <button style="padding: 0; border:none; background:none; " type="submit"

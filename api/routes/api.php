@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\FinancialController;
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\ReportPolicyController;
 use App\Http\Controllers\TeamController;
 use App\Models\Contact;
 use Illuminate\Http\Request;
@@ -24,6 +26,14 @@ Route::post('contact', function (Request $request) {
 
 });
 
+// Route::middleware('auth:sanctum')->group(function () {
+//     Route::post('filter/financials', [FinancialController::class, 'filterFinancial']);
+//     Route::post('filter/report-policies', [ReportPolicyController::class, 'filterReportPolicies']);
+// });
 
 Route::get('management', [TeamController::class, 'allteam']);
 Route::get('news', [NewsController::class, 'allNews']);
+Route::get('financials', [FinancialController::class, 'allFinancials']);
+Route::post('filter/financials', [FinancialController::class, 'filterFinancial']);
+Route::get('report-policies', [ReportPolicyController::class, 'allReportPolicies']);
+Route::post('filter/report-policies', [ReportPolicyController::class, 'filterReportPolicies']);

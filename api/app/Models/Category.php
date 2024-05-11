@@ -11,8 +11,18 @@ class Category extends Model
 
     protected $fillable = [
         'name',
-        'description',
-        'order',
-        'status',
     ];
+
+    public function setNameAttribute($value){
+        $this->attributes['name'] = $value;
+        $this->attributes['slug'] = str_slug($value);
+    }
+
+    public function financial(){
+        return $this->hasMany(Financial::class);
+    }
+
+    public function reportPolicy(){
+        return $this->hasMany(ReportPolicy::class);
+    }
 }

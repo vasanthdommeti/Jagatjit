@@ -21,10 +21,10 @@ JIL - file Category
                         <div class="card-body">
                             <div class="example-container">
                                 <div class="example-content">
-                                    <form action="{{ route('file.category.store') }}" method="POST">
+                                    <form action="{{ route('category.store') }}" method="POST">
                                         @csrf
                                         <div class="mb-3 row">
-                                            <label for="inputName" class="col-sm-2 col-form-label">File Category Name</label>
+                                            <label for="inputName" class="col-sm-2 col-form-label">Category Name</label>
                                             <div class="col-sm-10">
                                                 <input type="text" name="name" class="form-control" id="inputName">
                                             </div>

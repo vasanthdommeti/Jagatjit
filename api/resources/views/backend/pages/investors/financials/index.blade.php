@@ -28,7 +28,7 @@ JIL - Files
                                         <th>Files Name</th>
                                         <th>Files Link</th>
                                         <th>Files Description</th>
-                                        <th>Files Category</th>
+                                        <th>Category</th>
                                         <th>Date</th>
                                         <th>Action</th>
                                     </tr>
