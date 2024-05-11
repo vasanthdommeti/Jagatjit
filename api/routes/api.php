@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\NewsController;
+use App\Http\Controllers\TeamController;
 use App\Models\Contact;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
@@ -21,3 +23,7 @@ Route::post('contact', function (Request $request) {
     ]);
 
 });
+
+
+Route::get('management', [TeamController::class, 'allteam']);
+Route::get('news', [NewsController::class, 'allNews']);

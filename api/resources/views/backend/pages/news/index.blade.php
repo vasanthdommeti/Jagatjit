@@ -19,7 +19,7 @@ JIL - Award Press
                         <div class="card-header"
                             style="display: flex; justify-content:space-between; align-items: center;">
                             <h5 class="card-title">News Table</h5>
-                            <a href="{{ route('award-press.create')}}" class="btn btn-primary">Add New News</a>
+                            <a href="{{ route('new.create')}}" class="btn btn-primary">Add New News</a>
                         </div>
                         @if (session('success'))
 
@@ -48,92 +48,25 @@ JIL - Award Press
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($press as $item)
+                                    @foreach ($news as $item)
                                     <tr>
                                         <td>{{ $item->order }}</td>
                                         <td>{{ $item->name }}</td>
                                         <td>{{ $item->link }}</td>
                                         <td>
-                                            @if (!empty($item->award_press_image))
+                                            @if (!empty($item->news_image))
                                             <button class="btn btn-secondary image-btn" data-bs-toggle="modal"
-                                                data-bs-target="#imageModal" data-img-url="{{$item->award_press_image}}">
-                                                <img src="{{$item->award_press_image}}" alt="Thumbnail"
+                                                data-bs-target="#imageModal" data-img-url="{{$item->news_image}}">
+                                                <img src="{{$item->news_image}}" alt="Thumbnail"
                                                     style="width: 50px; height: 50px; border-radius: 50%;">
                                             </button>
                                             @endif
                                         </td>
                                         <td>{{ $item->status }}</td>
                                         <td class="d-flex">
-                                            <a href="{{ route('award-press.edit',[$item->id]) }}"
+                                            <a href="{{ route('new.edit',[$item->id]) }}"
                                                 class="btn btn-primary">Edit</a>
-                                            <form action="{{ route('award-press.destroy',[$item->id]) }}" method="POST">
-                                                @csrf
-                                                @method('DELETE')
-                                                <button type="submit" class="btn btn-danger">delete</button>
-                                            </form>
-                                        </td>
-                                    </tr>
-
-                                    @endforeach
-                                </tbody>
-                            </table>
-
-                        </div>
-
-                    </div>
-                    <div class="card">
-                        <div class="card-header"
-                            style="display: flex; justify-content:space-between; align-items: center;">
-                            <h5 class="card-title">Award Table</h5>
-                            <a href="{{ route('award-press.create')}}" class="btn btn-primary">Add New Award</a>
-                        </div>
-                        @if (session('success'))
-
-                        <div class="alert alert-success" role="alert">
-                            {{ session('success') }}
-                        </div>
-
-                        @endif
-                        @if (session('danger'))
-
-                        <div class="alert alert-danger" role="alert">
-                            {{ session('danger') }}
-                        </div>
-
-                        @endif
-                        <div class="card-body">
-                            <table id="datatable" class="display" style="width:100%">
-                                <thead>
-                                    <tr>
-                                        <th>Order</th>
-                                        <th>Name</th>
-                                        <th>Link</th>
-                                        <th>Image</th>
-                                        <th>Status</th>
-                                        <th>Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @foreach ($award as $item)
-
-                                    <tr>
-                                        <td>{{ $item->order }}</td>
-                                        <td>{{ $item->name }}</td>
-                                        <td>{{ $item->link }}</td>
-                                        <td>
-                                            @if (!empty($item->award_press_image))
-                                            <button class="btn btn-secondary image-btn" data-bs-toggle="modal"
-                                                data-bs-target="#imageModal" data-img-url="{{$item->award_press_image}}">
-                                                <img src="{{$item->award_press_image}}" alt="Thumbnail"
-                                                    style="width: 50px; height: 50px; border-radius: 50%;">
-                                            </button>
-                                            @endif
-                                        </td>
-                                        <td>{{ $item->status }}</td>
-                                        <td class="d-flex">
-                                            <a href="{{ route('award-press.edit',[$item->id]) }}"
-                                                class="btn btn-primary">Edit</a>
-                                            <form action="{{ route('award-press.destroy',[$item->id]) }}" method="POST">
+                                            <form action="{{ route('new.destroy',[$item->id]) }}" method="POST">
                                                 @csrf
                                                 @method('DELETE')
                                                 <button type="submit" class="btn btn-danger">delete</button>

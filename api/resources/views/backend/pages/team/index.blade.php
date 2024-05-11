@@ -63,8 +63,8 @@ JIL - Profile
                                             @endif
                                         </td>
                                         <td class="d-flex">
-                                            <a href="{{ route('team.edit',[$item->id]) }}"
-                                                class="btn btn-primary">Edit</a>
+                                            {{-- <a href="{{ route('team.edit',[$item->id]) }}"
+                                                class="btn btn-primary">Edit</a> --}}
                                             <form action="{{ route('team.destroy',[$item->id]) }}" method="POST">
                                                 @csrf
                                                 @method('DELETE')

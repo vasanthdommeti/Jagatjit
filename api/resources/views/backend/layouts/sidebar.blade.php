@@ -23,6 +23,14 @@
             <li>
                 <a href="{{ route('contacts.index')}}"><i class="material-icons-two-tone">support_agent</i>Contact</a>
             </li>
+
+            <li>
+                <a href="{{ route('team.index')}}"><i class="material-icons-two-tone">people</i>Team Table</a>
+            </li>
+
+            <li>
+                <a href="{{ route('new.index')}}"><i class="material-icons-two-tone">people</i>News Table</a>
+            </li>
         </ul>
     </div>
 </div>

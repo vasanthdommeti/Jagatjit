@@ -39,9 +39,21 @@ JIL - Editing
                             </div>
                         </div>
                         <div class="mb-3 row">
-                            <label class="col-sm-2 col-form-label">Description</label>
+                            <label class="col-sm-2 col-form-label">Experience</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="inputEmail3" name="designation" required value="{{ $team->designation }}">
+                                <input type="number" class="form-control" id="inputEmail3" name="experience" value="{{ $team->experience }}" required>
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label class="col-sm-2 col-form-label">Education</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="inputEmail3" name="education" value="{{ $team->education }}" required>
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label class="col-sm-2 col-form-label">Joined Date</label>
+                            <div class="col-sm-10">
+                                <input type="date" class="form-control" id="inputEmail3" name="joined_at" value="{{ $team->joined_at }}" required>
                             </div>
                         </div>
                         <div class="mb-3 row">
@@ -65,7 +77,7 @@ JIL - Editing
                                 <input type="number" class="form-control" id="inputEmail3" name="order" required value="{{ $team->order }}">
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-primary">Update Milestone</button>
+                        <button type="submit" class="btn btn-primary">Edit Team</button>
                     </form>
                 </div>
             </div>

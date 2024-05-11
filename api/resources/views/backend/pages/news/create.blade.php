@@ -13,13 +13,13 @@ JIL - Making
 <main class="mt-5 team-content">
     <!--breadcrumb-->
     <div class="mb-3 team-breadcrumb d-none d-sm-flex align-items-center">
-        <div class="breadcrumb-title pe-3">Team Create</div>
+        <div class="breadcrumb-title pe-3">News Create</div>
         <div class="ps-3">
             <nav aria-label="breadcrumb">
                 <ol class="p-0 mb-0 breadcrumb">
                     <li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i></a>
                     </li>
-                    <li class="breadcrumb-item active" aria-current="team">Team Create</li>
+                    <li class="breadcrumb-item active" aria-current="team">News Create</li>
                 </ol>
             </nav>
         </div>
@@ -30,10 +30,10 @@ JIL - Making
 
             <div class="card">
                 <div class="card-body">
-                    <form action="{{ route('award-press.store')}}" method="POST" enctype="multipart/form-data">
+                    <form action="{{ route('new.store')}}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="mb-3 row">
-                            <label for="inputEmail3" class="col-sm-2 col-form-label">Award/Press name</label>
+                            <label for="inputEmail3" class="col-sm-2 col-form-label">News name</label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" id="inputEmail3" name="name" required>
                             </div>
@@ -45,9 +45,9 @@ JIL - Making
                             </div>
                         </div>
                         <div class="mb-3 row">
-                            <label for="headerimage" class="col-sm-2 col-form-label">Award/Press Image</label>
+                            <label for="headerimage" class="col-sm-2 col-form-label">News Image</label>
                             <div class="col-sm-10">
-                                <input type="file" class="form-control" id="headerimage" name="award_press_image">
+                                <input type="file" class="form-control" id="headerimage" name="news_image">
                             </div>
                         </div>
                         <div class="mb-3 row">
@@ -57,15 +57,15 @@ JIL - Making
                             </div>
                         </div>
                         <div class="mb-3 row">
-                            <label for="status" class="col-sm-2 col-form-label">Section</label>
+                            <label for="status" class="col-sm-2 col-form-label">Status</label>
                             <div class="col-sm-10">
                                 <select type="text" class="form-control" id="status" name="status">
-                                    <option value="award">Award</option>
-                                    <option value="press">News</option>
+                                    <option value="publish">Publish</option>
+                                    <option value="draft">Draft</option>
                                 </select>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-primary">Add Award/Press</button>
+                        <button type="submit" class="btn btn-primary">Add News</button>
                     </form>
                 </div>
             </div>

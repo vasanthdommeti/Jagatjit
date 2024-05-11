@@ -33,15 +33,27 @@ JIL - Making
                     <form action="{{ route('team.store')}}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="mb-3 row">
-                            <label for="inputEmail3" class="col-sm-2 col-form-label">Team name</label>
+                            <label for="inputEmail3" class="col-sm-2 col-form-label">Full Name</label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" id="inputEmail3" name="name" required>
                             </div>
                         </div>
                         <div class="mb-3 row">
-                            <label class="col-sm-2 col-form-label">Designation</label>
+                            <label class="col-sm-2 col-form-label">Experience</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="inputEmail3" name="designation" required>
+                                <input type="number" class="form-control" id="inputEmail3" name="experience" required>
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label class="col-sm-2 col-form-label">Education</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="inputEmail3" name="education" required>
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label class="col-sm-2 col-form-label">Joined Date</label>
+                            <div class="col-sm-10">
+                                <input type="date" class="form-control" id="inputEmail3" name="joined_at" required>
                             </div>
                         </div>
                         <div class="mb-3 row">
