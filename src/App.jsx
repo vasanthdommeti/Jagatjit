@@ -17,6 +17,7 @@ import { Csr } from "./Components/Investors/Csr/Csr";
 import { CodeOfCunduct } from "./Components/Investors/CodeOfCunduct/CodeOfCunduct";
 import { Heritage } from "./Components/AboutUs/Heritage/Heritage";
 import AcPremiumOld from "./Components/Products/Liquor/AcpremiumOld/AcpremiumOld";
+import { DamnScotch } from "./Components/Products/Liquor/DamnScotch/DamnScotch";
 function App() {
   return (
     <>
@@ -26,6 +27,7 @@ function App() {
           <Route path="/products/liquor/ACpremiumOld" element={<AcPremiumOld />} />
           <Route path="/products/liquor/ACpremiumBlack" element={<AcBlack />} />
           <Route path="/products/liquor/RoyalPride" element={<RoyalPride />} />
+        <Route path="/products/liquor/DamnGoodScotch" element={<DamnScotch />} />
           <Route path="/products/mff" element={<Malt />} />
           <Route path="/products/ethnol" element={<Ethanol />} />
           <Route path="/aboutUs/values" element={<Values />} />

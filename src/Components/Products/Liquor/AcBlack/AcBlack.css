@@ -1,39 +1,80 @@
 @import url('https://fonts.googleapis.com/css?family=Lobster');
+/* @import url('https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400;1,700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400;1,700&family=Jura:wght@300..700&display=swap');
 
 .acblackFirstDiv {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-self: center;
+    height: 100vh;
 }
 
 .acblackRowContent {
     align-self: center;
+    width: 50%;
 }
 
+.acblackImgcontent {
+    align-self: center;
+}
+
+/* font-family: Krona One; */
+/* font-family: Fredoka; */
+/* font-family: 'Josefin Sans'; */
 .acblackColumnContent {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    /* padding: 10%; */
+    padding: 10%;
 }
-acblacksecondimg.png
+
+/* acblacksecondimg.png */
 
 .acblackSecondDiv {
     background-image: url('../../../../Assets/Products/Liquor/AcBlack/acblacksecondimg.png');
     background-position: bottom;
     background-size: contain;
+    height: 100vh;
     background-repeat: no-repeat;
-    aspect-ratio: 16/7.41;
+    align-content: start;
+    /* aspect-ratio: 16/7.41; */
 }
 
 .acblackThirdDiv {
     background-image: url('../../../../Assets/Products/Liquor/AcBlack/acblackthridimg.png');
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
-    aspect-ratio: 16/8.81;
+    height: 100vh;
+    /* aspect-ratio: 16/8.81; */
+}
 
+.acblackHeading {
+    color: #FFFFFF;
+    font-family: "Jura";
+    font-size: calc(50px + 1vw);
+    font-weight: 700;
+    margin-bottom: 0;
+    letter-spacing: 15px;
+    text-align: left;
+}
+
+.acblacksecondHeading {
+    color: #ED4E11;
+    font-family: "Andika";
+    font-size: calc(21px + 1vw);
+    letter-spacing: 1px;
+    text-align: left;
+    margin-bottom: 35px;
+}
+
+.acblackParagraph {
+    color: #FFFFFF;
+    font-family: 'Josefin Sans';
+    font-size: calc(18px + 1vw);
+    letter-spacing: 1px;
+    text-align: justify;
 }
 
 .candleimage {
@@ -43,54 +84,78 @@ acblacksecondimg.png
 }
 
 .acblackSecondDivHeading {
-    font-family: 'Lobster', cursive;
+    font-family: 'Krona One';
+    font-size: calc(30px + 1vw);
+    font-weight: 700;
+    margin-bottom: 0;
+    text-align: right;
+    letter-spacing: 4px;
+
+    /* font-family: 'Lobster', cursive; */
+}
+
+.acblackThirdDivHeading {
+    font-family: 'Krona One';
+    font-size: calc(22px + 1vw);
+    font-weight: 200;
+    margin-bottom: 0;
+    text-align: left;
+    letter-spacing: 1px;
+    margin: 2%;
 }
 
 .acblackSecondDivParagraph {
-    width: 30%;
+    width: 40%;
     text-align: right;
+    font-family: 'Josefin Sans';
+    font-weight: 100;
+    opacity: 0.6;
 }
 
-.acblackThirdDivContent {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10%;
-    width: 60%;
-}
 
 .candleimagehide {
     display: none;
 }
 
+.acblackFourthDiv {
+    height: 100vh;
+}
+
+.arrowHeading {
+    font-size: 21px;
+    margin-bottom: 0%;
+}
+
+.leftArrowDiv {
+    border-color: white;
+    padding: 1%;
+    border-width: 1px;
+    border-style: solid;
+    border-left-color: black;
+    border-top-right-radius: 15%;
+    border-bottom-right-radius: 15%;
+    display: flex;
+    text-align: right;
+}
+
+.rightArrowDiv {
+    border-color: white;
+    padding: 1%;
+    border-width: 1px;
+    border-style: solid;
+    border-right-color: black;
+    border-top-left-radius: 15%;
+    border-bottom-left-radius: 15%;
+    display: flex;
+
+}
+
 .acblackThirdDivContent {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-
-.royalprideThirdDivContent {
-    display: flex;
-    flex-direction: column;
-    text-align: right;
-    align-self: flex-end;
-    padding: 10%;
-}
-
-.royalpridehide {
-    display: none;
-}
-
-.candleimagesingle {
-    margin: 5%;
-    object-fit: cover;
-}
-
-.rowdiv {
-    display: flex;
     width: 60%;
-    align-self: flex-end;
+    padding: 5%;
 }
 
 .imageText {
@@ -115,6 +180,7 @@ acblacksecondimg.png
 
     .acblackRowContent {
         text-align: center;
+        padding: 10%;
     }
 
     .acblackColumnContent {
@@ -153,21 +219,20 @@ acblacksecondimg.png
         display: none;
     }
 
-    /* //royalpride */
-    .rowdiv {
-        display: none;
+    .acblackHeading {
+        font-size: 20px;
+        margin-bottom: 0;
+        font-weight: 500;
+        letter-spacing: 4px;
     }
 
-    .royalpridehide {
-        display: flex;
-        align-self: center;
-        flex-direction: column;
-        align-items: center;
-        margin: 10%;
+    .acblacksecondHeading {
+        font-size: 14px;
+        margin-bottom: 35px;
     }
 
-    .royalprideshow {
-        display: none;
+    .acblackParagraph {
+        font-size: 12px;
+        width: 70%;
     }
-
 }

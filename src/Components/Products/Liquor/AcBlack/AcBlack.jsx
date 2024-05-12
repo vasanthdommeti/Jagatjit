@@ -1,35 +1,48 @@
 import React from "react";
 import '../AcBlack/AcBlack.css';
+// import { FaArrowLeftLong } from "react-icons/fa6";
+import { HiArrowLongLeft, HiOutlineArrowLongRight } from "react-icons/hi2";
 import acblackfirstImg from '../../../../Assets/Products/Liquor/AcBlack/acblackfirstimg.png';
 import acblacksecondImg from '../../../../Assets/Products/Liquor/AcBlack/acblacksecondimg.png';
 import candles from '../../../../Assets/Products/Liquor/AcBlack/candles.png';
 import acblacklastImg from '../../../../Assets/Products/Liquor/AcBlack/acblacklastimg.png';
+import candle from '../../../../Assets/Products/Liquor/RoyalPride/candle.png';
+import glass from '../../../../Assets/Products/Liquor/RoyalPride/glass.png';
+import hotglass from '../../../../Assets/Products/Liquor/RoyalPride/hotglass.png';
+import lipglass from '../../../../Assets/Products/Liquor/RoyalPride/lipglass.png';
+import acblack from '../../../../Assets/Products/Liquor/AcBlack/acblack.png';
+import damnscotch from '../../../../Assets/Products/Liquor/AcBlack/damnscotch.png';
 
 export const AcBlack = () => {
     return (
         <section>
-            {/* //1 */}
+            {/* //1 completed */}
             <div className="acblackFirstDiv">
-                <div className="acblackRowContent">
-                    <h1>
-                        AC BLACK
-                    </h1>
-                    <h4>
-                        PURE GRAIN WHISKEY
-                    </h4>
-                    <p>
-                        The smooth taste and packaging embody a well-crafted melding of fine malt whisky from Scotland, and the finest Indian grain spirits
-                    </p>
-                </div>
-                <div >
-                    <img src={acblackfirstImg} alt="acblack" style={{ width: '100%' }} />
+                <div style={{ display: 'flex', alignSelf: 'center', paddingLeft: '7%', paddingRight: '5%' }}>
+                    <div className="acblackRowContent">
+                        <h1 className="acblackHeading">
+                            AC BLACK
+                        </h1>
+                        <h4 className="acblacksecondHeading">
+                            PURE GRAIN WHISKEY
+                        </h4>
+                        <p className="acblackParagraph">
+                            The smooth taste and packaging embody a well-crafted melding of fine malt whisky from Scotland, and the finest Indian grain spirits.
+                        </p>
+                    </div>
+                    <div className="acblackImgcontent">
+                        <img src={acblackfirstImg} alt="acblack" style={{ width: '100%', }} />
+                    </div>
                 </div>
             </div>
-            {/* //2 */}
+            {/* //2 completed*/}
             <div className="acblackSecondDiv">
                 <div className="acblackColumnContent">
                     <h1 className="acblackSecondDivHeading">
-                        Endless Possibilities
+                        Endless
+                    </h1>
+                    <h1 className="acblackSecondDivHeading">
+                        Possibilities
                     </h1>
                     <p className="acblackSecondDivParagraph">
                         AC Black has been lauded by the Confederatin of Indian Alcoholic Beverage Companies,
@@ -38,19 +51,79 @@ export const AcBlack = () => {
                 </div>
                 {/* <img src={acblacksecondImg} alt="acblack" /> */}
             </div>
-            {/* //3 */}
-            <img src={candles} alt="block" className="candleimagehide" />
+            {/* //3 completed but alignment small images*/}
+            {/* <img src={candles} alt="block" className="candleimagehide" /> */}
+            <div className="candleimagehide">
+                <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', margin: '2%', width: '40%' }}>
+                        <img src={glass} alt="" />
+                        <p>Elegant and long-lasting</p>
+                    </div>
+                    <div style={{ display: 'flex', alignItems: 'center', margin: '2%', width: '40%' }}>
+                        <img src={candle} alt="" />
+                        <p>Deep Gold</p>
+                    </div>
+                    <div style={{ display: 'flex', alignItems: 'center', margin: '2%', width: '40%' }}>
+                        <img src={lipglass} alt="" />
+                        <p>Smooth on the palate, green apple and spices</p>
+                    </div>
+                    <div style={{ display: 'flex', alignItems: 'center', margin: '2%', width: '40%' }}>
+                        <img src={hotglass} alt="" />
+                        <p>Honeyed, floral, with malty notes and a touch of spices</p>
+                    </div>
+                </div>
+            </div>
             <div className="acblackThirdDiv">
                 <div className="acblackThirdDivContent">
-                    <h1 className="acblackSecondDivHeading">
+                    <h1 className="acblackThirdDivHeading">
                         An elegant blend that pays hoage to those who
                         enjoy the finer things in life.
                     </h1>
-                    <img src={candles} alt="block" className="candleimage" />
+                    {/* <img src={candles} alt="block" className="candleimage" /> */}
+                    <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
+                        <div style={{ display: 'flex', alignItems: 'center', margin: '2%', width: '40%' }}>
+                            <img src={glass} alt="" />
+                            <p>Elegant and long-lasting</p>
+                        </div>
+                        <div style={{ display: 'flex', alignItems: 'center', margin: '2%', width: '40%' }}>
+                            <img src={candle} alt="" />
+                            <p>Deep Gold</p>
+                        </div>
+                        <div style={{ display: 'flex', alignItems: 'center', margin: '2%', width: '40%' }}>
+                            <img src={lipglass} alt="" />
+                            <p>Smooth on the palate, green apple and spices</p>
+                        </div>
+                        <div style={{ display: 'flex', alignItems: 'center', margin: '2%', width: '40%' }}>
+                            <img src={hotglass} alt="" />
+                            <p>Honeyed, floral, with malty notes and a touch of spices</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div>
-                <img src={acblacklastImg} alt="lastImg" style={{ height: '100%', width: '100%' }} />
+            <div className="acblackFourthDiv">
+                <div style={{ justifyContent: 'center', display: 'flex' }}>
+                    <img src={acblacklastImg} alt="lastImg" style={{ height: '60%', width: '60%' }} />
+                </div>
+                <div style={{ justifyContent: 'center', display: 'flex', flexDirection: 'row' }}>
+                    <div className="leftArrowDiv">
+                        <div style={{ textAlign: 'right', alignSelf: 'center', }}>
+                            <h1 className="arrowHeading">Aristocrat Premium (New)</h1>
+                            <HiArrowLongLeft style={{ fontSize: '55px' }} />
+                        </div>
+                        <div>
+                            <img src={acblack} alt="block" style={{ height: '150px', marginLeft: '25px', marginRight: '25px' }} />
+                        </div>
+                    </div>
+                    <div className="rightArrowDiv">
+                        <div>
+                            <img src={damnscotch} alt="block" style={{ height: '150px', marginLeft: '25px', marginRight: '25px' }} />
+                        </div>
+                        <div style={{ textAlign: 'left', alignSelf: 'center' }}>
+                            <h1 className="arrowHeading">Damn Good Scotch</h1>
+                            <HiOutlineArrowLongRight style={{ fontSize: '55px' }} />
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     )

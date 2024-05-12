@@ -1,19 +1,23 @@
-
-
 body {
   margin: 0;
   padding: 0;
-  background-color: #010101; /* Set background color to black */
+  background-color: #010101;
+  /* Set background color to black */
   font-family: 'Montserrat', sans-serif;
 }
- 
+
 .privacy-policy {
-  padding: 5%;
-  width: 100%; /* Adjust width as needed (optional) */
-  margin: 2; /* Use vh for vertical margin */
-  color: #fff; /* Set text color to white */
+  padding: 8%;
+  text-align: justify;
+  width: 100%;
+  /* Adjust width as needed (optional) */
+  margin: 2;
+  /* Use vh for vertical margin */
+  color: #fff;
+  /* Set text color to white */
 }
-.privacyheading{
+
+.privacyheading {
   text-align: center;
   color: #fff;
   font-size: 4rem;
@@ -22,7 +26,8 @@ body {
 
 .privacy-policy h1,
 .privacy-policy h2 {
-  color: #ECA533; /* Set heading color to orange */
+  color: #ECA533;
+  /* Set heading color to orange */
   margin-bottom: 20px;
   font-weight: bold;
 }
