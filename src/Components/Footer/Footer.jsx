@@ -42,7 +42,7 @@ function Footer() {
             </div>
             <div className='footerCredits footerCreditsText'>
                 <p className='allRightsparagraph'>All rights reserved. 2024. Designed by Webness</p>
-                <div style={{ justifyContent: 'space-between', display: 'flex' }}><Link to={'/PrivacyPolicys'} style={{ marginRight: 20, textDecoration:'none', color:'white' }}><span>Privacy Policy</span></Link> <Link to={'/Terms&Condition'} style={{ marginLeft: 20, textDecoration:'none', color:'white' }}>Terms And Conditions</Link></div>
+                <div style={{ justifyContent: 'space-between', display: 'flex' }}><Link to={'/PrivacyPolicy'} style={{ marginRight: 20, textDecoration:'none', color:'white' }}><span>Privacy Policy</span></Link> <Link to={'/Terms&Condition'} style={{ marginLeft: 20, textDecoration:'none', color:'white' }}>Terms And Conditions</Link></div>
             </div>
         </footer >
     );

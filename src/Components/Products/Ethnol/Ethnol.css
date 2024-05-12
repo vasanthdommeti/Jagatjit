@@ -1,78 +1,17 @@
 
 
-.firstDiv {
-  text-align: center;
-  padding-top: 10%;
-  padding-left: 5%;
-  padding-right: 5%;
-  justify-content: center;
-
-
-  /* background-color: aquamarine; */
-}
-
-.maltsubHeading {
-  font-size: 28px;
-  font-weight: bold;
-  line-height: 1px;
-  letter-spacing: 1px;
-  margin-top: 4%;
-}
-
-.maltparagraph {
-  font-size: 18px;
-  font-weight: 500;
-  letter-spacing: 1px;
-
-}
-
-.imgTxtcontentDiv {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding-left: 5%;
-  padding-right: 5%;
-}
-
-.maltdivText {
-  text-align: left;
-  /* width: 60%; */
-}
-
-.threeImageDiv {
-  display: flex;
-  flex-direction: row;
-}
-
-.maltImglogo {
-  width: 400px;
-  height: 400px;
-  object-fit: contain;
-  align-self: center;
-}
-
-.maltImglogo2 {
-  width: 200px;
-  height: 200px;
-  object-fit: contain;
-  align-self: center;
-  margin-right: 30px;
-}
-
-
-
 /* ethanol page */
-
 .ethanolfirstDiv {
   background-image: url('../../../Assets/Products/Ethnol/ethanolBg.png');
-  width: 100vw;
+  width: 100%;
+  background-position: center;
   height: 100vh;
   background-repeat: no-repeat;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  top: 0;
 }
 
 .ethanolHeading {
@@ -81,7 +20,34 @@
   font-family: 'Josefin Sans';
   align-self: center;
 }
-
+.ethanolsubHeading {
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.maltparagraph {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-align: left;
+}
+.mainlogoContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 5%;
+}
+.logoContent {
+  width: 90px;
+  margin: 20px;
+  /* background-color: blanchedalmond; */
+}
+.logoImgDrop {
+  height: 60px;
+  width: 60px;
+  object-fit: contain;
+}
 .logoTxt {
   font-size: 10px;
   font-weight: 100;
@@ -89,22 +55,4 @@
   font-family: 'Josefin Sans';
   align-self: center;
   /* width: 30%; */
-}
-
-.logoImgDrop {
-  height: 60px;
-  width: 60px;
-  object-fit: contain;
-}
-
-.logoContent {
-  width: 90px;
-  margin: 15px;
-  /* background-color: blanchedalmond; */
-}
-
-.mainlogoContent {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
 }

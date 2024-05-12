@@ -1,18 +1,18 @@
 
 
-.mainDiv{
+.valuesmainDiv{
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.firstDiv{
+.valuesfirstDiv{
   text-align: center;
+  padding-top: 10%;
 }
 
 .logoDiv{
   text-align: center;
   margin: 5%;
-  width: 100%;
 }
 .logoTextDiv{
   display: flex;
@@ -59,6 +59,7 @@
 @media (max-width:641px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
   .logoTextDiv{
       flex-direction: column;
+      padding: 5%;
   }
   .logoDiv{
       align-self: center;

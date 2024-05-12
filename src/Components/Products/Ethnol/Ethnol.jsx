@@ -5,14 +5,14 @@ import grains from '../../../Assets/Products/Ethnol/grains.png';
 import drop from '../../../Assets/Products/Ethnol/waterdrop.png';
 
 export const Ethanol = () => {
-    return (
+    return ( 
         <section>
             <div className="ethanolfirstDiv">
                 <h1 className="ethanolHeading">Manufacturing</h1>
                 <h1 className="ethanolHeading">Grain-Based Ethanol</h1>
             </div>
-            <div style={{ paddingLeft: '5%', paddingRight: '5%' }}>
-                <h1 className="maltsubHeading">
+            <div style={{ paddingLeft: '5%', paddingRight: '5%', marginTop:'10%'}}>
+                <h1 className="ethanolsubHeading">
                     What is Ethanol?
                 </h1>
                 <p className="maltparagraph">
@@ -40,7 +40,7 @@ export const Ethanol = () => {
                 </div>
             </div>
             <div style={{ paddingLeft: '5%', paddingRight: '5%', paddingBottom: '10%' }}>
-                <h1 className="maltsubHeading">
+                <h1 className="ethanolsubHeading">
                     How we manufacture Ethanol?
                 </h1>
                 <p className="maltparagraph">
@@ -57,7 +57,7 @@ export const Ethanol = () => {
     )
 }
 
-<section>
+{/* <section>
     <div><br /><span>
         What is Ethanol?
         <br /><br /></span><span>
@@ -79,4 +79,4 @@ export const Ethanol = () => {
     <div ><span>Made from Rice and Maiz</span><span >e</span></div>
 
     <div>Bio Fuel with low carbon emmisions</div>
-</section>
+</section> */}

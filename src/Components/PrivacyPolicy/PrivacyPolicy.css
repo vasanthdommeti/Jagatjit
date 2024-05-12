@@ -6,11 +6,18 @@ body {
   background-color: #010101; /* Set background color to black */
   font-family: 'Montserrat', sans-serif;
 }
-
+ 
 .privacy-policy {
-  width: 70%; /* Adjust width as needed (optional) */
-  margin: 2vh auto; /* Use vh for vertical margin */
+  padding: 5%;
+  width: 100%; /* Adjust width as needed (optional) */
+  margin: 2; /* Use vh for vertical margin */
   color: #fff; /* Set text color to white */
+}
+.privacyheading{
+  text-align: center;
+  color: #fff;
+  font-size: 4rem;
+  font-family: 'Josefin Sans';
 }
 
 .privacy-policy h1,

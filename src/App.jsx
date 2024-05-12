@@ -11,20 +11,19 @@ import { Ethanol } from "./Components/Products/Ethnol/Ethnol";
 import { Malt } from "./Components/Products/Mff/Malt";
 import { RoyalPride } from "./Components/Products/Liquor/RoyalPride/RoyalPride";
 import { AcBlack } from "./Components/Products/Liquor/AcBlack/AcBlack";
-import { AcPremiumNew } from "./Components/Products/Liquor/AcpremiumNew/AcpremiumNew";
-import AcPremiumOld from "./Components/Products/Liquor/AcpremiumOld/AcpremiumOld";
 import { Sustainability } from "./Components/Sustainability/Sustainability";
 import { PrivacyPolicy } from "./Components/PrivacyPolicy/PrivacyPolicy";
-import { Csr } from "./Components/Csr/Csr";
+import { Csr } from "./Components/Investors/Csr/Csr";
+import { CodeOfCunduct } from "./Components/Investors/CodeOfCunduct/CodeOfCunduct";
+import { Heritage } from "./Components/AboutUs/Heritage/Heritage";
+import AcPremiumOld from "./Components/Products/Liquor/AcpremiumOld/AcpremiumOld";
 function App() {
   return (
-    <div style={{ backgroundColor: 'black', color: 'white', width:'100%' }}>
+    <>
       <Navbar />
-      <div style={{ backgroundColor: 'transperent', color: 'white' }}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/products/liquor/ACpremiumOld" element={<AcPremiumOld />} />
-          <Route path="/products/liquor/ACpremiumNew" element={<AcPremiumNew />} />
           <Route path="/products/liquor/ACpremiumBlack" element={<AcBlack />} />
           <Route path="/products/liquor/RoyalPride" element={<RoyalPride />} />
           <Route path="/products/mff" element={<Malt />} />
@@ -33,10 +32,11 @@ function App() {
           <Route path="/Sustainability" element={<Sustainability />} />
           <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
           <Route path="/investors/csr" element={<Csr />} />
+          <Route path="/investors/codeOfCunduct" element={<CodeOfCunduct />} />
+          <Route path="/AboutUs/Heritage" element={<Heritage />} />
         </Routes>
-      </div>
       <Footer />
-    </div>
+    </>
   )
 }
 

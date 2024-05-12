@@ -15,8 +15,8 @@ import smart from '../../../Assets/AboutUs/Values/smart.png';
 
 export const Values = () => {
     return (
-        <section className="mainDiv">
-            <div className="firstDiv">
+        <section className="valuesmainDiv">
+            <div className="valuesfirstDiv">
                 <h1 className="firstDivHeader">Our Core Values</h1>
                 <p className="firstDivParagraph">What we believe in.</p>
             </div>

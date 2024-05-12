@@ -35,7 +35,7 @@ function Navbar() {
                     </li>
                     <li>
                         <DropdownButton id="dropdown-basic-button" className="dropdown-about" title="ABOUT US">
-                            <Dropdown.Item as={Link} to="/aboutUs/heritage" onClick={closeNav}>
+                            <Dropdown.Item as={Link} to="/AboutUs/Heritage" onClick={closeNav}>
                                 HERITAGE
                             </Dropdown.Item>
                             <Dropdown.Item as={Link} to="/aboutUs/ourTeam" onClick={closeNav}>
