@@ -48,10 +48,10 @@ function Navbar() {
                                 PRESS
                             </Dropdown.Item>
                         </DropdownButton>
-                    </li>
-                    <li>
+                    </li> 
+                    <li> 
                         <DropdownButton id="dropdown-basic-button" drop='down' className="dropdown-about" title="PRODUCTS">
-                            <DropdownButton id="dropdown-basic-button" drop='left' className="dropdown-about" title="LIQUOR">
+                            <DropdownButton id="dropdown-basic-button" drop='left' className="dropdown-liquor dropdown-about" title="LIQUOR">
                                 <Dropdown.Item as={Link} to="/products/liquor/ACpremiumOld" onClick={closeNav}>
                                     AC PREMIUM (OLD)
                                 </Dropdown.Item>

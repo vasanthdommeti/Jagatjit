@@ -169,6 +169,8 @@
 .damnleftArrowDiv {
   border-color: white;
   padding: 1%;
+  color: #FFFFFF;
+  text-decoration: none;
   border-width: 1px;
   border-style: solid;
   border-left-color: black;
@@ -181,6 +183,8 @@
 .damnrightArrowDiv {
   border-color: white;
   padding: 1%;
+  color: #FFFFFF;
+  text-decoration: none;
   border-width: 1px;
   border-style: solid;
   border-right-color: black;

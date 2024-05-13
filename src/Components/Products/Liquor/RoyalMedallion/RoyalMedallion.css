@@ -12,21 +12,23 @@
     align-self: center;
     width: 75%;
 }
-.medalionHeading {
+.medalionHeading { 
     color: #FFFFFF;
     font-family: 'Krona One';
     font-size: calc(35px + 1vw);
     font-weight: bold;
     margin-bottom: 0;
     text-align: left;
+    letter-spacing: 10px;
 }
 .medalionsecondHeading {
-    color: #ED4E11;
+    color: #9A1112;
     font-family: "Andika";
     font-size: calc(21px + 1vw);
     letter-spacing: 5px;
     text-align: left;
     margin-bottom: 35px;
+    margin-top: 3%;
 }
 .medalionParagraph {
     color: #FFFFFF;
@@ -46,6 +48,10 @@
     background-repeat: no-repeat;
     height: 100vh;
     border-style: dashed;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    padding: 5%;
 
     /* aspect-ratio: 15/7.2; */
 }
@@ -54,7 +60,7 @@
     display: flex;
     flex-direction: column;
     /* align-items: flex-end; */
-    padding: 10%;
+    /* padding: 10%; */
 }
 
 .medalionSecondDivHeading {
@@ -78,7 +84,7 @@
     opacity: 0.8;
     font-size: 24px;
     letter-spacing: 1px;
-    margin-top: 3%;
+    margin-top: 2%;
 }
 
 /* /33 */
@@ -92,10 +98,43 @@
     height: 100vh;
     border-style: dashed;
     align-self: flex-start;
-
-
 }
 
+.medalionThirdDivHeading{
+    font-family: 'Krona One';
+    font-size: calc(30px + 1vw);
+    font-weight: 700;
+    margin-bottom: 0;
+    text-align: center;
+    text-align: left;
+    letter-spacing: 4px;
+}
+.medalionThirdColumnContent{
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+}
+.medalionrowdiv {
+    display: flex;
+    flex-direction: column;
+    /* width: 5%; */
+    margin-top: 2%;
+    /* justify-content: space-between; */
+    /* align-self: center; */
+  }
+  .medalioncandleimagesingle {
+    display: flex;
+    /* height: 20%; */
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    object-fit: cover;
+    margin-right: 5%;
+    width: 40%;
+  }
+  .thirdlogoimg{
+    height: 122px;
+  }
 /* //4 */
 
 .medalionFourthDiv {
@@ -106,6 +145,8 @@
 
 .medalionleftArrowDiv {
     border-color: white;
+    color: #FFFFFF;
+    text-decoration: none;
     padding: 1%;
     border-width: 1px;
     border-style: solid;
@@ -119,6 +160,8 @@
 .medalionrightArrowDiv {
     border-color: white;
     padding: 1%;
+    color: #FFFFFF;
+    text-decoration: none;
     border-width: 1px;
     border-style: solid;
     border-right-color: black;

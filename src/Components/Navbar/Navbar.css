@@ -29,6 +29,10 @@ nav ul {
 nav ul li {
     list-style: none;
 }
+nav ul :hover {
+    color: #D38A14;
+
+}
 
 nav ul li a {
     display: block;
@@ -85,6 +89,10 @@ nav .menu span {
     border-color:transparent;
     display: flex;
 }
+.dropdown-liquor{
+    display: flex;
+    margin-left: 5%;
+}
 
 .dropdown-about .dropdown-toggle:hover {
     color: #D38A14;
@@ -124,7 +132,7 @@ nav ul.dropdown-li:hover {
 }
 
 .dropdown-about .dropdown-item:hover {
-    background-color: white;
+    background-color:  #D38A14;
     color: black;
 }
 /* nav ul .open:active{

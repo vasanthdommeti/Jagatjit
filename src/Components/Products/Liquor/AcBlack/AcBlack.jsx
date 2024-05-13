@@ -12,6 +12,7 @@ import hotglass from '../../../../Assets/Products/Liquor/RoyalPride/hotglass.png
 import lipglass from '../../../../Assets/Products/Liquor/RoyalPride/lipglass.png';
 import acblack from '../../../../Assets/Products/Liquor/AcBlack/acblack.png';
 import damnscotch from '../../../../Assets/Products/Liquor/AcBlack/damnscotch.png';
+import { Link } from "react-router-dom";
 
 export const AcBlack = () => {
     return (
@@ -105,7 +106,7 @@ export const AcBlack = () => {
                     <img src={acblacklastImg} alt="lastImg" style={{ height: '60%', width: '60%' }} />
                 </div>
                 <div style={{ justifyContent: 'center', display: 'flex', flexDirection: 'row' }}>
-                    <div className="leftArrowDiv">
+                    <Link to={'/products/liquor/ACpremiumNew'} className="leftArrowDiv">
                         <div style={{ textAlign: 'right', alignSelf: 'center', }}>
                             <h1 className="arrowHeading">Aristocrat Premium (New)</h1>
                             <HiArrowLongLeft style={{ fontSize: '55px' }} />
@@ -113,16 +114,16 @@ export const AcBlack = () => {
                         <div>
                             <img src={acblack} alt="block" style={{ height: '150px', marginLeft: '25px', marginRight: '25px' }} />
                         </div>
-                    </div>
-                    <div className="rightArrowDiv">
+                    </Link>
+                    <Link to='/products/liquor/RoyalPride' className="rightArrowDiv">
                         <div>
                             <img src={damnscotch} alt="block" style={{ height: '150px', marginLeft: '25px', marginRight: '25px' }} />
                         </div>
                         <div style={{ textAlign: 'left', alignSelf: 'center' }}>
-                            <h1 className="arrowHeading">Damn Good Scotch</h1>
+                            <h1 className="arrowHeading">Royal Pride</h1>
                             <HiOutlineArrowLongRight style={{ fontSize: '55px' }} />
                         </div>
-                    </div>
+                    </Link>
                 </div>
             </div>
         </section>

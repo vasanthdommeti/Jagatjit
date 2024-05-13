@@ -15,6 +15,7 @@ import distik from '../../../../Assets/Products/Liquor/AcpremiumOld/distik.png';
 import glasss from '../../../../Assets/Products/Liquor/AcpremiumOld/glass.png';
 import acblack from '../../../../Assets/Products/Liquor/AcBlack/acblack.png';
 import damnscotch from '../../../../Assets/Products/Liquor/AcBlack/damnscotch.png';
+import { Link } from "react-router-dom";
 export const RoyalPride = () => {
     return (
         <section>
@@ -137,16 +138,16 @@ export const RoyalPride = () => {
                     <img src={royalpridelastimage} alt="lastImg" style={{ height: '60%', width: '60%' }} />
                 </div>
                 <div style={{ justifyContent: 'center', display: 'flex', flexDirection: 'row' }}>
-                    <div className="royalleftArrowDiv">
+                    <Link to={'/products/liquor/ACpremiumBlack'} className="royalleftArrowDiv">
                         <div style={{ textAlign: 'right', alignSelf: 'center', }}>
-                            <h1 className="royalarrowHeading">Aristocrat Premium (New)</h1>
+                            <h1 className="royalarrowHeading">Aristocrat Premium Black</h1>
                             <HiArrowLongLeft style={{ fontSize: '55px' }} />
                         </div>
                         <div>
                             <img src={acblack} alt="block" style={{ height: '150px', marginLeft: '25px', marginRight: '25px' }} />
                         </div>
-                    </div>
-                    <div className="royalrightArrowDiv">
+                    </Link>
+                    <Link to={'/products/liquor/DamnGoodScotch'} className="royalrightArrowDiv">
                         <div>
                             <img src={damnscotch} alt="block" style={{ height: '150px', marginLeft: '25px', marginRight: '25px' }} />
                         </div>
@@ -154,7 +155,7 @@ export const RoyalPride = () => {
                             <h1 className="royalarrowHeading">Damn Good Scotch</h1>
                             <HiOutlineArrowLongRight style={{ fontSize: '55px' }} />
                         </div>
-                    </div>
+                    </Link>
                 </div>
             </div>
         </section>
