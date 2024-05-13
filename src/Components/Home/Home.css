@@ -1,22 +1,56 @@
-
-
 #sectionImage1 {
     background-image: url('../../Assets/Home/sec1backgroundImg.png');
 }
-.sectionBottleDiv{
+
+.sectionBottleDiv {
     position: relative;
-    min-height: 100vh;
+    max-height: 100vh;
     background-size: contain;
+    background-position: bottom;
     position: relative;
     background-repeat: no-repeat;
+    /* aspect-ratio: 14 / 7.3; */
 }
 
+.sectionImage1Div{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-end; */
+    align-items: flex-start;
+    position: fixed;
+    padding: 13%;
+}
+.section1Heading{
+    font-size: 75px;
+    color: #ECA533;
+    font-family: 'Josefin Sans';
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin-bottom: 0;
+}
+.section1subHeading{
+    font-size: 60px;
+    color: #fff;
+    font-family: 'Josefin Sans';
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+.section1paragraph{
+    font-size: 24px;
+    color: #fff;
+    /* font-family: 'Josefin Sans'; */
+    font-weight: 100;
+    letter-spacing: 3px;
+}
 #sectionImage2 {
     background-image: url('../../Assets/Home/sec2backgroundImg.png');
 }
 
 #sectionImage3 {
     background-image: url('../../Assets/Home/sec3backgroundImg.png');
+    display: flex;
+    justify-content: center;
+    padding: 5%;
     /* display: flex;
     flex-direction: column;
     justify-content: center; */
@@ -32,6 +66,7 @@
     background-size: cover;
     background-position: right;
     place-items: center;
+    height: 100vh;
     /* aspect-ratio: 16 / 8.71; */
     /* display: flex;
     flex-direction: column;
@@ -44,15 +79,24 @@
 
 .section {
     width: 100%;
-    height: auto;
+    height: 100vh;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     place-items: center;
-    aspect-ratio: 16 / 8.71;
+    /* aspect-ratio: 16 / 8.71; */
 
 }
 
-.section2{
+.section1 {
+    /* width: 100%; */
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    place-items: center;
+    /* aspect-ratio: 17 / 8.78; */
+}
+
+.section2 {
     width: 100%;
     height: auto;
     background-repeat: no-repeat;
@@ -60,36 +104,46 @@
     place-items: center;
     aspect-ratio: 16 / 8.71;
 }
+
 .section3GroupHeaderDiv {
-    width: 100%;
+    /* width: 100%; */
     align-self: center;
     justify-content: center;
 }
 
 .section3Image {
-   width: 100%;
-   height: auto; 
-   /* margin: 5%; */
+    width: 100%;
+    /* width: 100%; */
+    /* width: 100%; */
+    /* height: auto; */
+    /* margin: 5%; */
 }
 
+.sectionThreeMainDiv{
+    display: flex;
+    align-self: center;
+    align-items: center;
+}
 .section3MainDiv {
     display: flex;
-    padding: 8% 5% 5% 5%;
-    flex-direction: row;
+    /* padding: 8% 5% 5% 5%; */
+    /* flex-direction: row; */
     justify-content: space-around;
-    align-items: center;
-    /* padding: 10%; */
+    /* align-items: center; */
+    /* margin: auto; */
+    padding: 10%;
     /* width: 70%; */
 }
 
 .section3Header {
-    font-size: 35px;
+    font-size: 50px;
     font-family: 'Josefin Sans';
     font-weight: 100;
-    letter-spacing: 4px;
+    letter-spacing: 5px;
     text-decoration: none;
     margin-bottom: 0%;
     opacity: 0.9;
+    /* width: 50vw; */
 }
 
 .section3Paragraph {
@@ -157,13 +211,21 @@
 .mainDiv {
     padding-left: 5%;
 }
- 
+
 .transformText {
     font-size: 200px;
     font-family: 'Josefin Sans';
     -webkit-text-stroke-width: 2;
     -webkit-text-stroke-color: 'white';
     opacity: 0.6;
+}
+
+.sectionMargin {
+    padding-top: 15%;
+}
+.section3GroupImagesDiv{
+    /* object-fit: contain; */
+    
 }
 
 /* @media (min-width:320px) {
@@ -190,39 +252,57 @@
         /* padding: 10%; */
         /* width: 70%; */
     }
+
     .section {
         background-repeat: no-repeat;
         background-size: cover;
         place-items: center;
         height: auto;
-        background-position: center;    
+        background-position: center;
     }
+
+    .section1 {
+        background-repeat: no-repeat;
+        background-size: cover;
+        place-items: center;
+        height: auto;
+        background-position: center;
+    }
+
     #sectionImage5 {
-    opacity: 0.6;
+        opacity: 0.6;
     }
-    
+
     .section3GroupHeaderDiv {
         padding-left: 7%;
         margin-bottom: 5%;
     }
+
+
     .section5Image {
         width: 150px;
         height: 150px;
         margin: 6px 6px 6px 5px;
         border-radius: 12px;
     }
+
     #sectionImage6 {
         background-size: cover;
         background-color: #ECA533;
     }
-  }
 
-  @media only screen and (max-width: 1200px) {
+    .sectionThreeMainDiv {
+        /* padding-top: 15%; */
+    }
+}
+
+@media only screen and (max-width: 1200px) {
     .section3Header {
         font-size: 30px;
         font-family: 'Josefin Sans';
     }
-  }
+}
+
 /* @media (min-width:641px) {
 
     portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones

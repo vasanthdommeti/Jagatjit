@@ -7,11 +7,17 @@ import brewImage from '../../Assets/Home/brewingImage.png';
 import storageImage from '../../Assets/Home/storageImage.png';
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import acpsecond from '../../Assets/Home/SectionTwoImages/royalPride.png';
+import mapImage from '../../Assets/Home/sec6backgroundImg.png';
 // import LogoIcon from '../../Assests/LogoIcon.png'
 
 
 function Home() {
     gsap.registerPlugin(ScrollTrigger);
+
+    const imagesBlock = [
+        { 'id': 1, 'header': 'ROYAL PRIDE', 'paragraph': 'EXQUISTITE WHISKEY', 'subParagraph': 'Reinvent yourself with Every Sip.', 'src': acpsecond }
+    ]
 
     const firstRef = useRef(null);
 
@@ -58,9 +64,17 @@ function Home() {
     }, []);
     // ref={wrapperRef}
     return (
-        <div className="App" >
-            {/* <section className="main" data-pin="true">
-                <div id='sectionImage1' className='sectionBottleDiv'>
+        <div className="App" ref={wrapperRef}>
+            {/* //1 */}
+            <section className="main" data-pin="true"  >
+                <div id='sectionImage1' className='sectionBottleDiv' >
+                    <div className="sectionImage1Div">
+                        <h1 className="section1Heading">Brewing Magic</h1>
+                        <h1 className="section1subHeading">Since 1994</h1>
+                        <p className="section1paragraph">Explore our curated selection of</p>
+                        <p className="section1paragraph">premium liquor</p>
+                        <button className='section3Button'>BROWSE MORE</button>
+                    </div>
                     <img
                         ref={firstRef}
                         className="imageContainer1"
@@ -68,15 +82,28 @@ function Home() {
                         alt="hell"
                     />
                 </div>
-            </section> */}
+            </section>
+
             {/* //2 */}
             {/* <section>
                 <div id='sectionImage2' className='section2'>
+                    <div className='section3MainDiv' style={{flexDirection:'row-reverse'}}>
+                    <div>
+                        <h1>{imagesBlock[0].header}</h1>
+                        <p>{imagesBlock[0].paragraph}</p>
+                        <p>{imagesBlock[0].subParagraph}</p>
+                        <button>read more</button>
+                    </div>
+                    <div style={{display:'flex', flexDirection:'row', justifyContent:'space-between'}}>
+                        <img src={imagesBlock[0].src} alt="bottle" style={{height:'400px'}}/>
+                        <div>images block</div>
+                    </div>
+                    </div>
                 </div>
             </section> */}
             {/* /3/  completed*/} 
-            <section id='sectionImage3' className='section'>
-                    <div className='section3MainDiv'>
+            <section id='sectionImage3' className='section1'>
+                {/* <div className='sectionThreeMainDiv'> */}
                         <div className='section3GroupHeaderDiv'>
                             <h1 className='section3Header'>We sold over</h1>
                             <h1 style={{ color: '#ECA533' }} className='section3Header'>30 Billion Cases</h1>
@@ -88,16 +115,16 @@ function Home() {
                         <div className='section3GroupImagesDiv'>
                             <img src={section3Image} alt='Img' className='section3Image' />
                         </div>
-                    </div>
+                    {/* </div> */}
             </section>
             {/* //4 */}
-            {/* <section>
-                <div id='sectionImage4' className='section'>
-                </div>
-            </section> */}
-            {/* //5 complete */}
             <section>
-                <div id='sectionImage5' >
+                <div id='sectionImage4' className='section1'>
+                </div>
+            </section>
+            {/* //5 complete */}
+            <section id='sectionImage5'>
+                {/* <div id='sectionImage5' > */}
                     <div className='section3MainDiv'>
                         <div className='section3GroupHeaderDiv'>
                             <h1 className='section5Header'>Where does all the</h1>
@@ -114,12 +141,16 @@ function Home() {
                             </div>
                         </div>
                     </div>
-                </div>
+                {/* </div> */}
             </section>
-            <h1 className='section6Header'>JIL's Presence & Reach</h1>
             <section>
-                <div id='sectionImage6' className='section'>
+                {/* <div id='sectionImage6' className='section'>
+                </div> */}
+                <div style={{height:'100vh'}}>
+                <h1 className='section6Header'>JIL's Presence & Reach</h1>
+                <img src={mapImage} alt="mapImage" style={{width:'100%'}}/>
                 </div>
+
             </section>
         </div>
     )

@@ -6,7 +6,6 @@
   justify-content: space-between;
   align-self: center;
   height: 100vh;
-  border-style: dashed;
 }
 
 .acDryGinImgcontent{
@@ -44,7 +43,6 @@
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
-  border-style: dashed;
 
   /* aspect-ratio: 15/7.2; */
 }
@@ -88,7 +86,6 @@
   background-repeat: no-repeat;
   /* aspect-ratio: 16/8.81; */
   height: 100vh;
-  border-style: dashed;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -129,7 +126,6 @@
 
 .acDryGinFourthDiv {
   height: 100vh;
-  border-style: dashed;
 
 }
 
