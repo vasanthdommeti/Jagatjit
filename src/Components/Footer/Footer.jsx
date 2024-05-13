@@ -1,9 +1,11 @@
+
 import React from 'react';
 import './Footer.css';
-import logo from '../../Assests/LogoIcon.png'
+import logo from '../../Assets/LogoIcon.png'
 import { CiLocationOn } from "react-icons/ci";
 import { FiMail } from "react-icons/fi";
 import { GrPhone } from "react-icons/gr";
+import { Link } from 'react-router-dom';
 
 function Footer() {
     return (
@@ -25,10 +27,10 @@ function Footer() {
                     </div>
                     <div className='footerInfo'>
                         <h1>MORE INFO</h1>
-                        <p className='contactParagraph'>Sustainability</p>
-                        <p className='contactParagraph'>Press</p>
-                        <p className='contactParagraph'>Global Presence</p>
-                        <p className='contactParagraph'>Contact Us</p>
+                        <Link to={'/Sustainability'}  className='contactParagraph'><p>Sustainability</p></Link>
+                        <Link to={'/Press'} className='contactParagraph'><p>Press</p></Link>
+                        <Link to={'/GlobalPresence'} className='contactParagraph'><p>Global Presence</p></Link>
+                        <Link to={'/ContactUs'} className='contactParagraph'><p>Contact Us</p></Link>
                     </div>
                 </div>
             </div>
@@ -40,7 +42,7 @@ function Footer() {
             </div>
             <div className='footerCredits footerCreditsText'>
                 <p className='allRightsparagraph'>All rights reserved. 2024. Designed by Webness</p>
-                <div style={{ justifyContent: 'space-between', display: 'flex' }}><span style={{ marginRight: 20 }}>Privacy Policy</span> <span style={{ marginLeft: 20 }}>Terms And Conditions</span></div>
+                <div style={{ justifyContent: 'space-between', display: 'flex' }}><Link to={'/PrivacyPolicy'} style={{ marginRight: 20, textDecoration:'none', color:'white' }}><span>Privacy Policy</span></Link> <Link to={'/Terms&Condition'} style={{ marginLeft: 20, textDecoration:'none', color:'white' }}>Terms And Conditions</Link></div>
             </div>
         </footer >
     );

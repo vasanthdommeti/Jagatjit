@@ -105,6 +105,8 @@ p {
 .contactParagraph {
     letter-spacing: 1px;
     line-height: 21px;
+    text-decoration: none;
+    color: #fff;
 }
 
 .secondParagraphInFooterRights {

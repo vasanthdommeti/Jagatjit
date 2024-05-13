@@ -1,0 +1,95 @@
+.wide-image-back {
+    background-image: url('../../../../Assets/Products/Liquor/AcpremiumOld/sc1background.png');
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-color: black;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16 / 9;
+    right: 0;
+    top: 0;
+}
+
+.top-image-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.wide-text-wrap {
+    width: 50%;
+    text-align: center;
+}
+
+.banner-title {
+    font-family: Krona One;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 67.35px;
+    letter-spacing: 0.07em;
+    color: #9A1112;
+}
+
+.banner-summary {
+    color: #ffffff;
+    font-family: Fredoka;
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 39.75px;
+    letter-spacing: 0.09em;
+}
+
+.banner-logo {
+    width: 50%;
+}
+
+/*mobile  */
+@media only screen and (max-width: 767px) {
+    .top-image-container {
+        flex-direction: column;
+    }
+
+    .wide-text-wrap {
+        width: 100%;
+    }
+
+    .banner-logo {
+        width: 70%;
+        aspect-ratio: 3/2;
+    }
+
+    .banner-title {
+        font-family: Krona One;
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 67.35px;
+        letter-spacing: 0.07em;
+        color: #9A1112;
+    }
+
+    .wide-image-wrap>img {
+        width: 100%;
+        height: auto;
+        padding-left: 8%;
+    }
+
+    .banner-summary {
+        color: #ffffff;
+        font-family: Fredoka;
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 20px;
+        letter-spacing: 0.09em;
+    }
+}
+
+/* tablet */
+@media only screen and (min-width: 768px) {}
+
+/*use only if nessacary for tablet to destop  */
+@media only screen and (min-width: 992px) and (max-width: 1200px) {}

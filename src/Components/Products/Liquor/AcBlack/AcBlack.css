@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+/* @import url('https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400;1,700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400;1,700&family=Jura:wght@300..700&display=swap');
+
+.acblackFirstDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: center;
+    height: 100vh;
+}
+
+.acblackRowContent {
+    align-self: center;
+    width: 50%;
+}
+
+.acblackImgcontent {
+    align-self: center;
+}
+
+/* font-family: Krona One; */
+/* font-family: Fredoka; */
+/* font-family: 'Josefin Sans'; */
+.acblackColumnContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 10%;
+}
+
+/* acblacksecondimg.png */
+
+.acblackSecondDiv {
+    background-image: url('../../../../Assets/Products/Liquor/AcBlack/acblacksecondimg.png');
+    background-position: bottom;
+    background-size: contain;
+    height: 100vh;
+    background-repeat: no-repeat;
+    align-content: start;
+    /* aspect-ratio: 16/7.41; */
+}
+
+.acblackThirdDiv {
+    background-image: url('../../../../Assets/Products/Liquor/AcBlack/acblackthridimg.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    /* aspect-ratio: 16/8.81; */
+}
+
+.acblackHeading {
+    color: #FFFFFF;
+    font-family: "Jura";
+    font-size: calc(50px + 1vw);
+    font-weight: 700;
+    margin-bottom: 0;
+    letter-spacing: 15px;
+    text-align: left;
+}
+
+.acblacksecondHeading {
+    color: #ED4E11;
+    font-family: "Andika";
+    font-size: calc(21px + 1vw);
+    letter-spacing: 1px;
+    text-align: left;
+    margin-bottom: 35px;
+}
+
+.acblackParagraph {
+    color: #FFFFFF;
+    font-family: 'Josefin Sans';
+    font-size: calc(18px + 1vw);
+    letter-spacing: 1px;
+    text-align: justify;
+}
+
+.candleimage {
+    height: 50%;
+    width: 50%;
+    display: flex;
+}
+
+.acblackSecondDivHeading {
+    font-family: 'Krona One';
+    font-size: calc(30px + 1vw);
+    font-weight: 700;
+    margin-bottom: 0;
+    text-align: right;
+    letter-spacing: 4px;
+
+    /* font-family: 'Lobster', cursive; */
+}
+
+.acblackThirdDivHeading {
+    font-family: 'Krona One';
+    font-size: calc(22px + 1vw);
+    font-weight: 200;
+    margin-bottom: 0;
+    text-align: left;
+    letter-spacing: 1px;
+    margin: 2%;
+}
+
+.acblackSecondDivParagraph {
+    width: 40%;
+    text-align: right;
+    font-family: 'Josefin Sans';
+    font-weight: 100;
+    opacity: 0.6;
+}
+
+
+.candleimagehide {
+    display: none;
+}
+
+.acblackFourthDiv {
+    height: 100vh;
+}
+
+.arrowHeading {
+    font-size: 21px;
+    margin-bottom: 0%;
+}
+
+.leftArrowDiv {
+    border-color: white;
+    padding: 1%;
+    border-width: 1px;
+    border-style: solid;
+    border-left-color: black;
+    border-top-right-radius: 15%;
+    border-bottom-right-radius: 15%;
+    display: flex;
+    text-align: right;
+}
+
+.rightArrowDiv {
+    border-color: white;
+    padding: 1%;
+    border-width: 1px;
+    border-style: solid;
+    border-right-color: black;
+    border-top-left-radius: 15%;
+    border-bottom-left-radius: 15%;
+    display: flex;
+
+}
+
+.acblackThirdDivContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    padding: 5%;
+}
+
+.imageText {
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    margin-top: 5%;
+    margin-bottom: 5%;
+    align-self: center;
+}
+
+.logoimage {
+
+    margin-right: 3%;
+}
+
+@media (max-width: 768px) {
+    .acblackFirstDiv {
+        flex-direction: column;
+        align-self: center;
+    }
+
+    .acblackRowContent {
+        text-align: center;
+        padding: 10%;
+    }
+
+    .acblackColumnContent {
+        align-items: center;
+        padding: 10%;
+        text-align: center;
+    }
+
+    .acblackSecondDiv {
+        aspect-ratio: 9/7.41;
+    }
+
+    .acblackThirdDiv {
+        aspect-ratio: 4/2.20;
+    }
+
+    .acblackSecondDivParagraph {
+        width: 60%;
+        text-align: right;
+    }
+
+    .acblackThirdDivContent {
+        flex-direction: column-reverse;
+        align-items: flex-end;
+    }
+
+    .candleimagehide {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-self: center;
+        padding: 5%;
+    }
+
+    .candleimage {
+        display: none;
+    }
+
+    .acblackHeading {
+        font-size: 20px;
+        margin-bottom: 0;
+        font-weight: 500;
+        letter-spacing: 4px;
+    }
+
+    .acblacksecondHeading {
+        font-size: 14px;
+        margin-bottom: 35px;
+    }
+
+    .acblackParagraph {
+        font-size: 12px;
+        width: 70%;
+    }
+}
