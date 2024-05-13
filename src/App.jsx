@@ -18,6 +18,9 @@ import { CodeOfCunduct } from "./Components/Investors/CodeOfCunduct/CodeOfCunduc
 import { Heritage } from "./Components/AboutUs/Heritage/Heritage";
 import AcPremiumOld from "./Components/Products/Liquor/AcpremiumOld/AcpremiumOld";
 import { DamnScotch } from "./Components/Products/Liquor/DamnScotch/DamnScotch";
+import { AcDryGin } from "./Components/Products/Liquor/AcDryGin/AcDryGin";
+import { RoyalMedallion } from "./Components/Products/Liquor/RoyalMedallion/RoyalMedallion";
+import { ErrorPage } from "./Components/ErrorPage/ErrorPage";
 function App() {
   return (
     <>
@@ -27,7 +30,9 @@ function App() {
           <Route path="/products/liquor/ACpremiumOld" element={<AcPremiumOld />} />
           <Route path="/products/liquor/ACpremiumBlack" element={<AcBlack />} />
           <Route path="/products/liquor/RoyalPride" element={<RoyalPride />} />
-        <Route path="/products/liquor/DamnGoodScotch" element={<DamnScotch />} />
+          <Route path="/products/liquor/DamnGoodScotch" element={<DamnScotch />} />
+          <Route path="/products/liquor/AcDryGin" element={<AcDryGin />} />
+          <Route path="/products/liquor/RoyalMedallion" element={<RoyalMedallion />} />
           <Route path="/products/mff" element={<Malt />} />
           <Route path="/products/ethnol" element={<Ethanol />} />
           <Route path="/aboutUs/values" element={<Values />} />
@@ -36,6 +41,7 @@ function App() {
           <Route path="/investors/csr" element={<Csr />} />
           <Route path="/investors/codeOfCunduct" element={<CodeOfCunduct />} />
           <Route path="/AboutUs/Heritage" element={<Heritage />} />
+          <Route path="*" element={<ErrorPage />} />
         </Routes>
       <Footer />
     </>

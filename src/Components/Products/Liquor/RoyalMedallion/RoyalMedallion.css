@@ -1,0 +1,133 @@
+
+
+.medalionFirstDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: center;
+    height: 100vh;
+    border-style: dashed;
+}
+.medalionRowContent {
+    align-self: center;
+    width: 75%;
+}
+.medalionHeading {
+    color: #FFFFFF;
+    font-family: 'Krona One';
+    font-size: calc(35px + 1vw);
+    font-weight: bold;
+    margin-bottom: 0;
+    text-align: left;
+}
+.medalionsecondHeading {
+    color: #ED4E11;
+    font-family: "Andika";
+    font-size: calc(21px + 1vw);
+    letter-spacing: 5px;
+    text-align: left;
+    margin-bottom: 35px;
+}
+.medalionParagraph {
+    color: #FFFFFF;
+    font-family: 'Josefin Sans';
+    font-size: calc(16px + 1vw);
+    letter-spacing: 1px;
+    font-weight: 100;
+    opacity: 0.7;
+    text-align: justify;
+}
+
+/* 22 */
+.medalionSecondDiv {
+    background-image: url('../../../../Assets/Products/Liquor/RoyalMedalon/third.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    border-style: dashed;
+
+    /* aspect-ratio: 15/7.2; */
+}
+
+.medalionColumnContent {
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-end; */
+    padding: 10%;
+}
+
+.medalionSecondDivHeading {
+    /* font-family: 'Lobster', cursive; */
+    font-family: 'Krona One';
+    font-size: calc(30px + 1vw);
+    font-weight: 700;
+    margin-bottom: 0;
+    text-align: center;
+    /* text-align: right; */
+    letter-spacing: 4px;
+    /* width: 50%; */
+}
+
+.medalionSecondDivParagraph {
+    /* width: 25%; */
+    /* text-align: right; */
+    text-align: center;
+    font-family: 'Josefin Sans';
+    font-weight: 100;
+    opacity: 0.8;
+    font-size: 24px;
+    letter-spacing: 1px;
+    margin-top: 3%;
+}
+
+/* /33 */
+.medalionThirdDiv {
+    background-image: url('../../../../Assets/Products/Liquor/RoyalMedalon/second.png');
+    background-position: left;
+    background-size: cover;
+    /* width: 100%; */
+    background-repeat: no-repeat;
+    /* aspect-ratio: 16/8.81; */
+    height: 100vh;
+    border-style: dashed;
+    align-self: flex-start;
+
+
+}
+
+/* //4 */
+
+.medalionFourthDiv {
+    height: 100vh;
+    border-style: dashed;
+
+}
+
+.medalionleftArrowDiv {
+    border-color: white;
+    padding: 1%;
+    border-width: 1px;
+    border-style: solid;
+    border-left-color: black;
+    border-top-right-radius: 15%;
+    border-bottom-right-radius: 15%;
+    display: flex;
+    text-align: right;
+}
+
+.medalionrightArrowDiv {
+    border-color: white;
+    padding: 1%;
+    border-width: 1px;
+    border-style: solid;
+    border-right-color: black;
+    border-top-left-radius: 15%;
+    border-bottom-left-radius: 15%;
+    display: flex;
+}
+
+.medalionarrowHeading {
+    font-size: 21px;
+    margin-bottom: 0%;
+}

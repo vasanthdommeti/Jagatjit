@@ -1,9 +1,9 @@
 
 import React, { useEffect, useState } from 'react';
-import './Login.css'
-import logo from '../../Assests/LogoIcon.png'
+import '../DateOfBirth/DateOfBirth.css'
+import logo from '../../Assets/LogoIcon.png'
 
-function Login() {
+function DateOfBirth() {
     const [date, setDate] = useState(localStorage.getItem('date') || '');
     const ne = new Date();
     const years = ne.getFullYear();
@@ -80,4 +80,4 @@ function Login() {
     )
 }
 
-export default Login;
+export default DateOfBirth;

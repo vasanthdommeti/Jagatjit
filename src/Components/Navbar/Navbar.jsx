@@ -73,6 +73,9 @@ function Navbar() {
                                 <Dropdown.Item as={Link} to="/products/liquor/AcDryGin" onClick={closeNav}>
                                     AC DRY GIN
                                 </Dropdown.Item>
+                                <Dropdown.Item as={Link} to="/products/liquor/RoyalMedallion" onClick={closeNav}>
+                                    ROYAL MEDALLION
+                                </Dropdown.Item>
                             </DropdownButton>
                             <Dropdown.Item as={Link} to="/products/mff" onClick={closeNav}>
                                 MFF

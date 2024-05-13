@@ -1,0 +1,163 @@
+
+
+.acDryGinFirstDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-self: center;
+  height: 100vh;
+  border-style: dashed;
+}
+.acDryGinRowContent {
+  align-self: center;
+  width: 75%;
+}
+.acDryGinHeading {
+  color: #FFFFFF;
+  font-family: 'Krona One';
+  font-size: calc(35px + 1vw);
+  font-weight: bold;
+  margin-bottom: 0;
+  text-align: left;
+}
+.acDryGinsecondHeading {
+  color: #ED4E11;
+  font-family: "Andika";
+  font-size: calc(21px + 1vw);
+  letter-spacing: 5px;
+  text-align: left;
+  margin-bottom: 35px;
+}
+.acDryGinParagraph {
+  color: #FFFFFF;
+  font-family: 'Josefin Sans';
+  font-size: calc(16px + 1vw);
+  letter-spacing: 1px;
+  font-weight: 100;
+  opacity: 0.7;
+  text-align: justify;
+}
+
+/* 22 */
+.acDryGinSecondDiv {
+  background-image: url('../../../../Assets/Products/Liquor/AcDryGin/acdryginsec2img.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  border-style: dashed;
+
+  /* aspect-ratio: 15/7.2; */
+}
+
+.acDryGinColumnContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 10%;
+}
+
+
+.acDryGinSecondDivHeading {
+  /* font-family: 'Lobster', cursive; */
+  font-family: 'Krona One';
+  font-size: calc(30px + 1vw);
+  font-weight: 700;
+  margin-bottom: 0;
+  text-align: right;
+  letter-spacing: 4px;
+  width: 30%;
+}
+
+.acDryGinSecondDivParagraph {
+  width: 20%;
+  text-align: right;
+  font-family: 'Josefin Sans';
+  font-weight: 100;
+  opacity: 0.8;
+  font-size: 24px;
+  letter-spacing: 1px;
+  margin-top: 3%;
+}
+
+/* /33 */
+.acDryGinThirdDiv {
+  background-image: url('../../../../Assets/Products/Liquor/AcDryGin/acdryginsec3img.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* aspect-ratio: 16/8.81; */
+  height: 100vh;
+  border-style: dashed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+
+}
+.acDryGinThirdDivHeading{
+  font-family: 'Krona One';
+  font-size: calc(30px + 1vw);
+  font-weight: 700;
+  margin-bottom: 0;
+  text-align: left;
+  letter-spacing: 4px;
+  /* width: 50%; */
+}
+.acDryGinThirdDivParagraph{
+  /* width: 25%; */
+  text-align: left;
+  font-family: 'Josefin Sans';
+  font-weight: 100;
+  opacity: 0.8;
+  font-size: 24px;
+  letter-spacing: 1px;
+  margin-top: 3%;
+}
+.acDryGinThirdColumnContent{
+  display: flex;
+  width: 35%;
+  /* text-align: left; */
+  flex-direction: column;
+  padding: 5%;
+  /* justify-content: first baseline; */
+  /* align-items: center; */
+}
+
+/* //4 */
+
+.acDryGinFourthDiv {
+  height: 100vh;
+  border-style: dashed;
+
+}
+
+.acDryGinleftArrowDiv {
+  border-color: white;
+  padding: 1%;
+  border-width: 1px;
+  border-style: solid;
+  border-left-color: black;
+  border-top-right-radius: 15%;
+  border-bottom-right-radius: 15%;
+  display: flex;
+  text-align: right;
+}
+
+.acDryGinrightArrowDiv {
+  border-color: white;
+  padding: 1%;
+  border-width: 1px;
+  border-style: solid;
+  border-right-color: black;
+  border-top-left-radius: 15%;
+  border-bottom-left-radius: 15%;
+  display: flex;
+}
+
+.acDryGinarrowHeading {
+  font-size: 21px;
+  margin-bottom: 0%;
+}
