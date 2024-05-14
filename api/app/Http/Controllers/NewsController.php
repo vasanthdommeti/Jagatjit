@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\AchievementResource;
 use App\Http\Resources\NewsResource;
+use App\Models\Achievement;
 use App\Models\News;
 use Illuminate\Http\Request;
 
@@ -68,6 +70,15 @@ class NewsController extends Controller
     public function allNews()
     {
         $news = News::where('status', 'publish')->orderBy('order')->get();
-        return NewsResource::collection($news);
+        $achievement = Achievement::where('status', 'publish')->orderBy('order')->get();
+
+        $newsResource = NewsResource::collection($news);
+        $achievementResource = AchievementResource::collection($achievement);
+
+        return response()->json([
+            'news' => $newsResource,
+            'achievement' => $achievementResource,
+        ]);
+
     }
 }
