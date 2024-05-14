@@ -7,38 +7,33 @@ use Illuminate\Database\Eloquent\Model;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 
-class Team extends Model implements HasMedia
+class Achievement extends Model implements HasMedia
 {
     use HasFactory, InteractsWithMedia;
 
     protected $fillable = [
         'name',
-        'experience',
         'order',
-        'education',
-        'joined_at',
-        'designation',
+        'status',
+        'link',
     ];
 
     protected $casts = [
-        'joined_at' => 'datetime',
         'order' => 'integer',
     ];
 
     protected $appends = [
-        'team_image',
+        'achievement_image',
     ];
 
-    public function getTeamImageAttribute()
+    public function getAchievementImageAttribute()
     {
-        if ($this->hasMedia('team_image')) {
-            $mediaItem = $this->getMedia('team_image')->last();
+        if ($this->hasMedia('achievement_image')) {
+            $mediaItem = $this->getMedia('achievement_image')->last();
             $path = parse_url($mediaItem->getUrl(), PHP_URL_PATH);
             return config('app.cloudfront_url') . $path;
         }
 
-        return null;
+        return asset('frontend/img/logo.png');
     }
-
 }
-

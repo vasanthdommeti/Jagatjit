@@ -13,13 +13,13 @@ JIL - Making
 <main class="mt-5 team-content">
     <!--breadcrumb-->
     <div class="mb-3 team-breadcrumb d-none d-sm-flex align-items-center">
-        <div class="breadcrumb-title pe-3">Team Create</div>
+        <div class="breadcrumb-title pe-3">Corporate Create</div>
         <div class="ps-3">
             <nav aria-label="breadcrumb">
                 <ol class="p-0 mb-0 breadcrumb">
                     <li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i></a>
                     </li>
-                    <li class="breadcrumb-item active" aria-current="team">Team Create</li>
+                    <li class="breadcrumb-item active" aria-current="team">Corporate Create</li>
                 </ol>
             </nav>
         </div>
@@ -30,7 +30,7 @@ JIL - Making
 
             <div class="card">
                 <div class="card-body">
-                    <form action="{{ route('team.store')}}" method="POST" enctype="multipart/form-data">
+                    <form action="{{ route('corporate.store')}}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="mb-3 row">
                             <label for="inputEmail3" class="col-sm-2 col-form-label">Full Name</label>
@@ -51,21 +51,15 @@ JIL - Making
                             </div>
                         </div>
                         <div class="mb-3 row">
-                            <label class="col-sm-2 col-form-label">Education</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="inputEmail3" name="education" required>
-                            </div>
-                        </div>
-                        <div class="mb-3 row">
                             <label class="col-sm-2 col-form-label">Joined Date</label>
                             <div class="col-sm-10">
                                 <input type="date" class="form-control" id="inputEmail3" name="joined_at" required>
                             </div>
                         </div>
                         <div class="mb-3 row">
-                            <label for="headerimage" class="col-sm-2 col-form-label">Team Image</label>
+                            <label class="col-sm-2 col-form-label">Contact Email</label>
                             <div class="col-sm-10">
-                                <input type="file" class="form-control" id="headerimage" name="team_image">
+                                <input type="text" class="form-control" id="inputEmail3" name="contact_mail" required>
                             </div>
                         </div>
                         <div class="mb-3 row">

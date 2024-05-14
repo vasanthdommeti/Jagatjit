@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\AchievementController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\CorporateMembersController;
 use App\Http\Controllers\FinancialController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\ProfileController;
@@ -29,7 +31,8 @@ Route::middleware('auth')->group(function () {
     Route::resource('new', NewsController::class);
     Route::resource('financial', FinancialController::class);
     Route::resource('report', ReportPolicyController::class);
-
+    Route::resource('achievement', AchievementController::class);
+    Route::resource('corporate', CorporateMembersController::class);
     // File Category
     Route::get('/category/{type}',[CategoryController::class, 'index'])->name('category.index');
     Route::get('/category/create/{type}',[CategoryController::class, 'create'])->name('category.create');

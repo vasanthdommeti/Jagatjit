@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\CorporateResource;
 use App\Http\Resources\TeamResource;
+use App\Models\CorporateMembers;
 use App\Models\Team;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
@@ -28,10 +30,10 @@ class TeamController extends Controller
             'order' => 'required|integer',
             'education' => 'required',
             'joined_at' => 'required|date',
-            'team_image' => 'required|image',
+            'designation' => 'required',
         ]);
 
-        $team = Team::create($request->only('name', 'experience', 'order', 'education', 'joined_at'));
+        $team = Team::create($request->only('name', 'experience', 'order', 'education', 'joined_at', 'designation'));
 
         if ($request->hasFile('team_image')) {
             $team->addMedia($request->file('team_image'))->toMediaCollection('team_image', 's3');
@@ -53,10 +55,10 @@ class TeamController extends Controller
             'order' => 'required|integer',
             'education' => 'required',
             'joined_at' => 'required|date',
-            'team_image' => 'required|image',
+            'designation' => 'required',
         ]);
-        Log::info($request->all());
-        $team->update($request->only('name', 'experience', 'order', 'education', 'joined_at'));
+
+        $team->update($request->only('name', 'experience', 'order', 'education', 'joined_at', 'designation'));
 
         if ($request->hasFile('team_image')) {
             $team->addMedia($request->file('team_image'))->toMediaCollection('team_image', 's3');
@@ -74,6 +76,14 @@ class TeamController extends Controller
     public function allteam()
     {
         $team = Team::orderBy('order')->get();
-        return TeamResource::collection($team);
+        $corporate = CorporateMembers::orderBy('order')->get();
+
+        $teamResource = TeamResource::collection($team);
+        $corporateResource = CorporateResource::collection($corporate);
+
+        return response()->json([
+            'management' => $teamResource,
+            'corporateMembers' => $corporateResource
+        ]);
     }
 }

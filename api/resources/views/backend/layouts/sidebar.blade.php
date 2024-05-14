@@ -29,7 +29,15 @@
             </li>
 
             <li>
+                <a href="{{ route('corporate.index')}}"><i class="material-icons-two-tone">people</i>Corporate Member Table</a>
+            </li>
+
+            <li>
                 <a href="{{ route('new.index')}}"><i class="material-icons-two-tone">people</i>News Table</a>
+            </li>
+
+            <li>
+                <a href="{{ route('achievement.index')}}"><i class="material-icons-two-tone">people</i>Achievement Table</a>
             </li>
 
             <li>
