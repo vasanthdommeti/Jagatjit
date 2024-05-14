@@ -19,7 +19,7 @@ class AchievementResource extends JsonResource
             'order' => $this->order,
             'status' => $this->status,
             'link' => $this->link,
-            'news_image' => $this->news_image,
+            'achievement_image' => $this->achievement_image,
         ];
     }
 }
