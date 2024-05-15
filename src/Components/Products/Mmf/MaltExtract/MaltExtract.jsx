@@ -6,6 +6,7 @@ import milingProcess from '../../../../Assets/Products/Mmf/milling.png';
 import mashing from '../../../../Assets/Products/Mmf/mashing.png';
 import evaporation from '../../../../Assets/Products/Mmf/evoparation.png';
 import mainImg from '../../../../Assets/Products/Mmf/malt_bg_1.png';
+import filter from '../../../../Assets/Products/Mmf/filter.png';
 
 export const MaltExtract = () => {
     return (
@@ -49,7 +50,9 @@ export const MaltExtract = () => {
                 <div className="maltmilling-description"><h2>Milling</h2></div>
 
                 <div className="maltmilling-description">
-                    <p>To guarantee 100% extraction yield (= laboratory yield) as well as to guarantee the clearest possible wort, the malt must be milled very finely. For raw material with moisture content of 4% and over, we use a ventilated hammer mill with a horizontal shaft to finely grind malt, barley, sorghum and some cereals with moisture content up to 15 %. Because of the ventilated hammer mill, the risk of the mill being blocked because of humidity and of burning or explosion are overcome.</p>
+                    <p>
+                        To guarantee 100% extraction yield (= laboratory yield) as well as to guarantee the clearest possible wort, the malt must be milled very finely. For raw material with moisture content of 4% and over, we use a ventilated hammer mill with a horizontal shaft to finely grind malt, barley, sorghum and some cereals with moisture content up to 15 %. Because of the ventilated hammer mill, the risk of the mill being blocked because of humidity and of burning or explosion are overcome.
+                        </p>
                     <img src={milingProcess} alt="Milling Process" className="maltImage"/>
                 </div>
 
@@ -79,6 +82,7 @@ export const MaltExtract = () => {
 
                     <p>Next, the liquid is passed through a mash filter to produce ‘wort’. The aim of malt extract/cereal extract production is to obtain the clearest possible wort as well as wort with the highest gravity. The low gravity or weak wort is used in the next mashing-in and, if required, partly also during the initial sparging cycle of the mash filter to achieve high densities. Our mash filter assures clear and dense wort between 25 and 30° before evaporation.
                     </p>
+                    <img src={filter} alt="Mashing Process" className="maltImage"/>  
                 </div>
                 </div>
 {/* //4 */}

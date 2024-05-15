@@ -26,7 +26,7 @@ function Navbar() {
                     <span></span>
                     <span></span>
                     <span></span>
-                </div>
+                </div> 
             </div>
             <div>
                 <ul className={menuOpen ? "open" : "close"}>

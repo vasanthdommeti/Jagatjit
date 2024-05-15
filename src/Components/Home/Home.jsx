@@ -178,7 +178,7 @@ function Home() {
                     <div className='section3MainDiv'>
                         <img src={data.largeImg} alt="bottle" style={{ height: '450px' }} />
                         <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-around' }}>
-                            <div>
+                            <div> 
                                 <h1 className="btnheading">{data.name}</h1>
                                 <p className="btnsubheading">{data.heading}</p>
                                 <p className="btnparagraph"> {data.para}</p>
@@ -200,7 +200,7 @@ function Home() {
                 </div>
             </section>
             {/* /3/  completed*/}
-            <section id='sectionImage3' className='section1'>
+            <section id='sectionImage3' className='section1' >
                 {/* <div className='sectionThreeMainDiv'> */}
                 <div className='section3GroupHeaderDiv'>
                     <h1 className='section3Header'>We sold over</h1>
