@@ -1,0 +1,183 @@
+
+
+
+/* Make the page background black */
+.ourProcessMainDiv {
+  background-color: #010101;
+  margin: 0; /* Remove left/right margins for better layout control */
+  /* width: 100%; */
+
+}
+.ourProcess-process-container {
+  width: 90%; 
+  margin: 0 auto; 
+  padding: 20px;
+  text-align: justify; 
+  color: #FFFFFF;
+}
+
+/* Style the process title (h1) */
+.ourProcess-process-title {
+  font-family: 'Josefin Sans', sans-serif; 
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px; 
+  line-height: 48px; 
+  text-align: center;
+  margin-bottom: 20px; 
+}
+
+/* Other content paragraphs */
+.ourProcess-process-container p {
+  font-family: 'Montserrat', sans-serif; 
+  font-size: 18px; 
+  line-height: 1.5; 
+}
+
+.ourProcess-process-container h4 {
+    text-align: center;
+font-family: 'Josefin Sans';
+font-style: normal;
+font-weight: 100;
+font-size: 24px;
+line-height: 92.01%;
+letter-spacing: 0.09em;
+
+color: #FFFFFF;
+}
+.ourProcess-process-wrapper {
+display: flex; 
+flex-direction: row;
+justify-content: center;
+align-items: center;
+margin: 6%;
+/* Use flexbox for responsive layout */
+/* width: 100%;  */
+/* Take up full viewport width */
+/* height: 700px;  */
+/* Adjust height as needed */
+}
+
+/* Style the image container */
+.ourProcess-process-image {
+/* width: 0%;  */
+width: 450px;
+height: 450px;
+/* Take up 60% of the wrapper width */
+}
+
+/* Style the process description */
+.ourProcess-process-description {
+  /* width: 90%;  */
+padding: 20px 10px; /* Add padding for content and right margin */
+font-family: 'Josefin Sans', sans-serif;
+font-style: normal;
+font-weight: 700;
+font-size: 20px; /* Adjust font size as needed */
+line-height: 1.5; /* Adjust line-height for readability */
+color: #FFFFFF; /* White text color */
+}
+
+.ourProcess-process-title {
+font-family: 'Josefin Sans'; /* Adjust font family if needed */
+font-style: normal;
+font-weight: 700;
+font-size: 28px; /* Adjust font size as needed */
+line-height: 28px;
+display: flex;
+align-items: center;
+color: #FFFFFF;
+margin-bottom: 20px; /* Optional: Add spacing after the title */
+}
+
+.ourProcess-pre-blending-description {
+font-family: 'Montserrat'; 
+font-style: normal;
+font-weight: 400;
+font-size: 20px; 
+line-height: 24px;
+display: flex;
+align-items: left;
+color: #FFFFFF;
+padding: 20px; 
+}
+
+.ourProcess-process-wrappers {
+display: flex; 
+width: 100%; 
+height: 700px; 
+}
+
+.ourProcess-process-images {
+/* flex: 30%;  */
+order: 1; 
+}
+
+.ourProcess-process-descriptions {
+/* flex: 40%; */
+padding: 20px 10px; 
+font-family: 'Josefin Sans', sans-serif;
+text-align: left;
+font-style: normal;
+font-weight: 700;
+font-size: 20px; 
+line-height: 1.5; 
+color: #FFFFFF; 
+}
+
+.ourProcess-process-images img {
+width: 60%; /* Adjust image width as needed */
+height: auto; /* Maintain image aspect ratio */
+}
+
+.ourProcess-process-titles {
+/* flex: 40%;  */
+display: flex; /* Enable flexbox for child elements */
+flex-direction: column; /* Arrange elements side-by-side */
+font-family: 'Josefin Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 28px;
+line-height: 28px;
+text-align: left;
+align-items: start;
+color: #FFFFFF;
+margin-bottom: 10px;
+}
+
+/* Styles for the new text content */
+.ourProcess-pre-blending-descriptions {
+flex: 40%;
+display: flex;
+flex-direction: column;
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+text-align: left;
+align-items: start;
+color: #FFFFFF;
+padding: 20px;
+}
+
+@media (max-width: 768px) {
+.ourProcess-process-wrappers {
+flex-direction: column-reverse; 
+}
+.ourProcess-process-image,
+.ourProcess-process-description {
+/* flex: 100%;  */
+/* Take up full width on small screens */
+}
+}
+
+
+@media (max-width: 768px) {
+  .ourProcess-process-container {
+    width: 80%; /* Adjust width for smaller screens */
+  }
+  .ourProcess-process-title {
+    font-size: 36px; /* Adjust font size for smaller screens */
+  }
+}

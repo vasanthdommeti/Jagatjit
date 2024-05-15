@@ -1,0 +1,64 @@
+.bodySection {
+  background-color: #010101;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  
+
+}
+
+/* Malt background image */
+#bghead {
+  position: absolute;
+  width: 100%;
+  height: 60vh; 
+  top: -40px;
+  background: url(../../../../Assets/Products/Mmf/foodproducts.png);
+  background-size: contain;
+  background-position: right;
+  /* background-repeat: no-repeat; */
+}
+
+/* Malt Food Extract text */
+.texthead {
+  position: relative;
+  padding-top: 10%;
+  padding-bottom: 13%;
+  width: 100%;
+  font-family: 'Josefin Sans', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 110.41%;
+  text-align: center; 
+  letter-spacing: 0.07em;
+  color: #FFFFFF;
+}
+
+.textheadsmall {
+  position: relative;
+  padding-top: 5%;
+  width: 100%;
+  margin-left: 10%;
+ margin-right: 10%;
+  font-family: 'Josefin Sans', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  text-align: left; 
+  color: #FFFFFF;
+}
+
+.paraone {
+ width: 80%;
+ margin-left: 10%;
+ margin-right: 10%;
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  text-align: justify;
+  color: #FFFFFF;
+}

@@ -11,7 +11,7 @@ nav {
     top: 0;
     z-index: 2;
 
-}
+} 
 
 nav .title {
     font-size: 1.5rem;
@@ -28,6 +28,10 @@ nav ul {
 
 nav ul li {
     list-style: none;
+}
+nav ul :hover {
+    color: #D38A14;
+
 }
 
 nav ul li a {
@@ -77,13 +81,28 @@ nav .menu span {
   cursor: pointer;
 }
 
-
-
+.show>.btn-primary.dropdown-toggle{
+    background-color: black;
+    border-color: black;
+}
+.show>.btn-primary.dropdown-toggle:focus{
+    box-shadow: none;
+}
 /* ///dddd */
 .dropdown-about .dropdown-toggle {
     background-color: transparent;
     border-color:transparent;
     display: flex;
+}
+.dropdown-liquor{
+    display: flex;
+    margin-left: 5%;
+}
+.dropdown-liquor .dropdown-menu {
+    background-color: black;
+    border-color: #fff;
+    margin-left: 70%;
+    margin-top: -25%;
 }
 
 .dropdown-about .dropdown-toggle:hover {
@@ -124,8 +143,9 @@ nav ul.dropdown-li:hover {
 }
 
 .dropdown-about .dropdown-item:hover {
-    background-color: white;
+    background-color:  #D38A14;
     color: black;
+    
 }
 /* nav ul .open:active{
     display: none;

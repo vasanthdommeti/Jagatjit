@@ -19,6 +19,7 @@ import bottle from '../../../../Assets/Products/Liquor/AcpremiumOld/bottles.png'
 import distik from '../../../../Assets/Products/Liquor/AcpremiumOld/distik.png';
 import glasss from '../../../../Assets/Products/Liquor/AcpremiumOld/glass.png';
 import drums from '../../../../Assets/Products/Liquor/RoyalPride/drums.png';
+import { Link } from "react-router-dom";
 
 export const DamnScotch = () => {
   return (
@@ -135,24 +136,24 @@ export const DamnScotch = () => {
           <img src={lastSecimg} alt="lastImg" />
         </div>
         <div style={{ justifyContent: 'center', display: 'flex', flexDirection: 'row', marginTop: '5%' }}>
-          <div className="damnleftArrowDiv">
+          <Link to={'/products/liquor/RoyalPride'} className="damnleftArrowDiv">
             <div style={{ textAlign: 'right', alignSelf: 'center', }}>
-              <h1 className="damnarrowHeading">Aristocrat Premium (New)</h1>
+              <h1 className="damnarrowHeading">Royal Pride</h1>
               <HiArrowLongLeft style={{ fontSize: '55px' }} />
-            </div>
+            </div> 
             <div>
               <img src={acblack} alt="block" style={{ height: '150px', marginLeft: '25px', marginRight: '25px' }} />
-            </div>
-          </div>
-          <div className="damnrightArrowDiv">
+            </div> 
+          </Link>
+          <Link  to={'/products/liquor/AcDryGin'} className="damnrightArrowDiv">
             <div>
               <img src={damnscotch} alt="block" style={{ height: '150px', marginLeft: '25px', marginRight: '25px' }} />
             </div>
             <div style={{ textAlign: 'left', alignSelf: 'center' }}>
-              <h1 className="damnarrowHeading">Damn Good Scotch</h1>
+              <h1 className="damnarrowHeading">Aristocrat Dry Gin</h1>
               <HiOutlineArrowLongRight style={{ fontSize: '55px' }} />
             </div>
-          </div>
+          </Link>
         </div>
       </div>
     </section>

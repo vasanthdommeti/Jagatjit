@@ -1,36 +1,119 @@
-// import '../AcpremiumNew/AcpremiumNew.css'
-// import sc1logo from '../../../../Assets/Products/Liquor/AcpremiumOld/sc1logo.png'
-// import sc1bottle from '../../../../Assets/Products/Liquor/AcpremiumOld/sc1bottle.png'
-// import sc1bottlesmall from '../../../../Assets/Products/Liquor/AcpremiumOld/s1bottlesmall.png'
 
-// const AcPremiumNew = () => {
-//     return (
-//         <section className="top-wide-banner">
-//             <div className="wide-image-back">
-//             </div>
-//             <div className="top-image-container">
-//                 <div className="wide-text-wrap">
-//                     <img className='banner-logo' src={sc1logo} srcset="" alt="banner-logo" />
-//                     <h3 className="banner-title">CLASSIC WHISKEY</h3>
-//                     <p className="banner-summary">One of India's most-loved whiskey brands with its iconic gold and deep-red bottle,</p>
-//                 </div>
-//                 <div className="wide-image-wrap">
-//                     <picture>
-//                         <source
-//                             media="(max-width: 768px)"
-//                             srcSet={sc1bottlesmall}
-//                             sizes="768px"
-//                         />
-//                         <source
-//                             srcSet={sc1bottle}
-//                             sizes="1280px"
-//                         />
-//                         <img src={sc1bottle} />
-//                     </picture>
-//                 </div>
-//             </div>
-//         </section>
-//     )
-// }
 
-// export default AcPremiumNew;
+
+
+import React from "react";
+import "../AcpremiumNew/AcpremiumNew.css";
+import { HiArrowLongLeft, HiOutlineArrowLongRight } from "react-icons/hi2";
+import { Link } from "react-router-dom";
+
+import curtainImg from '../../../../Assets/Products/Liquor/AcpremiumOld/sectionCurtain.png';
+import flavourImgs from '../../../../Assets/Products/Liquor/AcpremiumNew/bottleimgsec.png';
+import flavourGroupimg from '../../../../Assets/Products/Liquor/AcpremiumNew/groupimgfav.png';
+import bottle from '../../../../Assets/Products/Liquor/AcpremiumOld/bottles.png';
+import distik from '../../../../Assets/Products/Liquor/AcpremiumOld/distik.png';
+import glass from '../../../../Assets/Products/Liquor/AcpremiumOld/glass.png';
+import acpsectiononelogo from '../../../../Assets/Products/Liquor/AcpremiumNew/acpsectiononelogo.png';
+import acpsectiontwoimg from '../../../../Assets/Products/Liquor/AcpremiumNew/acpremiumsecBottleImg.png';
+import acpblack from '../../../../Assets/Products/Liquor/AcpremiumNew/acblackImg.png';
+import acpnewImg from '../../../../Assets/Products/Liquor/AcpremiumNew/acpnewImg.png';
+import acplast from '../../../../Assets/Products/Liquor/AcpremiumNew/AcpProducts.png';
+
+export const AcpremiumNew = () => {
+    return (
+        <div>
+            {/* //1 */}
+            <div className="acpSecondPageSectionOneImage">
+                <div className="acpNewTextDiv">
+                    <h2 className="aristocratSecondHeading">THE ALL NEW</h2>
+                    <img src={acpsectiononelogo} alt="bottleImg" style={{ height: '40%', width: '50%', marginLeft:'-5%' }} />
+                    <p className="aristocratParagraph">One of India's most-loved whiskey brands with its iconic gold and deep-red bottle. Now Revamped. </p>
+                </div>
+            </div>
+            {/* //2 */}
+            <div className="pagesTextDivTwo acpScondSectionTwoImage">
+            <img src={acpsectiontwoimg} alt="bottleImg" style={{ height: '100vh', width: '50%' }} />
+                <div className="pagesTextDiv">
+                    <div className="pageSecondText">
+                        <h1 className="sectionTwoHeading">THE ESSENCE OF</h1>
+                        <h1 className="sectionTwoHeading">SOPHISTICATION</h1>
+                    </div>
+                    <div>
+                        <p className="sectionTwoParagraph">Distinctive and refined in both taste and look, it is</p>
+                        <p className="sectionTwoParagraph">blended with pure grain and select imported</p>
+                        <p className="sectionTwoParagraph">Scotch malts, bringing a <span>honeyed and delightful</span></p>
+                        <p className="sectionTwoParagraph"><span>experince</span> to its loyal patrons</p>
+                    </div>
+                </div>
+            </div>
+            {/* //3 */}
+            <section className="sectionThree">
+                <div><img src={curtainImg} alt="leftCurtain" className="image" /></div>
+                <div className="flavourDiv">
+                    <h1 className="flavourDivHeader">FLAVOUR PROFILE</h1>
+                    <div style={{display:'flex', alignSelf:'center', flexDirection:'row', justifyContent:'center'}}>
+                    <img src={flavourImgs} alt="flavours" style={{width:'70%', height:'90%'}} />
+                    <img src={flavourGroupimg} alt="groupBtl" style={{width:'70%', height:'90%'}} />
+                    </div>
+                </div>
+                <div><img src={curtainImg} alt="rightCurtain" className="curtainImage image" /></div>
+            </section>
+            {/* //4 */}
+            <section className="acpoldsecondfourthSectionImage">
+                <div className="acpoldpagesTextbetween">
+                    <h2 className="pagesTextFavorDivHeader">BEYOND LUXURY LIES LEGACY.</h2>
+                </div>
+                <div className="rowIconVisible">
+                        <div className="imageText">
+                            <img src={glass} alt="bottleImg" className="acpnewlogoText" />
+                            <div>
+                                <p className="logoTextParagraph">Best Enjoyed How You</p>
+                                <p className="logoTextParagraph">Like Your Scotch</p>
+                            </div>
+                        </div>
+                        <div className="imageText">
+                            <img src={bottle} alt="bottleImg" className="acpnewlogoText" />
+                            <div>
+                                <p className="logoTextParagraph">Best Enjoyed How You</p>
+                                <p className="logoTextParagraph">Like Your Scotch</p>
+                            </div>
+                        </div>
+                        <div className="imageText">
+                            <img src={distik} alt="bottleImg" className="acpnewlogoText" />
+                            <div>
+                                <p className="logoTextParagraph">Best Enjoyed How You</p>
+                                <p className="logoTextParagraph">Like Your Scotch</p>
+                            </div>
+                        </div>
+                </div>
+            </section>
+            {/* //5 */}
+            <div className="acppremiumfifthhDiv">
+                <div style={{ justifyContent: 'center', display: 'flex', height: '50%', marginTop: '5%' }}>
+                    <img src={acplast} alt="lastImg" />
+                </div>
+                <div style={{ justifyContent: 'center', display: 'flex', flexDirection: 'row',marginTop: '5%' }}>
+                    <Link to={'/products/liquor/DamnGoodScotch'} className="acppremiumleftArrowDiv">
+                        <div style={{ textAlign: 'right', alignSelf: 'center', }}>
+                            <h1 className="acppremiumarrowHeading">Aristocrat Premium (OLD)</h1>
+                            <HiArrowLongLeft style={{ fontSize: '55px' }} />
+                        </div>
+                        <div>
+                            <img src={acpnewImg} alt="block" style={{ height: '150px', marginLeft: '25px', marginRight: '25px' }} />
+                        </div>
+                    </Link>
+                    <Link to={'/products/liquor/RoyalMedallion'} className="acppremiumrightArrowDiv">
+                        <div>
+                            <img src={acpblack} alt="block" style={{ height: '150px',marginRight: '5px' }} />
+                        </div>
+                        <div style={{ textAlign: 'left', alignSelf: 'center' }}>
+                            <h1 className="acppremiumarrowHeading">Aristocrat Black</h1>
+                            <HiOutlineArrowLongRight style={{ fontSize: '55px' }} />
+                        </div>
+                    </Link>
+                </div>
+            </div>
+        </div>
+    )
+};
+

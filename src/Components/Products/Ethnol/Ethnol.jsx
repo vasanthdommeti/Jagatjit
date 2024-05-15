@@ -28,7 +28,7 @@ export const Ethanol = () => {
                 </div>
                 <div className="logoContent">
                     <img src={bio} className="logoImgDrop" />
-                    <p className="logoTxt">
+                    <p className="logoTxt"> 
                         Bio Fuel with low carbon emmisions
                     </p>
                 </div>

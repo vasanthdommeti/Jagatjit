@@ -1,0 +1,47 @@
+
+
+.submitBtn{
+ border-radius: 15px;
+ padding: 2% 6% 2% 6% ;
+ background-color: #ECA533;
+ 
+}
+.inputField{
+    width: 100%;
+    margin-bottom: 2%;
+    background-color: black;
+    border-color: #fff;
+    border-width: 0.5px;
+    color: #fff;
+}
+
+.inputFieldHeading{
+    font-size: 18px;
+    margin-bottom: 0;
+    font-weight: 100;
+    opacity: 0.6;
+    font-family: 'Josefin Sans';
+}
+
+.contactHeading{
+    font-size: 38px;
+    margin-bottom: 0;
+    font-weight: 100;
+    /* opacity: 0.6; */
+    font-family: 'Josefin Sans';
+}
+
+.contactusParagraph{
+    margin: 5%;
+}
+
+.contacticons{
+    color: #ECA533;
+    /* margin-bottom: -3px; */
+    margin-right: 10px;
+}
+
+.contactContact {
+    margin-bottom: 20px;
+}
+

@@ -1,0 +1,164 @@
+
+
+.acDryGinFirstDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-self: center;
+  height: 100vh;
+} 
+
+.acDryGinImgcontent{
+  display: flex;
+  height: 100vh;
+}
+.acDryGinRowContent {
+  align-self: center;
+  width: 75%;
+}
+.acDryGinHeading {
+  color: #FFFFFF;
+  font-family: 'Krona One';
+  font-size: calc(45px + 1vw);
+  font-weight: bold;
+  margin-bottom: 0;
+  letter-spacing: 6px;
+  text-align: left;
+}
+
+.acDryGinParagraph {
+  color: #FFFFFF;
+  font-family: 'Josefin Sans';
+  font-size: calc(16px + 1vw);
+  letter-spacing: 1px;
+  font-weight: 100;
+  opacity: 0.7;
+  text-align: justify;
+}
+
+/* 22 */
+.acDryGinSecondDiv {
+  background-image: url('../../../../Assets/Products/Liquor/AcDryGin/acdryginsec2img.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+
+  /* aspect-ratio: 15/7.2; */
+}
+
+.acDryGinColumnContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 8%;
+}
+
+
+.acDryGinSecondDivHeading {
+  /* font-family: 'Lobster', cursive; */
+  font-family: 'Krona One';
+  font-size: calc(30px + 1vw);
+  font-weight: 700;
+  margin-bottom: 0;
+  text-align: right;
+  letter-spacing: 6px;
+  width: 30%;
+}
+
+.acDryGinSecondDivParagraph {
+  width: 25%;
+  text-align: right;
+  font-family: 'Josefin Sans';
+  font-weight: 100;
+  opacity: 0.8;
+  font-size: 24px;
+  letter-spacing: 1px;
+  margin-top: 3%;
+}
+
+/* /33 */
+.acDryGinThirdDiv {
+  background-image: url('../../../../Assets/Products/Liquor/AcDryGin/acdryginsec3img.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* aspect-ratio: 16/8.81; */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+
+}
+.acDryGinThirdDivHeading{
+  font-family: 'Krona One';
+  font-size: calc(30px + 1vw);
+  font-weight: 700;
+  margin-bottom: 0;
+  text-align: left;
+  letter-spacing: 5px;
+  /* width: 50%; */
+}
+.acDryGinThirdDivParagraph{
+  /* width: 25%; */
+  text-align: left;
+  font-family: 'Josefin Sans';
+  font-weight: 100;
+  opacity: 0.8;
+  font-size: 24px;
+  letter-spacing: 2px;
+  margin-top: 3%;
+}
+.acDryGinThirdColumnContent{
+  display: flex;
+  width: 35%;
+  /* text-align: left; */
+  flex-direction: column;
+  padding: 5%;
+  /* justify-content: first baseline; */
+  /* align-items: center; */
+}
+
+/* //4 */
+
+.acDryGinFourthDiv {
+  height: 100vh;
+}
+
+.acDryGinleftArrowDiv {
+  border-color: white;
+  padding: 1%;
+  color: #FFFFFF;
+  text-decoration: none;
+  border-width: 1px;
+  border-style: solid;
+  border-left-color: black;
+  border-top-right-radius: 15%;
+  border-bottom-right-radius: 15%;
+  display: flex;
+  text-align: right;
+  align-self: center;
+}
+
+.acDryGinrightArrowDiv {
+  border-color: white;
+  padding: 1%;
+  color: #FFFFFF;
+  text-decoration: none;
+  border-width: 1px;
+  border-style: solid;
+  border-right-color: black;
+  border-top-left-radius: 15%;
+  border-bottom-left-radius: 15%;
+  display: flex;
+  align-self: center;
+}
+
+.acDryGinarrowHeading {
+  font-size: 21px;
+  margin-bottom: 0%;
+}
+ 

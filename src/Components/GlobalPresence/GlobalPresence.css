@@ -1,0 +1,55 @@
+
+
+
+/* Global Styles */
+.globalMainDiv {
+  background-color: #010101;
+  font-family: 'Josefin Sans', sans-serif;
+  color: #FFFFFF;
+}
+
+/* Global Presence */
+.global-presence {
+  width: 100vw;
+  height: 10vh;
+  text-align: center;
+  letter-spacing: 0.07em;
+  color: #FFFFFF;
+  font-size: 64px;
+  padding-top: 10%;
+
+  
+}
+
+/* JIL's Global Text */
+.global-text {
+  text-align: justify;
+  width: 80vw;  /* Margin from top after Global Presence */
+  padding: 20px;
+  font-family: 'Josefin Sans';
+  font-size: 1.2rem;  /* Use rem for better responsiveness */
+  color: #FFFFFF;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.global-text ul {
+  list-style: disc;  /* Set list style for bullets */
+  width: 80vw;  /* 80% of viewport width */
+  font-family: 'Josefin Sans';
+  font-size: 1.2rem;  /* Use rem for better responsiveness */
+  color: #FFFFFF;
+}
+
+/* Picture */
+.picture {
+  width: 80vw;
+  margin-left: 3%;
+  align-items: center;
+  justify-items: center;
+  justify-self: center;
+  justify-content: center;
+  padding-top: 5%;
+  margin-bottom: 5%;
+  
+}
