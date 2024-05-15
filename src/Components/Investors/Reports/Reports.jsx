@@ -22,7 +22,8 @@ const Report = () => {
  
   useEffect(() => {
     axios.get('https://api.jagatjit.com/api/financials')
-      .then(response => {        
+      .then(response => {     
+        console.log('response',response);   
         if (response.data && Array.isArray(response.data)) {
           setReports(response.data);
           setFilteredReports(response.data);
@@ -88,25 +89,23 @@ const Report = () => {
       <p className='reportPara'>Our yearly reports</p>
 </div>
       <div style={{display:'flex', justifyContent:'center'}}>
-
           <input placeholder='Search Reports' style={{width:'40%'}} type="text" value={fileName} onChange={(e) => setFileName(e.target.value)}  className='reportinputField'/>
           <input placeholder='By Year' type="number" value={year} onChange={handleYearChange} className='reportinputField'/>
           {yearError && <span style={{ color: 'red' }}>{yearError}</span>}
-
           <input  placeholder='By Month' type="number" value={month} onChange={handleMonthChange} className='reportinputField'/>
           {monthError && <span style={{ color: 'red' }}>{monthError}</span>}
-
           <input placeholder='Category' type="number" value={categoryId} onChange={(e) => setCategoryId(e.target.value)} className='reportinputField'/>
       </div>
       <div className='reportmainDiv'>
-
           {Array.isArray(filteredReports) && filteredReports.length > 0 ? (
             filteredReports.map((report, idx) => (
-                <div key={idx} className='reportDiv'>
+              <div key={idx} className='reportDiv'>
+                <a href={report.file_url} target='_blank' rel='noopener noreferrer' style={{textDecoration : 'none'}}>
                     <img src={noteImg} alt='report'/>
-                    <h1 style={{marginBottom:'0%'}}>{report.file_name}</h1>
-                    <p>{report.file_date}</p>
-                </div>
+                    <h1 style={{marginBottom:'0%', color : 'white'}}>{report.file_name}</h1>
+                    <p style={{color : 'white'}}>{report.file_date}</p>
+                </a>
+              </div>
             ))
           ) : (
             <h1>No reports found</h1>

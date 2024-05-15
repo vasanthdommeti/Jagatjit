@@ -21,9 +21,10 @@ function Footer() {
                 <div className='footerContactInfo'>
                     <div className='footerContact' >
                         <h1> CONTACT US</h1>
-                        <div style={{ display: 'flex', flexDirection: 'row' }}><CiLocationOn className='icons' size={35} style={{ marginTop: '-6px' }} /><p className='contactParagraph'>Jagatjit Nagar, Hamira, Kapurthala Dist, 144802, Punjab, India.</p></div>
-                        <p className='contactParagraph'><FiMail className='icons' /> demomail.com</p>
-                        <p className='contactParagraph'><GrPhone className='icons' /> Phone Number</p>
+                        <div style={{ display: 'flex', flexDirection: 'row' }}><CiLocationOn className='icons' size={35} style={{ marginTop: '-6px' }} /><p className='contactParagraph'> <a href="https://maps.app.goo.gl/LAcFgCDhUC7ajYTXA" style={{textDecoration : 'none', color : 'white'}}>Jagatjit Nagar, Hamira, Kapurthala Dist, 144802, Punjab, India.</a></p></div>
+                        
+                        <p className='contactParagraph'><FiMail className='icons' /> <a href="mailto:jil@jagatjit.com" style={{textDecoration : 'none', color : 'white'}}>jil@jagatjit.com</a></p>
+                        <p className='contactParagraph'><GrPhone className='icons' /><a href="tel:0181-2783112" style={{textDecoration : 'none', color : 'white'}}>0181-2783112</a></p>
                     </div>
                     <div className='footerInfo'>
                         <h1>MORE INFO</h1>

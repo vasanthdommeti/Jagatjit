@@ -99,18 +99,19 @@ const Financial = () => {
           <input placeholder='Category' type="number" value={categoryId} onChange={(e) => setCategoryId(e.target.value)} className='reportinputField'/>
       </div>
       <div className='reportmainDiv'>
-
-          {Array.isArray(filteredReports) && filteredReports.length > 0 ? (
+      {Array.isArray(filteredReports) && filteredReports.length > 0 ? (
             filteredReports.map((report, idx) => (
-                <div key={idx} className='reportDiv'>
+              <div key={idx} className='reportDiv'>
+                <a href={report.file_url} target='_blank' rel='noopener noreferrer' style={{textDecoration : 'none'}}>
                     <img src={noteImg} alt='report'/>
-                    <h1 style={{marginBottom:'0%'}}>{report.file_name}</h1>
-                    <p>{report.file_date}</p>
-                </div>
+                    <h1 style={{marginBottom:'0%', color : 'white'}}>{report.file_name}</h1>
+                    <p style={{color : 'white'}}>{report.file_date}</p>
+                </a>
+              </div>
             ))
           ) : (
             <h1>No reports found</h1>
-          )}
+        )}
       </div>
     </div>
   );

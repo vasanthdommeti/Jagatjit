@@ -152,7 +152,7 @@ function Home() {
                 <div id='sectionImage1' className='sectionBottleDiv' >
                     <div className="sectionImage1Div">
                         <h1 className="section1Heading">Brewing Magic</h1>
-                        <h1 className="section1subHeading">Since 1994</h1>
+                        <h1 className="section1subHeading">Since 1944</h1>
                         <p className="section1paragraph">Explore our curated selection of</p>
                         <p className="section1paragraph">premium liquor</p>
                         <button className='section3Button'>BROWSE MORE</button>
