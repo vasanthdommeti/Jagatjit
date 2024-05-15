@@ -26,7 +26,7 @@ function Navbar() {
                     <span></span>
                     <span></span>
                     <span></span>
-                </div>
+                </div> 
             </div>
             <div>
                 <ul className={menuOpen ? "open" : "close"}>
@@ -34,7 +34,7 @@ function Navbar() {
                         <Link to={'/'} onClick={closeNav}>HOME</Link>
                     </li>
                     <li>
-                        <DropdownButton id="dropdown-basic-button" className="dropdown-about" title="ABOUT US">
+                        <DropdownButton id="dropdown-basic-button" className="dropdown-about borderChange" title="ABOUT US">
                             <Dropdown.Item as={Link} to="/AboutUs/Heritage" onClick={closeNav}>
                                 HERITAGE
                             </Dropdown.Item>
@@ -47,7 +47,7 @@ function Navbar() {
                             <Dropdown.Item as={Link} to="/aboutUs/Press" onClick={closeNav}>
                                 PRESS
                             </Dropdown.Item>
-                        </DropdownButton>
+                        </DropdownButton> 
                     </li>  
                     <li> 
                         <DropdownButton id="dropdown-basic-button" drop='down' className="dropdown-about" title="PRODUCTS">
@@ -80,7 +80,7 @@ function Navbar() {
                             {/* <Dropdown.Item as={Link} to="/products/mff" onClick={closeNav}>
                                 MFF
                             </Dropdown.Item> */}
-        <DropdownButton id="dropdown-basic-button" className=" dropdown-liquor dropdown-about" title="MMF">
+        <DropdownButton id="dropdown-basic-button" className="dropdown-liquor dropdown-about" title="MMF">
             <Dropdown.Item as={Link} to="/products/mmf/food-products" onClick={closeNav}>
                 FOOD PRODUCTS
             </Dropdown.Item>

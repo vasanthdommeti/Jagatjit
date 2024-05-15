@@ -1,6 +1,4 @@
 
-
-
 /* Make the page background black */
 .ourProcessMainDiv {
   background-color: #010101;
@@ -23,14 +21,14 @@
   font-weight: 400;
   font-size: 48px; 
   line-height: 48px; 
-  text-align: center;
+  /* text-align: center; */
   margin-bottom: 20px; 
 }
 
 /* Other content paragraphs */
 .ourProcess-process-container p {
   font-family: 'Montserrat', sans-serif; 
-  font-size: 18px; 
+  font-size: 17px; 
   line-height: 1.5; 
 }
 
@@ -50,7 +48,7 @@ display: flex;
 flex-direction: row;
 justify-content: center;
 align-items: center;
-margin: 6%;
+/* margin: 6%; */
 /* Use flexbox for responsive layout */
 /* width: 100%;  */
 /* Take up full viewport width */
@@ -61,45 +59,54 @@ margin: 6%;
 /* Style the image container */
 .ourProcess-process-image {
 /* width: 0%;  */
-width: 450px;
-height: 450px;
+/* width: 450px; */
+/* height: 450px; */
+/* width: 100vw; */
+width: 55vw;
+background-position: left;
+height: 80vh;
+object-fit: cover;
 /* Take up 60% of the wrapper width */
 }
 
 /* Style the process description */
 .ourProcess-process-description {
   /* width: 90%;  */
-padding: 20px 10px; /* Add padding for content and right margin */
+ /* Add padding for content and right margin */
 font-family: 'Josefin Sans', sans-serif;
 font-style: normal;
-font-weight: 700;
+/* font-weight: 700; */
 font-size: 20px; /* Adjust font size as needed */
 line-height: 1.5; /* Adjust line-height for readability */
 color: #FFFFFF; /* White text color */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: left;
 }
 
 .ourProcess-process-title {
 font-family: 'Josefin Sans'; /* Adjust font family if needed */
 font-style: normal;
 font-weight: 700;
-font-size: 28px; /* Adjust font size as needed */
+font-size: 24px; /* Adjust font size as needed */
 line-height: 28px;
-display: flex;
-align-items: center;
+/* display: flex; */
+/* align-items: center; */
 color: #FFFFFF;
-margin-bottom: 20px; /* Optional: Add spacing after the title */
+margin-bottom: 3px; /* Optional: Add spacing after the title */
 }
 
 .ourProcess-pre-blending-description {
 font-family: 'Montserrat'; 
 font-style: normal;
 font-weight: 400;
-font-size: 20px; 
-line-height: 24px;
+font-size: 16px; 
+line-height: 30px;
+/* width: '50%'; */
 display: flex;
 align-items: left;
 color: #FFFFFF;
-padding: 20px; 
 }
 
 .ourProcess-process-wrappers {

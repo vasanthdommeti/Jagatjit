@@ -1,13 +1,52 @@
 
-.bodySection {
+.maltbodySection {
   background-color: #010101;
   margin: 0;
+  /* font-family: 'Light'; */
   /* Remove left/right margins for better layout control */
-  width: 80%;
+  /* width: 80%; */
   text-align: center;
   justify-content: center;
   margin: 0 auto;
 
+}
+.maltImage{
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+}
+.maltImage1{
+  width: 30%;
+  height: 20%;
+  object-fit: cover;
+}
+.maltSectionDiv {
+  position: relative;
+  width: 100vw;
+  height: 60vh;
+  overflow: hidden;
+}
+
+.maltSectionDiv img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.malttexthead {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  margin: 0;
+  font-family: 'Josefin Sans'; 
+  font-style: normal;
+  font-weight: 400;
+  font-size: 52px; 
 }
 
 #malt-bg {
@@ -40,19 +79,29 @@
 }
 
 /* Container for main content (header and description) */
-.content-container {
-  width: 80%;
+.maltcontent-container {
+  /* width: 80%; */
   /* Adjust container width as needed */
   /* margin: 0 auto; */
   /* Center container horizontally */
   /* padding: 20px; */
   padding-left: 5%;
   padding-right: 5%;
+  margin-top: 5%;
   align-self: center;
   align-content: center;
   /* align-items: center; */
 
   /* Add some padding for spacing */
+  text-align: center;
+  justify-content: center;
+}
+.maltcontent-container1 {
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-top: 5%;
+  align-self: center;
+  align-content: center;
   text-align: center;
   justify-content: center;
 }
@@ -76,7 +125,7 @@
 }
 
 /* Malt extract process (combined description, image, and list) */
-.process-description {
+.maltprocess-description {
   width: 100%;
   margin-top: 20px;
   /* Add spacing after description */
@@ -94,8 +143,8 @@
 }
 
 /* Image within process description */
-.process-description img {
-  width: 40%;
+.maltprocess-description img {
+  width: 58%;
   padding-left: 3%;
   float: right;
   /* Make images float to the right */
@@ -106,18 +155,19 @@
 }
 
 /* Malt extract process list (already justified) */
-.process-list {
-  margin-top: -140px;
+.maltprocess-list {
+  margin-top: -180px;
   font-style: normal;
+  margin-left: 10%;
   font-weight: 400;
   font-size: 24px;
   line-height: 26px;
-  text-align: justify;
+  text-align: left;
   /* All text within this element will be justified */
   color: #FFFFFF;
 }
 
-.milling-description {
+.maltmilling-description {
   width: 100%;
   margin-top: 5px;
   /* Add spacing after description */
@@ -134,8 +184,8 @@
   color: #FFFFFF;
 }
 
-.milling-description img {
-  width: 35%;
+.maltmilling-description img {
+  width: 50%;
   margin-top: -50px;
   padding-left: 8%;
   float: right;
@@ -145,14 +195,14 @@
   margin: 10px;
 }
 
-.milling-description h2 {
+.maltmilling-description h2 {
   text-align: left;
 
   font-family: 'Josefin Sans';
   color: #FFFFFF;
 }
 
-.milling-description p {
+.maltmilling-description p {
   flex: 1;
   /* Allow text to grow and shrink */
 }

@@ -21,7 +21,7 @@ export const Values = () => {
                 <p className="firstDivParagraph">What we believe in.</p>
             </div>
             {/* //1 */}
-            <div className="logoTextDiv">
+            <div className="logoTextDiv"> 
                 <div className="logoDiv">
                     <img src={responsibility} alt="alwayslearing" />
                     <h1 className="logoTxtHeader">

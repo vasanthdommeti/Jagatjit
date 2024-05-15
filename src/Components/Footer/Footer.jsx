@@ -29,7 +29,7 @@ function Footer() {
                     <div className='footerInfo'>
                         <h1>MORE INFO</h1>
                         <Link to={'/Sustainability'}  className='contactParagraph'><p>Sustainability</p></Link>
-                        <Link to={'/Press'} className='contactParagraph'><p>Press</p></Link>
+                        <Link to={'/aboutUs/Press'} className='contactParagraph'><p>Press</p></Link>
                         <Link to={'/GlobalPresence'} className='contactParagraph'><p>Global Presence</p></Link>
                         <Link to={'/ContactUs'} className='contactParagraph'><p>Contact Us</p></Link>
                     </div>
@@ -42,8 +42,10 @@ function Footer() {
                 <p className='thirdParagraphInFooterRights'>Please do not share or forward with anyone under the legal drinking age.</p>
             </div>
             <div className='footerCredits footerCreditsText'>
-                <p className='allRightsparagraph'>All rights reserved. 2024. Designed by Webness</p>
-                <div style={{ justifyContent: 'space-between', display: 'flex' }}><Link to={'/PrivacyPolicy'} style={{ marginRight: 20, textDecoration:'none', color:'white' }}><span>Privacy Policy</span></Link> <Link to={'/Terms&Condition'} style={{ marginLeft: 20, textDecoration:'none', color:'white' }}>Terms And Conditions</Link></div>
+                <p className='allRightsparagraph'>All rights reserved. 2024.</p>
+                <div style={{ justifyContent: 'space-between', display: 'flex' }}><Link to={'/PrivacyPolicy'} style={{ marginRight: 20, textDecoration:'none', color:'white' }}><span>Privacy Policy</span></Link> 
+                {/* <Link to={'/Terms&Condition'} style={{ marginLeft: 20, textDecoration:'none', color:'white' }}>Terms And Conditions</Link> */}
+            </div>
             </div>
         </footer >
     );

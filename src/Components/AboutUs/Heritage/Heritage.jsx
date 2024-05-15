@@ -197,6 +197,15 @@ export const Heritage = () => {
                     })}
                 </VerticalTimeline>
             </div>
+            {/* <div className='toBeContinuedMain'>
+                <div className='toBeContinued'>
+                    <h1 style={{ textAlign: 'center' }}>To Be Continued</h1>
+                </div>
+            </div> */}
+
+            <div className='toBeContinuedMain'>
+                <h1 className='continuedText'>To Be Continued</h1>
+            </div>
         </div>
     )
 };

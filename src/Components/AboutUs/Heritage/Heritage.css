@@ -8,10 +8,29 @@
   color: #FFFFFF;
 }
 
-.vertical-timeline-element-content{
-  box-shadow:none
+.vertical-timeline-element-content {
+  box-shadow: none
 }
 
-.vertical-timeline-element-icon{
-  box-shadow:none
+.vertical-timeline-element-icon {
+  box-shadow: none
+}
+
+.toBeContinuedMain {
+  display: flex;
+  border-radius: 20px;
+  border: 2px white solid;
+  margin: 10% 25% 5% 25%;
+  padding: 2%;
+}
+
+.continuedText {
+  margin: auto;
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  font-family: Josefin Sans;
+  font-weight: 300;
+  letter-spacing: 5px;
+  font-family: 'Light';
 }
