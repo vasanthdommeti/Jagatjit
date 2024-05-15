@@ -52,7 +52,11 @@ JIL - Award Press
                                     <tr>
                                         <td>{{ $item->order }}</td>
                                         <td>{{ $item->name }}</td>
-                                        <td>{{ $item->link }}</td>
+                                        <td>
+                                            <a href="{{ $item->link }}" class="btn btn-secondary">
+                                                View
+                                            </a>
+                                        </td>
                                         <td>
                                             @if (!empty($item->news_image))
                                             <button class="btn btn-secondary image-btn" data-bs-toggle="modal"
