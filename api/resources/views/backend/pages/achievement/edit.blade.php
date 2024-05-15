@@ -42,7 +42,7 @@ JIL - Making
                         <div class="mb-3 row">
                             <label class="col-sm-2 col-form-label">link</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="inputEmail3" name="link" value="{{ $achievement->name }}" >
+                                <input type="text" class="form-control" id="inputEmail3" name="link" value="{{ $achievement->link }}" >
                             </div>
                         </div>
                         <div class="mb-3 row">
@@ -79,7 +79,7 @@ JIL - Making
                                 </select>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-primary">Update News</button>
+                        <button type="submit" class="btn btn-primary">Update Achievement</button>
                     </form>
                 </div>
             </div>

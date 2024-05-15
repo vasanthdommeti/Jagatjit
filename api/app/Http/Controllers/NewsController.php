@@ -38,9 +38,9 @@ class NewsController extends Controller
         return redirect()->route('new.index')->with('success', 'News created successfully');
     }
 
-    public function edit(News $news)
+    public function edit(News $new)
     {
-        return view('backend.pages.news.edit', compact('news'));
+        return view('backend.pages.news.edit', compact('new'));
     }
 
     public function update(Request $request, News $news)

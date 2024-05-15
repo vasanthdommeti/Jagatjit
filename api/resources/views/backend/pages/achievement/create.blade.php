@@ -65,7 +65,7 @@ JIL - Making
                                 </select>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-primary">Add News</button>
+                        <button type="submit" class="btn btn-primary">Add Achievement</button>
                     </form>
                 </div>
             </div>
