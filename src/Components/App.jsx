@@ -2,7 +2,8 @@
 
 import { Route, Routes } from "react-router-dom";
 
-import './index.css';
+
+import './index.css'
 import './fonts/JosefinSans-Light.ttf';
 import './fonts/JosefinSans-Regular.ttf';
 import Navbar from "./Components/Navbar/Navbar";

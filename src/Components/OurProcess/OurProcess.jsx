@@ -30,7 +30,7 @@ export const OurProcess = () => {
       <p className="ourProcess-pre-blending-description">State-of-the-Art Distillery JIL’s hyper-modern and efficient multi-pressure distillation plant is set up with equipment supplied by the best national and international manufacturers. The pot stills are made from thick copper plate and yield a particularly smooth and pure spirit.</p>
     </div>
   </div>
-
+ 
   <div className="ourProcess-process-wrapper">
      <div className="ourProcess-process-description" style={{textAlign:'left', paddingLeft:'5%' }}>
         <h1 className="ourProcess-process-title">Pre-Blending & Bottling</h1>
