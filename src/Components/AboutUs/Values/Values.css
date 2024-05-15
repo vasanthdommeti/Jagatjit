@@ -13,11 +13,13 @@
 .logoDiv{
   text-align: center;
   margin: 5%;
+  width: 50%;
 }
 .logoTextDiv{
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  width: 100%;
 }
 .logoTxtHeader{
   color: #ECA533;

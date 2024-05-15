@@ -15,3 +15,15 @@
 body {
   margin: 0;
 }
+
+@font-face {
+  font-family: "Light";   /*Can be any text*/
+  src: local("AirbnbCerealLight"),
+    url("./fonts/JosefinSans-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Regular";   /*Can be any text*/
+  src: local("AirbnbCerealLight"),
+    url("./fonts/JosefinSans-Regular.ttf") format("truetype");
+}
