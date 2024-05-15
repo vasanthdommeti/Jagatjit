@@ -43,7 +43,7 @@ class NewsController extends Controller
         return view('backend.pages.news.edit', compact('new'));
     }
 
-    public function update(Request $request, News $news)
+    public function update(Request $request, News $new)
     {
         $request->validate([
             'name' => 'required',
@@ -51,11 +51,11 @@ class NewsController extends Controller
             'status' => 'required|in:publish,draft',
         ]);
 
-        $news->update($request->only('name', 'order', 'status', 'link'));
+        $new->update($request->only('name', 'order', 'status', 'link'));
 
         if ($request->hasFile('news_image')) {
-            $news->clearMediaCollection('news_image');
-            $news->addMedia($request->file('news_image'))->toMediaCollection('news_image', 's3');
+            $new->clearMediaCollection('news_image');
+            $new->addMedia($request->file('news_image'))->toMediaCollection('news_image', 's3');
         }
 
         return redirect()->route('new.index')->with('success', 'Award Press updated successfully');
