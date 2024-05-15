@@ -324,7 +324,9 @@ function Home() {
                     <div className='section3GroupHeaderDiv'>
                         <h1 className='section5Header'>Where does all the</h1>
                         <h1 className='section5Header'>magic come from ?</h1>
-                        <button className='section3Button'>OUR PROCESS</button>
+                        <Link to={'/our-Process'}>
+                            <button className='section3Button'>OUR PROCESS</button>
+                        </Link>
                     </div>
                     <div className='section5GroupImagesDiv'>
                         <div className='section5firstImage'>
