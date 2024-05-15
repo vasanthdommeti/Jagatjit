@@ -102,6 +102,10 @@
     /* aspect-ratio: 17 / 8.78; */
 }
 
+.d-block {
+    height: 100vh;
+}
+
 .smallImgDiv{
     display: flex;
     /* flex-wrap: wrap; */
