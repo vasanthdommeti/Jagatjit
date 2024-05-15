@@ -6,9 +6,12 @@ import milkproducts from '../../../../Assets/Products/Mmf/milkfood.png'
 export const FoodProducts = () => { 
     return (
         <section className="bodySection">
- <div id="header">
+ {/* <div  id="bghead">
    <div id="bghead"></div>
    <h1 className="texthead">Food Products</h1>
+ </div> */}
+ <div className="foodSectionDiv">
+    <h1 className="texthead">Food Products</h1>
  </div>
  <div className="paraone" style={{marginTop:'10%'}}>
     <p>Jagatjit Industries Limited’s food division is versatile and diverse. JIL has a malt house, malt extract plant, a modern dairy and a malted milk food manufacturing unit. The malted milk food division has two units with a capacity to manufacture 120 tons per day of high quality malted milk food. JIL manufactures primer malted milk food for Unilever formerly know as GlaxoSmithKline Consumer Healthcare Ltd’s makers of Boost, Maltova and Horlicks, the leading brands in the country. Our own brands, Champion and Compleat are exported and loved in international markets.</p>

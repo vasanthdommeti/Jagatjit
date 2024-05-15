@@ -20,7 +20,7 @@ export const OurProcess = () => {
         </p>
   </div>
 
-  <div className="ourProcess-process-wrapper">
+  <div className="ourProcess-process-wrapper" style={{marginTop:'5%'}}>
     
     <div className="ourProcess-process-image">
         <img src={bg1} alt="distillery"  className="ourProcess-process-image"/>

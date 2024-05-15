@@ -20,6 +20,17 @@
   /* background-repeat: no-repeat; */
 }
 
+.foodSectionDiv{
+  background: url(../../../../Assets/Products/Mmf/foodproducts.png);
+  height: 100vh;
+  background-size: cover;
+  object-fit: fill;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 18%;
+}
+
 /* Malt Food Extract text */
 .texthead {
   position: relative;

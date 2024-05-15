@@ -28,7 +28,7 @@
 /* Other content paragraphs */
 .ourProcess-process-container p {
   font-family: 'Montserrat', sans-serif; 
-  font-size: 18px; 
+  font-size: 17px; 
   line-height: 1.5; 
 }
 
@@ -101,7 +101,7 @@ margin-bottom: 3px; /* Optional: Add spacing after the title */
 font-family: 'Montserrat'; 
 font-style: normal;
 font-weight: 400;
-font-size: 20px; 
+font-size: 16px; 
 line-height: 24px;
 display: flex;
 align-items: left;
