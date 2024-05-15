@@ -10,6 +10,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ReportPolicyController;
 use App\Http\Controllers\TeamController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\VideoController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -33,6 +34,8 @@ Route::middleware('auth')->group(function () {
     Route::resource('report', ReportPolicyController::class);
     Route::resource('achievement', AchievementController::class);
     Route::resource('corporate', CorporateMembersController::class);
+    Route::resource('video', VideoController::class);
+
     // File Category
     Route::get('/category/{type}',[CategoryController::class, 'index'])->name('category.index');
     Route::get('/category/create/{type}',[CategoryController::class, 'create'])->name('category.create');
