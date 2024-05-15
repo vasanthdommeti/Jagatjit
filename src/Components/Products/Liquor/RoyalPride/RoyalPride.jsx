@@ -51,7 +51,7 @@ export const RoyalPride = () => {
                         Made with the
                     </h1>
                     <h1 className="royalSecondDivHeading">
-                        finest grains
+                        finest grains 
                     </h1>
                     <p className="royalSecondDivParagraph">
                         Royal Pride is carefully created by our Scottish master blenders with the

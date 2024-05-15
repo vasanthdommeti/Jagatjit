@@ -38,17 +38,17 @@ function Navbar() {
                             <Dropdown.Item as={Link} to="/AboutUs/Heritage" onClick={closeNav}>
                                 HERITAGE
                             </Dropdown.Item>
-                            <Dropdown.Item as={Link} to="/aboutUs/ourTeam" onClick={closeNav}>
+                            <Dropdown.Item as={Link} to="/aboutUs/OurTeam" onClick={closeNav}>
                                 OUR TEAM
                             </Dropdown.Item>
                             <Dropdown.Item as={Link} to="/aboutUs/values" onClick={closeNav}>
                                 VALUES
                             </Dropdown.Item>
-                            <Dropdown.Item as={Link} to="/aboutUs/press" onClick={closeNav}>
+                            <Dropdown.Item as={Link} to="/aboutUs/Press" onClick={closeNav}>
                                 PRESS
                             </Dropdown.Item>
                         </DropdownButton>
-                    </li> 
+                    </li>  
                     <li> 
                         <DropdownButton id="dropdown-basic-button" drop='down' className="dropdown-about" title="PRODUCTS">
                             <DropdownButton id="dropdown-basic-button" drop='left' className="dropdown-liquor dropdown-about" title="LIQUOR">
@@ -56,7 +56,7 @@ function Navbar() {
                                     AC PREMIUM (OLD)
                                 </Dropdown.Item>
                                 <Dropdown.Item as={Link} to="/products/liquor/ACpremiumNew" onClick={closeNav}>
-                                    AC PREMIUM (NEW)
+                                    AC PREMIUM
                                 </Dropdown.Item>
                                 <Dropdown.Item as={Link} to="/products/liquor/ACpremiumBlack" onClick={closeNav}>
                                     AC BLACK
@@ -77,9 +77,17 @@ function Navbar() {
                                     ROYAL MEDALLION
                                 </Dropdown.Item>
                             </DropdownButton>
-                            <Dropdown.Item as={Link} to="/products/mff" onClick={closeNav}>
+                            {/* <Dropdown.Item as={Link} to="/products/mff" onClick={closeNav}>
                                 MFF
-                            </Dropdown.Item>
+                            </Dropdown.Item> */}
+        <DropdownButton id="dropdown-basic-button" className=" dropdown-liquor dropdown-about" title="MMF">
+            <Dropdown.Item as={Link} to="/products/mmf/food-products" onClick={closeNav}>
+                FOOD PRODUCTS
+            </Dropdown.Item>
+            <Dropdown.Item as={Link} to="/products/mmf/malt-extract" onClick={closeNav}>
+                MALT EXTRACT
+            </Dropdown.Item>
+        </DropdownButton>
                             <Dropdown.Item as={Link} to="/products/ethnol" onClick={closeNav}>
                                 ETHNOL
                             </Dropdown.Item>
@@ -105,12 +113,12 @@ function Navbar() {
                                 CSR
                             </Dropdown.Item>
                             <Dropdown.Item as={Link} to="/investors/codeOfCunduct" onClick={closeNav}>
-                                CODE OF CUNDUCT
+                                CODE OF CONDUCT
                             </Dropdown.Item>
                         </DropdownButton>
                     </li>
                     <li className='dropdown-li'>
-                        <Link to="/contact-us" onClick={closeNav}>CONTACT US</Link>
+                    <Link to="/ContactUs" onClick={closeNav}>CONTACT US</Link>
                     </li>
                 </ul>
                 <div className="menu" style={{zIndex:2, marginRight:'7%'}} id="nav-close" onClick={closeNav}>

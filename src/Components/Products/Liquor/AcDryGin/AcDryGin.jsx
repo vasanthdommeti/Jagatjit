@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 
 export const AcDryGin = () => {
     return(
-        <section>
+        <section> 
             {/* //1 */}
             <div className="acDryGinFirstDiv">
                 <div style={{ display: 'flex', alignSelf: 'center', paddingLeft: '7%', paddingRight: '5%' }}>

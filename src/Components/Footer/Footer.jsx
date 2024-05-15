@@ -7,7 +7,7 @@ import { FiMail } from "react-icons/fi";
 import { GrPhone } from "react-icons/gr";
 import { Link } from 'react-router-dom';
 
-function Footer() {
+function Footer() { 
     return (
         <footer className='footer'>
             <div className='footerImage'>

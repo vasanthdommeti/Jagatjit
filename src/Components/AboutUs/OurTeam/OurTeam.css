@@ -1,0 +1,55 @@
+
+
+.TeamMember{
+    height: 250px;
+    width: 250px;
+    border-radius: 5px;
+
+    /* width: 100%; */
+}
+
+.teamMemberDiv{
+    text-align: center;
+    margin: 3%;
+}
+
+.teamMemberName{
+    font-size: 16px;
+    position: relative;
+    /* margin-top: -10%; */
+    margin-bottom: 3%;
+}
+.hoverText{
+    font-size: 14px;
+    text-align: center;
+}
+
+.teamnameDiv{
+    margin-top: -25%;
+    /* display: none; */
+}
+.hoverEffect{
+    width: 250px;
+    z-index: 1;
+    text-align: center;
+    margin-top: -90%;
+    display: none;
+}
+
+
+/* .teamMemberDiv:hover+ .hoverEffect {
+    display: block;
+    color: red;
+} */
+.teamMemberDiv:hover+ .hoverEffect {
+    display: block;
+    opacity: 1;
+}
+
+
+
+
+/* .myDIV:hover + .hide {
+    display: block;
+    color: red;
+  } */

@@ -2,7 +2,7 @@
 import '../PrivacyPolicy/PrivacyPolicy.css';
 export const PrivacyPolicy = () =>{
   return(
-    <div class="privacy-policy">
+    <div className="privacy-policy">
     <h1 className='privacyheading'>Privacy Policy</h1> <p>Your privacy is important to Jagatjit Industries Limited. This statement describes the information gathering and dissemination practices for our website (the "Site"), including the types of information we collect and how we may use that information.</p>
  
     <h2>Disclaimer</h2>

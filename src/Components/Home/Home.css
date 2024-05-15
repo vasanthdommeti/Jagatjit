@@ -5,19 +5,24 @@
 .sectionBottleDiv {
     position: relative;
     max-height: 100vh;
-    background-size: contain;
-    background-position: bottom;
-    position: relative;
+    background-size: cover;
+    background-position: center;
+    /* position: fixed; */
     background-repeat: no-repeat;
     /* aspect-ratio: 14 / 7.3; */
 }
-
+ .imageContainer1{
+    height: 100vh;
+ }
+ .main{
+    height: 100vh;
+ }
 .sectionImage1Div{
     display: flex;
     flex-direction: column;
     /* justify-content: flex-end; */
     align-items: flex-start;
-    position: fixed;
+    position: absolute;
     padding: 13%;
 }
 .section1Heading{
@@ -45,6 +50,7 @@
 #sectionImage2 {
     background-image: url('../../Assets/Home/sec2backgroundImg.png');
 }
+
 
 #sectionImage3 {
     background-image: url('../../Assets/Home/sec3backgroundImg.png');
@@ -94,6 +100,42 @@
     background-size: cover;
     place-items: center;
     /* aspect-ratio: 17 / 8.78; */
+}
+
+.smallImgDiv{
+    display: flex;
+    /* flex-wrap: wrap; */
+    object-fit: cover;
+    align-items: last baseline;
+    align-self: last baseline;
+    flex-direction: row;
+    /* margin-right: -45%; */
+    /* justify-content: flex-end; */
+    /* align-items: flex-end; */
+}
+.btnheading{
+    font-size: 35px;
+    font-family: 'Josefin Sans';
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 0;
+}
+.btnsubheading{
+    font-size: 25px;
+    font-family: 'Josefin Sans';
+    font-weight: bold;
+    letter-spacing: 4px;
+    color: #ECA533;
+    margin-bottom: 0;
+}
+.btnparagraph{
+    font-size: 18px;
+    margin-bottom: 0;
+    font-weight: 200;
+}
+.smallImgButton{
+ background-color: transparent;
+ border-color: transparent;
 }
 
 .section2 {
@@ -164,7 +206,32 @@
     letter-spacing: 2px;
     margin-top: 30px;
 }
-
+.section4Button{
+    border-color: #ECA533;
+    background-color: black;
+    border-width: 0.5px solid;
+    border-radius: 25px;
+    padding: 10px 35px;
+    color: #ECA533;
+    letter-spacing: 2px;
+    margin-top: 30px;
+}
+ 
+.subparaheading{
+    font-size: 16px;
+    font-family: 'Lobster', cursive;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center;
+}
+.subparaheading span{
+    font-size: 16px;
+    font-family: 'Lobster', cursive;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #ECA533;
+    text-decoration: none;
+}
 .section5GroupImagesDiv {
     /* width: 420px; */
 }
@@ -228,6 +295,47 @@
     
 }
 
+.section6firstThirdDiv {
+    background-image: url('../../../../Assets/Products/Liquor/RoyalPride/royalprideBg.png');
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* aspect-ratio: 16/8.81; */
+    width: 100vw;
+    height: 100vh;
+}
+.section6firstThirdDivContent {
+    display: flex;
+    flex-direction: row;
+    text-align: justify;
+    align-self: flex-end;
+    /* padding: 10%; */
+}
+.section6firstthirdDivLine {
+    font-family: 'Krona One';
+    font-size: calc(30px + 1vw);
+    font-weight: 700;
+    margin-bottom: 0;
+    text-align: center;
+    letter-spacing: 4px;
+    padding-right: 5%;
+    margin-bottom: 2%;
+}
+.section6firstrowdiv {
+    display: flex;
+    width: 80%;
+    margin-top: 20%;
+    justify-content: space-between;
+    align-self: center;
+    /* align-items: center; */
+}
+.section6firstcandleimagesingle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    object-fit: cover;
+}
 /* @media (min-width:320px) {
 
     smartphones, iPhone, portrait 480x320 phones

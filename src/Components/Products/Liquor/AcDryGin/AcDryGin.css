@@ -6,7 +6,7 @@
   justify-content: space-between;
   align-self: center;
   height: 100vh;
-}
+} 
 
 .acDryGinImgcontent{
   display: flex;
@@ -126,7 +126,6 @@
 
 .acDryGinFourthDiv {
   height: 100vh;
-
 }
 
 .acDryGinleftArrowDiv {
