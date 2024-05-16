@@ -51,6 +51,19 @@
     background-image: url('../../Assets/Home/sec2backgroundImg.png');
 }
 
+.sectionThreeHeadDiv{
+    /* style={{height:'35%', background:'red', position:'fixed', alignSelf:'center', justifyContent:'flex-end'}} */
+    height: 45%;
+    position: fixed;
+    margin-top: 3%;
+    margin-left: 35%;
+}
+.sectionThreeImageDiv{
+    /* style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }} */
+    margin-top: 20%;
+    margin-left: 25%;
+    position: fixed;
+}
 
 #sectionImage3 {
     background-image: url('../../Assets/Home/sec3backgroundImg.png');
@@ -175,6 +188,7 @@
     /* padding: 8% 5% 5% 5%; */
     /* flex-direction: row; */
     justify-content: space-around;
+    width: 100%;
     /* align-items: center; */
     /* margin: auto; */
     padding: 10%;

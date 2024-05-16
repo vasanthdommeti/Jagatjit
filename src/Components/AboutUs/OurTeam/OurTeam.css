@@ -1,11 +1,9 @@
 
-
+ 
 .TeamMember{
     height: 250px;
     width: 250px;
     border-radius: 5px;
-
-    /* width: 100%; */
 }
 
 .teamMemberDiv{
@@ -16,35 +14,50 @@
 .teamMemberName{
     font-size: 16px;
     position: relative;
-    /* margin-top: -10%; */
     margin-bottom: 3%;
 }
 .hoverText{
-    font-size: 14px;
+    color: #fff;
     text-align: center;
 }
 
 .teamnameDiv{
+    z-index: 1;
     margin-top: -25%;
-    /* display: none; */
 }
 .hoverEffect{
     width: 250px;
     z-index: 1;
     text-align: center;
-    margin-top: -90%;
+    margin-top: -98%;
     display: none;
 }
 
+.hoverTextData{
+    font-size: 16px;
+    font-family: 'Montserrat';
+    margin-bottom: 3px;
+    text-align: left;
 
-/* .teamMemberDiv:hover+ .hoverEffect {
+}
+    /* style={{fontSize:'10',fontFamily: 'Montserrat', marginBottom:'0', textAlign:'left'}} */
+
+
+.teamMemberDiv:hover .hoverEffect {
     display: block;
-    color: red;
-} */
-.teamMemberDiv:hover+ .hoverEffect {
-    display: block;
+    text-align: justify;
+    color: #fff;
+    font-weight: bold;
     opacity: 1;
 }
+.teamMemberDiv:hover .teamMemberName {
+    display: none;
+}
+.teamMemberDiv:hover .TeamMember {
+    text-shadow: 1px;
+    opacity: 0.3;
+}
+
 
 
 

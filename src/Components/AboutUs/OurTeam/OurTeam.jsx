@@ -21,11 +21,11 @@ const OurTeam = () => {
             console.error('Error fetching users:', error);
         });
     }, [])
-
+ 
     return(
         <div style={{marginTop:'10%'}}>
            <h1 className='reportHeading'>Our Management Team</h1>
-           <div className='reportmainDiv'>
+           <div className='reportmainDiv' style={{marginLeft:'5%',marginRight:'5%'}}>
            {management.map((el,index) => (
                 <div key={index} className="teamMemberDiv">
                     <img src={el.team_image} alt="Team" className="TeamMember"/>
@@ -34,11 +34,11 @@ const OurTeam = () => {
                     <h1 className="teamMemberName">{el.name}</h1>
                     </div>
                     <div className="hoverEffect">
-                        <h1 className="teamMemberName">{el.designation}</h1>
-                        <h1 className="teamMemberName">{el.name}</h1>
-                        <p className="hoverText">Total Experience: {el.experience}+ Years </p>
-                        <p className="hoverText">Education:{el.education}</p>
-                        <p className="hoverText">Time With JIL: {el.joined_at}+ Years(Since 2019)</p>
+                        <h1 className="hoverText" style={{fontSize:'16px', fontFamily:'Josefin Sans', marginBottom:'0'}}>{el.designation}</h1>
+                        <h1 className="hoverText"  style={{fontSize:'16px', fontFamily:'Josefin Sans',marginBottom:'6px'}}>{el.name}</h1>
+                        <p className="hoverText hoverTextData">Total Experience: {el.experience}+ Years </p>
+                        <p className="hoverText hoverTextData">Education:{el.education}</p>
+                        <p className="hoverText hoverTextData">Time With JIL: {el.joined_at}+ Years(Since 2019)</p>
                     </div>
                 </div>
             ))}

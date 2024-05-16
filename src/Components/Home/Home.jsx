@@ -176,9 +176,9 @@ function Home() {
             <section >
                 <div id='sectionImage2' className='section2'>
                     <div className='section3MainDiv'>
-                        <img src={data.largeImg} alt="bottle" style={{ height: '450px' }} />
-                        <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-around' }}>
-                            <div> 
+                        <img src={data.largeImg} alt="bottle" style={{ height: '500px', width:'50%', marginRight:'45%' }} />
+                        <div style={{ display: 'flex', flexDirection: 'column', position:'fixed', width:'50%' }}>
+                            <div className="sectionThreeHeadDiv">  
                                 <h1 className="btnheading">{data.name}</h1>
                                 <p className="btnsubheading">{data.heading}</p>
                                 <p className="btnparagraph"> {data.para}</p>
@@ -186,7 +186,7 @@ function Home() {
                                     <button className='section3Button'>Read More</button>
                                 </Link>
                             </div>
-                            <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
+                            <div className="sectionThreeImageDiv">
                                 <div className="smallImgDiv">
                                     {section.map((e) => (
                                         <button className="smallImgButton" onClick={() => setData(e)}>
