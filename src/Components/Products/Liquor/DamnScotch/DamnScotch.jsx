@@ -48,10 +48,7 @@ export const DamnScotch = () => {
       <div className="damnsecondDiv">
         <div className="damnsecondRowContent">
           <h1 className="damnHeading">
-            Scotch Crafted
-          </h1>
-          <h1 className="damnHeading">
-            for royalty
+            Royalty Redefined
           </h1>
           <p className="damnParagraph">
             A Scotch whisky of rare character, KING HENRY VIII truly lives up to its name.
@@ -99,21 +96,21 @@ export const DamnScotch = () => {
       <div className="royalpridehide">
         <div className="royalimageText">
           <img src={glasss} alt="block" className="royallogoimage" />
-          <p>Best Enjoyed How You Like Your Scotch</p>
+          <p>Best enjoyed how you like your scotch</p>
         </div>
         <div className="royalimageText">
           <img src={bottle} alt="block" className="royallogoimage" />
-          <p>Bottled With Care By State Of The Art Bottling Facilities</p>
+          <p>Bottled With Care By State Of the art bottling facilities</p>
         </div>
         <div className="royalimageText">
           <img src={distik} alt="block" className="royallogoimage" />
-          <p>Made With The Finest Indian Spirits</p>
+          <p>Made with the finest indian spirits</p>
         </div>
 
       </div>
       <div className="damnFourthDiv">
         <div className="damnForthDivContent royalprideshow" >
-          <h1 className="damnSecondDivHeading" >Aged For Three Years in</h1>
+          <h1 className="damnSecondDivHeading" >Aged for 3 years in</h1>
           <h1 className="damnSecondDivHeading" >The Scottish Highlands</h1>
           <div className="damnimageText" style={{ marginTop: '5%' }}>
             <img src={glasss} alt="block" className="damnlogoimage" />
@@ -121,11 +118,11 @@ export const DamnScotch = () => {
           </div>
           <div className="damnimageText">
             <img src={bottle} alt="block" className="damnlogoimage" style={{ marginRight: '12%', marginLeft: '3%' }} />
-            <p>Bottled With Care By State Of The Art Bottling Facilities</p>
+            <p>Bottled with care by state of the art bottling facilities</p>
           </div>
           <div className="damnlogodrumsimage">
             <img src={drums} alt="block" className="damnlogoimage" style={{ marginRight: '-3%', marginTop: '-10%', marginLeft: '-2%' }} />
-            <p>Made With The Finest Indian Spirits</p>
+            <p>Made with the finest Indian spirits</p>
           </div>
 
         </div>
@@ -140,12 +137,12 @@ export const DamnScotch = () => {
             <div style={{ textAlign: 'right', alignSelf: 'center', }}>
               <h1 className="damnarrowHeading">Royal Pride</h1>
               <HiArrowLongLeft style={{ fontSize: '55px' }} />
-            </div> 
+            </div>
             <div>
               <img src={acblack} alt="block" style={{ height: '150px', marginLeft: '25px', marginRight: '25px' }} />
-            </div> 
+            </div>
           </Link>
-          <Link  to={'/products/liquor/AcDryGin'} className="damnrightArrowDiv">
+          <Link to={'/products/liquor/AcDryGin'} className="damnrightArrowDiv">
             <div>
               <img src={damnscotch} alt="block" style={{ height: '150px', marginLeft: '25px', marginRight: '25px' }} />
             </div>

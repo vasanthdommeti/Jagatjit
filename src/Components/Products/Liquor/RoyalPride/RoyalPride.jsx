@@ -27,7 +27,7 @@ export const RoyalPride = () => {
                             ROYAL PRIDE
                         </h1>
                         <h4 className="royalsecondHeading">
-                            EXQUISITE WHISKEY
+                            BLENDED SCOTCH WHISKEY
                         </h4>
                         <p className="royalParagraph">
                             From the Highland, Speyside and Islay regions of Scotland comes a whiskey
@@ -51,10 +51,10 @@ export const RoyalPride = () => {
                         Made with the
                     </h1>
                     <h1 className="royalSecondDivHeading">
-                        finest grains 
+                        finest grains
                     </h1>
                     <p className="royalSecondDivParagraph">
-                        Royal Pride is carefully created by our Scottish master blenders with the
+                        Launched in 2022, Royal Pride is crafted by our Scottish master blenders with the
                         <span> finest grain spirits</span> and
                         <span> imported Scotch malts.</span>
                     </p>
@@ -113,7 +113,7 @@ export const RoyalPride = () => {
             </div>
             <div className="royalPrideFourthDiv">
                 <div className="royalThirdDivContent royalprideshow" style={{ width: '45%', }}>
-                    <h1 className="royalPrideSecondDivHeading" >Lauched in 2022</h1>
+                    <h1 className="royalPrideSecondDivHeading" >Crafted for your Inner Connoisseur</h1>
                     <div className="royalimageText">
                         <img src={glasss} alt="block" className="royallogoimage" />
                         <p>Best Enjoyed How You Like Your Scotch</p>

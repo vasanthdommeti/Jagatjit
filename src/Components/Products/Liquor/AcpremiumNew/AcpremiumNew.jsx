@@ -25,14 +25,14 @@ export const AcpremiumNew = () => {
             {/* //1 */}
             <div className="acpSecondPageSectionOneImage">
                 <div className="acpNewTextDiv">
-                    <h2 className="aristocratSecondHeading">THE ALL NEW</h2>
-                    <img src={acpsectiononelogo} alt="bottleImg" style={{ height: '40%', width: '50%', marginLeft:'-5%' }} />
+                    <h2 className="aristocratSecondHeading">New Bottle. Same Brilliant Taste</h2>
+                    <img src={acpsectiononelogo} alt="bottleImg" style={{ height: '40%', width: '50%', marginLeft: '-5%' }} />
                     <p className="aristocratParagraph">One of India's most-loved whiskey brands with its iconic gold and deep-red bottle. Now Revamped. </p>
                 </div>
             </div>
             {/* //2 */}
             <div className="pagesTextDivTwo acpScondSectionTwoImage">
-            <img src={acpsectiontwoimg} alt="bottleImg" style={{ height: '100vh', width: '50%' }} />
+                <img src={acpsectiontwoimg} alt="bottleImg" style={{ height: '100vh', width: '50%' }} />
                 <div className="pagesTextDiv">
                     <div className="pageSecondText">
                         <h1 className="sectionTwoHeading">THE ESSENCE OF</h1>
@@ -51,9 +51,9 @@ export const AcpremiumNew = () => {
                 <div><img src={curtainImg} alt="leftCurtain" className="image" /></div>
                 <div className="flavourDiv">
                     <h1 className="flavourDivHeader">FLAVOUR PROFILE</h1>
-                    <div style={{display:'flex', alignSelf:'center', flexDirection:'row', justifyContent:'center'}}>
-                    <img src={flavourImgs} alt="flavours" style={{width:'70%', height:'90%'}} />
-                    <img src={flavourGroupimg} alt="groupBtl" style={{width:'70%', height:'90%'}} />
+                    <div style={{ display: 'flex', alignSelf: 'center', flexDirection: 'row', justifyContent: 'center' }}>
+                        <img src={flavourImgs} alt="flavours" style={{ width: '70%', height: '90%' }} />
+                        <img src={flavourGroupimg} alt="groupBtl" style={{ width: '70%', height: '90%' }} />
                     </div>
                 </div>
                 <div><img src={curtainImg} alt="rightCurtain" className="curtainImage image" /></div>
@@ -64,27 +64,27 @@ export const AcpremiumNew = () => {
                     <h2 className="pagesTextFavorDivHeader">BEYOND LUXURY LIES LEGACY.</h2>
                 </div>
                 <div className="rowIconVisible">
-                        <div className="imageText">
-                            <img src={glass} alt="bottleImg" className="acpnewlogoText" />
-                            <div>
-                                <p className="logoTextParagraph">Best Enjoyed How You</p>
-                                <p className="logoTextParagraph">Like Your Scotch</p>
-                            </div>
+                    <div className="imageText">
+                        <img src={glass} alt="bottleImg" className="acpnewlogoText" />
+                        <div>
+                            <p className="logoTextParagraph">Best Enjoyed How You</p>
+                            <p className="logoTextParagraph">Like Your Scotch</p>
                         </div>
-                        <div className="imageText">
-                            <img src={bottle} alt="bottleImg" className="acpnewlogoText" />
-                            <div>
-                                <p className="logoTextParagraph">Best Enjoyed How You</p>
-                                <p className="logoTextParagraph">Like Your Scotch</p>
-                            </div>
+                    </div>
+                    <div className="imageText">
+                        <img src={bottle} alt="bottleImg" className="acpnewlogoText" />
+                        <div>
+                            <p className="logoTextParagraph">Best Enjoyed How You</p>
+                            <p className="logoTextParagraph">Like Your Scotch</p>
                         </div>
-                        <div className="imageText">
-                            <img src={distik} alt="bottleImg" className="acpnewlogoText" />
-                            <div>
-                                <p className="logoTextParagraph">Best Enjoyed How You</p>
-                                <p className="logoTextParagraph">Like Your Scotch</p>
-                            </div>
+                    </div>
+                    <div className="imageText">
+                        <img src={distik} alt="bottleImg" className="acpnewlogoText" />
+                        <div>
+                            <p className="logoTextParagraph">Best Enjoyed How You</p>
+                            <p className="logoTextParagraph">Like Your Scotch</p>
                         </div>
+                    </div>
                 </div>
             </section>
             {/* //5 */}
@@ -92,7 +92,7 @@ export const AcpremiumNew = () => {
                 <div style={{ justifyContent: 'center', display: 'flex', height: '50%', marginTop: '5%' }}>
                     <img src={acplast} alt="lastImg" />
                 </div>
-                <div style={{ justifyContent: 'center', display: 'flex', flexDirection: 'row',marginTop: '5%' }}>
+                <div style={{ justifyContent: 'center', display: 'flex', flexDirection: 'row', marginTop: '5%' }}>
                     <Link to={'/products/liquor/DamnGoodScotch'} className="acppremiumleftArrowDiv">
                         <div style={{ textAlign: 'right', alignSelf: 'center', }}>
                             <h1 className="acppremiumarrowHeading">Aristocrat Premium (OLD)</h1>
@@ -104,7 +104,7 @@ export const AcpremiumNew = () => {
                     </Link>
                     <Link to={'/products/liquor/RoyalMedallion'} className="acppremiumrightArrowDiv">
                         <div>
-                            <img src={acpblack} alt="block" style={{ height: '150px',marginRight: '5px' }} />
+                            <img src={acpblack} alt="block" style={{ height: '150px', marginRight: '5px' }} />
                         </div>
                         <div style={{ textAlign: 'left', alignSelf: 'center' }}>
                             <h1 className="acppremiumarrowHeading">Aristocrat Black</h1>

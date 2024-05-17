@@ -11,17 +11,17 @@ import { Link } from "react-router-dom";
 
 
 export const AcDryGin = () => {
-    return(
-        <section> 
+    return (
+        <section>
             {/* //1 */}
             <div className="acDryGinFirstDiv">
                 <div style={{ display: 'flex', alignSelf: 'center', paddingLeft: '7%', paddingRight: '5%' }}>
                     <div className="acDryGinRowContent">
                         <h1 className="acDryGinHeading">
-                        EXTRA DRY GIN
+                            Aristocrat Extra Dry Gin
                         </h1>
                         <p className="acDryGinParagraph">
-                        Distilled from the finest raw materials, this high quality Gin symbolizes the true spirit of fun and frolic.
+                            Slow distilled from the finest grains and Indian botanicals, this gin creates fun and frolic wherever it goes.
                         </p>
                     </div>
                     <div className="acDryGinImgcontent">
@@ -34,10 +34,10 @@ export const AcDryGin = () => {
             <div className="acDryGinSecondDiv">
                 <div className="acDryGinColumnContent">
                     <h1 className="acDryGinSecondDivHeading">
-                    Launched in 1978 
+                        Launched in 1978
                     </h1>
                     <p className="acDryGinSecondDivParagraph">
-                    Sold 2,07,389 Cases in FY 2012-13
+                        Still going strong and enhancing celebrations in India and abroad
                     </p>
                 </div>
             </div>
@@ -47,10 +47,10 @@ export const AcDryGin = () => {
             <div className="acDryGinThirdDiv">
                 <div className="acDryGinThirdColumnContent">
                     <h1 className="acDryGinThirdDivHeading">
-                    Fun and Frolic
+                        Fun and Frolic
                     </h1>
                     <p className="acDryGinThirdDivParagraph" >
-                    Ready to be served straight-up or on the rocks, this drink is the revival of the good old Gimlet.
+                        Whether served straight up, as a classic gimlet or in trendy cocktails, this gin is smooth and delicious.
                     </p>
                 </div>
             </div>
@@ -60,7 +60,7 @@ export const AcDryGin = () => {
                 <div style={{ justifyContent: 'center', display: 'flex', height: '50%', marginTop: '5%' }}>
                     <img src={acDryGinLastImg} alt="lastImg" />
                 </div>
-                <div style={{ justifyContent: 'center', display: 'flex', flexDirection: 'row',marginTop: '5%' }}>
+                <div style={{ justifyContent: 'center', display: 'flex', flexDirection: 'row', marginTop: '5%' }}>
                     <Link to={'/products/liquor/DamnGoodScotch'} className="acDryGinleftArrowDiv">
                         <div style={{ textAlign: 'right', alignSelf: 'center', }}>
                             <h1 className="acDryGinarrowHeading">Damn Good Scotch</h1>
@@ -72,7 +72,7 @@ export const AcDryGin = () => {
                     </Link>
                     <Link to={'/products/liquor/RoyalMedallion'} className="acDryGinrightArrowDiv">
                         <div>
-                            <img src={royalMedallon} alt="block" style={{ height: '150px',marginRight: '5px' }} />
+                            <img src={royalMedallon} alt="block" style={{ height: '150px', marginRight: '5px' }} />
                         </div>
                         <div style={{ textAlign: 'left', alignSelf: 'center' }}>
                             <h1 className="acDryGinarrowHeading">Royal Medallion</h1>

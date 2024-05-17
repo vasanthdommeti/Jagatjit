@@ -28,7 +28,7 @@ export const AcBlack = () => {
                             PURE GRAIN WHISKEY
                         </h4>
                         <p className="acblackParagraph">
-                            The smooth taste and packaging embody a well-crafted melding of fine malt whisky from Scotland, and the finest Indian grain spirits.
+                            Smooth taste and packaging embody a well-crafted melding of fine malt whisky from Scotland, and the finest Indian grain spirits.
                         </p>
                     </div>
                     <div className="acblackImgcontent">
@@ -40,14 +40,14 @@ export const AcBlack = () => {
             <div className="acblackSecondDiv">
                 <div className="acblackColumnContent">
                     <h1 className="acblackSecondDivHeading">
-                        Endless
+                        An Elegant,
                     </h1>
                     <h1 className="acblackSecondDivHeading">
-                        Possibilities
+                        World Class Blend
                     </h1>
                     <p className="acblackSecondDivParagraph">
-                        AC Black has been lauded by the Confederatin of Indian Alcoholic Beverage Companies,
-                        a body which represents the major liquor companies in India and overseas.
+                        Lauded by the Confederation of Indian Alcoholic Beverage Companies,
+                        the body which represents the major liquor companies in India and overseas.
                     </p>
                 </div>
                 {/* <img src={acblacksecondImg} alt="acblack" /> */}
@@ -77,8 +77,8 @@ export const AcBlack = () => {
             <div className="acblackThirdDiv">
                 <div className="acblackThirdDivContent">
                     <h1 className="acblackThirdDivHeading">
-                        An elegant blend that pays hoage to those who
-                        enjoy the finer things in life.
+                        An homage to who
+                        enjoy the finer things in life
                     </h1>
                     {/* <img src={candles} alt="block" className="candleimage" /> */}
                     <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
@@ -108,7 +108,7 @@ export const AcBlack = () => {
                 <div style={{ justifyContent: 'center', display: 'flex', flexDirection: 'row' }}>
                     <Link to={'/products/liquor/ACpremiumNew'} className="leftArrowDiv">
                         <div style={{ textAlign: 'right', alignSelf: 'center', }}>
-                            <h1 className="arrowHeading">Aristocrat Premium (New)</h1>
+                            <h1 className="arrowHeading">Aristocrat Premium</h1>
                             <HiArrowLongLeft style={{ fontSize: '55px' }} />
                         </div>
                         <div>
@@ -120,7 +120,7 @@ export const AcBlack = () => {
                             <img src={damnscotch} alt="block" style={{ height: '150px', marginLeft: '25px', marginRight: '25px' }} />
                         </div>
                         <div style={{ textAlign: 'left', alignSelf: 'center' }}>
-                            <h1 className="arrowHeading">Royal Pride</h1>
+                            <h1 className="arrowHeading">Damn Good Scotch</h1>
                             <HiOutlineArrowLongRight style={{ fontSize: '55px' }} />
                         </div>
                     </Link>
