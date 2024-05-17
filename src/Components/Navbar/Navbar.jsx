@@ -7,15 +7,15 @@ import { MdClose } from "react-icons/md";
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import { IoClose, IoMenu } from "react-icons/io5";
 import { Link } from 'react-router-dom';
-function Navbar() {
+function Navbar({show}) {
     const [menuOpen, setMenuOpen] = useState(false);
-
+ 
     const closeNav = () => {
         setMenuOpen(!menuOpen)
     };
 
     return (
-        <nav>
+        <nav style={{display:show ? 'flex' :'none'}}>
             <div className='mainNavDiv'>
                 <div className="firstLogo">
                     <Link to="/" className="title">

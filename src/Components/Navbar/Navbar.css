@@ -5,7 +5,7 @@ nav {
     color: white;
     /* position: calc(0 - 'absolute' ) calc(10 - 'stickey'); */
     /* position: sticky; */
-    position:absolute;
+    position:fixed;
     /* position: calc(0); */
     width: 100%;
     top: 0;

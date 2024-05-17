@@ -56,7 +56,7 @@ function App() {
 
   return (
     <>
-      <Navbar />
+      <Navbar show={show}/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/products/liquor/ACpremiumOld" element={<AcpremiumOld />} />
