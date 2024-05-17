@@ -1,7 +1,7 @@
 
 
 import { Route, Routes } from "react-router-dom";
-
+import React, { useState, useEffect } from "react";
 import './index.css';
 import './fonts/JosefinSans-Light.ttf';
 import './fonts/JosefinSans-Regular.ttf';
@@ -34,38 +34,57 @@ import Financial from "./Components/Investors/Financial/Financial";
 import Press from "./Components/AboutUs/Press/Press";
 import OurTeam from "./Components/AboutUs/OurTeam/OurTeam";
 function App() {
+
+  const [show, setShow] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  const controlNavbar = () => {
+    if (window.scrollY > lastScrollY) {
+      setShow(false);
+    } else {
+      setShow(true);
+    }
+    setLastScrollY(window.scrollY);
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', controlNavbar);
+    return () => {
+      window.removeEventListener('scroll', controlNavbar);
+    };
+  }, [lastScrollY]);
+
   return (
-    <> 
+    <>
       <Navbar />
-      {/* <AcpremiumNew/> */}
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/products/liquor/ACpremiumOld" element={<AcpremiumOld />} />
-          <Route path="/products/liquor/ACpremiumNew" element={<AcpremiumNew />} />
-          <Route path="/products/liquor/ACpremiumBlack" element={<AcBlack />} />
-          <Route path="/products/liquor/RoyalPride" element={<RoyalPride />} />
-          <Route path="/products/liquor/DamnGoodScotch" element={<DamnScotch />} />
-          <Route path="/products/liquor/AcDryGin" element={<AcDryGin />} />
-          <Route path="/products/liquor/RoyalMedallion" element={<RoyalMedallion />} />
-          <Route path="/products/liquor/IiceVodka" element={<IceVodka />} />
-          <Route path="/products/mmf/food-products" element={<FoodProducts />} />
-          <Route path="/products/mmf/malt-extract" element={<MaltExtract />} />
-          <Route path="/products/ethnol" element={<Ethanol />} />
-          <Route path="/aboutUs/values" element={<Values />} />
-          <Route path="/Sustainability" element={<Sustainability />} />
-          <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
-          <Route path="/GlobalPresence" element={<GlobalPresence />} />
-          <Route path="/investors/csr" element={<Csr />} />
-          <Route path="/investors/codeOfCunduct" element={<CodeOfCunduct />} />
-          <Route path="/AboutUs/Heritage" element={<Heritage />} />
-          <Route path="/ContactUs" element={<ContactUs />} />
-          <Route path="/investors/reports" element={<Report />} />
-          <Route path="/investors/financial" element={<Financial />} />
-          <Route path="/aboutUs/OurTeam" element={<OurTeam />} />
-          <Route path="/aboutUs/Press" element={<Press />} />
-          <Route path="/our-Process" element={<OurProcess />} />
-          <Route path="*" element={<ErrorPage />} />
-        </Routes>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/products/liquor/ACpremiumOld" element={<AcpremiumOld />} />
+        <Route path="/products/liquor/ACpremiumNew" element={<AcpremiumNew />} />
+        <Route path="/products/liquor/ACpremiumBlack" element={<AcBlack />} />
+        <Route path="/products/liquor/RoyalPride" element={<RoyalPride />} />
+        <Route path="/products/liquor/DamnGoodScotch" element={<DamnScotch />} />
+        <Route path="/products/liquor/AcDryGin" element={<AcDryGin />} />
+        <Route path="/products/liquor/RoyalMedallion" element={<RoyalMedallion />} />
+        <Route path="/products/liquor/IiceVodka" element={<IceVodka />} />
+        <Route path="/products/mmf/food-products" element={<FoodProducts />} />
+        <Route path="/products/mmf/malt-extract" element={<MaltExtract />} />
+        <Route path="/products/ethnol" element={<Ethanol />} />
+        <Route path="/aboutUs/values" element={<Values />} />
+        <Route path="/Sustainability" element={<Sustainability />} />
+        <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
+        <Route path="/GlobalPresence" element={<GlobalPresence />} />
+        <Route path="/investors/csr" element={<Csr />} />
+        <Route path="/investors/codeOfCunduct" element={<CodeOfCunduct />} />
+        <Route path="/AboutUs/Heritage" element={<Heritage />} />
+        <Route path="/ContactUs" element={<ContactUs />} />
+        <Route path="/investors/reports" element={<Report />} />
+        <Route path="/investors/financial" element={<Financial />} />
+        <Route path="/aboutUs/OurTeam" element={<OurTeam />} />
+        <Route path="/aboutUs/Press" element={<Press />} />
+        <Route path="/our-Process" element={<OurProcess />} />
+        <Route path="*" element={<ErrorPage />} />
+      </Routes>
       <Footer />
     </>
   )
