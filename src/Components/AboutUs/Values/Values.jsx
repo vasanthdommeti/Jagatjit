@@ -21,9 +21,9 @@ export const Values = () => {
                 <p className="firstDivParagraph">What we believe in.</p>
             </div>
             {/* //1 */}
-            <div className="logoTextDiv"> 
+            <div className="logoTextDiv">  
                 <div className="logoDiv">
-                    <img src={responsibility} alt="alwayslearing" />
+                    <img src={responsibility} alt="alwayslearing" className="img" />
                     <h1 className="logoTxtHeader">
                         Responsibility
                     </h1>
@@ -32,7 +32,7 @@ export const Values = () => {
                     </p>
                 </div>
                 <div className="logoDiv">
-                    <img src={teamwork} alt="creative" />
+                    <img src={teamwork} alt="creative" className="img" />
                     <h1 className="logoTxtHeader">
                         Team Work
                     </h1>
@@ -44,7 +44,7 @@ export const Values = () => {
             {/* //2 */}
             <div className="logoTextDiv">
                 <div className="logoDiv">
-                    <img src={respect} alt="alwayslearing" />
+                    <img src={respect} alt="alwayslearing" className="img"  />
                     <h1 className="logoTxtHeader">
                         Respect
                     </h1>
@@ -53,7 +53,7 @@ export const Values = () => {
                     </p>
                 </div>
                 <div className="logoDiv">
-                    <img src={equality} alt="creative" />
+                    <img src={equality} alt="creative" className="img" />
                     <h1 className="logoTxtHeader">
                         Equality
                     </h1>
@@ -65,7 +65,7 @@ export const Values = () => {
             {/* //3 */}
             <div className="logoTextDiv">
                 <div className="logoDiv">
-                    <img src={creative} alt="alwayslearing" />
+                    <img src={creative} alt="alwayslearing" className="img" />
                     <h1 className="logoTxtHeader">
                         Creative
                     </h1>
@@ -74,7 +74,7 @@ export const Values = () => {
                     </p>
                 </div>
                 <div className="logoDiv">
-                    <img src={alwayslearning} alt="creative" />
+                    <img src={alwayslearning} alt="creative" className="img"  />
                     <h1 className="logoTxtHeader">
                         Always Learning
                     </h1>
@@ -86,7 +86,7 @@ export const Values = () => {
             {/* //4 */}
             <div className="logoTextDiv">
                 <div className="logoDiv">
-                    <img src={more} alt="alwayslearing" />
+                    <img src={more} alt="alwayslearing" className="img"/>
                     <h1 className="logoTxtHeader">
                         More
                     </h1>
@@ -95,7 +95,7 @@ export const Values = () => {
                     </p>
                 </div>
                 <div className="logoDiv">
-                    <img src={loyal} alt="creative" />
+                    <img src={loyal} alt="creative" className="img"/>
                     <h1 className="logoTxtHeader">
                         Loyal
                     </h1>
@@ -107,7 +107,7 @@ export const Values = () => {
             {/* //5 */}
             <div className="logoTextDiv">
                 <div className="logoDiv">
-                    <img src={smart} alt="creative" />
+                    <img src={smart} alt="creative" className="img"/>
                     <h1 className="logoTxtHeader">
                         Smart
                     </h1>

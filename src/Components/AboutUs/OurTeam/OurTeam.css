@@ -1,31 +1,53 @@
+.ourTeamMainDiv {
+    margin-top: 10%;
+    /* width: 100%; */
+}
 
- 
-.TeamMember{
+.corporateDiv {
+    width: 30%;
+}
+
+.corporateMainDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+
+.imageMainDiv {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.TeamMember {
     height: 250px;
     width: 250px;
     border-radius: 5px;
 }
 
-.teamMemberDiv{
+.teamMemberDiv {
     text-align: center;
     margin: 3%;
 }
 
-.teamMemberName{
+.teamMemberName {
     font-size: 16px;
     position: relative;
     margin-bottom: 3%;
 }
-.hoverText{
+
+.hoverText {
     color: #fff;
     text-align: center;
 }
 
-.teamnameDiv{
+.teamnameDiv {
     z-index: 1;
     margin-top: -25%;
 }
-.hoverEffect{
+
+.hoverEffect {
     width: 250px;
     z-index: 1;
     text-align: center;
@@ -33,14 +55,15 @@
     display: none;
 }
 
-.hoverTextData{
+.hoverTextData {
     font-size: 16px;
     font-family: 'Montserrat';
     margin-bottom: 3px;
     text-align: left;
 
 }
-    /* style={{fontSize:'10',fontFamily: 'Montserrat', marginBottom:'0', textAlign:'left'}} */
+
+/* style={{fontSize:'10',fontFamily: 'Montserrat', marginBottom:'0', textAlign:'left'}} */
 
 
 .teamMemberDiv:hover .hoverEffect {
@@ -50,15 +73,62 @@
     font-weight: bold;
     opacity: 1;
 }
+
 .teamMemberDiv:hover .teamMemberName {
     display: none;
 }
+
 .teamMemberDiv:hover .TeamMember {
     text-shadow: 1px;
     opacity: 0.3;
 }
 
 
+
+@media only screen and (max-width: 600px) {
+
+    /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+    .ourTeamMainDiv {
+        margin-top: 30%;
+    }
+
+    .reportHeading {
+        font-size: 21px;
+        margin-bottom: 10%;
+    }
+
+    .imageMainDiv {
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+
+    .corporateMainDiv {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .corporateDiv {
+        width: 100%;
+        padding: 5%;
+    }
+
+    .hoverTextData {
+        font-size: 14px;
+        margin-bottom: 5%;
+    }
+
+    .teamMemberName {
+        font-size: 12px;
+    }
+
+    .teamMemberDiv {
+        margin: 10%;
+    }
+
+
+}
 
 
 

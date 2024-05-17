@@ -23,9 +23,9 @@ const OurTeam = () => {
     }, [])
  
     return(
-        <div style={{marginTop:'10%'}}>
+        <div className="ourTeamMainDiv">
            <h1 className='reportHeading'>Our Management Team</h1>
-           <div className='reportmainDiv' style={{marginLeft:'5%',marginRight:'5%'}}>
+           <div className='reportmainDiv imageMainDiv' >
            {management.map((el,index) => (
                 <div key={index} className="teamMemberDiv">
                     <img src={el.team_image} alt="Team" className="TeamMember"/>
@@ -33,7 +33,7 @@ const OurTeam = () => {
                     <h1 className="teamMemberName">{el.designation}</h1>
                     <h1 className="teamMemberName">{el.name}</h1>
                     </div>
-                    <div className="hoverEffect">
+                    <div className="hoverEffect" style={{marginBottom:'20%'}}>
                         <h1 className="hoverText" style={{fontSize:'16px', fontFamily:'Josefin Sans', marginBottom:'0'}}>{el.designation}</h1>
                         <h1 className="hoverText"  style={{fontSize:'16px', fontFamily:'Josefin Sans',marginBottom:'6px'}}>{el.name}</h1>
                         <p className="hoverText hoverTextData">Total Experience: {el.experience}+ Years </p>
@@ -45,9 +45,9 @@ const OurTeam = () => {
            </div>
 
            <h1 className='reportHeading' style={{marginTop:'5%'}}>Corporate Members</h1>
-           <div style={{display:'flex',flexDirection:'row', justifyContent:'space-around', marginTop:'5%', marginBottom:'5%'}}>
+           <div className="corporateMainDiv">
             {corporateMembers.map((er) => (
-                <div style={{width:'20%'}}>
+                <div className="corporateDiv">
                     <p>{er.designation}</p>
                     <h1 style={{marginBottom:'0%'}}>{er.name}</h1>
                     <p>Total Experience: {er.experience}+ Years</p>
