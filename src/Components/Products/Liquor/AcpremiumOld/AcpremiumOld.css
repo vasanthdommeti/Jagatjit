@@ -90,12 +90,109 @@
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {} */
 
-
+.bottleImgLogo{
+    height: 40%;
+    width: 50%;
+}
+.bottleImg{
+    height: 90vh;
+    width: 50%;
+}
+.section2BotleImg{
+    height: 90vh;
+    width: 50%;
+}
+.favBotGroupImg{
+    margin-bottom: -15%;
+}
 .acpoldpagesRowDiv {
     display: flex;
-    /* flex-direction: row;
-        justify-content: flex-start; */
 }
+.acpremium5ImgDiv{
+    justify-content: center;
+    display: flex;
+    height: 50%;
+    margin-top: 5%;
+}
+.acpremiumleftrightDiv{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 5%;
+}
+.premiumleftarrowDiv{
+    text-align: right;
+    align-self: center;
+}
+.leftImgBtn{
+ height: 150px;
+ margin-left: 25px;
+ margin-right: 25px;
+}
+.rightImgBtn{
+    height: 150px;
+    margin-left: 5px;
+}
+.acparrowSize{
+    font-size: 55px;
+}
+.premiumrightarrow{
+    text-align: left;
+    align-self: center;
+}
+.acpsecDiv{
+    margin-left: 80px;
+    align-self: center;
+}
+
+/* //flavour icon */
+.profile-icon-wrap {
+    display: flex;
+    gap: 30px;
+}
+
+.profile-icon-wrap > div {
+    color: #FFFFFF;
+    width: calc(100% / 4);
+    height: auto;
+    font-family: Josefin Sans;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24.29px;
+    letter-spacing: 0.07em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.profile-icon-1::before, 
+.profile-icon-2::before,
+.profile-icon-3::before,
+.profile-icon-4::before {
+    content: '';
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-size: cover;
+    width: 70px;
+    height: 110px;
+}
+
+.profile-icon-1::before {
+    background-image: url('../../../../Assets//Products/Liquor/AcpremiumOld/elegant.svg');
+}
+.profile-icon-2::before {
+    background-image: url('../../../../Assets//Products/Liquor/AcpremiumOld/sweet.svg');
+}
+.profile-icon-3::before {
+    background-image: url('../../../../Assets//Products/Liquor/AcpremiumOld/deep.svg');
+}
+.profile-icon-4::before {
+    background-image: url('../../../../Assets//Products/Liquor/AcpremiumOld/smooth.svg');
+}
+
+
 
 .pagesTextDiv {
     /* margin-top: -30%; */
@@ -314,6 +411,7 @@
     display: flex;
     flex-direction: row;
     height: 100vh;
+    border-style: dashed;
     /* align-items: center; */
     justify-content: space-between;
 }

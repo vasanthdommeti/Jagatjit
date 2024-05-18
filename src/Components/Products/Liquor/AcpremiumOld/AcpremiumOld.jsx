@@ -12,9 +12,9 @@ import { Link } from "react-router-dom";
 import curtainImg from '../../../../Assets/Products/Liquor/AcpremiumOld/sectionCurtain.png';
 import flavourImg from '../../../../Assets/Products/Liquor/AcpremiumOld/sectionFlavours.png';
 import flavourGroup from '../../../../Assets/Products/Liquor/AcpremiumOld/flavourGroup.png'
-import bottle from '../../../../Assets/Products/Liquor/AcpremiumOld/bottles.png';
-import distik from '../../../../Assets/Products/Liquor/AcpremiumOld/distik.png';
-import glass from '../../../../Assets/Products/Liquor/AcpremiumOld/glass.png';
+import bottle from '../../../../Assets/Products/Liquor/AcpremiumOld/bottle.svg';
+import distik from '../../../../Assets/Products/Liquor/AcpremiumOld/distik.svg';
+import glass from '../../../../Assets/Products/Liquor/AcpremiumOld/glass.svg';
 import acpsectiononelogo from '../../../../Assets/Products/Liquor/AcpremiumNew/acpsectiononelogo.png';
 import acpsectiontwoimgs from '../../../../Assets/Products/Liquor/AcpremiumOld/sec1bottle.png';
 import acpblack from '../../../../Assets/Products/Liquor/AcpremiumNew/acblackImg.png';
@@ -26,17 +26,17 @@ export const AcpremiumOld = () => {
         <div>
             {/* //1 */}
             <div className="acpoldpagesRowDiv acpoldSecondPageSectionOneImage">
-                <div style={{marginLeft:'80px', alignSelf:'center'}}>
-                    <img src={acpsectiononelogo} alt="bottleImg" style={{ height: '40%', width: '50%' }} />
+                <div className="acpsecDiv">
+                    <img src={acpsectiononelogo} alt="bottleImg" className="bottleImgLogo" />
                     <h2 className="acpoldSecondHeading">CLASSIC WHISKEY</h2>
                     <p className="acpoldParagraph">One of India's most-loved whiskey brands with</p>
                     <p className="acpoldParagraph">its iconic gold and deep-red bottle.</p>
                 </div>
-            <img src={acpsectiontwoimgs} alt="bottleImg" style={{ height: '90vh', width: '50%' }} />
+            <img src={acpsectiontwoimgs} alt="bottleImg" className="bottleImg" />
             </div>
             {/* //2 */}
             <div className="pagesTextDivTwo acpScondSectionTwoImage">
-            <img src={acplast} alt="bottleImg" style={{ height: '90vh', width: '50%' }} />
+            <img src={acplast} alt="bottleImg" className="section2BotleImg" />
                 <div className="pagesTextDiv">
                     <div className="pageSecondText">
                         <h1 className="sectionTwoHeading">THE ESSENCE OF</h1>
@@ -55,8 +55,14 @@ export const AcpremiumOld = () => {
                 <div><img src={curtainImg} alt="leftCurtain" className="image" /></div>
                 <div className="flavourDiv">
                     <h1 className="flavourDivHeader">FLAVOUR PROFILE</h1>
-                    <img src={flavourGroup} alt="groupBtl" className="image" style={{marginBottom:'-15%'}}/>
-                    <img src={flavourImg} alt="flavours" className="image" />
+                    <img src={flavourGroup} alt="groupBtl" className="image favBotGroupImg" />
+                    {/* <img src={flavourImg} alt="flavours" className="image" /> */}
+                    <div class="profile-icon-wrap">
+                    <div class="profile-icon-1">Elegant and Long Lasting</div>
+                    <div class="profile-icon-2">Sweet, Floral with a touch of spices</div>
+                    <div class="profile-icon-3">Deep Gold to the eyes</div>
+                    <div class="profile-icon-4">Smooth, with a hint of Fruit & Spices</div>
+                </div>
                 </div>
                 <div><img src={curtainImg} alt="rightCurtain" className="curtainImage image" /></div>
             </section>
@@ -91,26 +97,26 @@ export const AcpremiumOld = () => {
             </section>
             {/* //5 */}
             <div className="acppremiumfifthhDiv">
-                <div style={{ justifyContent: 'center', display: 'flex', height: '50%', marginTop: '5%' }}>
+                <div className="acpremium5ImgDiv" >
                     <img src={acplast} alt="lastImg" />
                 </div>
-                <div style={{ justifyContent: 'center', display: 'flex', flexDirection: 'row',marginTop: '5%' }}>
+                <div className="acpremiumleftrightDiv">
                     <Link to={'/products/liquor/DamnGoodScotch'} className="acppremiumleftArrowDiv">
-                        <div style={{ textAlign: 'right', alignSelf: 'center', }}>
+                        <div className="premiumleftarrowDiv">
                             <h1 className="acppremiumarrowHeading">Aristocrat Premium (OLD)</h1>
-                            <HiArrowLongLeft style={{ fontSize: '55px' }} />
+                            <HiArrowLongLeft className="acparrowSize" />
                         </div>
                         <div>
-                            <img src={acpnewImg} alt="block" style={{ height: '150px', marginLeft: '25px', marginRight: '25px' }} />
+                            <img src={acpnewImg} alt="block" className="leftImgBtn" />
                         </div>
                     </Link>
                     <Link to={'/products/liquor/RoyalMedallion'} className="acppremiumrightArrowDiv">
                         <div>
-                            <img src={acpblack} alt="block" style={{ height: '150px',marginRight: '5px' }} />
+                            <img src={acpblack} alt="block" className="rightImgBtn" />
                         </div>
-                        <div style={{ textAlign: 'left', alignSelf: 'center' }}>
+                        <div className="premiumrightarrow">
                             <h1 className="acppremiumarrowHeading">Aristocrat Black</h1>
-                            <HiOutlineArrowLongRight style={{ fontSize: '55px' }} />
+                            <HiOutlineArrowLongRight className="acparrowSize"/>
                         </div>
                     </Link>
                 </div>
