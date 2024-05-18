@@ -21,23 +21,26 @@ export const RoyalPride = () => {
         <section>
             {/* //1 completed*/}
             <div className="royalFirstDiv">
-                <div style={{ display: 'flex', alignSelf: 'center', paddingLeft: '7%', paddingRight: '5%' }}>
+                <div style={{ display: 'flex', alignSelf: 'center', paddingLeft: '7%' }}>
+
                     <div className="royalRowContent">
-                        <h1 className="royalHeading">
+                        <div className="animated"> <h1 className="royalHeading animated">
                             ROYAL PRIDE
                         </h1>
-                        <h4 className="royalsecondHeading">
-                            BLENDED SCOTCH WHISKEY
-                        </h4>
-                        <p className="royalParagraph">
-                            From the Highland, Speyside and Islay regions of Scotland comes a whiskey
-                            <span> exquisitely blended</span> and
-                            <span> artfully crafted</span> - a pleasure for every palate which transports one to those fabled lands of folktales and snow with
-                            <span> just one sip.</span>
-                        </p>
+
+                            <h4 className="royalsecondHeading">
+                                EXQUISITE WHISKEY
+                            </h4>
+                            <p className="royalParagraph">
+                                From the Highland, Speyside and Islay regions of Scotland comes a whiskey
+                                <span> exquisitely blended</span> and
+                                <span> artfully crafted</span> - a pleasure for every palate which transports one to those fabled lands of folktales and snow with
+                                <span> just one sip.</span>
+                            </p>
+                        </div>
                     </div>
                     <div className="royalImgcontent">
-                        <img src={royalpridefirstImg} alt="acblack" style={{ width: '100%' }} />
+                        <img src={royalpridefirstImg} alt="royalpride" />
                     </div>
                 </div>
             </div>
@@ -47,17 +50,27 @@ export const RoyalPride = () => {
                     {/* <h1 className="royalSecondDivHeading">
                         Launched in 2022
                     </h1> */}
+
                     <h1 className="royalSecondDivHeading">
-                        Made with the
+                        <div className="animated">
+                            Made with the
+                        </div>
                     </h1>
+
                     <h1 className="royalSecondDivHeading">
-                        finest grains
+                        <div className="animated">
+                            finest grains
+                        </div>
                     </h1>
+
                     <p className="royalSecondDivParagraph">
-                        Launched in 2022, Royal Pride is crafted by our Scottish master blenders with the
-                        <span> finest grain spirits</span> and
-                        <span> imported Scotch malts.</span>
+                        <div className="animated">
+                            Launched in 2022, Royal Pride is crafted by our Scottish master blenders with the
+                            <span> finest grain spirits</span> and
+                            <span> imported Scotch malts.</span>
+                        </div>
                     </p>
+
                 </div>
             </div>
 
@@ -113,7 +126,7 @@ export const RoyalPride = () => {
             </div>
             <div className="royalPrideFourthDiv">
                 <div className="royalThirdDivContent royalprideshow" style={{ width: '45%', }}>
-                    <h1 className="royalPrideSecondDivHeading" >Crafted for your Inner Connoisseur</h1>
+                    <h1 className="royalPrideSecondDivHeading" >Crafted for your Inner Connoisseur </h1>
                     <div className="royalimageText">
                         <img src={glasss} alt="block" className="royallogoimage" />
                         <p>Best Enjoyed How You Like Your Scotch</p>

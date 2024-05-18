@@ -10,22 +10,55 @@
 
 .royalRowContent {
     align-self: center;
-    width: 75%;
+    width: 85%;
 }
+
+.royalImgcontent {
+    width: 100%;
+    margin: 0;
+}
+
+
+
+
 
 .royalHeading {
     color: #FFFFFF;
     font-family: 'Krona One';
-    font-size: calc(35px + 1vw);
+    font-size: calc(38px + 1vw);
     font-weight: bold;
     margin-bottom: 0;
     text-align: left;
+
+
+}
+
+.animated {
+    opacity: 0;
+    /* Initially hidden */
+    animation: fadeInZoom ease-in-out 1s forwards;
+    animation-delay: 0.1s;
+    /* Add a slight delay for a smoother flow */
+}
+
+@keyframes fadeInZoom {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+        /* Start with a slight zoom out */
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+        /* Zoom back to normal size */
+    }
 }
 
 .royalsecondHeading {
     color: #ED4E11;
     font-family: "Andika";
-    font-size: calc(21px + 1vw);
+    font-size: calc(20px + 1vw);
     letter-spacing: 5px;
     text-align: left;
     margin-bottom: 35px;
@@ -33,20 +66,20 @@
 
 .royalParagraph {
     color: #FFFFFF;
+    width: 80%;
     font-family: 'Josefin Sans';
-    font-size: calc(16px + 1vw);
+    font-size: calc(12px + 1vw);
     letter-spacing: 1px;
-    font-weight: 100;
-    opacity: 0.7;
+    font-family: 'Light';
     text-align: justify;
 }
 
 .royalParagraph span {
-    font-size: calc(16px + 1vw);
+    font-size: calc(13px + 1vw);
     color: #ED4E11;
     font-family: 'Josefin Sans';
     text-decoration: none;
-    font-weight: 100;
+    font-family: 'Light';
 }
 
 .royalColumnContent {
@@ -116,19 +149,19 @@
     width: 25%;
     text-align: right;
     font-family: 'Josefin Sans';
-    font-weight: 100;
-    opacity: 0.8;
+    font-family: 'Light';
     font-size: 24px;
     letter-spacing: 1px;
     margin-top: 3%;
+    color: #FFFFFF;
 }
 
 .royalSecondDivParagraph span {
     font-family: 'Josefin Sans';
     font-weight: 100;
-    opacity: 0.8;
     color: #ED4E11;
     letter-spacing: 1px;
+    font-family: 'regular';
     font-size: 24px;
     text-decoration: none;
 }
@@ -277,7 +310,9 @@
 
     .royalSecondDivParagraph {
         width: 60%;
+        font-weight: 100;
         text-align: right;
+        color: #fff;
     }
 
     .royalcandleimagehide {
