@@ -55,7 +55,7 @@ export const AcBlack = () => {
             {/* //3 completed but alignment small images*/}
             {/* <img src={candles} alt="block" className="candleimagehide" /> */}
             <div className="candleimagehide">
-                <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
+                <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }} className="candle-image-wrap">
                     <div style={{ display: 'flex', alignItems: 'center', margin: '2%', width: '40%' }}>
                         <img src={glass} alt="" />
                         <p>Elegant and long-lasting</p>
@@ -81,7 +81,7 @@ export const AcBlack = () => {
                         enjoy the finer things in life
                     </h1>
                     {/* <img src={candles} alt="block" className="candleimage" /> */}
-                    <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
+                    <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }} className="candle-image-wrap-desk">
                         <div style={{ display: 'flex', alignItems: 'center', margin: '2%', width: '40%' }}>
                             <img src={glass} alt="" />
                             <p>Elegant and long-lasting</p>
@@ -105,7 +105,7 @@ export const AcBlack = () => {
                 <div style={{ justifyContent: 'center', display: 'flex' }}>
                     <img src={acblacklastImg} alt="lastImg" style={{ height: '60%', width: '60%' }} />
                 </div>
-                <div style={{ justifyContent: 'center', display: 'flex', flexDirection: 'row' }}>
+                <div className="pre-next-wrap">
                     <Link to={'/products/liquor/ACpremiumNew'} className="leftArrowDiv">
                         <div style={{ textAlign: 'right', alignSelf: 'center', }}>
                             <h1 className="arrowHeading">Aristocrat Premium</h1>
