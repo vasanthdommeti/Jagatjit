@@ -23,14 +23,13 @@ import acplast from '../../../../Assets/Products/Liquor/AcpremiumNew/acplastImg.
 
 export const AcpremiumOld = () => {
     return (
-        <div>
+        <div className="acpremium-container">
             {/* //1 */}
             <div className="acpoldpagesRowDiv acpoldSecondPageSectionOneImage">
                 <div className="acpsecDiv">
                     <img src={acpsectiononelogo} alt="bottleImg" className="bottleImgLogo" />
                     <h2 className="acpoldSecondHeading">CLASSIC WHISKEY</h2>
-                    <p className="acpoldParagraph">One of India's most-loved whiskey brands with</p>
-                    <p className="acpoldParagraph">its iconic gold and deep-red bottle.</p>
+                    <p className="acpoldParagraph">One of India's most-loved whiskey brands with its iconic gold and deep-red bottle.</p>
                 </div>
             <img src={acpsectiontwoimgs} alt="bottleImg" className="bottleImg" />
             </div>
@@ -43,16 +42,13 @@ export const AcpremiumOld = () => {
                         <h1 className="sectionTwoHeading">SOPHISTICATION</h1>
                     </div>
                     <div>
-                        <p className="sectionTwoParagraph">Distinctive and refined in both taste and look, it is</p>
-                        <p className="sectionTwoParagraph">blended with pure grain and select imported</p>
-                        <p className="sectionTwoParagraph">Scotch malts, bringing a <span>honeyed and delightful</span></p>
-                        <p className="sectionTwoParagraph"><span>experince</span> to its loyal patrons</p>
+                        <p className="sectionTwoParagraph">Distinctive and refined in both taste and look, it is blended with pure grain and select imported Scotch malts, bringing a <span>honeyed and delightful experince</span> to its loyal patrons</p>
                     </div>
                 </div>
             </div>
             {/* //3 */}
             <section className="sectionThree">
-                <div><img src={curtainImg} alt="leftCurtain" className="image" /></div>
+                <div><img src={curtainImg} alt="leftCurtain" className="image img-dec" /></div>
                 <div className="flavourDiv">
                     <h1 className="flavourDivHeader">FLAVOUR PROFILE</h1>
                     <img src={flavourGroup} alt="groupBtl" className="image favBotGroupImg" />
@@ -64,13 +60,13 @@ export const AcpremiumOld = () => {
                     <div class="profile-icon-4">Smooth, with a hint of Fruit & Spices</div>
                 </div>
                 </div>
-                <div><img src={curtainImg} alt="rightCurtain" className="curtainImage image" /></div>
+                <div><img src={curtainImg} alt="rightCurtain" className="curtainImage image img-dec" /></div>
             </section>
             {/* //4 */}
             <section className="acpsecondfourthSectionImage">
                 <div className="pagesTextbetween">
                     <h2 className="pagesTextFavorDivHeader">BEYOND LUXURY LIES LEGACY.</h2>
-                    <div>
+                    <div className="legacy-img-wrap">
                         <div className="imageText">
                             <img src={glass} alt="bottleImg" className="logoText" />
                             <div>

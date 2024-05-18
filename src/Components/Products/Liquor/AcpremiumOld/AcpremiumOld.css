@@ -115,10 +115,12 @@
     margin-top: 5%;
 }
 .acpremiumleftrightDiv{
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 50%;
+    place-self: center;
     justify-content: center;
-    flex-direction: row;
-    margin-top: 5%;
+    margin: 5% 0;
 }
 .premiumleftarrowDiv{
     text-align: right;
@@ -142,7 +144,14 @@
 }
 .acpsecDiv{
     margin-left: 80px;
-    align-self: center;
+    display: flex;
+    align-items: center;
+    width: 50%;
+    flex-direction: column;
+}
+
+.img-dec {
+    height: 500px !important;
 }
 
 /* //flavour icon */
@@ -214,6 +223,8 @@
 }
 .acppremiumfifthhDiv {
     height: 100vh;
+    display: flex;
+    flex-direction: column;
   }
 
 
@@ -279,7 +290,8 @@
     font-family: "Fredoka", sans-serif;
     font-size: 16px;
     letter-spacing: 1px;
-    text-align: left;
+    text-align: center;
+    max-width: 350px;
     margin-left: 40px;
 
     /* line-height: 15px; */
@@ -295,6 +307,8 @@
     font-size: 30px;
     letter-spacing: 1px;
     line-height: 10px;
+    text-align: end;
+    max-width: 76%;
 }
 
 .sectionTwoParagraph {
@@ -305,6 +319,8 @@
     font-size: 16px;
     letter-spacing: 1px;
     line-height: 15px;
+    max-width: 500px;
+    text-align: end;
 }
 
 .sectionTwoParagraph span {
@@ -411,9 +427,14 @@
     display: flex;
     flex-direction: row;
     height: 100vh;
-    border-style: dashed;
     /* align-items: center; */
     justify-content: space-between;
+}
+
+.sectionThree > div:nth-child(odd) {
+    position: relative;
+    top: -28px;
+    z-index: -1;
 }
 
 .flavourDiv {
@@ -534,4 +555,207 @@
         place-items: center;
         display: flex;
         /* aspect-ratio: 16 / 8.71; */
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px){
+
+    .acpremium-container > div {
+        padding: 0 15px;
+    }
+
+    .acpoldSecondPageSectionOneImage {
+        width: 100%;
+        height: auto;
+        padding-top: 55px;
+    }
+
+    .acpsecDiv {
+        margin: 0;
+    }
+
+    .acpsecDiv > img {
+        width: 100%;
+        height: auto;
+    }
+
+    .acpoldSecondHeading {
+        text-align: center;
+        margin: 0;
+    }
+
+    .acpoldParagraph,
+    .sectionTwoHeading {
+        max-width: unset;
+    }
+
+    .bottleImg,
+    .section2BotleImg {
+        height: auto;
+        width: 50%;
+    }
+
+    .acpScondSectionTwoImage,
+    .sectionThree ,
+    .acpsecondfourthSectionImage,
+    .acppremiumfifthhDiv,
+    .acpremium5ImgDiv > img {
+        width: 100%;
+        height: auto;
+    }
+
+    .pagesTextDiv {
+        margin: 0;
+        padding: 0;
+    }
+
+    .sectionThree > div:nth-child(odd) {
+        position: relative;
+        top: -16px;
+    }
+
+    .flavourDivHeader {
+        padding-top: 40px;
+    }
+
+    .flavourDiv {
+        width: 100%;
+        justify-content: unset;
+        gap: 40px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .acpoldpagesRowDiv {
+        padding: 90px 15px 0 15px;
+    }
+
+    .acpoldpagesRowDiv {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+    }
+
+    .acpsecDiv{
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .bottleImgLogo,
+    .bottleImg,
+    .section2BotleImg {
+        width: 100%;
+        height: auto;
+    }
+
+    .acpoldSecondHeading {
+        font-size: 20px;
+        margin-left: 0;
+        line-height: 22px;
+    }
+
+    .acpoldParagraph {
+        text-align: center;
+        margin: 0;
+    }
+        
+    .pagesTextDivTwo {
+        flex-direction: column-reverse;
+        text-align: center;
+        height: auto;
+        padding: 0 15px;
+    }
+    
+    .pagesTextDiv {
+        width: 100%;
+        padding: 0;
+    }
+
+    .sectionTwoHeading {
+        font-size: 24px;
+        line-height: 28px;
+        margin-bottom: 10px;
+        max-width: 100%;
+        text-align: center;
+    }
+    
+    .sectionTwoParagraph {
+        font-weight: 300;
+        line-height: 17px;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .sectionTwoParagraph > span {
+        line-height: 17px;
+    }
+
+    .sectionThree {
+        width: 100%;
+        height: auto;
+        padding: 30px 15px;
+    }
+
+    .sectionThree > div:nth-child(odd) {
+        display: none;
+    }
+
+    .flavourDiv {
+        width: 100%;
+        justify-content: unset;
+        gap: 30px;
+    }
+    
+    .profile-icon-wrap {
+        display: grid;
+        gap: 30px;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .profile-icon-wrap > div {
+        width: 100%;
+        font-size: 14px;
+        line-height: 11px;
+    }
+
+    .profile-icon-1::before, .profile-icon-2::before, .profile-icon-3::before, .profile-icon-4::before {
+        width: 30px;
+        height: 50px;
+    }
+    
+    .acpsecondfourthSectionImage {
+        width: 100%;
+        height: auto;
+    }
+
+    /* .pagesTextbetween > .pagesTextFavorDivHeader {
+        margin-top: -80%;
+        margin-bottom: 50px;
+        width: 100%;
+        font-size: 32px;
+        line-height: 37px;
+        text-align: center;
+    }
+
+    .legacy-img-wrap {
+        width: 100%;
+        top: 55px;
+        position: relative;
+    } */
+
+    .acppremiumfifthhDiv {
+        width: 100%;
+        height: auto;
+        margin-bottom: 50px;
+    }
+
+    .acpremium5ImgDiv {
+        height: auto;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+
+    .acpremium5ImgDiv > img {
+        width: 100%;
+        height: auto;
+    }
 }
