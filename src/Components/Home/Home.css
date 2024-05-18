@@ -11,13 +11,23 @@
     background-repeat: no-repeat;
     /* aspect-ratio: 14 / 7.3; */
 }
- .imageContainer1{
+
+.imageContainer1 {
     height: 100vh;
- }
- .main{
+}
+
+.mapContainerDiv {
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.main {
     height: 100vh;
- }
-.sectionImage1Div{
+}
+
+.sectionImage1Div {
     display: flex;
     flex-direction: column;
     /* justify-content: flex-end; */
@@ -25,7 +35,8 @@
     position: absolute;
     padding: 13%;
 }
-.section1Heading{
+
+.section1Heading {
     font-size: 75px;
     color: #ECA533;
     font-family: 'Josefin Sans';
@@ -33,32 +44,36 @@
     letter-spacing: 3px;
     margin-bottom: 0;
 }
-.section1subHeading{
+
+.section1subHeading {
     font-size: 60px;
     color: #fff;
     font-family: 'Josefin Sans';
     font-weight: 600;
     letter-spacing: 3px;
 }
-.section1paragraph{
+
+.section1paragraph {
     font-size: 24px;
     color: #fff;
     /* font-family: 'Josefin Sans'; */
     font-weight: 100;
     letter-spacing: 3px;
 }
+
 #sectionImage2 {
     background-image: url('../../Assets/Home/sec2backgroundImg.png');
 }
 
-.sectionThreeHeadDiv{
+.sectionThreeHeadDiv {
     /* style={{height:'35%', background:'red', position:'fixed', alignSelf:'center', justifyContent:'flex-end'}} */
     height: 45%;
     position: fixed;
     margin-top: 3%;
     margin-left: 35%;
 }
-.sectionThreeImageDiv{
+
+.sectionThreeImageDiv {
     /* style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }} */
     margin-top: 20%;
     margin-left: 25%;
@@ -119,7 +134,7 @@
     height: 100vh;
 }
 
-.smallImgDiv{
+.smallImgDiv {
     display: flex;
     /* flex-wrap: wrap; */
     object-fit: cover;
@@ -130,14 +145,16 @@
     /* justify-content: flex-end; */
     /* align-items: flex-end; */
 }
-.btnheading{
+
+.btnheading {
     font-size: 35px;
     font-family: 'Josefin Sans';
     font-weight: bold;
     letter-spacing: 4px;
     margin-bottom: 0;
 }
-.btnsubheading{
+
+.btnsubheading {
     font-size: 25px;
     font-family: 'Josefin Sans';
     font-weight: bold;
@@ -145,14 +162,16 @@
     color: #ECA533;
     margin-bottom: 0;
 }
-.btnparagraph{
+
+.btnparagraph {
     font-size: 18px;
     margin-bottom: 0;
     font-weight: 200;
 }
-.smallImgButton{
- background-color: transparent;
- border-color: transparent;
+
+.smallImgButton {
+    background-color: transparent;
+    border-color: transparent;
 }
 
 .section2 {
@@ -178,11 +197,12 @@
     /* margin: 5%; */
 }
 
-.sectionThreeMainDiv{
+.sectionThreeMainDiv {
     display: flex;
     align-self: center;
     align-items: center;
 }
+
 .section3MainDiv {
     display: flex;
     /* padding: 8% 5% 5% 5%; */
@@ -224,7 +244,8 @@
     letter-spacing: 2px;
     margin-top: 30px;
 }
-.section4Button{
+
+.section4Button {
     border-color: #ECA533;
     background-color: black;
     border-width: 0.5px solid;
@@ -234,15 +255,16 @@
     letter-spacing: 2px;
     margin-top: 30px;
 }
- 
-.subparaheading{
+
+.subparaheading {
     font-size: 16px;
     font-family: 'Lobster', cursive;
     font-weight: bold;
     letter-spacing: 1px;
     text-align: center;
 }
-.subparaheading span{
+
+.subparaheading span {
     font-size: 16px;
     font-family: 'Lobster', cursive;
     font-weight: bold;
@@ -250,6 +272,7 @@
     color: #ECA533;
     text-decoration: none;
 }
+
 .section5GroupImagesDiv {
     /* width: 420px; */
 }
@@ -289,9 +312,16 @@
     letter-spacing: 4px;
     margin-bottom: 0%;
     text-align: center;
-    margin: 80px 0 20px 0;
+    margin: 30px 0 20px 0;
 
 }
+
+.imageMapContainer {
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+}
+
 
 .mainDiv {
     padding-left: 5%;
@@ -308,10 +338,11 @@
 .sectionMargin {
     padding-top: 15%;
 }
-.section3GroupImagesDiv{
+
+.section3GroupImagesDiv {
     width: 50%;
     /* object-fit: contain; */
-    
+
 }
 
 .section6firstThirdDiv {
@@ -323,6 +354,7 @@
     width: 100vw;
     height: 100vh;
 }
+
 .section6firstThirdDivContent {
     display: flex;
     flex-direction: row;
@@ -330,6 +362,7 @@
     align-self: flex-end;
     /* padding: 10%; */
 }
+
 .section6firstthirdDivLine {
     font-family: 'Krona One';
     font-size: calc(30px + 1vw);
@@ -340,6 +373,7 @@
     padding-right: 5%;
     margin-bottom: 2%;
 }
+
 .section6firstrowdiv {
     display: flex;
     width: 80%;
@@ -348,6 +382,7 @@
     align-self: center;
     /* align-items: center; */
 }
+
 .section6firstcandleimagesingle {
     display: flex;
     flex-direction: column;
@@ -355,6 +390,7 @@
     text-align: center;
     object-fit: cover;
 }
+
 /* @media (min-width:320px) {
 
     smartphones, iPhone, portrait 480x320 phones

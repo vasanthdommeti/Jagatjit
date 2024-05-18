@@ -8,6 +8,7 @@
     border-top-left-radius: 35px;
     border-top-right-radius: 35px;
     padding-left: 10vw;
+    position: relative;
 }
 
 .footerImage {
@@ -104,7 +105,8 @@ p {
 
 .contactParagraph {
     letter-spacing: 1px;
-    line-height: 21px;
+    /* line-height: 21px; */
+    /* margin-bottom: auto; */
     text-decoration: none;
     color: #fff;
 }
@@ -178,5 +180,14 @@ span {
     .footerInfo {
         margin-top: 0;
         margin-left: 0;
+    }
+
+}
+
+@media (max-width: 986px) {
+
+    .footerContact,
+    .footerInfo {
+        margin-top: 0;
     }
 }

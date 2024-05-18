@@ -1,5 +1,7 @@
 
 import React, { useRef, useLayoutEffect, useState } from "react";
+import { ComposableMap, Geographies, Geography, Marker } from "react-simple-maps";
+import { Tooltip } from 'react-tooltip'
 import '../Home/Home.css';
 import { Link } from "react-router-dom";
 import section3Image from '../../Assets/Home/sec3bottleImg.png';
@@ -103,8 +105,34 @@ const section = [
     }
 ]
 
+const markers = [
+    {
+        markerOffset: -15,
+        name: "South Africa",
+        coordinates: [16.34, -28.58]
+    },
+    {
+        markerOffset: -15,
+        name: "Mauritius",
+        coordinates: [57.62, -20.5]
+    },
+    {
+        markerOffset: -15,
+        name: "Oman",
+        coordinates: [53.11, 16.65]
+    }
+];
+
+const countries = [
+    'India',
+    'Oman',
+    'South Africa'
+];
+
 function Home() {
-    const [data, setData] = useState(section[0])
+    const [data, setData] = useState(section[0]);
+    const [content, setContent] = useState("");
+
     gsap.registerPlugin(ScrollTrigger);
 
     const firstRef = useRef(null);
@@ -176,9 +204,9 @@ function Home() {
             <section >
                 <div id='sectionImage2' className='section2'>
                     <div className='section3MainDiv'>
-                        <img src={data.largeImg} alt="bottle" style={{ height: '500px', width:'50%', marginRight:'45%' }} />
-                        <div style={{ display: 'flex', flexDirection: 'column', position:'fixed', width:'50%' }}>
-                            <div className="sectionThreeHeadDiv">  
+                        <img src={data.largeImg} alt="bottle" style={{ height: '500px', width: '50%', marginRight: '45%' }} />
+                        <div style={{ display: 'flex', flexDirection: 'column', position: 'fixed', width: '50%' }}>
+                            <div className="sectionThreeHeadDiv">
                                 <h1 className="btnheading">{data.name}</h1>
                                 <p className="btnsubheading">{data.heading}</p>
                                 <p className="btnparagraph"> {data.para}</p>
@@ -344,7 +372,54 @@ function Home() {
 
             <div style={{ height: '100vh' }}>
                 <h1 className='section6Header'>JIL's Presence & Reach</h1>
-                <img src={mapImage} alt="mapImage" style={{ width: '100%' }} />
+                <div className="mapContainerDiv">
+                    <Tooltip id="my-tooltip" />
+                    <div>
+                        <ComposableMap data-tooltip-id="my-tooltip" data-tooltip-content={content} className="imageMapContainer">
+                            <Geographies geography="/features.json" style={{ fill: 'orange', outline: 'none' }}>
+                                {({ geographies }) =>
+                                    geographies.map((geo) => (
+                                        <Geography
+                                            key={geo.rsmKey}
+                                            geography={geo}
+                                            outline='none'
+                                            onMouseEnter={() => {
+                                                console.log('geo.properties', geo);
+                                                const { name } = geo.properties;
+                                                setContent(name);
+                                            }}
+                                            onMouseLeave={() => {
+                                                setContent("");
+                                            }}
+
+                                        // style={{
+                                        //     default: {
+                                        //         fill: "#D6D6DA",
+                                        //         outline: "none"
+                                        //     },
+                                        //     hover: {
+                                        //         fill: "#F53",
+                                        //         outline: "none"
+                                        //     },
+                                        //     pressed: {
+                                        //         fill: "#E42",
+                                        //         outline: "none"
+                                        //     }
+                                        // }}
+                                        />
+                                    ))
+                                }
+                            </Geographies>
+                            {markers.map(({ name, coordinates }) => (
+                                <Marker key={name} coordinates={coordinates}>
+                                    <a data-tooltip-id="my-tooltip" data-tooltip-content={name}>
+                                        <circle r={10} fill="#f00" stroke="#fff" strokeWidth={2} />
+                                    </a>
+                                </Marker>
+                            ))}
+                        </ComposableMap>
+                    </div>
+                </div>
             </div>
         </div>
     )
