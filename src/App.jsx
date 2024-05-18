@@ -34,11 +34,15 @@ import Financial from "./Components/Investors/Financial/Financial";
 import Press from "./Components/AboutUs/Press/Press";
 import OurTeam from "./Components/AboutUs/OurTeam/OurTeam";
 import DateOfBirth from "./Components/DateOfBirth/DateOfBirth";
+import { Loading } from "./Components/Loading/Loading";
 function App() {
 
   const {pathname} = useLocation()
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [loading, setLoading] = useState(true);
+  const [previousPathname, setPreviousPathname] = useState('');
+
 
   const controlNavbar = () => {
     if (window.scrollY > lastScrollY) {
@@ -50,15 +54,28 @@ function App() {
   };
 
   useEffect(() => {
+    if (pathname !== previousPathname) {
+      setLoading(true);
+      setPreviousPathname(pathname);
+  }
+  
+  if (pathname) {
+      setTimeout(() => {
+          setLoading(false);
+      }, 1000);
+  }
     window.addEventListener('scroll', controlNavbar);
     return () => {
       window.removeEventListener('scroll', controlNavbar);
     };
-  }, [lastScrollY]);
+  }, [lastScrollY,pathname]);
 
   return (
     <>
-      {pathname !==  '/' && <Navbar show={show}/>}
+      {pathname !==  '/' && !loading  && <Navbar show={show}/>}
+      {loading ?
+      <Loading/>
+      :
       <Routes>
         <Route exact path="/" element={<DateOfBirth />} />
         <Route path="/home" element={<Home />} />
@@ -87,8 +104,8 @@ function App() {
         <Route path="/aboutUs/Press" element={<Press />} />
         <Route path="/our-Process" element={<OurProcess />} />
         <Route path="*" element={<ErrorPage />} />
-      </Routes>
-      {pathname !==  '/' && <Footer /> }
+      </Routes>}
+      {pathname !==  '/' && !loading  && <Footer /> }
     </>
   )
 }

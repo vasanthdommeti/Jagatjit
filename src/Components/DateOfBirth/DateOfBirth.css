@@ -74,17 +74,22 @@
     line-height: 20px;
     color: white;
   }
+  .dobRights{
+    margin-top: 20px;
+    text-align: center;
+    letter-spacing: 2px;
+  }
   
-.firstParagraphInFooterRights{
+.firstParagraphdobFooterRights{
     font-size: 21px;
     font-family: 'Light';
-    margin-top: 2%;
+    margin-top: 2%; 
 }
-.secondParagraphInFooterRights{
+.secondParagraphdobFooterRights{
     font-size: 21px;
     font-family: 'Light';
 }
-.thirdParagraphInFooterRights{
+.thirdParagraphdobFooterRights{
     font-size: 21px;
     font-family: 'Light';
 }
@@ -123,13 +128,13 @@
     .dobparagraph{
         font-size: 12px;
     }
-    .firstParagraphInFooterRights{
+    .firstParagraphdobFooterRights{
         font-size: 12px;
     }
-    .secondParagraphInFooterRights{
+    .secondParagraphdobFooterRights{
         font-size: 12px;
     }
-    .thirdParagraphInFooterRights{
+    .thirdParagraphdobFooterRights{
         font-size: 12px;
     }
     .dateDiv {
