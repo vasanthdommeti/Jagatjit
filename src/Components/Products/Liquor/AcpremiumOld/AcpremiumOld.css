@@ -100,10 +100,10 @@
 }
 .section2BotleImg{
     height: 90vh;
-    width: 50%;
+    width: 40%;
 }
 .favBotGroupImg{
-    margin-bottom: -15%;
+    margin-bottom: -15%
 }
 .acpoldpagesRowDiv {
     display: flex;
@@ -151,7 +151,7 @@
 }
 
 .img-dec {
-    height: 500px !important;
+    height: 80% !important;
 }
 
 /* //flavour icon */
@@ -205,8 +205,8 @@
 
 .pagesTextDiv {
     /* margin-top: -30%; */
-    width: 70%;
-    padding-left: 60px;
+    width: 50%;
+    padding: 0 60px;
 }
 
 .pagesTextFavorDiv {
@@ -308,7 +308,6 @@
     letter-spacing: 1px;
     line-height: 10px;
     text-align: end;
-    max-width: 76%;
 }
 
 .sectionTwoParagraph {
@@ -319,7 +318,6 @@
     font-size: 16px;
     letter-spacing: 1px;
     line-height: 15px;
-    max-width: 500px;
     text-align: end;
 }
 
@@ -725,10 +723,12 @@
     .acpsecondfourthSectionImage {
         width: 100%;
         height: auto;
+        margin-top: 180px;
+        aspect-ratio: 16 / 9;
     }
 
     .pagesTextbetween > .pagesTextFavorDivHeader {
-        margin-top: -80%;
+        margin-top: -55%;
         margin-bottom: 50px;
         width: 100%;
         font-size: 32px;
