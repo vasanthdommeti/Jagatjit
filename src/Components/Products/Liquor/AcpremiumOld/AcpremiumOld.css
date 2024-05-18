@@ -727,7 +727,7 @@
         height: auto;
     }
 
-    /* .pagesTextbetween > .pagesTextFavorDivHeader {
+    .pagesTextbetween > .pagesTextFavorDivHeader {
         margin-top: -80%;
         margin-bottom: 50px;
         width: 100%;
@@ -740,7 +740,7 @@
         width: 100%;
         top: 55px;
         position: relative;
-    } */
+    }
 
     .acppremiumfifthhDiv {
         width: 100%;
