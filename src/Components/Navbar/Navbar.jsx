@@ -31,7 +31,7 @@ function Navbar({show}) {
             <div>
                 <ul className={menuOpen ? "open" : "close"}>
                     <li className='dropdown-li'>
-                        <Link to={'/'} onClick={closeNav}>HOME</Link>
+                        <Link to={'/home'} onClick={closeNav}>HOME</Link>
                     </li>
                     <li>
                         <DropdownButton id="dropdown-basic-button" className="dropdown-about borderChange" title="ABOUT US">

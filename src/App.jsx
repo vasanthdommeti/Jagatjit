@@ -1,6 +1,6 @@
 
 
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import './index.css';
 import './fonts/JosefinSans-Light.ttf';
@@ -33,8 +33,10 @@ import Report from "./Components/Investors/Reports/Reports";
 import Financial from "./Components/Investors/Financial/Financial";
 import Press from "./Components/AboutUs/Press/Press";
 import OurTeam from "./Components/AboutUs/OurTeam/OurTeam";
+import DateOfBirth from "./Components/DateOfBirth/DateOfBirth";
 function App() {
 
+  const {pathname} = useLocation()
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
@@ -56,9 +58,10 @@ function App() {
 
   return (
     <>
-      <Navbar show={show}/>
+      {pathname !==  '/' && <Navbar show={show}/>}
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route exact path="/" element={<DateOfBirth />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/products/liquor/ACpremiumOld" element={<AcpremiumOld />} />
         <Route path="/products/liquor/ACpremiumNew" element={<AcpremiumNew />} />
         <Route path="/products/liquor/ACpremiumBlack" element={<AcBlack />} />
@@ -85,13 +88,10 @@ function App() {
         <Route path="/our-Process" element={<OurProcess />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
-      <Footer />
+      {pathname !==  '/' && <Footer /> }
     </>
   )
 }
 
 export default App;
-
-
-
 
