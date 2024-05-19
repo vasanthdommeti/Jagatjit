@@ -255,6 +255,7 @@
     display: flex;
     width: 80%;
     margin-top: 20%;
+    gap: 10px;
     justify-content: space-between;
     align-self: center;
     /* align-items: center; */
@@ -505,7 +506,6 @@
     
     .royalPrideThirdDiv {
         background-position: bottom;
-        height: auto;
     }
     
     .royalthirdDivLine {
@@ -534,8 +534,13 @@
     .royalprideThirdDivContent > div > img {
         height: auto !important;
         width: 100%;
-        top: 110px;
+        top: 15px;
         position: relative;
+    }
+
+    .royalcandleimagesingle > img {
+        width: 40px;
+        height: 70px;
     }
 
     .royalcandleimagesingle > p {
