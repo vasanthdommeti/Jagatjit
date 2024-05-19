@@ -19,7 +19,7 @@ export const AcBlack = () => {
         <section>
             {/* //1 completed */}
             <div className="acblackFirstDiv">
-                <div style={{ display: 'flex', alignSelf: 'center', paddingLeft: '7%', paddingRight: '5%' }}>
+                <div className="acsec1div">
                     <div className="acblackRowContent">
                         <h1 className="acblackHeading">
                             AC BLACK
@@ -32,7 +32,7 @@ export const AcBlack = () => {
                         </p>
                     </div>
                     <div className="acblackImgcontent">
-                        <img src={acblackfirstImg} alt="acblack" style={{ width: '100%', }} />
+                        <img src={acblackfirstImg} alt="acblack" className="acfirstImg" />
                     </div>
                 </div>
             </div>
@@ -55,20 +55,20 @@ export const AcBlack = () => {
             {/* //3 completed but alignment small images*/}
             {/* <img src={candles} alt="block" className="candleimagehide" /> */}
             <div className="candleimagehide">
-                <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }} className="candle-image-wrap">
-                    <div style={{ display: 'flex', alignItems: 'center', margin: '2%', width: '40%' }}>
+                <div  className="candle-image-wrap accandleDiv">
+                    <div className="aciconsDiv">
                         <img src={glass} alt="" />
                         <p>Elegant and long-lasting</p>
                     </div>
-                    <div style={{ display: 'flex', alignItems: 'center', margin: '2%', width: '40%' }}>
+                    <div className="aciconsDiv">
                         <img src={candle} alt="" />
                         <p>Deep Gold</p>
                     </div>
-                    <div style={{ display: 'flex', alignItems: 'center', margin: '2%', width: '40%' }}>
+                    <div className="aciconsDiv">
                         <img src={lipglass} alt="" />
                         <p>Smooth on the palate, green apple and spices</p>
                     </div>
-                    <div style={{ display: 'flex', alignItems: 'center', margin: '2%', width: '40%' }}>
+                    <div className="aciconsDiv">
                         <img src={hotglass} alt="" />
                         <p>Honeyed, floral, with malty notes and a touch of spices</p>
                     </div>
@@ -81,20 +81,20 @@ export const AcBlack = () => {
                         enjoy the finer things in life
                     </h1>
                     {/* <img src={candles} alt="block" className="candleimage" /> */}
-                    <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }} className="candle-image-wrap-desk">
-                        <div style={{ display: 'flex', alignItems: 'center', margin: '2%', width: '40%' }}>
+                    <div className="candle-image-wrap-desk accandleDiv">
+                        <div className="aciconsDiv">
                             <img src={glass} alt="" />
                             <p>Elegant and long-lasting</p>
                         </div>
-                        <div style={{ display: 'flex', alignItems: 'center', margin: '2%', width: '40%' }}>
+                        <div className="aciconsDiv">
                             <img src={candle} alt="" />
                             <p>Deep Gold</p>
                         </div>
-                        <div style={{ display: 'flex', alignItems: 'center', margin: '2%', width: '40%' }}>
+                        <div className="aciconsDiv">
                             <img src={lipglass} alt="" />
                             <p>Smooth on the palate, green apple and spices</p>
                         </div>
-                        <div style={{ display: 'flex', alignItems: 'center', margin: '2%', width: '40%' }}>
+                        <div className="aciconsDiv">
                             <img src={hotglass} alt="" />
                             <p>Honeyed, floral, with malty notes and a touch of spices</p>
                         </div>
@@ -102,26 +102,26 @@ export const AcBlack = () => {
                 </div>
             </div>
             <div className="acblackFourthDiv">
-                <div style={{ justifyContent: 'center', display: 'flex' }}>
-                    <img src={acblacklastImg} alt="lastImg" style={{ height: '60%', width: '60%' }} />
+                <div className="acsec4imgDiv">
+                    <img src={acblacklastImg} alt="lastImg" className="acsec4secimg" />
                 </div>
                 <div className="pre-next-wrap">
                     <Link to={'/products/liquor/ACpremiumNew'} className="leftArrowDiv">
-                        <div style={{ textAlign: 'right', alignSelf: 'center', }}>
+                        <div className="acleftarrowDiv">
                             <h1 className="arrowHeading">Aristocrat Premium</h1>
-                            <HiArrowLongLeft style={{ fontSize: '55px' }} />
+                            <HiArrowLongLeft className="acparrowSize" />
                         </div>
                         <div>
-                            <img src={acblack} alt="block" style={{ height: '150px', marginLeft: '25px', marginRight: '25px' }} />
+                            <img src={acblack} alt="block" className="acarrowImg" />
                         </div>
                     </Link>
                     <Link to='/products/liquor/RoyalPride' className="rightArrowDiv">
                         <div>
-                            <img src={damnscotch} alt="block" style={{ height: '150px', marginLeft: '25px', marginRight: '25px' }} />
+                            <img src={damnscotch} alt="block" className="acarrowImg" />
                         </div>
-                        <div style={{ textAlign: 'left', alignSelf: 'center' }}>
+                        <div className="acrightarowDiv">
                             <h1 className="arrowHeading">Damn Good Scotch</h1>
-                            <HiOutlineArrowLongRight style={{ fontSize: '55px' }} />
+                            <HiOutlineArrowLongRight className="acparrowSize" />
                         </div>
                     </Link>
                 </div>

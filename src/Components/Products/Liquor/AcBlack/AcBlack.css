@@ -28,9 +28,48 @@
     align-items: flex-end;
     padding: 10%;
 }
-
+.acsec1div{
+    display: flex;
+    align-self: center;
+    padding-left: 7%;
+    padding-right: 5%;
+}
+.acfirstImg{
+    width: 100%;
+}
+.aciconsDiv{
+    display: flex;
+    align-items: center;
+    margin: 2%;
+    width: 40%;
+}
+.accandleDiv{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.acsec4secimg{
+    height: 60%;
+    width: 60%;
+}
+.acsec4imgDiv{
+    justify-content: center;
+    display: flex;
+}
+.acleftarrowDiv{
+    text-align: right;
+    align-self: center;
+}
+.acrightarowDiv{
+    text-align: left;
+    align-self: center;
+}
+.acarrowImg{
+    height: 150px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
 /* acblacksecondimg.png */
-
 .acblackSecondDiv {
     background-image: url('../../../../Assets/Products/Liquor/AcBlack/acblacksecondimg.png');
     background-position: bottom;
