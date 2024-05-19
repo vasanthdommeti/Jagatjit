@@ -135,38 +135,45 @@ export const Heritage = () => {
             image: year20242,
             desc: 'AC Black and Damn Good Scotch has won The Ambrosia Awards in the Product Category.',
         },
-
     ];
 
     return (
-        <div style={{ margin: '10%' }}>
+        <div className='main'>
             <h1 className="heritage-heading">
                 Heritage
             </h1>
-            <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginTop: '2%' }}>
-                <div style={{ textAlign: 'justify' }}>
+            <div className='container'>
+                <h6 className='para'>
                     Jagatjit Industries was founded in 1944 by the Late Mr LP Jaiswal in the erstwhile state of Kapurthala, under the patronage of its Maharaja, Jagatjit Singh. Jagatjit Chemical and Pharmaceutical Works and the Jagatjit Laboratories were established in 1946, and the distillery began operations in 1948. The company then obtained a license for the annual manufacture of malt extract of 1800 tons, the largest in the country at the time,and started production in 1963.
-                </div>
+                </h6>
                 <div style={{ paddingLeft: '5%' }}>
                     <img src={mainImg1} />
                 </div>
             </div>
-            <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginTop: '2%' }}>
+            <div className='containerTwo'>
                 <div>
                     <img src={mainImg2} />
                 </div>
-                <div style={{ paddingLeft: '5%', textAlign: 'justify' }}>
+                <h6 className='para para2'>
                     The next few decades saw the development and introduction of several premium brands of liquor (including the iconic Aristocrat and Teachers whiskies), as well as malted milk food (Ovaltine/Maltova), which cemented the company’s pioneering position in the industry, and delivered on its promise of a ‘Heritage of Quality’. In 2023, JIL got approval for its Ethanol plant.
-                </div>
+                </h6>
             </div>
-            <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginTop: '2%' }}>
-                <div style={{ textAlign: 'justify' }}>
+            <div className='container'>
+                <h4 className='para'>
                     In 2015, Roshini Sanah Jaiswal took over as Promoter and Chief Restructuring Officer at Jagatjit Industries Limited (JIL), carrying forward a seventy-one-year-old legacy created by her father and grandfather. She has successfully leveraged that rich heritage by upgrading the company’s technology and automation capabilities to increase efficiency, ensuring future-ready agility and catalyzing dynamism in thought and deed.
-                </div>
+                </h4>
                 <div style={{ paddingLeft: '5%' }}>
                     <img src={mainImg3} />
                 </div>
             </div>
+            <div className='container'>
+                <h4 className='para'>
+                    “Our company ethos since 1944 has rested on two pillars – one, the desire to provide true ‘value for money’ to both customers and stakeholders and second, on ‘quality’ par excellence across the board. JIL has drawn its strength from these values and continues to do so even today.
+                </h4>
+            </div>
+            <h4 className='para3'>
+                – Roshini Sanah Jaiswal, Promoter and Chief Restructuring Officer at Jagatjit Industries
+            </h4>
             <div style={{ margin: '5%' }}>
                 <h1 className="heritage-heading">
                     Milestones
@@ -185,11 +192,11 @@ export const Heritage = () => {
                                     {t.image && <img src={t.image} style={{ height: '90%', width: '90%' }} />}
                                     <p style={{ color: 'white', fontSize: 32, fontWeight: 'bolder' }}>{t.date}</p>
                                     {t.id != 16 ? (
-                                        <p style={{ color: 'white', fontFamily: 'Josefin Sans' }}>{t.desc}</p>
+                                        <p className='timelinePara'>{t.desc}</p>
                                     ) : (
-                                        <div>
+                                        <p className='timelinePara'>
                                             Ms. Roshini Sanah Jaiswal won the ‘Entrepreneur of the year’ Award at Indspirit 2016 (The mega Alcobev Trade Event). <br />• IICE Vodka won the Gold Award for Standard Product of the Year at Indspirit 2016 (The mega Alcobev Trade Event). <br />• AC Black Whisky in Packaging category won the Gold award at Indspirit 2016 (The mega Alcobev Trade Event).<br /><br /><br /><br /><br />
-                                        </div>
+                                        </p>
                                     )}
                                 </div>
                             </VerticalTimelineElement>
@@ -197,12 +204,6 @@ export const Heritage = () => {
                     })}
                 </VerticalTimeline>
             </div>
-            {/* <div className='toBeContinuedMain'>
-                <div className='toBeContinued'>
-                    <h1 style={{ textAlign: 'center' }}>To Be Continued</h1>
-                </div>
-            </div> */}
-
             <div className='toBeContinuedMain'>
                 <h1 className='continuedText'>To Be Continued</h1>
             </div>
