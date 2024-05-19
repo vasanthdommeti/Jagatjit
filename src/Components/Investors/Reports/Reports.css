@@ -1,31 +1,35 @@
-
-.reportinputField{
+.reportinputField {
     border-radius: 10px;
     margin-right: 15px;
 }
-.reportmainDiv{
+
+.reportmainDiv {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
 }
 
-.reportDiv{
+.reportDiv {
     margin-top: 5%;
-    width: 25%;
+    width: 15%;
 }
 
-.reportHeading{
-    font-size: 32px;
+.reportHeading {
+    font-size: 28px;
     text-align: center;
     letter-spacing: 3px;
     margin-bottom: 0%;
     font-family: 'Josefin Sans';
 }
 
-.reportPara{
+.reportPara {
     font-size: 26px;
     text-align: center;
     font-family: 'Josefin Sans';
     opacity: 0.7;
+}
+
+.reportImg {
+    scale: 0.6;
 }

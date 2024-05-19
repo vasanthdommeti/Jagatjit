@@ -7,7 +7,7 @@ import '../Reports/Reports.css';
 import noteImg from '../../../Assets/Reports/noteImg.png';
 import { GrPhone } from "react-icons/gr";
 
- 
+
 const Report = () => {
   const [reports, setReports] = useState([]);
   const [filteredReports, setFilteredReports] = useState([]);
@@ -17,19 +17,22 @@ const Report = () => {
   const [year, setYear] = useState('');
   const [monthError, setMonthError] = useState('');
   const [yearError, setYearError] = useState('');
- 
+
   const currentYear = new Date().getFullYear();
- 
+
   useEffect(() => {
     axios.get('https://api.jagatjit.com/api/financials')
-      .then(response => {     
-        console.log('response',response);   
+      .then(response => {
+        console.log('response', response);
         if (response.data && Array.isArray(response.data)) {
-          setReports(response.data);
-          setFilteredReports(response.data);
+          let data = response.data.filter(report => new Date(report.file_date).getFullYear() === parseInt(year));
+          data = data.sort((a, b) => new Date(b.file_date) - new Date(a.file_date));
+          setReports(data);
+          setFilteredReports(data);
         } else if (response.data && Array.isArray(response.data.data)) {
-          setReports(response.data.data);
-          setFilteredReports(response.data.data);
+          let data = response.data.data.sort((a, b) => new Date(b.file_date) - new Date(a.file_date));
+          setReports(data);
+          setFilteredReports(data);
         } else {
           console.error('API response does not contain an array');
         }
@@ -38,10 +41,10 @@ const Report = () => {
         console.error('Error fetching data: ', error);
       });
   }, []);
- 
+
   const filterReports = () => {
     let filtered = reports;
- 
+
     if (fileName) {
       filtered = filtered.filter(report => report.file_name.toLowerCase().includes(fileName.toLowerCase()));
     }
@@ -54,14 +57,18 @@ const Report = () => {
     if (year) {
       filtered = filtered.filter(report => new Date(report.file_date).getFullYear() === parseInt(year));
     }
- 
+
+    // Sort the filtered reports from newest to oldest
+    filtered = filtered.sort((a, b) => new Date(b.file_date) - new Date(a.file_date));
+
     setFilteredReports(filtered);
   };
- 
+
+
   useEffect(() => {
     filterReports();
   }, [fileName, categoryId, month, year]);
- 
+
   const handleMonthChange = (e) => {
     const value = parseInt(e.target.value);
     if (value < 1 || value > 12) {
@@ -71,7 +78,7 @@ const Report = () => {
       setMonth(e.target.value);
     }
   };
- 
+
   const handleYearChange = (e) => {
     const value = parseInt(e.target.value);
     if (value > currentYear) {
@@ -81,35 +88,35 @@ const Report = () => {
       setYear(e.target.value);
     }
   };
- 
+
   return (
-    <div style={{marginTop : '10%'}}>
-<div style={{marginBottom:'5%'}}>
-<h1 className='reportHeading'>Report and Policies</h1>
-      <p className='reportPara'>Our yearly reports</p>
-</div>
-      <div style={{display:'flex', justifyContent:'center'}}>
-          <input placeholder='Search Reports' style={{width:'40%'}} type="text" value={fileName} onChange={(e) => setFileName(e.target.value)}  className='reportinputField'/>
-          <input placeholder='By Year' type="number" value={year} onChange={handleYearChange} className='reportinputField'/>
-          {yearError && <span style={{ color: 'red' }}>{yearError}</span>}
-          <input  placeholder='By Month' type="number" value={month} onChange={handleMonthChange} className='reportinputField'/>
-          {monthError && <span style={{ color: 'red' }}>{monthError}</span>}
-          <input placeholder='Category' type="number" value={categoryId} onChange={(e) => setCategoryId(e.target.value)} className='reportinputField'/>
+    <div style={{ marginTop: '10%' }}>
+      <div style={{ marginBottom: '5%' }}>
+        <h1 className='reportHeading'>Report and Policies</h1>
+        <p className='reportPara'>Our yearly reports</p>
+      </div>
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <input placeholder='Search Reports' style={{ width: '40%' }} type="text" value={fileName} onChange={(e) => setFileName(e.target.value)} className='reportinputField' />
+        <input placeholder='By Year' type="number" value={year} onChange={handleYearChange} className='reportinputField' />
+        {yearError && <span style={{ color: 'red' }}>{yearError}</span>}
+        <input placeholder='By Month' type="number" value={month} onChange={handleMonthChange} className='reportinputField' />
+        {monthError && <span style={{ color: 'red' }}>{monthError}</span>}
+        <input placeholder='Category' type="number" value={categoryId} onChange={(e) => setCategoryId(e.target.value)} className='reportinputField' />
       </div>
       <div className='reportmainDiv'>
-          {Array.isArray(filteredReports) && filteredReports.length > 0 ? (
-            filteredReports.map((report, idx) => (
-              <div key={idx} className='reportDiv'>
-                <a href={report.file_url} target='_blank' rel='noopener noreferrer' style={{textDecoration : 'none'}}>
-                    <img src={noteImg} alt='report'/>
-                    <h1 style={{marginBottom:'0%', color : 'white'}}>{report.file_name}</h1>
-                    <p style={{color : 'white'}}>{report.file_date}</p>
-                </a>
-              </div>
-            ))
-          ) : (
-            <h1>No reports found</h1>
-          )}
+        {Array.isArray(filteredReports) && filteredReports.length > 0 ? (
+          filteredReports.map((report, idx) => (
+            <div key={idx} className='reportDiv'>
+              <a href={report.file_url} target='_blank' rel='noopener noreferrer' style={{ textDecoration: 'none' }}>
+                <img src={noteImg} alt='report' className='reportImg' />
+                <h1 style={{ marginBottom: '0%', color: 'white' }}>{report.file_name}</h1>
+                <p style={{ color: 'white' }}>{report.file_date}</p>
+              </a>
+            </div>
+          ))
+        ) : (
+          <h1>No reports found</h1>
+        )}
       </div>
     </div>
   );
