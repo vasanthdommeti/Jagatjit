@@ -451,7 +451,7 @@ function Home() {
                             {markers.map(({ name, coordinates }) => (
                                 <Marker key={name} coordinates={coordinates}>
                                     <a data-tooltip-id="my-tooltip" data-tooltip-content={name}>
-                                        <circle r={10} fill="#f00" stroke="#fff" strokeWidth={2} />
+                                        <circle r={10} fill="#fff" stroke="gray" strokeWidth={2} />
                                     </a>
                                 </Marker>
                             ))}
