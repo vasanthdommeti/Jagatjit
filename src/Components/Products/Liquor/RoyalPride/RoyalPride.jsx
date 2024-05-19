@@ -75,7 +75,7 @@ export const RoyalPride = () => {
             </div>
 
             {/* //3 incomplete side image and small images */}
-            <img src={candles} alt="block" className="royalcandleimagehide" />
+            {/* <img src={candles} alt="block" className="royalcandleimagehide" /> */}
             <div className="royalPrideThirdDiv">
                 <div className="royalprideThirdDivContent">
                     <div style={{ alignItems: 'flex-end', display: 'flex', paddingTop: '5%', }}>
@@ -150,7 +150,7 @@ export const RoyalPride = () => {
                 <div style={{ justifyContent: 'center', display: 'flex' }}>
                     <img src={royalpridelastimage} alt="lastImg" style={{ height: '60%', width: '60%' }} />
                 </div>
-                <div style={{ justifyContent: 'center', display: 'flex', flexDirection: 'row' }}>
+                <div style={{ justifyContent: 'center', display: 'flex', flexDirection: 'row' }} className="pre-next-wrap">
                     <Link to={'/products/liquor/ACpremiumBlack'} className="royalleftArrowDiv">
                         <div style={{ textAlign: 'right', alignSelf: 'center', }}>
                             <h1 className="royalarrowHeading">Aristocrat Premium Black</h1>
