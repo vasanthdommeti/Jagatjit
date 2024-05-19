@@ -1,47 +1,75 @@
+.submitBtn {
+    border-radius: 30px;
+    padding: 2% 6% 2% 6%;
+    background-color: #ECA533;
 
-
-.submitBtn{
- border-radius: 15px;
- padding: 2% 6% 2% 6% ;
- background-color: #ECA533;
- 
 }
-.inputField{
+
+.inputField {
+    width: 100%;
+    margin-bottom: 2%;
+    background-color: black;
+    border-color: #fff;
+    padding: 2%;
+    border-width: 0.5px;
+    border-radius: 30px;
+    color: #fff;
+}
+
+.inputFieldHeading {
+    font-size: 18px;
+    margin-bottom: 0;
+    font-weight: 100;
+    font-family: 'Josefin Sans';
+}
+
+.contactHeading {
+    font-size: 38px;
+    margin-bottom: 0;
+    font-weight: 100;
+    font-family: 'Josefin Sans';
+}
+
+.contactusParagraph {
+    margin: 5%;
+}
+
+.textareainput {
     width: 100%;
     margin-bottom: 2%;
     background-color: black;
     border-color: #fff;
     border-width: 0.5px;
+    border-radius: 20px;
     color: #fff;
 }
 
-.inputFieldHeading{
-    font-size: 18px;
-    margin-bottom: 0;
-    font-weight: 100;
-    opacity: 0.6;
-    font-family: 'Josefin Sans';
-}
-
-.contactHeading{
-    font-size: 38px;
-    margin-bottom: 0;
-    font-weight: 100;
-    /* opacity: 0.6; */
-    font-family: 'Josefin Sans';
-}
-
-.contactusParagraph{
-    margin: 5%;
-}
-
-.contacticons{
+.contacticons {
     color: #ECA533;
     /* margin-bottom: -3px; */
     margin-right: 10px;
 }
 
 .contactContact {
-    margin-bottom: 20px;
+    margin-bottom: 1%;
 }
 
+.contactContactmain {
+    display: flex;
+    margin-left: 10%;
+    margin-right: 10%;
+    justify-content: space-around;
+    align-self: center;
+    margin-bottom: 1%;
+}
+
+
+@media (max-width: 768px) {
+    .contactContactmain {
+        display: flex;
+        justify-content: space-around;
+        align-self: center;
+        flex-direction: column;
+        margin-bottom: 1%;
+    }
+}

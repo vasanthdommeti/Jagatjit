@@ -5,13 +5,13 @@ import grains from '../../../Assets/Products/Ethnol/grains.png';
 import drop from '../../../Assets/Products/Ethnol/waterdrop.png';
 
 export const Ethanol = () => {
-    return ( 
+    return (
         <section>
             <div className="ethanolfirstDiv">
                 <h1 className="ethanolHeading">Manufacturing</h1>
                 <h1 className="ethanolHeading">Grain-Based Ethanol</h1>
             </div>
-            <div style={{ paddingLeft: '5%', paddingRight: '5%', marginTop:'10%'}}>
+            <div style={{ paddingLeft: '10%', paddingRight: '10%', marginTop: '10%', paddingBottom: '2%' }}>
                 <h1 className="ethanolsubHeading">
                     What is Ethanol?
                 </h1>
@@ -20,15 +20,15 @@ export const Ethanol = () => {
                 </p>
             </div>
             <div className="mainlogoContent">
-                <div className="logoContent">
-                    <img src={grains} className="logoImgDrop" />
+                <div className="logoContentrice">
+                    <img src={grains} className="logoImgDroprice" />
                     <p className="logoTxt">
                         Made from Rice and Maiz
                     </p>
                 </div>
                 <div className="logoContent">
                     <img src={bio} className="logoImgDrop" />
-                    <p className="logoTxt"> 
+                    <p className="logoTxt">
                         Bio Fuel with low carbon emmisions
                     </p>
                 </div>
@@ -39,7 +39,7 @@ export const Ethanol = () => {
                     </p>
                 </div>
             </div>
-            <div style={{ paddingLeft: '5%', paddingRight: '5%', paddingBottom: '10%' }}>
+            <div style={{ paddingLeft: '10%', paddingRight: '10%', paddingBottom: '15%', marginTop: '10%' }}>
                 <h1 className="ethanolsubHeading">
                     How we manufacture Ethanol?
                 </h1>
