@@ -61,7 +61,7 @@ export const Values = () => {
                         We are not afraid to treat women as equals.
                     </p>
                 </div>
-            </div>
+            </div> 
             {/* //3 */}
             <div className="logoTextDiv">
                 <div className="logoDiv">
