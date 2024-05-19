@@ -92,7 +92,7 @@ const Financial = () => {
   return (
     <div style={{ marginTop: '10%' }}>
       <div style={{ marginBottom: '5%' }}>
-        <h1 className='reportHeading'>Report and Policies</h1>
+        <h1 className='reportHeading'>Financial</h1>
         <p className='reportPara'>Our yearly reports</p>
       </div>
       <div style={{ display: 'flex', justifyContent: 'center' }}>

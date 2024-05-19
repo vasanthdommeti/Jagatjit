@@ -18,27 +18,30 @@ import acpsectiontwoimg from '../../../../Assets/Products/Liquor/AcpremiumNew/ac
 import acpblack from '../../../../Assets/Products/Liquor/AcpremiumNew/acblackImg.png';
 import acpnewImg from '../../../../Assets/Products/Liquor/AcpremiumNew/acpnewImg.png';
 import acplast from '../../../../Assets/Products/Liquor/AcpremiumNew/AcpProducts.png';
- 
+import acpsectiontwoimgs from '../../../../Assets/Products/Liquor/AcpremiumNew/acpnewImg.png';
+import bendFavImg from '../../../../Assets/Products/Liquor/AcpremiumNew/bendfavimg.png';
+
 export const AcpremiumNew = () => {
     return (
         <div>
             {/* //1 */}
-            <div className="acpSecondPageSectionOneImage">
+            <div className=" acpNewpagesRowDiv acpSecondPageSectionOneImage">
                 <div className="acpNewTextDiv">
-                    <h2 className="aristocratSecondHeading">New Bottle. Same Brilliant Taste</h2>
-                    <img src={acpsectiononelogo} alt="bottleImg" style={{ height: '40%', width: '50%', marginLeft: '-5%' }} />
+                    <h2 className="aristocratSecondHeading">THE ALL NEW</h2>
+                    <img src={acpsectiononelogo} alt="bottleImg" className="acpNewlogoImg1" />
                     <p className="aristocratParagraph">One of India's most-loved whiskey brands with its iconic gold and deep-red bottle. Now Revamped. </p>
                 </div>
+            <img src={acpsectiontwoimgs} alt="bottleImg" className="acpbottleImg" />
             </div>
             {/* //2 */}
-            <div className="pagesTextDivTwo acpScondSectionTwoImage">
-                <img src={acpsectiontwoimg} alt="bottleImg" style={{ height: '100vh', width: '50%' }} />
-                <div className="pagesTextDiv">
+            <div className="acpnewpagesTextDivTwo acpNewScondSectionTwoImage">
+                <img src={acpsectiontwoimg} alt="bottleImg"  className="acpNewImg1" />
+                <div className="acpnewpagesTextDiv">
                     <div className="pageSecondText">
                         <h1 className="sectionTwoHeading">THE ESSENCE OF</h1>
                         <h1 className="sectionTwoHeading">SOPHISTICATION</h1>
                     </div>
-                    <div>
+                    <div> 
                         <p className="sectionTwoParagraph">Distinctive and refined in both taste and look, it is</p>
                         <p className="sectionTwoParagraph">blended with pure grain and select imported</p>
                         <p className="sectionTwoParagraph">Scotch malts, bringing a <span>honeyed and delightful</span></p>
@@ -47,50 +50,54 @@ export const AcpremiumNew = () => {
                 </div>
             </div>
             {/* //3 */}
-            <section className="sectionThree">
+            <section className="acpNsectionThree">
                 <div><img src={curtainImg} alt="leftCurtain" className="image" /></div>
-                <div className="flavourDiv">
-                    <h1 className="flavourDivHeader">FLAVOUR PROFILE</h1>
-                    <div style={{ display: 'flex', alignSelf: 'center', flexDirection: 'row', justifyContent: 'center' }}>
+                <div className="acpNflavourDiv">
+                    <h1 className="acpNflavourDivHeader">FLAVOUR PROFILE</h1>
+                    <div className="acpNewFavIconImgDiv">
                     <div class="profileN-icon-wrap">
                     <div class="profileN-icon-1">Elegant and Long Lasting</div>
                     <div class="profileN-icon-2">Sweet, Floral with a touch of spices</div>
                     <div class="profileN-icon-3">Deep Gold to the eyes</div>
                     <div class="profileN-icon-4">Smooth, with a hint of Fruit & Spices</div>
                 </div>
+                <picture>
+                  <source media="(max-width:767px)" srcset={bendFavImg} />
+                  <img src={flavourGroupimg} alt="Flowers" className="acpfavsectImg"/>
+                </picture>
                 
-                        {/* <img src={flavourImgs} alt="flavours" style={{ width: '70%', height: '90%' }} /> */}
-                        <img src={flavourGroupimg} alt="groupBtl" style={{ width: '70%', height: '90%' }} />
+                        {/* <img src={flavourGroupimg} alt="groupBtl" className="acpfavsectImg" /> */}
 
                     </div>
                 </div>
                 <div><img src={curtainImg} alt="rightCurtain" className="curtainImage image" /></div>
             </section>
             {/* //4 */}
-            <section className="acpoldsecondfourthSectionImage">
-                <div className="acpoldpagesTextbetween">
+
+            {/* <div className="acpnewHide">
                     <h2 className="pagesTextFavorDivHeader">BEYOND LUXURY LIES LEGACY.</h2>
+                </div> */}
+            <section className="acpoldsecondfourthSectionImage">
+                <div className="acpNewpagesTextbetween">
+                    <h2 className="acpNpagesTextFavorDivHeader">BEYOND LUXURY LIES LEGACY.</h2>
                 </div>
-                <div className="rowIconVisible">
+                <div className="rowIconVisible"> 
                     <div className="imageText">
                         <img src={glass} alt="bottleImg" className="acpnewlogoText" />
                         <div>
-                            <p className="logoTextParagraph">Best Enjoyed How You</p>
-                            <p className="logoTextParagraph">Like Your Scotch</p>
+                            <p className="acpNlogoTextParagraph">Best Enjoyed How You Like Your Scotch</p>
                         </div>
                     </div>
                     <div className="imageText">
                         <img src={bottle} alt="bottleImg" className="acpnewlogoText" />
                         <div>
-                            <p className="logoTextParagraph">Best Enjoyed How You</p>
-                            <p className="logoTextParagraph">Like Your Scotch</p>
+                            <p className="acpNlogoTextParagraph">Best Enjoyed How You Like Your Scotch</p>
                         </div>
                     </div>
                     <div className="imageText">
                         <img src={distik} alt="bottleImg" className="acpnewlogoText" />
                         <div>
-                            <p className="logoTextParagraph">Best Enjoyed How You</p>
-                            <p className="logoTextParagraph">Like Your Scotch</p>
+                            <p className="acpNlogoTextParagraph">Best Enjoyed How You Like Your Scotch</p>
                         </div>
                     </div>
                 </div>
