@@ -5,14 +5,14 @@ import { HiArrowLongLeft, HiOutlineArrowLongRight } from "react-icons/hi2";
 import royalpridefirstImg from '../../../../Assets/Products/Liquor/RoyalPride/royalpridefirstimg.png';
 import royalpridelastimage from '../../../../Assets/Products/Liquor/RoyalPride/royalpridelastimg.png'
 import candles from '../../../../Assets/Products/Liquor/AcBlack/candles.png';
-import candle from '../../../../Assets/Products/Liquor/RoyalPride/candle.png';
-import hotglass from '../../../../Assets/Products/Liquor/RoyalPride/hotglass.png';
-import lipglass from '../../../../Assets/Products/Liquor/RoyalPride/lipglass.png';
-import glass from '../../../../Assets/Products/Liquor/RoyalPride/glass.png';
+import candle from '../../../../Assets//Products/Liquor/AcpremiumOld/deep.svg';
+import glass from '../../../../Assets//Products/Liquor/AcpremiumOld/elegant.svg';
+import hotglass from '../../../../Assets//Products/Liquor/AcpremiumOld/sweet.svg';
+import lipglass from '../../../../Assets//Products/Liquor/AcpremiumOld/smooth.svg';
 import royalpridethirdImg from '../../../../Assets/Products/Liquor/RoyalPride/royalpridethirdimg.png'
-import bottle from '../../../../Assets/Products/Liquor/AcpremiumOld/bottles.png';
-import distik from '../../../../Assets/Products/Liquor/AcpremiumOld/distik.png';
-import glasss from '../../../../Assets/Products/Liquor/AcpremiumOld/glass.png';
+import bottle from '../../../../Assets/Products/Liquor/AcpremiumOld/bottle.svg';
+import distik from '../../../../Assets/Products/Liquor/AcpremiumOld/distik.svg';
+import glasss from '../../../../Assets/Products/Liquor/AcpremiumOld/glass.svg';
 import acblack from '../../../../Assets/Products/Liquor/AcBlack/acblack.png';
 import damnscotch from '../../../../Assets/Products/Liquor/AcBlack/damnscotch.png';
 import { Link } from "react-router-dom";
