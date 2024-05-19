@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../Navbar/Navbar.css'
 import logo from '../../Assets/LogoIcon.png'
 import Dropdown from 'react-bootstrap/Dropdown';
@@ -9,6 +9,10 @@ import { IoClose, IoMenu } from "react-icons/io5";
 import { Link } from 'react-router-dom';
 function Navbar({show}) {
     const [menuOpen, setMenuOpen] = useState(false);
+
+    useEffect(() => {
+        setMenuOpen(false)
+    },[])
  
     const closeNav = () => {
         setMenuOpen(!menuOpen)

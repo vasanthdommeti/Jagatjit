@@ -1,9 +1,79 @@
 body {
   margin: 0;
-  padding: 0;
   background-color: #010101;
-  /* Set background color to black (optional) */
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
+  
+}
+
+.sustainability {
+  width: 80%;
+  /* Adjust width as needed (optional) */
+  margin: 10% auto;
+  /* margin: 5%; */
+  /* Use vh for vertical margin */
+  /* padding: 30px; */
+  color: #fff;
+  padding-bottom: 15vh;
+}
+
+.headingmain {
+  text-align: center;
+  margin-top: 5%; 
+  margin-bottom: 5%;
+  /* Center align headingmain */
+  color: #ECA533;
+  /* Set color to orange */
+  font-size: 4.2rem;
+  font-weight: 1000;
+  color: #FFFFFF;
+  /* Adjust font size (28px = 2.8rem) */
+}
+
+.headingmainsmall {
+  font-family: 'Josefin Sans', sans-serif;
+  text-align: left;
+  color: #ECA533;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.sustainability p {
+  text-align: justify;
+  /* Center align all paragraphs (optional, adjust if needed) */
+  line-height: 1.5;
+  margin-bottom: 15px;
+  
+}
+
+.sustainability h2 {
+  font-family: 'Josefin Sans', sans-serif;
+  text-align: left;
+  color: #ECA533;
+  font-size: 1.8rem;
+  font-weight: 200;
+}
+
+
+@media (max-width: 768px) {
+
+  
+.headingmain {
+  text-align: center;
+  
+  /* Center align headingmain */
+  color: #FFFFFF;
+  /* Set color to orange */
+  font-size: 2.2rem;
+  /* Adjust font size (28px = 2.8rem) */
+  margin: 10%;
+  margin-top: 20%;
+}
+
+.headingmainsmall {
+  font-family: 'Josefin Sans', sans-serif;
+  text-align: left;
+  color: #ECA533;
+  font-size: 1rem;
 }
 
 .sustainability {
@@ -15,28 +85,52 @@ body {
   /* padding: 30px; */
   padding-top: 8%;
   color: #fff;
-  /* Set text color to white */
-}
-
-.headingmain {
-  text-align: center;
-  /* Center align headingmain */
-  color: #ECA533;
-  /* Set color to orange */
-  font-size: 2.8rem;
-  /* Adjust font size (28px = 2.8rem) */
-}
-
-.heading {
-  color: #ECA533;
-  /* Set color to orange for all headings */
-  font-size: 1.8rem;
-  /* Adjust font size (28px = 2.8rem) */
+  padding-bottom: 15vh;
 }
 
 .sustainability p {
   text-align: justify;
   /* Center align all paragraphs (optional, adjust if needed) */
-  line-height: 1.5;
+  line-height: 1.3;
+  font-size: 16px;
   margin-bottom: 15px;
+  
+}
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) { /* Target screens between 768px and 1024px (tablets) */
+  /* Tablet specific styles */
+
+  .headingmain {
+    margin-top: 15%;
+    text-align: center;
+    /* Center align headingmain */
+    color: #FFFFFF;
+    /* Set color to orange */
+    font-size: 3rem;
+    font-weight: 900;
+    /* Adjust font size (28px = 2.8rem) */
+  }
+  
+  .headingmainsmall {
+    font-family: 'Josefin Sans', sans-serif;
+    text-align: left;
+    color: #ECA533;
+    font-size: 1.2rem;
+    font-weight: 800;
+  }
+
+  .sustainability {
+    width: 80%;
+    /* Adjust width as needed (optional) */
+    margin: 5%;
+    /* margin: 5%; */
+    /* Use vh for vertical margin */
+    /* padding: 30px; */
+    padding-top: 8%;
+    color: #fff;
+    padding-bottom: 15vh;
+  }
+
 }

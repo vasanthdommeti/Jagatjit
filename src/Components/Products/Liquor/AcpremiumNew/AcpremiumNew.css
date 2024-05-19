@@ -241,6 +241,60 @@ text-align: left;
     justify-content: space-between;
 }
 
+
+/* //flavour icon */
+.profileN-icon-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: auto;
+    margin-left: -20%;
+    top: 0;
+    bottom: 0;
+    margin-bottom: 20%;
+}
+
+.profileN-icon-wrap > div {
+    color: #FFFFFF;
+    width: 100%;
+    height: 100%;
+    font-family: Josefin Sans;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 24.29px;
+    letter-spacing: 0.07em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 25px;
+}
+
+.profileN-icon-1::before, 
+.profileN-icon-2::before,
+.profileN-icon-3::before,
+.profileN-icon-4::before {
+    content: '';
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-size: cover;
+    width: 50px;
+    height: 80px;
+}
+
+.profileN-icon-1::before {
+    background-image: url('../../../../Assets//Products/Liquor/AcpremiumOld/elegant.svg');
+}
+.profileN-icon-2::before {
+    background-image: url('../../../../Assets//Products/Liquor/AcpremiumOld/sweet.svg');
+}
+.profileN-icon-3::before {
+    background-image: url('../../../../Assets//Products/Liquor/AcpremiumOld/deep.svg');
+}
+.profileN-icon-4::before {
+    background-image: url('../../../../Assets//Products/Liquor/AcpremiumOld/smooth.svg');
+}
+
 .flavourDiv {
     width: 45%;
     display: flex;

@@ -10,15 +10,15 @@ import { Link } from "react-router-dom";
 import curtainImg from '../../../../Assets/Products/Liquor/AcpremiumOld/sectionCurtain.png';
 import flavourImgs from '../../../../Assets/Products/Liquor/AcpremiumNew/bottleimgsec.png';
 import flavourGroupimg from '../../../../Assets/Products/Liquor/AcpremiumNew/groupimgfav.png';
-import bottle from '../../../../Assets/Products/Liquor/AcpremiumOld/bottles.png';
-import distik from '../../../../Assets/Products/Liquor/AcpremiumOld/distik.png';
-import glass from '../../../../Assets/Products/Liquor/AcpremiumOld/glass.png';
+import bottle from '../../../../Assets/Products/Liquor/AcpremiumOld/bottle.svg';
+import distik from '../../../../Assets/Products/Liquor/AcpremiumOld/distik.svg';
+import glass from '../../../../Assets/Products/Liquor/AcpremiumOld/glass.svg';
 import acpsectiononelogo from '../../../../Assets/Products/Liquor/AcpremiumNew/acpsectiononelogo.png';
 import acpsectiontwoimg from '../../../../Assets/Products/Liquor/AcpremiumNew/acpremiumsecBottleImg.png';
 import acpblack from '../../../../Assets/Products/Liquor/AcpremiumNew/acblackImg.png';
 import acpnewImg from '../../../../Assets/Products/Liquor/AcpremiumNew/acpnewImg.png';
 import acplast from '../../../../Assets/Products/Liquor/AcpremiumNew/AcpProducts.png';
-
+ 
 export const AcpremiumNew = () => {
     return (
         <div>
@@ -52,8 +52,16 @@ export const AcpremiumNew = () => {
                 <div className="flavourDiv">
                     <h1 className="flavourDivHeader">FLAVOUR PROFILE</h1>
                     <div style={{ display: 'flex', alignSelf: 'center', flexDirection: 'row', justifyContent: 'center' }}>
-                        <img src={flavourImgs} alt="flavours" style={{ width: '70%', height: '90%' }} />
+                    <div class="profileN-icon-wrap">
+                    <div class="profileN-icon-1">Elegant and Long Lasting</div>
+                    <div class="profileN-icon-2">Sweet, Floral with a touch of spices</div>
+                    <div class="profileN-icon-3">Deep Gold to the eyes</div>
+                    <div class="profileN-icon-4">Smooth, with a hint of Fruit & Spices</div>
+                </div>
+                
+                        {/* <img src={flavourImgs} alt="flavours" style={{ width: '70%', height: '90%' }} /> */}
                         <img src={flavourGroupimg} alt="groupBtl" style={{ width: '70%', height: '90%' }} />
+
                     </div>
                 </div>
                 <div><img src={curtainImg} alt="rightCurtain" className="curtainImage image" /></div>
