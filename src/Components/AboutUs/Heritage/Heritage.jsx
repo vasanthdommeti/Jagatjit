@@ -138,7 +138,7 @@ export const Heritage = () => {
     ];
 
     return (
-        <div className='main'>
+        <div className='heritagemain'> 
             <h1 className="heritage-heading">
                 Heritage
             </h1>
