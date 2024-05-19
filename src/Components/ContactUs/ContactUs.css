@@ -5,6 +5,10 @@
 
 }
 
+.container {
+    margin-top: 10%;
+}
+
 .inputField {
     width: 100%;
     margin-bottom: 2%;
@@ -71,5 +75,17 @@
         align-self: center;
         flex-direction: column;
         margin-bottom: 1%;
+        margin-top: 10%;
+    }
+
+    .container {
+        margin-top: 20%;
+    }
+
+    .contactHeading {
+        font-size: 24px;
+        margin-bottom: 0;
+        font-weight: 100;
+        font-family: 'Josefin Sans';
     }
 }

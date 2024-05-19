@@ -72,7 +72,7 @@ const ContactUs = () => {
   };
 
   return (
-    <div style={{ marginTop: '10%' }}>
+    <div className='container' style={{ marginTop: '20%' }}>
       <div className='contactContactmain'>
         <div className='contactContact' >
           <h1 className='contactHeading'>Get in Touch with Us</h1>
