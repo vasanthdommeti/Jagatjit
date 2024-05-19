@@ -107,26 +107,69 @@ const section = [
 
 const markers = [
     {
-        markerOffset: -15,
-        name: "South Africa",
-        coordinates: [16.34, -28.58]
+        name: "Angola",
+        coordinates: [17.8739, -11.2027]
     },
     {
-        markerOffset: -15,
-        name: "Mauritius",
-        coordinates: [57.62, -20.5]
+        name: "United Arab Emirates",
+        coordinates: [53.8478, 23.4241]
     },
     {
-        markerOffset: -15,
+        name: "Democratic Republic of the Congo",
+        coordinates: [21.7587, -4.0383]
+    },
+    {
+        name: "Ghana",
+        coordinates: [-1.0232, 7.9465]
+    },
+    {
+        name: "Guinea",
+        coordinates: [-9.6966, 9.9456]
+    },
+    {
+        name: "India",
+        coordinates: [78.9629, 20.5937]
+    },
+    {
+        name: "Italy",
+        coordinates: [12.5674, 41.8719]
+    },
+    {
+        name: "Kenya",
+        coordinates: [36.8219, -1.2921]
+    },
+    {
+        name: "Mali",
+        coordinates: [-3.9962, 17.5707]
+    },
+    {
         name: "Oman",
-        coordinates: [53.11, 16.65]
+        coordinates: [55.9754, 21.4735]
+    },
+    {
+        name: "Togo",
+        coordinates: [0.8248, 8.6195]
+    },
+    {
+        name: "United States",
+        coordinates: [-95.7129, 37.0902]
+    },
+    {
+        name: "South Africa",
+        coordinates: [22.9375, -30.5595]
+    },
+    {
+        name: "Zambia",
+        coordinates: [27.8493, -13.1339]
+    },
+    {
+        name: "Mauritius",
+        coordinates: [57.5522, -20.3484]
+    },
+    {
+        name: "Singapore",
+        coordinates: [103.8198, 1.3521]
     }
-];
-
-const countries = [
-    'India',
-    'Oman',
-    'South Africa'
 ];
 
 function Home() {
@@ -169,15 +212,15 @@ function Home() {
                 marginLeft: '75vw',
                 // height: '100vh',
             });
-
-
             tl.add([firstTimeline]);
-
-
         }, [wrapperRef, firstRef]);
 
         return () => ctx.revert();
     }, []);
+
+    const isHighlightedCountry = (countryName) => {
+        return markers.some(marker => marker.name.includes(countryName));
+    };
 
     return (
         <div className="App" ref={wrapperRef}>
@@ -376,38 +419,33 @@ function Home() {
                     <Tooltip id="my-tooltip" />
                     <div>
                         <ComposableMap data-tooltip-id="my-tooltip" data-tooltip-content={content} className="imageMapContainer">
-                            <Geographies geography="/features.json" style={{ fill: 'orange', outline: 'none' }}>
+                            <Geographies geography="/features.json">
                                 {({ geographies }) =>
-                                    geographies.map((geo) => (
-                                        <Geography
-                                            key={geo.rsmKey}
-                                            geography={geo}
-                                            outline='none'
-                                            onMouseEnter={() => {
-                                                console.log('geo.properties', geo);
-                                                const { name } = geo.properties;
-                                                setContent(name);
-                                            }}
-                                            onMouseLeave={() => {
-                                                setContent("");
-                                            }}
+                                    geographies.map((geo) => {
+                                        const { name } = geo.properties;
+                                        const isHighlighted = isHighlightedCountry(name);
 
-                                        // style={{
-                                        //     default: {
-                                        //         fill: "#D6D6DA",
-                                        //         outline: "none"
-                                        //     },
-                                        //     hover: {
-                                        //         fill: "#F53",
-                                        //         outline: "none"
-                                        //     },
-                                        //     pressed: {
-                                        //         fill: "#E42",
-                                        //         outline: "none"
-                                        //     }
-                                        // }}
-                                        />
-                                    ))
+                                        return (
+                                            <Geography
+                                                key={geo.rsmKey}
+                                                geography={geo}
+                                                style={{
+                                                    default: {
+                                                        fill: isHighlighted ? "#D38A14" : "gray",
+                                                        outline: "none"
+                                                    },
+                                                    hover: {
+                                                        fill: isHighlighted ? "#D38A14" : "gray",
+                                                        outline: "none"
+                                                    },
+                                                    pressed: {
+                                                        fill: isHighlighted ? "#D38A14" : "gray",
+                                                        outline: "none"
+                                                    }
+                                                }}
+                                            />
+                                        );
+                                    })
                                 }
                             </Geographies>
                             {markers.map(({ name, coordinates }) => (
