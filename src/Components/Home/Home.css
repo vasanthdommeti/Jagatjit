@@ -130,7 +130,7 @@
     /* aspect-ratio: 17 / 8.78; */
 }
 
-.d-block {
+.carousel-item > img {
     height: 100vh;
 }
 
@@ -235,14 +235,13 @@
 }
 
 .section3Button {
-    border-color: #ECA533;
-    background-color: black;
-    border-width: 0.5px solid;
+    border: 0.5px solid #ECA533;
     border-radius: 18px;
     padding: 10px 35px;
     color: #ECA533;
     letter-spacing: 2px;
     margin-top: 30px;
+    background-color: transparent;
 }
 
 .section4Button {
@@ -271,10 +270,6 @@
     letter-spacing: 2px;
     color: #ECA533;
     text-decoration: none;
-}
-
-.section5GroupImagesDiv {
-    /* width: 420px; */
 }
 
 .section5firstImage {
@@ -391,72 +386,17 @@
     object-fit: cover;
 }
 
-/* @media (min-width:320px) {
-
-    smartphones, iPhone, portrait 480x320 phones
-    .section {
-        height: 35vh;
-    }
+.section3MainDiv > .section2img{
+    width: 50%;
+    height: 500px;
+    margin-right: 45%;
 }
 
-@media (min-width:481px)  { 
-    portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. 
-    .section {
-        height: 45vh;
-    }
-} */
-@media only screen and (max-width: 600px) {
-    .section3MainDiv {
-        display: flex;
-        padding: 8% 5% 5% 5%;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        /* padding: 10%; */
-        /* width: 70%; */
-    }
-
-    .section {
-        background-repeat: no-repeat;
-        background-size: cover;
-        place-items: center;
-        height: auto;
-        background-position: center;
-    }
-
-    .section1 {
-        background-repeat: no-repeat;
-        background-size: cover;
-        place-items: center;
-        height: auto;
-        background-position: center;
-    }
-
-    #sectionImage5 {
-        opacity: 0.6;
-    }
-
-    .section3GroupHeaderDiv {
-        padding-left: 7%;
-        margin-bottom: 5%;
-    }
-
-
-    .section5Image {
-        width: 150px;
-        height: 150px;
-        margin: 6px 6px 6px 5px;
-        border-radius: 12px;
-    }
-
-    #sectionImage6 {
-        background-size: cover;
-        background-color: #ECA533;
-    }
-
-    .sectionThreeMainDiv {
-        /* padding-top: 15%; */
-    }
+.secion2TextWrap {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 50%;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -514,3 +454,255 @@
     }
 
 } */
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .main,
+    .sectionBottleDiv {
+        height: 80vh;
+    }
+
+    .sectionBottleDiv {
+        max-height: unset;
+    }
+
+    .imageContainer1 {
+        height: 500px;
+    }
+
+    .sectionImage1Div {
+        padding: 10%;
+    }
+
+    .section2 .section3MainDiv {
+        justify-content: unset;
+        padding: 7%;
+        flex-direction: column-reverse;
+        text-align: center;
+        align-items: center;
+    }
+
+    .section2 {
+        height: 80vh;
+    }
+
+    #sectionImage3 {
+        height: 50vh;
+        padding: 7%;
+    }
+
+    .secion2TextWrap {
+        position: unset;
+        width: 100%;
+        gap: 15px;
+    }
+
+    .section3MainDiv > .section2img {
+        width: unset;
+        height: 500px;
+        margin: 0;
+    }
+
+    .sectionThreeHeadDiv,
+    .sectionThreeImageDiv {
+        position: unset;
+        margin: 0;
+        text-align: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .smallImgDiv {
+        align-self: unset;
+    }
+
+    .carousel-item > img,
+    section:nth-child(4) {
+        height: auto;
+    }
+
+    #sectionImage5 {
+        height: 65vh;
+    }
+
+    #sectionImage5 .section3MainDiv {
+        flex-direction: column;
+    }
+
+    .section3GroupHeaderDiv {
+        width: 100%;
+    }
+
+    .App > div,
+    .imageMapContainer {
+        height: 50vh;
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+
+    .main {
+        margin-top: 100px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .sectionBottleDiv {
+        height: 100vh;
+        max-height: unset;
+    }
+
+    .sectionImage1Div {
+        padding: 0 15px;
+    }
+
+    .section1Heading,
+    .section1subHeading {
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 41.6px;
+        letter-spacing: 0.07em;
+        text-align: left;
+        margin: 0;
+    }
+
+    .imageContainer1 {
+        height: 350px;
+    }
+
+    .sectionImage1Div .section3Button {
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 12px;
+        text-align: center;
+    }
+
+    .section3MainDiv {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .section3MainDiv > .section2img {
+        width: 50%;
+        height: 200px;
+        margin: 0;
+        position: absolute;
+        top: 24%;
+        left: 26%;
+    }
+    
+    .section3MainDiv > .secion2TextWrap {
+        width: 100%;
+        height: auto;
+        position: unset;
+        text-align: center;
+        z-index: 1;
+    }
+
+    .btnheading {
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 35.33px;
+        letter-spacing: 0.1em;
+        margin-bottom: 10px;
+    }
+
+    .btnsubheading {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 22.08px;
+        letter-spacing: 0.18em;
+        margin-bottom: 10px;
+    }
+
+    .btnparagraph {
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17.07px;
+    }
+
+    .secion2TextWrap .section3Button {
+        color: #000;
+        background-color: rgba(255, 153, 0, 1);
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 12px;
+        text-align: center;
+    }
+
+    .sectionThreeHeadDiv,
+    .sectionThreeImageDiv {
+        position: unset;
+        margin: 0;
+    }
+
+    .sectionThreeImageDiv {
+        position: absolute;
+        top: 31%;
+        left: 0;
+    }
+
+    .sectionThreeImageDiv > .smallImgDiv {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap-reverse;
+        gap: 40px;
+    }
+
+    #sectionImage3 {
+        flex-direction: column;
+        padding: 0 15px;
+        gap: 50px;
+    }
+
+    .section3GroupHeaderDiv,
+    .section3GroupImagesDiv {
+        width: 100%;
+    }
+    .carousel-item > img,
+    .App > section:nth-child(4) {
+        height: auto;
+    }
+
+    #sectionImage5 {
+        height: 85vh;
+    }
+
+    #sectionImage5 > .section3MainDiv {
+        flex-direction: column;
+        padding: 50px 20px;
+        gap: 50px;
+    }
+
+    .section5Header {
+        font-size: 32px;
+        font-weight: 300;
+        line-height: 33.13px;
+        letter-spacing: 0.09em;
+    }
+
+    #sectionImage5  .section3Button {
+        border: 2px solid rgba(236, 165, 51, 1);
+        color: rgba(236, 165, 51, 1);
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 12px;
+    }
+
+
+    .section5GroupImagesDiv img {
+        width: 150px;
+        height: auto;
+    }
+
+    .App > div {
+        padding: 80px 0 0 0;
+        height: auto !important;
+    }
+
+    .imageMapContainer {
+        height: auto;
+    }
+}
