@@ -101,7 +101,7 @@ const Report = () => {
       <div className='reportInputFieldDiv reportinputField'>
       <div class="search-container">
     <input placeholder='Search Reports' type="text" value={fileName} onChange={(e) => setFileName(e.target.value)} className='reportinputField searchBar' />
-    <i class="icon search-icon"> <CiFilter style={{color:'black', fontSize:'21px'}}/></i>
+    <i class="icon search-icon"> <IoIosSearch style={{color:'black', fontSize:'21px'}}/></i>
 </div>
       {/* <div class="search-container">
     <input placeholder='Search Reports' type="text" value={fileName} onChange={(e) => setFileName(e.target.value)} className='reportinputField searchBar' />
@@ -243,7 +243,7 @@ const Report = () => {
             <HiSortDescending  style={{color:'black', fontSize:'21px'}}/>
           </div>
         </div>
-
+ 
       </div>
       <div className='reportmainDiv'>
         {Array.isArray(filteredReports) && filteredReports.length > 0 ? (
