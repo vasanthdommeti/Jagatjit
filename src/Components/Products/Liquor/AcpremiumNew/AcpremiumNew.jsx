@@ -118,39 +118,42 @@ export const AcpremiumNew = () => {
                     </div>
                 </div>
             </section>
-            {/* //5 */}
-            <div className="acppremiumfifthhDiv">
+            {/* //5 */} 
+            <div>
+                <div className="acpvideoDiv">
                 {scrVideo && (
                     <video
                         className="videoContent"
                         width="100%"
-                        height="80%"
+                        height="100%"
                         // controls
                         autoPlay
                         muted
+                        loop
                         playsInline
                     >
                         <source src={scrVideo} type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
                 )}
-                <div style={{ justifyContent: 'center', display: 'flex', flexDirection: 'row', marginTop: '1%' }}>
+                </div>
+                <div className="acpNewarrowDiv">
                     <Link to={'/products/liquor/DamnGoodScotch'} className="acppremiumleftArrowDiv">
-                        <div style={{ textAlign: 'right', alignSelf: 'center', }}>
-                            <h1 className="acppremiumarrowHeading">Aristocrat Premium (OLD)</h1>
-                            <HiArrowLongLeft style={{ fontSize: '55px' }} />
+                        <div className="acpNewLeftDiv">
+                            <h1 className="acpNpremiumarrowHeading">Aristocrat Premium (OLD)</h1>
+                            <HiArrowLongLeft className="leftIconImg" />
                         </div>
                         <div>
-                            <img src={acpnewImg} alt="block" style={{ height: '80px', marginLeft: '25px', marginRight: '25px' }} />
+                            <img src={acpnewImg} alt="block" className="acpNewleftSmallImg" />
                         </div>
                     </Link>
                     <Link to={'/products/liquor/RoyalMedallion'} className="acppremiumrightArrowDiv">
                         <div>
-                            <img src={acpblack} alt="block" style={{ height: '80px', marginRight: '5px' }} />
+                            <img src={acpblack} alt="block" className="acpNewrightSmallImg" />
                         </div>
-                        <div style={{ textAlign: 'left', alignSelf: 'center' }}>
-                            <h1 className="acppremiumarrowHeading">Aristocrat Black</h1>
-                            <HiOutlineArrowLongRight style={{ fontSize: '55px' }} />
+                        <div className="acpNewRightDiv">
+                            <h1 className="acpNpremiumarrowHeading">Aristocrat Black</h1>
+                            <HiOutlineArrowLongRight className="leftIconImg"/>
                         </div>
                     </Link>
                 </div>

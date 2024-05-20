@@ -51,12 +51,39 @@
     justify-content: space-between; */
 }
 .acppremiumfifthhDiv {
-    height: 100vh;
+    height: auto;
     max-width: 100%;
     /* object-fit: cover; */
   }
-
-
+  .acpNewarrowDiv{
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    margin-top: 1%;
+  }
+  .acpNewLeftDiv{
+    text-align: right;
+    align-self: center;
+  }
+  .acpNewleftSmallImg{
+    height: 80px;
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+  .acpNewrightSmallImg{
+    height: 80px;
+    margin-right: 5px;
+  }
+  .acpNewRightDiv{
+    text-align: left;
+    align-self: center;
+  }
+  .leftIconImg{
+    font-size: 55px;
+  }
+  .acpvideoDiv{
+    aspect-ratio: 16/9;
+  }
 .acppremiumleftArrowDiv {
     border-color: white;
     padding: 1%;
@@ -86,7 +113,7 @@
     align-self: center;
   }
   
-  .acppremiumarrowHeading {
+  .acpNpremiumarrowHeading {
     font-size: 21px;
     margin-bottom: 0%; 
   }
@@ -730,11 +757,36 @@
         max-width: 100%;
       }
       .videoContent{
-        height: 80%;
+        height: 100%;
         width: 100%;
         margin-bottom: 10%;
       }
       .botleImg2{
         margin-left: 0%;
+      }
+      .acpvideoDiv{
+        aspect-ratio: 4/2;
+      }
+      .acpNewleftSmallImg{
+        height: 60px;
+        margin-left: 25px;
+        margin-right: 25px;
+      }
+      .acpNpremiumarrowHeading {
+        font-size: 12px;
+      }
+      .leftIconImg{
+        font-size: 21px;
+      }
+      .acpNewrightSmallImg{
+        height: 60px;
+        margin-right: 5px;
+      }
+      .acppremiumleftArrowDiv {
+        width: 50%;
+      }
+      
+      .acppremiumrightArrowDiv {
+        width: 50%;
       }
 }
