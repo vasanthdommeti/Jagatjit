@@ -1,7 +1,7 @@
 .reportinputField {
     border-radius: 10px;
     margin-right: 15px;
-    width: 300px;
+    width: 100%;
     color: black;
     font-family: 'Light';
     padding-left: 5px;
@@ -14,12 +14,16 @@
 }
 .reportInputFieldDiv{
     display: flex;
+    flex-direction: row;
+    position: relative;
     justify-content: center;
-    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5%;
 }
 .searchBar{
     width: 600px;
-}
+} 
 /* .reportinputField::-webkit-inner-spin-button {
     display: none;
 } */
@@ -35,11 +39,13 @@
     text-align: center;
 }
 
-.reportDiv {
+.reportDiv { 
+    display: flex;
+    /* align-self: center; */
     margin-top: 5%;
     width: 200px;
     /* width: 15%; */
-}
+} 
 
 .reportHeading {
     font-size: 28px;
@@ -58,4 +64,69 @@
 
 .reportImg {
     scale: 0.6;
+}
+
+.search-container {
+    position: relative;
+    color: black;
+    font-family: 'Light';
+}
+
+input[type="text"].searchBar {
+    padding-right: 30px; /* Adjust as per your icon size */
+}
+
+.search-icon {
+    position: absolute;
+    right: 30px; /* Adjust as per your design */
+    top: 50%;
+    transform: translateY(-60%);
+    /* transform: translateX(-10%); */
+    /* You can set the icon font or SVG here */
+    background-image: url('search-icon.svg'); /* Example for SVG icon */
+    width: 20px; /* Example size */
+    height: 20px; /* Example size */
+    background-size: cover; /* Ensures the icon fits inside the container */
+}
+
+
+
+/* searchBar */
+
+/* @media screens only (max-width: '767px'){
+    
+} */
+
+@media (max-width: 768px) {
+    .searchBar{
+        width: 100%;
+        color: black;
+    }
+    .reportinputField{
+        margin-bottom: 5px;
+        margin-left: auto;
+        margin-right: auto;
+        /* margin: 3px; */
+    }
+    .search-container{
+        margin-left: 5px;
+    }
+    .reportsMainDiv{
+        padding-top: 25%;
+    }
+    .reportInputFieldDiv{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        /* flex-wrap: wrap; */
+    }
+    .search-icon {
+        right: 10px;
+    }
+} 
+@media (min-width: 768px) and (max-width: 1024px){
+    .searchBar{
+        width: 300px;
+        color: black;
+    }
 }

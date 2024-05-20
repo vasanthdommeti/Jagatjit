@@ -18,7 +18,7 @@ const OurTeam = () => {
             })
             .catch(error => {
                 console.error('Error fetching users:', error);
-            });
+            }); 
     }, []);
 
     const calculateExperienceInYears = (joiningDate) => {

@@ -8,6 +8,7 @@ import noteImg from '../../../Assets/Reports/noteImg.png';
 import { GrPhone } from "react-icons/gr";
 import { HiSortDescending } from "react-icons/hi";
 import { CiFilter } from "react-icons/ci";
+import { IoIosSearch } from "react-icons/io";
 
 
 const Report = () => {
@@ -22,7 +23,7 @@ const Report = () => {
 
   const currentYear = new Date().getFullYear();
 
-  useEffect(() => {
+  useEffect(() => { 
     axios.get('https://api.jagatjit.com/api/financials')
       .then(response => {
         console.log('response', response);
@@ -97,8 +98,16 @@ const Report = () => {
         <h1 className='reportHeading'>Report and Policies</h1>
         <p className='reportPara'>Our yearly reports</p>
       </div>
-      <div className='reportInputFieldDiv'>
-        <input placeholder='Search Reports' type="text" value={fileName} onChange={(e) => setFileName(e.target.value)} className='reportinputField searchBar' />
+      <div className='reportInputFieldDiv reportinputField'>
+      <div class="search-container">
+    <input placeholder='Search Reports' type="text" value={fileName} onChange={(e) => setFileName(e.target.value)} className='reportinputField searchBar' />
+    <i class="icon search-icon"> <CiFilter style={{color:'black', fontSize:'21px'}}/></i>
+</div>
+      {/* <div class="search-container">
+    <input placeholder='Search Reports' type="text" value={fileName} onChange={(e) => setFileName(e.target.value)} className='reportinputField searchBar' />
+    <CiFilter style={{color:'white', fontSize:'21px'}}/>
+</div> */}
+        {/* <input placeholder='Search Reports' type="text" value={fileName} onChange={(e) => setFileName(e.target.value)} className='reportinputField searchBar' /> */}
         {/* <input placeholder='By Year' type="number" value={year} onChange={handleYearChange} className='reportinputField' /> */}
         {/* <div style={{ position: 'relative', display: 'inline-block' }}>
     <input 
@@ -124,18 +133,30 @@ const Report = () => {
         </svg>
     </div>
 </div> */}
-        <div style={{ position: 'relative', display: 'inline-block' }} >
+{/* //year field */}
+        <div style={{ position: 'relative', display: 'inline-block' }} className='reportinputField'>
           <select
             className='reportinputField'
             onChange={handleYearChange}
             style={{ paddingRight: '30px',  appearance: 'none' }} // Adjust the padding to accommodate the icon
           >
             <option value="" disabled selected>By Year</option>
-            {[...Array(new Date().getFullYear() - 1943).keys()].map((index) => (
+            {/* {[...Array(new Date().getFullYear() - 1943).keys()].map((index) => (
               <option key={index} value={1944 + index}>{1944 + index}</option>
-            ))}
+            ))} */}
+            {/* {[...Array(new Date().getFullYear() - 1943).keys()]
+  .reverse().map((index) => (
+    <option key={index} value={new Date().getFullYear() - index}>
+      {new Date().getFullYear() - index}
+    </option>
+  ))} */}
+  {[...Array(new Date().getFullYear() - 1943).keys()].map((index) => (
+  <option key={index} value={new Date().getFullYear() - index}>
+    {new Date().getFullYear() - index}
+  </option>
+))}
           </select>
-          <div style={{ position: 'absolute', top: '50%', right: '5px', transform: 'translateY(-50%) translateX(-60%)' }}>
+          <div style={{ position: 'absolute', top: '50%', right: '5px', transform: 'translateY(-60%) translateX(-10%)' }}>
             {/* Place your icon component or HTML here */}
             <CiFilter style={{color:'black', fontSize:'21px'}}/>
           </div>
@@ -165,13 +186,14 @@ const Report = () => {
 </div> */}
         {yearError && <span style={{ color: 'red' }}>{yearError}</span>}
         {/* <input placeholder='By Month' type="number" value={month} onChange={handleMonthChange} className='reportinputField' /> */}
+        {/* //monthfield */}
         <div style={{ position: 'relative', display: 'inline-block' }} className='reportinputField'>
           <select
             placeholder='By Month'
             value={month}
             onChange={handleMonthChange}
             className='reportinputField'
-            style={{ paddingRight: '30px', appearance: 'none', backgroundImage: `url('path_to_custom_icon.svg')`, backgroundRepeat: 'no-repeat', backgroundPosition: 'right center' }}
+            style={{ paddingRight: '30px', appearance: 'none'}}
           >
             <option value="" disabled selected>By Month</option>
             <option value="1">January</option>
@@ -187,7 +209,7 @@ const Report = () => {
             <option value="11">November</option>
             <option value="12">December</option>
           </select>
-          <div style={{ position: 'absolute', top: '50%', right: '5px', transform: 'translateY(-50%) translateX(-60%)' }}>
+          <div style={{ position: 'absolute', top: '50%', right: '5px', transform: 'translateY(-60%) translateX(-10%)' }}>
             {/* Place your icon component or HTML here */}
             <CiFilter style={{color:'black', fontSize:'21px'}}/>
           </div>
@@ -195,6 +217,7 @@ const Report = () => {
 
         {monthError && <span style={{ color: 'red' }}>{monthError}</span>}
         {/* <input placeholder='Category' type="number" value={categoryId} onChange={(e) => setCategoryId(e.target.value)} className='reportinputField' /> */}
+        {/* //categoryId */}
         <div style={{ position: 'relative', display: 'inline-block' }} className='reportinputField'>
           <select
             placeholder='Category'
@@ -208,8 +231,14 @@ const Report = () => {
             <option value="2">Category 2</option>
             <option value="3">Category 3</option>
             <option value="4">Category 4</option>
+            <option value="5">Category 5</option>
+            <option value="6">Category 6</option>
+            <option value="7">Category 7</option>
+            <option value="8">Category 8</option>
+            <option value="9">Category 9</option>
+            <option value="10">Category 10</option>
           </select>
-          <div style={{ position: 'absolute', top: '50%', right: '5px', transform: 'translateY(-50%) translateX(-60%)' }}>
+          <div style={{ position: 'absolute', top: '50%', right: '5px', transform: 'translateY(-60%) translateX(-10%)' }}>
             {/* Place your icon component or HTML here */}
             <HiSortDescending  style={{color:'black', fontSize:'21px'}}/>
           </div>
@@ -222,7 +251,7 @@ const Report = () => {
             <div key={idx} className='reportDiv'>
               <a href={report.file_url} target='_blank' rel='noopener noreferrer' style={{ textDecoration: 'none' }}>
                 <img src={noteImg} alt='report' className='reportImg' />
-                <h1 style={{ marginBottom: '0%', color: 'white' }}>{report.file_name}</h1>
+                <h1 style={{ marginBottom: '0%', color: 'white', marginRight:'10px'}}>{report.file_name}</h1>
                 <p style={{ color: 'white' }}>{report.file_date}</p>
               </a>
             </div>

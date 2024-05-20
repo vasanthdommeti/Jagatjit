@@ -43,3 +43,47 @@ body {
   text-align: center;
   color: #FFFFFF;
 }
+
+@media (max-width: 768px) {
+
+  .corporate-responsibility {
+    width: 100%;
+    padding: 10%;
+    margin-top: 15%;
+  }
+
+  .corporate-citizen,
+.responsibility-section p {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px;
+  line-height: 144%;
+  color: #FFFFFF;
+  text-align: justify;
+}
+
+.corporate-citizen {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.responsibility-section h3 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 144%;
+  color: #ECA533;
+  margin-bottom: 10px;
+}
+
+.csr-heading {
+  font-family: 'Josefin Sans', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 50px;
+  line-height: 110.41%;
+  /* identical to box height, or 71px */
+  text-align: center;
+  color: #FFFFFF;
+}
+}

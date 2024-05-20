@@ -20,21 +20,21 @@ const Press = () => {
         .catch(error => {
             console.error('Error fetching users:', error);
         });
-    }, [])
+    }, []) 
 
-    return(
+    return( 
         <div style={{marginTop:'10%', marginBottom:'5%'}}>
            <div>
            <h1 className='reportHeading'>News</h1>
           <p className='reportPara'>The inside Sip: Company Updates</p>
            </div>
-           <div className='reportmainDiv' style={{marginLeft:'5%', marginRight:'5%'}}>
+           <div className='newsmainDiv'>
            {news.map((el,index) => (
                 <div key={index} className="newsDiv">
                   <img src={el.news_image} alt="image" className="newsImg"/>
-                  <Link to={el.link} className="newsPara">
+                  <p><Link to={el.link} className="newsPara">
                   {el.name}
-                  </Link>
+                  </Link></p>
                     {/* <h1>{el.name}</h1> */}
                 </div>
             ))}
@@ -44,13 +44,13 @@ const Press = () => {
            <h1 className='reportHeading'>Achievements</h1>
           <p className='reportPara'>Our Awards</p>
            </div>
-           <div className='reportmainDiv' style={{marginLeft:'5%', marginRight:'5%'}}>
+           <div className='newsmainDiv bottomnewsDiv'>
            {achievement.map((el,index) => (
                 <div key={index} className="newsDiv">
                   <img src={el.achievement_image} alt="image" className="newsImg"/>
-                  <Link to={el.link} className="newsPara">
+                  <p><Link to={el.link} className="newsPara">
                   {el.name}
-                  </Link>
+                  </Link></p>
                     {/* <h1>{el.name}</h1> */}
                 </div>
             ))}
