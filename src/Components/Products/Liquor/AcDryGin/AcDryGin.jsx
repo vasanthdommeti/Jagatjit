@@ -11,21 +11,21 @@ import { Link } from "react-router-dom";
 
 
 export const AcDryGin = () => {
-    return (
+    return ( 
         <section>
             {/* //1 */}
-            <div className="acDryGinFirstDiv">
-                <div style={{ display: 'flex', alignSelf: 'center', paddingLeft: '7%', paddingRight: '5%' }}>
+            <div className="acDryGinFirstDiv acDryGin1divHead">
+                <div className="acDryGin1divHead">
                     <div className="acDryGinRowContent">
                         <h1 className="acDryGinHeading">
-                            Aristocrat Extra Dry Gin
+                            Extra Dry Gin
                         </h1>
                         <p className="acDryGinParagraph">
-                            Slow distilled from the finest grains and Indian botanicals, this gin creates fun and frolic wherever it goes.
+                        Distilled from the finest raw materials, this high quality Gin symbolizes the true spirit of fun and frolic.
                         </p>
                     </div>
                     <div className="acDryGinImgcontent">
-                        <img src={acDryGinfirstImg} alt="acblack" style={{ width: '100%', }} />
+                        <img src={acDryGinfirstImg} alt="acblack" className="acdryGin1stImg" />
                     </div>
                 </div>
             </div>
@@ -34,10 +34,10 @@ export const AcDryGin = () => {
             <div className="acDryGinSecondDiv">
                 <div className="acDryGinColumnContent">
                     <h1 className="acDryGinSecondDivHeading">
-                        Launched in 1978
+                        Launched in The Year 1978
                     </h1>
                     <p className="acDryGinSecondDivParagraph">
-                        Still going strong and enhancing celebrations in India and abroad
+                      Sold 2,07,389 Croses in FY 2012-13
                     </p>
                 </div>
             </div>
@@ -50,7 +50,8 @@ export const AcDryGin = () => {
                         Fun and Frolic
                     </h1>
                     <p className="acDryGinThirdDivParagraph" >
-                        Whether served straight up, as a classic gimlet or in trendy cocktails, this gin is smooth and delicious.
+                       Ready to be served straight-up or on the rocks, this drink is the revival
+                       of the good old Gimlet.
                     </p>
                 </div>
             </div>

@@ -11,7 +11,7 @@
 .acDryGinImgcontent{
   display: flex;
   height: 100vh;
-}
+} 
 .acDryGinRowContent {
   align-self: center;
   width: 75%;
@@ -25,10 +25,19 @@
   letter-spacing: 6px;
   text-align: left;
 }
-
+.acDryGin1divHead{
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  padding-left: 7%;
+  padding-right: 5%;
+}
+.acdryGin1stImg{
+  width: 100%;
+}
 .acDryGinParagraph {
   color: #FFFFFF;
-  font-family: 'Josefin Sans';
+  font-family: 'Regular';
   font-size: calc(16px + 1vw);
   letter-spacing: 1px;
   font-weight: 100;
@@ -70,7 +79,7 @@
 .acDryGinSecondDivParagraph {
   width: 25%;
   text-align: right;
-  font-family: 'Josefin Sans';
+  font-family: 'Regular';
   font-weight: 100;
   opacity: 0.8;
   font-size: 24px;
@@ -105,7 +114,7 @@
 .acDryGinThirdDivParagraph{
   /* width: 25%; */
   text-align: left;
-  font-family: 'Josefin Sans';
+  font-family: 'Regular';
   font-weight: 100;
   opacity: 0.8;
   font-size: 24px;
@@ -162,3 +171,104 @@
   margin-bottom: 0%;
 }
  
+.visible{
+  display: none;
+}
+
+@media only screen and (max-width: 767px) {
+  .acDryGinFirstDiv {
+    display: flex;
+    padding-top: 25%;
+    height: auto;
+  } 
+  .acDryGin1divHead{
+    flex-direction: column;
+  }
+  .acDryGinRowContent {
+    align-self: center;
+    width: 100%;
+  }
+  .acDryGinHeading {
+    font-size: 32px;
+    margin-bottom: 0;
+    text-align: center;
+  }
+  .acDryGinParagraph {
+    font-family: 'Light';
+    font-size: 16px;
+    text-align: center;
+  }
+  .acDryGinImgcontent{
+    display: flex;
+    height: auto;
+    width: 100%;
+  } 
+  .acDryGinSecondDiv {
+    background-image: url('../../../../Assets/Products/Liquor/AcDryGin/acgin.png');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    max-height: 80vh;
+  }
+  .visible{
+    display: flex;
+  }
+  .acDryGinColumnContent {
+    justify-content: center;
+    align-items: center;
+    padding: 4%;
+  }
+  .acDryGinSecondDivHeading {
+    font-family: 'Lobster', cursive;
+    font-size: 32px;
+    margin-bottom: 0;
+    text-align: center;
+    width: 80%;
+    padding-top: 15%;
+  }
+  .acDryGinSecondDivParagraph {
+    width: 65%;
+    text-align: center;
+    font-family: 'Light';
+    font-weight: 100;
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin-top: 4%;
+  }
+  .acDryGinThirdDiv {
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 60vh;
+    justify-content: space-between;
+    padding-top: 7%;
+  }
+  .acDryGinThirdColumnContent{
+    width: 80%;
+    text-align: center;
+    flex-direction: column;
+    padding: 2%;
+    align-self: center;
+  }
+  .acDryGinThirdDivHeading{
+    font-size: 28px;
+    text-align: center;
+    letter-spacing: 5px;
+  }
+  .acDryGinThirdDivParagraph{
+    text-align: center;
+    font-family: 'Light';
+    font-weight: 100;
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin-top: 5%;
+  }
+  
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px){
+  .acDryGin1divHead {
+    /* flex-direction: column; */
+    border-style:dotted;
+  } 
+}
