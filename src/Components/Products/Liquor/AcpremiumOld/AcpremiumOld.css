@@ -96,14 +96,17 @@
 }
 .bottleImg{
     height: 90vh;
-    width: 50%;
+    width: auto;
+}
+.bottleImgfirst{
+    margin-right: 10%;
 }
 .section2BotleImg{
     height: 90vh;
-    width: 40%;
+    width: auto;
 }
 .favBotGroupImg{
-    margin-bottom: -15%
+    margin-bottom: -15% 
 }
 .acpoldpagesRowDiv {
     display: flex;
@@ -222,7 +225,7 @@
     /* align-self: flex-end; */
 }
 .acppremiumfifthhDiv {
-    height: 100vh;
+    height: 50vh;
     display: flex;
     flex-direction: column;
   }
@@ -471,7 +474,7 @@
     color: #FFFFFF;
     font-weight: 100;
     font-style: normal;
-    font-family: 'Josefin Sans';
+    font-family: 'Light';
     font-size: 16px;
     letter-spacing: 1px;
     line-height: 15px;
@@ -757,5 +760,11 @@
     .acpremium5ImgDiv > img {
         width: 100%;
         height: auto;
+    }
+    .bottleImgfirst{
+        margin-right: 0%;
+    }
+    .logoTextParagraph{
+        font-size: 12px;
     }
 }

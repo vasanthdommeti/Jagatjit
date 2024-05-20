@@ -14,7 +14,7 @@ import flavourImg from '../../../../Assets/Products/Liquor/AcpremiumOld/sectionF
 import flavourGroup from '../../../../Assets/Products/Liquor/AcpremiumOld/flavourGroup.png'
 import bottle from '../../../../Assets/Products/Liquor/AcpremiumOld/bottle.svg';
 import distik from '../../../../Assets/Products/Liquor/AcpremiumOld/distik.svg';
-import glass from '../../../../Assets/Products/Liquor/AcpremiumOld/glass.svg';
+import glass from '../../../../Assets/Products/Liquor/AcpremiumOld/glass.png';
 import acpsectiononelogo from '../../../../Assets/Products/Liquor/AcpremiumNew/acpsectiononelogo.png';
 import acpsectiontwoimgs from '../../../../Assets/Products/Liquor/AcpremiumOld/sec1bottle.png';
 import acpblack from '../../../../Assets/Products/Liquor/AcpremiumNew/acblackImg.png';
@@ -31,7 +31,7 @@ export const AcpremiumOld = () => {
                     <h2 className="acpoldSecondHeading">CLASSIC WHISKEY</h2>
                     <p className="acpoldParagraph">One of India's most-loved whiskey brands with its iconic gold and deep-red bottle.</p>
                 </div>
-            <img src={acpsectiontwoimgs} alt="bottleImg" className="bottleImg" />
+            <img src={acpsectiontwoimgs} alt="bottleImg" className="bottleImg bottleImgfirst"/>
             </div>
             {/* //2 */}
             <div className="pagesTextDivTwo acpScondSectionTwoImage">
@@ -77,25 +77,25 @@ export const AcpremiumOld = () => {
                         <div className="imageText">
                             <img src={bottle} alt="bottleImg" className="logoText" />
                             <div>
-                                <p className="logoTextParagraph">Best Enjoyed How You</p>
-                                <p className="logoTextParagraph">Like Your Scotch</p>
+                                <p className="logoTextParagraph">Bottled With Care By State</p>
+                                <p className="logoTextParagraph">Of the Art Bottling Facilities</p>
                             </div>
                         </div>
                         <div className="imageText">
                             <img src={distik} alt="bottleImg" className="logoText" />
                             <div>
-                                <p className="logoTextParagraph">Best Enjoyed How You</p>
-                                <p className="logoTextParagraph">Like Your Scotch</p>
+                                <p className="logoTextParagraph">Made With The Finest</p>
+                                <p className="logoTextParagraph">Indian Spirits</p>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> 
             {/* //5 */}
             <div className="acppremiumfifthhDiv">
-                <div className="acpremium5ImgDiv" >
+                {/* <div className="acpremium5ImgDiv" >
                     <img src={acplast} alt="lastImg" />
-                </div>
+                </div> */}
                 <div className="acpremiumleftrightDiv">
                     <Link to={'/products/liquor/DamnGoodScotch'} className="acppremiumleftArrowDiv">
                         <div className="premiumleftarrowDiv">

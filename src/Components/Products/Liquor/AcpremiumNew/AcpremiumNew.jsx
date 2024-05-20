@@ -12,7 +12,7 @@ import flavourImgs from '../../../../Assets/Products/Liquor/AcpremiumNew/bottlei
 import flavourGroupimg from '../../../../Assets/Products/Liquor/AcpremiumNew/groupimgfav.png';
 import bottle from '../../../../Assets/Products/Liquor/AcpremiumOld/bottle.svg';
 import distik from '../../../../Assets/Products/Liquor/AcpremiumOld/distik.svg';
-import glass from '../../../../Assets/Products/Liquor/AcpremiumOld/glass.svg';
+import glass from '../../../../Assets/Products/Liquor/AcpremiumOld/glass.png';
 import acpsectiononelogo from '../../../../Assets/Products/Liquor/AcpremiumNew/acpsectiononelogo.png';
 import acpsectiontwoimg from '../../../../Assets/Products/Liquor/AcpremiumNew/acpremiumsecBottleImg.png';
 import acpblack from '../../../../Assets/Products/Liquor/AcpremiumNew/acblackImg.png';
@@ -36,9 +36,9 @@ export const AcpremiumNew = () => {
     }, []);
 
     return (
-        <div>
+        <div> 
             {/* //1 */}
-            <div className=" acpNewpagesRowDiv acpSecondPageSectionOneImage">
+            <div className=" acpNewpagesRowDiv acpSecondPageSectionOneImage"> 
                 <div className="acpNewTextDiv">
                     <h2 className="aristocratSecondHeading">THE ALL NEW</h2>
                     <img src={acpsectiononelogo} alt="bottleImg" className="acpNewlogoImg1" />
@@ -98,19 +98,19 @@ export const AcpremiumNew = () => {
                     <div className="imageText">
                         <img src={glass} alt="bottleImg" className="acpnewlogoText" />
                         <div>
-                            <p className="acpNlogoTextParagraph">Best Enjoyed How You Like Your Scotch</p>
+                            <p className="acpNlogoTextParagraph">Best Enjoyed How You Like Your Whiskey</p>
                         </div>
                     </div>
                     <div className="imageText">
-                        <img src={bottle} alt="bottleImg" className="acpnewlogoText" />
+                        <img src={bottle} alt="bottleImg" className="acpnewlogoText botleImg2" />
                         <div>
-                            <p className="acpNlogoTextParagraph">Best Enjoyed How You Like Your Scotch</p>
+                            <p className="acpNlogoTextParagraph">Bottled With Care By State Of The Art Bottling Facilities</p>
                         </div>
                     </div>
                     <div className="imageText"> 
-                        <img src={distik} alt="bottleImg" className="acpnewlogoText" />
+                        <img src={distik} alt="bottleImg" className="acpnewlogoText"  />
                         <div>
-                            <p className="acpNlogoTextParagraph">Best Enjoyed How You Like Your Scotch</p>
+                            <p className="acpNlogoTextParagraph">Made With The Finest Indian Spirits</p>
                         </div>
                     </div>
                 </div>
@@ -119,8 +119,9 @@ export const AcpremiumNew = () => {
             <div className="acppremiumfifthhDiv">
             {scrVideo && (
                         <video
+                            className="videoContent"
                             width="100%"
-                            height="500"
+                            height="80%"
                             // controls
                             autoPlay
                             muted

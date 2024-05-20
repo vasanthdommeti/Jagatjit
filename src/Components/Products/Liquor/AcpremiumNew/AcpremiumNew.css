@@ -21,10 +21,10 @@
     display: flex;
 }
 .acpNewTextDiv {
-    margin-left: 80px;
+    margin-left: 10px;
     display: flex;
     align-items: center;
-    width: 50%;
+    width: 60%;
     justify-content: center;
     flex-direction: column;
 }
@@ -254,15 +254,16 @@
     justify-content: space-between;
 }
 .acpNewlogoImg1{
-    height: 40%;
+    height: auto;
     width: 50%;
 }
 .acpNewImg1{
     height: 90vh;
-    width: 40%;
+    /* width: 50%; */
 }
 .acpbottleImg{
-    height: 90vh;
+    height: 80vh;
+    margin-top: 7%;
 }
 .acpnewHide{
     display: none;
@@ -337,6 +338,7 @@
 .image {
     width: 100%;
     height: auto;
+    margin-top: -8%;
 }
 
 .imageText {
@@ -352,6 +354,9 @@
     width: 7%;
     margin-right: 3%;
 }
+.botleImg2{
+    margin-left: 10%;
+}
 .acpnewlogoText {
     /* height: 50%; */
     /* width: 50%; */
@@ -363,7 +368,7 @@
     color: #FFFFFF;
     font-weight: 100;
     font-style: normal;
-    font-family: 'Josefin Sans';
+    font-family: 'Regular';
     font-size: 16px;
     letter-spacing: 1px;
     line-height: 15px;
@@ -701,8 +706,8 @@
         font-size: 12px;
     }
     .acpnewlogoText {
-        height: 50px;
-        width: 50px;
+        height: 40px;
+        width: 40px;
     }
     .rowIconVisible{
         height: 30%;
@@ -720,4 +725,16 @@
         width: 350px;
         height: 200px;    
     }
+    .acppremiumfifthhDiv {
+        height: 100vh;
+        max-width: 100%;
+      }
+      .videoContent{
+        height: 80%;
+        width: 100%;
+        margin-bottom: 10%;
+      }
+      .botleImg2{
+        margin-left: 0%;
+      }
 }
