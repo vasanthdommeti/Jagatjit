@@ -1,9 +1,3 @@
-
-
-
-
-
-
 import React from "react";
 import "../AcpremiumOld/AcpremiumOld.css";
 import { HiArrowLongLeft, HiOutlineArrowLongRight } from "react-icons/hi2";
@@ -31,11 +25,11 @@ export const AcpremiumOld = () => {
                     <h2 className="acpoldSecondHeading">CLASSIC WHISKEY</h2>
                     <p className="acpoldParagraph">One of India's most-loved whiskey brands with its iconic gold and deep-red bottle.</p>
                 </div>
-            <img src={acpsectiontwoimgs} alt="bottleImg" className="bottleImg bottleImgfirst"/>
+                <img src={acpsectiontwoimgs} alt="bottleImg" className="bottleImg bottleImgfirst" />
             </div>
             {/* //2 */}
             <div className="pagesTextDivTwo acpScondSectionTwoImage">
-            <img src={acplast} alt="bottleImg" className="section2BotleImg" />
+                <img src={acplast} alt="bottleImg" className="section2BotleImg" />
                 <div className="pagesTextDiv">
                     <div className="pageSecondText">
                         <h1 className="sectionTwoHeading">THE ESSENCE OF</h1>
@@ -54,11 +48,11 @@ export const AcpremiumOld = () => {
                     <img src={flavourGroup} alt="groupBtl" className="image favBotGroupImg" />
                     {/* <img src={flavourImg} alt="flavours" className="image" /> */}
                     <div class="profile-icon-wrap">
-                    <div class="profile-icon-1">Elegant and Long Lasting</div>
-                    <div class="profile-icon-2">Sweet, Floral with a touch of spices</div>
-                    <div class="profile-icon-3">Deep Gold to the eyes</div>
-                    <div class="profile-icon-4">Smooth, with a hint of Fruit & Spices</div>
-                </div>
+                        <div class="profile-icon-1">Elegant and Long Lasting</div>
+                        <div class="profile-icon-2">Sweet, Floral with a touch of spices</div>
+                        <div class="profile-icon-3">Deep Gold to the eyes</div>
+                        <div class="profile-icon-4">Smooth, with a hint of Fruit & Spices</div>
+                    </div>
                 </div>
                 <div><img src={curtainImg} alt="rightCurtain" className="curtainImage image img-dec" /></div>
             </section>
@@ -90,29 +84,44 @@ export const AcpremiumOld = () => {
                         </div>
                     </div>
                 </div>
-            </section> 
+            </section>
             {/* //5 */}
-            <div className="acppremiumfifthhDiv">
-                {/* <div className="acpremium5ImgDiv" >
-                    <img src={acplast} alt="lastImg" />
+
+            <div>
+                {/* <div className="acpvideoDiv">
+                {scrVideo && (
+                    <video
+                        className="videoContent"
+                        width="100%"
+                        height="100%"
+                        // controls
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                    >
+                        <source src={scrVideo} type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                )}
                 </div> */}
-                <div className="acpremiumleftrightDiv">
-                    <Link to={'/products/liquor/DamnGoodScotch'} className="acppremiumleftArrowDiv">
-                        <div className="premiumleftarrowDiv">
-                            <h1 className="acppremiumarrowHeading">Aristocrat Premium (OLD)</h1>
-                            <HiArrowLongLeft className="acparrowSize" />
+                <div className="acpNewarrowDiv">
+                    <Link to={'/products/liquor/ACpremiumNew'} className="acppremiumleftArrowDiv">
+                        <div className="acpNewLeftDiv">
+                            <h1 className="acpNpremiumarrowHeading">Aristocrat Premium</h1>
+                            <HiArrowLongLeft className="leftIconImg" />
                         </div>
                         <div>
-                            <img src={acpnewImg} alt="block" className="leftImgBtn" />
+                            <img src={acpnewImg} alt="block" className="acpNewleftSmallImg" />
                         </div>
                     </Link>
-                    <Link to={'/products/liquor/RoyalMedallion'} className="acppremiumrightArrowDiv">
+                    <Link to={'/products/liquor/ACpremiumBlack'} className="acppremiumrightArrowDiv">
                         <div>
-                            <img src={acpblack} alt="block" className="rightImgBtn" />
+                            <img src={acpblack} alt="block" className="acpNewrightSmallImg" />
                         </div>
-                        <div className="premiumrightarrow">
-                            <h1 className="acppremiumarrowHeading">Aristocrat Black</h1>
-                            <HiOutlineArrowLongRight className="acparrowSize"/>
+                        <div className="acpNewRightDiv">
+                            <h1 className="acpNpremiumarrowHeading">Aristocrat Black</h1>
+                            <HiOutlineArrowLongRight className="leftIconImg" />
                         </div>
                     </Link>
                 </div>

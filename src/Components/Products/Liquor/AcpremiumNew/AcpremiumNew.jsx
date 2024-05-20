@@ -118,27 +118,27 @@ export const AcpremiumNew = () => {
                     </div>
                 </div>
             </section>
-            {/* //5 */} 
+            {/* //5 */}
             <div>
                 <div className="acpvideoDiv">
-                {scrVideo && (
-                    <video
-                        className="videoContent"
-                        width="100%"
-                        height="100%"
-                        // controls
-                        autoPlay
-                        muted
-                        loop
-                        playsInline
-                    >
-                        <source src={scrVideo} type="video/mp4" />
-                        Your browser does not support the video tag.
-                    </video>
-                )}
+                    {scrVideo && (
+                        <video
+                            className="videoContent"
+                            width="100%"
+                            height="100%"
+                            // controls
+                            autoPlay
+                            muted
+                            loop
+                            playsInline
+                        >
+                            <source src={scrVideo} type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
+                    )}
                 </div>
                 <div className="acpNewarrowDiv">
-                    <Link to={'/products/liquor/DamnGoodScotch'} className="acppremiumleftArrowDiv">
+                    <Link to={'/products/liquor/ACpremiumOld'} className="acppremiumleftArrowDiv">
                         <div className="acpNewLeftDiv">
                             <h1 className="acpNpremiumarrowHeading">Aristocrat Premium (OLD)</h1>
                             <HiArrowLongLeft className="leftIconImg" />
@@ -147,13 +147,13 @@ export const AcpremiumNew = () => {
                             <img src={acpnewImg} alt="block" className="acpNewleftSmallImg" />
                         </div>
                     </Link>
-                    <Link to={'/products/liquor/RoyalMedallion'} className="acppremiumrightArrowDiv">
+                    <Link to={'/products/liquor/ACpremiumBlack'} className="acppremiumrightArrowDiv">
                         <div>
                             <img src={acpblack} alt="block" className="acpNewrightSmallImg" />
                         </div>
                         <div className="acpNewRightDiv">
                             <h1 className="acpNpremiumarrowHeading">Aristocrat Black</h1>
-                            <HiOutlineArrowLongRight className="leftIconImg"/>
+                            <HiOutlineArrowLongRight className="leftIconImg" />
                         </div>
                     </Link>
                 </div>

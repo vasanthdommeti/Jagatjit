@@ -119,27 +119,41 @@ export const AcBlack = () => {
                     </div>
                 </div>
             </div>
-            <div className="acblackFourthDiv">
-                <div className="acsec4imgDiv">
-                    <img src={acblacklastImg} alt="lastImg" className="acsec4secimg" />
+            <div>
+                <div className="acpvideoDiv">
+                    {scrVideo && (
+                        <video
+                            className="videoContent"
+                            width="100%"
+                            height="100%"
+                            // controls
+                            autoPlay
+                            muted
+                            loop
+                            playsInline
+                        >
+                            <source src={scrVideo} type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
+                    )}
                 </div>
-                <div className="pre-next-wrap">
-                    <Link to={'/products/liquor/ACpremiumNew'} className="leftArrowDiv">
-                        <div className="acleftarrowDiv">
-                            <h1 className="arrowHeading">Aristocrat Premium</h1>
-                            <HiArrowLongLeft className="acparrowSize" />
+                <div className="acpNewarrowDiv">
+                    <Link to={'/products/liquor/ACpremiumNew'} className="acppremiumleftArrowDiv">
+                        <div className="acpNewLeftDiv">
+                            <h1 className="acpNpremiumarrowHeading">Aristocrat Premium</h1>
+                            <HiArrowLongLeft className="leftIconImg" />
                         </div>
                         <div>
-                            <img src={acblack} alt="block" className="acarrowImg" />
+                            <img src={acblack} alt="block" className="acpNewleftSmallImg" />
                         </div>
                     </Link>
-                    <Link to='/products/liquor/RoyalPride' className="rightArrowDiv">
+                    <Link to={'/products/liquor/DamnGoodScotch'} className="acppremiumrightArrowDiv">
                         <div>
-                            <img src={damnscotch} alt="block" className="acarrowImg" />
+                            <img src={damnscotch} alt="block" className="acpNewrightSmallImg" />
                         </div>
-                        <div className="acrightarowDiv">
-                            <h1 className="arrowHeading">Damn Good Scotch</h1>
-                            <HiOutlineArrowLongRight className="acparrowSize" />
+                        <div className="acpNewRightDiv">
+                            <h1 className="acpNpremiumarrowHeading">Damn Good Scotch</h1>
+                            <HiOutlineArrowLongRight className="leftIconImg" />
                         </div>
                     </Link>
                 </div>

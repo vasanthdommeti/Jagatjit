@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 
 
 export const AcDryGin = () => {
-    return ( 
+    return (
         <section>
             {/* //1 */}
             <div className="acDryGinFirstDiv acDryGin1divHead">
@@ -21,7 +21,7 @@ export const AcDryGin = () => {
                             Extra Dry Gin
                         </h1>
                         <p className="acDryGinParagraph">
-                        Distilled from the finest raw materials, this high quality Gin symbolizes the true spirit of fun and frolic.
+                            Distilled from the finest raw materials, this high quality Gin symbolizes the true spirit of fun and frolic.
                         </p>
                     </div>
                     <div className="acDryGinImgcontent">
@@ -37,7 +37,7 @@ export const AcDryGin = () => {
                         Launched in The Year 1978
                     </h1>
                     <p className="acDryGinSecondDivParagraph">
-                      Sold 2,07,389 Croses in FY 2012-13
+                        Sold 2,07,389 Croses in FY 2012-13
                     </p>
                 </div>
             </div>
@@ -50,34 +50,48 @@ export const AcDryGin = () => {
                         Fun and Frolic
                     </h1>
                     <p className="acDryGinThirdDivParagraph" >
-                       Ready to be served straight-up or on the rocks, this drink is the revival
-                       of the good old Gimlet.
+                        Ready to be served straight-up or on the rocks, this drink is the revival
+                        of the good old Gimlet.
                     </p>
                 </div>
             </div>
 
             {/* //4 */}
-            <div className="acDryGinFourthDiv">
-                <div style={{ justifyContent: 'center', display: 'flex', height: '50%', marginTop: '5%' }}>
-                    <img src={acDryGinLastImg} alt="lastImg" />
-                </div>
-                <div style={{ justifyContent: 'center', display: 'flex', flexDirection: 'row', marginTop: '5%' }}>
-                    <Link to={'/products/liquor/DamnGoodScotch'} className="acDryGinleftArrowDiv">
-                        <div style={{ textAlign: 'right', alignSelf: 'center', }}>
-                            <h1 className="acDryGinarrowHeading">Damn Good Scotch</h1>
-                            <HiArrowLongLeft style={{ fontSize: '55px' }} />
+            <div>
+                {/* <div className="acpvideoDiv">
+                {scrVideo && (
+                    <video
+                        className="videoContent"
+                        width="100%"
+                        height="100%"
+                        // controls
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                    >
+                        <source src={scrVideo} type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                )}
+                </div> */}
+                <div className="acpNewarrowDiv">
+                    <Link to={'/products/liquor/DamnGoodScotch'} className="acppremiumleftArrowDiv">
+                        <div className="acpNewLeftDiv">
+                            <h1 className="acpNpremiumarrowHeading">Damn Good Scotch</h1>
+                            <HiArrowLongLeft className="leftIconImg" />
                         </div>
                         <div>
-                            <img src={damnscotch} alt="block" style={{ height: '150px', marginLeft: '25px', marginRight: '25px' }} />
+                            <img src={damnscotch} alt="block" className="acpNewleftSmallImg" />
                         </div>
                     </Link>
-                    <Link to={'/products/liquor/RoyalMedallion'} className="acDryGinrightArrowDiv">
+                    <Link to={'/products/liquor/RoyalMedallion'} className="acppremiumrightArrowDiv">
                         <div>
-                            <img src={royalMedallon} alt="block" style={{ height: '150px', marginRight: '5px' }} />
+                            <img src={royalMedallon} alt="block" className="acpNewrightSmallImg" />
                         </div>
-                        <div style={{ textAlign: 'left', alignSelf: 'center' }}>
-                            <h1 className="acDryGinarrowHeading">Royal Medallion</h1>
-                            <HiOutlineArrowLongRight style={{ fontSize: '55px' }} />
+                        <div className="acpNewRightDiv">
+                            <h1 className="acpNpremiumarrowHeading">Royal Medallion</h1>
+                            <HiOutlineArrowLongRight className="leftIconImg" />
                         </div>
                     </Link>
                 </div>
