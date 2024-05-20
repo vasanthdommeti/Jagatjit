@@ -12,6 +12,15 @@ justify-content: space-between; /* Distribute images evenly with space between *
 padding: 20px; /* Add padding to the section */
 }
 
+section:nth-child(4) .image-container {
+  margin-top: 0%;
+  padding: 0;
+}
+section:nth-child(5) .image-container {
+  margin-top: -10%;
+  padding: 0;
+}
+
 .vodka-image {
 width: 40%;
 height: 70vh;
@@ -40,7 +49,7 @@ background-size: contain;
 background-repeat: no-repeat;
 background-position: top;
 display: flex; 
-height: 100vh; 
+height: 130vh; 
 margin: 0px;
 }
 
@@ -50,7 +59,7 @@ background-size: contain;
 background-repeat: no-repeat;
 background-position: top;
 display: flex; 
-height: 100vh; 
+height: 140vh; 
 margin: 0px;
 }
 
@@ -67,7 +76,7 @@ width: 100%;
 padding-right: 10%; /* Add padding for content */
 display: flex; /* Arrange heading, paragraph, and image vertically */
 flex-direction: column;
-padding-top: 14%;
+padding-top: 20%;
 color: #fff; /* Text color */
 }
 

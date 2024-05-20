@@ -39,7 +39,10 @@ export const IceVodka = () => {
       <p className="info-text">
         The plain variant of IICE Vodka, Bare It All, has clean, fresh notes and is smooth and mellow on the tongue.
       </p>
-      <img src={vodkainfo1} alt="Vodka Information" className="info-image" srcSet={`${iconBare} 767w, ${vodkainfo1} 992w`} sizes="(max-width: 767px) 100vw, 992px"/>
+      <picture>
+        <source media="(max-width:767px)" srcset={iconBare} />
+        <img src={vodkainfo1} alt="Vodka Information" className="info-image" />
+      </picture>
     </div>
   </section>
 
@@ -50,7 +53,10 @@ export const IceVodka = () => {
       <p className="info-text">
         With every sip you take of this flavored variant of IICE Vodka, you feel like you're biting into a fresh green apple. Made from natural ingredients, clear and smooth, with no added sugar, fresh and fruity to the end.
       </p>
-      <img src={vodkainfo2} alt="Vodka Information" srcSet={`${iconBite} 767w, ${vodkainfo2} 992w`} sizes="(max-width: 767px) 100vw, 992px" className="info-image"/>
+      <picture>
+        <source media="(max-width:767px)" srcset={iconBite} />
+        <img src={vodkainfo2} alt="Vodka Information" className="info-image"/>
+      </picture>
     </div>
     <div className="image-container">
       <img src={applevod} alt="IICE Vodka" className="split-image" />
@@ -66,7 +72,11 @@ export const IceVodka = () => {
       <p className="info-text">
         Undress the Orange is a variant of IICE Vodka that delivers the freshness of a juicy orange with every drink. Popular among folks who savor a good cocktail with a zesty and citrus-based vibe.
       </p>
-      <img src={vodkainfo3} alt="Vodka Information" className="info-image" srcSet={`${iconorange} 767w, ${vodkainfo3} 992w`} sizes="(max-width: 767px) 100vw, 992px" />
+
+      <picture>
+        <source media="(max-width:767px)" srcset={iconorange} />
+        <img src={vodkainfo3} alt="Vodka Information" className="info-image" />
+      </picture>
     </div>
   </section>
   <section className="full-image-container">

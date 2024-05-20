@@ -12,9 +12,12 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import mapImage from '../../Assets/Home/sec6backgroundImg.png';
 
-import image1 from '../../Assets/Home/SectionThreeImages/sec1.png';
-import image2 from '../../Assets/Home/SectionThreeImages/sec2.png';
-import image3 from '../../Assets/Home/SectionThreeImages/sec3.png';
+import image1 from '../../Assets/Home/SectionThreeImages/sec1.svg';
+import image2 from '../../Assets/Home/SectionThreeImages/sec2.svg';
+import image3 from '../../Assets/Home/SectionThreeImages/sec3.svg';
+import imagemob1 from '../../Assets/Home/SectionThreeImages/secmob1.svg';
+import imagemob2 from '../../Assets/Home/SectionThreeImages/secmob2.svg';
+import imagemob3 from '../../Assets/Home/SectionThreeImages/secmob3.svg';
 
 import candle from '../../Assets/Products/Liquor/RoyalPride/candle.png';
 import hotglass from '../../Assets/Products/Liquor/RoyalPride/hotglass.png';
@@ -203,15 +206,55 @@ function Home() {
             const firstTimeline = gsap.timeline().fromTo(firstRef.current, {
                 scale: 1.6,
                 rotate: '30deg',
-                marginTop: '35vh',
-                marginLeft: '35vw',
+                marginTop: getMarginTop(),
+                marginLeft: getMarginLeft(),
             }, {
                 scale: 0.7,
                 rotate: 0,
-                marginTop: '10vh',
-                marginLeft: '75vw',
+                marginTop: getMarginTopReset(),
+                marginLeft: getMarginLeftreset(),
                 // height: '100vh',
             });
+            function getMarginTop() {
+                const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+                if (vw < 768) {
+                    return '30vh';
+                } else if (vw >= 768 && vw < 1024) {
+                    return '25vh';
+                } else {
+                    return '35vh';
+                }
+            }
+            function getMarginLeft() {
+                const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+                if (vw < 768) {
+                    return '20vw';
+                } else if (vw >= 768 && vw < 1024) {
+                    return '30vw';
+                } else {
+                    return '35vw';
+                }
+            }
+            function getMarginTopReset() {
+                const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+                if (vw < 768) {
+                    return '40vh';
+                } else if (vw >= 768 && vw < 1024) {
+                    return '20vh';
+                } else {
+                    return '15vh';
+                }
+            }
+            function getMarginLeftreset() {
+                const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+                if (vw < 768) {
+                    return '35vw';
+                } else if (vw >= 768 && vw < 1024) {
+                    return '70vw';
+                } else {
+                    return '75vw';
+                }
+            }
             tl.add([firstTimeline]);
         }, [wrapperRef, firstRef]);
 
@@ -247,8 +290,8 @@ function Home() {
             <section >
                 <div id='sectionImage2' className='section2'>
                     <div className='section3MainDiv'>
-                        <img src={data.largeImg} alt="bottle" style={{ height: '500px', width: '50%', marginRight: '45%' }} />
-                        <div style={{ display: 'flex', flexDirection: 'column', position: 'fixed', width: '50%' }}>
+                        <img src={data.largeImg} alt="bottle" className="section2img" />
+                        <div className="secion2TextWrap">
                             <div className="sectionThreeHeadDiv">
                                 <h1 className="btnheading">{data.name}</h1>
                                 <p className="btnsubheading">{data.heading}</p>
@@ -369,13 +412,22 @@ function Home() {
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src={image1} class="d-block w-100" alt="image1" />
+                            <picture>
+                                <source media="(max-width: 767px)" srcset={imagemob1} />
+                                <img src={image1} class="d-block w-100" alt="image1" />
+                            </picture>
                         </div>
                         <div class="carousel-item">
+                        <picture>
+                            <source media="(max-width: 767px)" srcset={imagemob2} />
                             <img src={image2} class="d-block w-100" alt="image2" />
+                        </picture>
                         </div>
                         <div class="carousel-item">
-                            <img src={image3} class="d-block w-100" alt="image3" />
+                            <picture>
+                                <source media="(max-width: 767px)" srcset={imagemob3} />
+                                <img src={image3} class="d-block w-100" alt="image3" />
+                            </picture>
                         </div>
                     </div>
                     {/* <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
