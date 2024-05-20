@@ -1,5 +1,6 @@
 
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import '../RoyalPride/RoyalPride.css'
 import { HiArrowLongLeft, HiOutlineArrowLongRight } from "react-icons/hi2";
 import royalpridefirstImg from '../../../../Assets/Products/Liquor/RoyalPride/royalpridefirstimg.png';
@@ -17,6 +18,22 @@ import acblack from '../../../../Assets/Products/Liquor/AcBlack/acblack.png';
 import damnscotch from '../../../../Assets/Products/Liquor/AcBlack/damnscotch.png';
 import { Link } from "react-router-dom";
 export const RoyalPride = () => {
+
+    const [scrVideo, setScrVideo] = useState("");
+    useEffect(() => {
+        axios.get('https://api.jagatjit.com/api/videos')
+            .then(response => {
+                let data = response.data.data.find((el) => {
+                    return el.name == "ROYAL PRIDE"
+                });
+
+                setScrVideo(data.video_file)
+            })
+            .catch(error => {
+                console.error('Error fetching users:', error);
+            });
+    }, []);
+
     return (
         <section>
             {/* //1 completed*/}

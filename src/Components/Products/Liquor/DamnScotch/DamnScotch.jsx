@@ -1,5 +1,5 @@
-
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import '../DamnScotch/DamnScotch.css';
 import { HiArrowLongLeft, HiOutlineArrowLongRight } from "react-icons/hi2";
 import firstSecimg from '../../../../Assets/Products/Liquor/DamnScotch/damn1stSecimg.png';
@@ -22,6 +22,22 @@ import drums from '../../../../Assets/Products/Liquor/RoyalPride/drums.png';
 import { Link } from "react-router-dom";
 
 export const DamnScotch = () => {
+
+  const [scrVideo, setScrVideo] = useState("");
+  useEffect(() => {
+    axios.get('https://api.jagatjit.com/api/videos')
+      .then(response => {
+        let data = response.data.data.find((el) => {
+          return el.name == "DAMN GOOD SCOTCH"
+        });
+
+        setScrVideo(data.video_file)
+      })
+      .catch(error => {
+        console.error('Error fetching users:', error);
+      });
+  }, []);
+
   return (
     <section>
       {/* //1st cursive pending */}

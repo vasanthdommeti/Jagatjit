@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import '../AcBlack/AcBlack.css';
 // import { FaArrowLeftLong } from "react-icons/fa6";
 import { HiArrowLongLeft, HiOutlineArrowLongRight } from "react-icons/hi2";
@@ -15,6 +16,23 @@ import damnscotch from '../../../../Assets/Products/Liquor/AcBlack/damnscotch.pn
 import { Link } from "react-router-dom";
 
 export const AcBlack = () => {
+
+    const [scrVideo, setScrVideo] = useState("");
+
+    useEffect(() => {
+        axios.get('https://api.jagatjit.com/api/videos')
+            .then(response => {
+                let data = response.data.data.find((el) => {
+                    return el.name == "AC BLACK"
+                });
+
+                setScrVideo(data.video_file)
+            })
+            .catch(error => {
+                console.error('Error fetching users:', error);
+            });
+    }, []);
+
     return (
         <section>
             {/* //1 completed */}
@@ -23,7 +41,7 @@ export const AcBlack = () => {
                     <div className="acblackRowContent">
                         <h1 className="acblackHeading">
                             AC BLACK
-                        </h1> 
+                        </h1>
                         <h4 className="acblacksecondHeading">
                             PURE GRAIN WHISKEY
                         </h4>
@@ -55,7 +73,7 @@ export const AcBlack = () => {
             {/* //3 completed but alignment small images*/}
             {/* <img src={candles} alt="block" className="candleimagehide" /> */}
             <div className="candleimagehide">
-                <div  className="candle-image-wrap accandleDiv">
+                <div className="candle-image-wrap accandleDiv">
                     <div className="aciconsDiv">
                         <img src={glass} alt="" />
                         <p>Elegant and long-lasting</p>

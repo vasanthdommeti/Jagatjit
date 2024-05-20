@@ -26,35 +26,38 @@ export const AcpremiumNew = () => {
     const [scrVideo, setScrVideo] = useState("");
     useEffect(() => {
         axios.get('https://api.jagatjit.com/api/videos')
-        .then(response => {
-          console.log('response',response);
-          setScrVideo(response.data.data[0].video_file)
-        })
-        .catch(error => {
-            console.error('Error fetching users:', error);
-        });
+            .then(response => {
+                let data = response.data.data.find((el) => {
+                    return el.name == "AC PREMIUM NEW"
+                });
+
+                setScrVideo(data.video_file)
+            })
+            .catch(error => {
+                console.error('Error fetching users:', error);
+            });
     }, []);
 
     return (
-        <div> 
+        <div>
             {/* //1 */}
-            <div className=" acpNewpagesRowDiv acpSecondPageSectionOneImage"> 
+            <div className=" acpNewpagesRowDiv acpSecondPageSectionOneImage">
                 <div className="acpNewTextDiv">
                     <h2 className="aristocratSecondHeading">THE ALL NEW</h2>
                     <img src={acpsectiononelogo} alt="bottleImg" className="acpNewlogoImg1" />
                     <p className="aristocratParagraph">One of India's most-loved whiskey brands with its iconic gold and deep-red bottle. Now Revamped. </p>
                 </div>
-            <img src={acpsectiontwoimgs} alt="bottleImg" className="acpbottleImg" />
+                <img src={acpsectiontwoimgs} alt="bottleImg" className="acpbottleImg" />
             </div>
             {/* //2 */}
             <div className="acpnewpagesTextDivTwo acpNewScondSectionTwoImage">
-                <img src={acpsectiontwoimg} alt="bottleImg"  className="acpNewImg1" />
+                <img src={acpsectiontwoimg} alt="bottleImg" className="acpNewImg1" />
                 <div className="acpnewpagesTextDiv">
                     <div className="pageSecondText">
                         <h1 className="sectionTwoHeading">THE ESSENCE OF</h1>
                         <h1 className="sectionTwoHeading">SOPHISTICATION</h1>
                     </div>
-                    <div> 
+                    <div>
                         <p className="sectionTwoParagraph">Distinctive and refined in both taste and look, it is</p>
                         <p className="sectionTwoParagraph">blended with pure grain and select imported</p>
                         <p className="sectionTwoParagraph">Scotch malts, bringing a <span>honeyed and delightful</span></p>
@@ -68,17 +71,17 @@ export const AcpremiumNew = () => {
                 <div className="acpNflavourDiv">
                     <h1 className="acpNflavourDivHeader">FLAVOUR PROFILE</h1>
                     <div className="acpNewFavIconImgDiv">
-                    <div class="profileN-icon-wrap">
-                    <div class="profileN-icon-1">Elegant and Long Lasting</div>
-                    <div class="profileN-icon-2">Sweet, Floral with a touch of spices</div>
-                    <div class="profileN-icon-3">Deep Gold to the eyes</div>
-                    <div class="profileN-icon-4">Smooth, with a hint of Fruit & Spices</div>
-                </div>
-                <picture>
-                  <source media="(max-width:767px)" srcset={bendFavImg} />
-                  <img src={flavourGroupimg} alt="Flowers" className="acpfavsectImg"/>
-                </picture>
-                
+                        <div class="profileN-icon-wrap">
+                            <div class="profileN-icon-1">Elegant and Long Lasting</div>
+                            <div class="profileN-icon-2">Sweet, Floral with a touch of spices</div>
+                            <div class="profileN-icon-3">Deep Gold to the eyes</div>
+                            <div class="profileN-icon-4">Smooth, with a hint of Fruit & Spices</div>
+                        </div>
+                        <picture>
+                            <source media="(max-width:767px)" srcset={bendFavImg} />
+                            <img src={flavourGroupimg} alt="Flowers" className="acpfavsectImg" />
+                        </picture>
+
                         {/* <img src={flavourGroupimg} alt="groupBtl" className="acpfavsectImg" /> */}
 
                     </div>
@@ -94,7 +97,7 @@ export const AcpremiumNew = () => {
                 <div className="acpNewpagesTextbetween">
                     <h2 className="acpNpagesTextFavorDivHeader">BEYOND LUXURY LIES LEGACY.</h2>
                 </div>
-                <div className="rowIconVisible"> 
+                <div className="rowIconVisible">
                     <div className="imageText">
                         <img src={glass} alt="bottleImg" className="acpnewlogoText" />
                         <div>
@@ -107,8 +110,8 @@ export const AcpremiumNew = () => {
                             <p className="acpNlogoTextParagraph">Bottled With Care By State Of The Art Bottling Facilities</p>
                         </div>
                     </div>
-                    <div className="imageText"> 
-                        <img src={distik} alt="bottleImg" className="acpnewlogoText"  />
+                    <div className="imageText">
+                        <img src={distik} alt="bottleImg" className="acpnewlogoText" />
                         <div>
                             <p className="acpNlogoTextParagraph">Made With The Finest Indian Spirits</p>
                         </div>
@@ -117,20 +120,20 @@ export const AcpremiumNew = () => {
             </section>
             {/* //5 */}
             <div className="acppremiumfifthhDiv">
-            {scrVideo && (
-                        <video
-                            className="videoContent"
-                            width="100%"
-                            height="80%"
-                            // controls
-                            autoPlay
-                            muted
-                            playsInline
-                        >
-                            <source src={scrVideo} type="video/mp4" />
-                            Your browser does not support the video tag.
-                        </video>
-                    )}
+                {scrVideo && (
+                    <video
+                        className="videoContent"
+                        width="100%"
+                        height="80%"
+                        // controls
+                        autoPlay
+                        muted
+                        playsInline
+                    >
+                        <source src={scrVideo} type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                )}
                 <div style={{ justifyContent: 'center', display: 'flex', flexDirection: 'row', marginTop: '1%' }}>
                     <Link to={'/products/liquor/DamnGoodScotch'} className="acppremiumleftArrowDiv">
                         <div style={{ textAlign: 'right', alignSelf: 'center', }}>
