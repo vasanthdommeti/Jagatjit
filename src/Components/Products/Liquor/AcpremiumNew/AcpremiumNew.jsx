@@ -2,7 +2,7 @@
 
 
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../AcpremiumNew/AcpremiumNew.css";
 import { HiArrowLongLeft, HiOutlineArrowLongRight } from "react-icons/hi2";
 import { Link } from "react-router-dom";
@@ -20,8 +20,21 @@ import acpnewImg from '../../../../Assets/Products/Liquor/AcpremiumNew/acpnewImg
 import acplast from '../../../../Assets/Products/Liquor/AcpremiumNew/AcpProducts.png';
 import acpsectiontwoimgs from '../../../../Assets/Products/Liquor/AcpremiumNew/acpnewImg.png';
 import bendFavImg from '../../../../Assets/Products/Liquor/AcpremiumNew/bendfavimg.png';
+import axios from "axios";
 
 export const AcpremiumNew = () => {
+    const [scrVideo, setScrVideo] = useState("");
+    useEffect(() => {
+        axios.get('https://api.jagatjit.com/api/videos')
+        .then(response => {
+          console.log('response',response);
+          setScrVideo(response.data.data[0].video_file)
+        })
+        .catch(error => {
+            console.error('Error fetching users:', error);
+        });
+    }, []);
+
     return (
         <div>
             {/* //1 */}
@@ -94,7 +107,7 @@ export const AcpremiumNew = () => {
                             <p className="acpNlogoTextParagraph">Best Enjoyed How You Like Your Scotch</p>
                         </div>
                     </div>
-                    <div className="imageText">
+                    <div className="imageText"> 
                         <img src={distik} alt="bottleImg" className="acpnewlogoText" />
                         <div>
                             <p className="acpNlogoTextParagraph">Best Enjoyed How You Like Your Scotch</p>
@@ -104,22 +117,32 @@ export const AcpremiumNew = () => {
             </section>
             {/* //5 */}
             <div className="acppremiumfifthhDiv">
-                <div style={{ justifyContent: 'center', display: 'flex', height: '50%', marginTop: '5%' }}>
-                    <img src={acplast} alt="lastImg" />
-                </div>
-                <div style={{ justifyContent: 'center', display: 'flex', flexDirection: 'row', marginTop: '5%' }}>
+            {scrVideo && (
+                        <video
+                            width="100%"
+                            height="500"
+                            // controls
+                            autoPlay
+                            muted
+                            playsInline
+                        >
+                            <source src={scrVideo} type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
+                    )}
+                <div style={{ justifyContent: 'center', display: 'flex', flexDirection: 'row', marginTop: '1%' }}>
                     <Link to={'/products/liquor/DamnGoodScotch'} className="acppremiumleftArrowDiv">
                         <div style={{ textAlign: 'right', alignSelf: 'center', }}>
                             <h1 className="acppremiumarrowHeading">Aristocrat Premium (OLD)</h1>
                             <HiArrowLongLeft style={{ fontSize: '55px' }} />
                         </div>
                         <div>
-                            <img src={acpnewImg} alt="block" style={{ height: '150px', marginLeft: '25px', marginRight: '25px' }} />
+                            <img src={acpnewImg} alt="block" style={{ height: '80px', marginLeft: '25px', marginRight: '25px' }} />
                         </div>
                     </Link>
                     <Link to={'/products/liquor/RoyalMedallion'} className="acppremiumrightArrowDiv">
                         <div>
-                            <img src={acpblack} alt="block" style={{ height: '150px', marginRight: '5px' }} />
+                            <img src={acpblack} alt="block" style={{ height: '80px', marginRight: '5px' }} />
                         </div>
                         <div style={{ textAlign: 'left', alignSelf: 'center' }}>
                             <h1 className="acppremiumarrowHeading">Aristocrat Black</h1>
