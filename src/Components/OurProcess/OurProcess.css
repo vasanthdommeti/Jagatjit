@@ -1,190 +1,222 @@
+/* Keyframe for fadeIn animation with ease-in-out */
+@keyframes fadeInZoom {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
 
-/* Make the page background black */
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.fadeInZoom {
+  opacity: 0;
+  animation: fadeInZoom 1s ease-in-out forwards;
+}
+
 .ourProcessMainDiv {
   background-color: #010101;
-  margin: 0; /* Remove left/right margins for better layout control */
-  /* width: 100%; */
-
+  margin: 0;
+  padding-top: 9%;
 }
+
 .ourProcess-process-container {
-  width: 90%; 
-  margin: 0 auto; 
-  padding: 20px;
-  text-align: justify; 
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 5%;
+  text-align: center;
   color: #FFFFFF;
 }
 
-/* Style the process title (h1) */
 .ourProcess-process-title {
-  font-family: 'Josefin Sans', sans-serif; 
-  font-style: normal;
-  font-weight: 400;
-  font-size: 48px; 
-  line-height: 48px; 
-  /* text-align: center; */
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
 }
 
-/* Other content paragraphs */
+.ourProcess-process-container h1 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 42px;
+  margin-bottom: 5%;
+
+}
+
 .ourProcess-process-container p {
-  font-family: 'Montserrat', sans-serif; 
-  font-size: 17px; 
-  line-height: 1.5; 
+  font-family: 'Montserrat', sans-serif;
+  font-size: 17px;
+  text-align: justify;
+  line-height: 1.5;
+  margin-top: 5%;
+  padding: 5%;
 }
 
 .ourProcess-process-container h4 {
-    text-align: center;
-font-family: 'Josefin Sans';
-font-style: normal;
-font-weight: 100;
-font-size: 24px;
-line-height: 92.01%;
-letter-spacing: 0.09em;
-
-color: #FFFFFF;
-}
-.ourProcess-process-wrapper {
-display: flex; 
-flex-direction: row;
-justify-content: center;
-align-items: center;
-/* margin: 6%; */
-/* Use flexbox for responsive layout */
-/* width: 100%;  */
-/* Take up full viewport width */
-/* height: 700px;  */
-/* Adjust height as needed */
+  font-family: 'Josefin Sans';
+  font-size: 22px;
+  font-weight: 100;
+  letter-spacing: 0.2em;
+  color: #FFFFFF;
 }
 
-/* Style the image container */
-.ourProcess-process-image {
-/* width: 0%;  */
-/* width: 450px; */
-/* height: 450px; */
-/* width: 100vw; */
-width: 55vw;
-background-position: left;
-height: 80vh;
-object-fit: cover;
-/* Take up 60% of the wrapper width */
+.ourProcess-process-wrapper,
+.ourProcess-process-wrappers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-/* Style the process description */
+.ourProcess-process-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
 .ourProcess-process-description {
-  /* width: 90%;  */
- /* Add padding for content and right margin */
-font-family: 'Josefin Sans', sans-serif;
-font-style: normal;
-/* font-weight: 700; */
-font-size: 20px; /* Adjust font size as needed */
-line-height: 1.5; /* Adjust line-height for readability */
-color: #FFFFFF; /* White text color */
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: left;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 17px;
+  line-height: 1.5;
+  color: #FFFFFF;
+  flex: 1;
+  margin: 5%;
 }
 
 .ourProcess-process-title {
-font-family: 'Josefin Sans'; /* Adjust font family if needed */
-font-style: normal;
-font-weight: 700;
-font-size: 24px; /* Adjust font size as needed */
-line-height: 28px;
-/* display: flex; */
-/* align-items: center; */
-color: #FFFFFF;
-margin-bottom: 3px; /* Optional: Add spacing after the title */
+  font-family: 'Josefin Sans';
+  font-weight: 700;
+  font-size: 24px;
+  margin-top: 5%;
+}
+
+.ourProcess-process-title-main {
+  font-family: 'Josefin Sans';
+  font-weight: 700;
+  font-size: 36px;
+  margin-bottom: 3px;
 }
 
 .ourProcess-pre-blending-description {
-font-family: 'Montserrat'; 
-font-style: normal;
-font-weight: 400;
-font-size: 16px; 
-line-height: 30px;
-/* width: '50%'; */
-display: flex;
-align-items: left;
-color: #FFFFFF;
+  font-family: 'Montserrat';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
 }
 
-.ourProcess-process-wrappers {
-display: flex; 
-width: 100%; 
-height: 700px; 
+.plantunittitle {
+  font-family: 'Josefin Sans';
+  font-weight: 700;
+  font-size: 28px;
+  margin-bottom: 5%;
+  margin-top: 10%;
 }
 
-.ourProcess-process-images {
-/* flex: 30%;  */
-order: 1; 
-}
+/* Responsive design */
 
-.ourProcess-process-descriptions {
-/* flex: 40%; */
-padding: 20px 10px; 
-font-family: 'Josefin Sans', sans-serif;
-text-align: left;
-font-style: normal;
-font-weight: 700;
-font-size: 20px; 
-line-height: 1.5; 
-color: #FFFFFF; 
-}
-
-.ourProcess-process-images img {
-width: 60%; /* Adjust image width as needed */
-height: auto; /* Maintain image aspect ratio */
-}
-
-.ourProcess-process-titles {
-/* flex: 40%;  */
-display: flex; /* Enable flexbox for child elements */
-flex-direction: column; /* Arrange elements side-by-side */
-font-family: 'Josefin Sans';
-font-style: normal;
-font-weight: 700;
-font-size: 28px;
-line-height: 28px;
-text-align: left;
-align-items: start;
-color: #FFFFFF;
-margin-bottom: 10px;
-}
-
-/* Styles for the new text content */
-.ourProcess-pre-blending-descriptions {
-flex: 40%;
-display: flex;
-flex-direction: column;
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 400;
-font-size: 20px;
-line-height: 24px;
-text-align: left;
-align-items: start;
-color: #FFFFFF;
-padding: 20px;
-}
-
-@media (max-width: 768px) {
-.ourProcess-process-wrappers {
-flex-direction: column-reverse; 
-}
-.ourProcess-process-image,
-.ourProcess-process-description {
-/* flex: 100%;  */
-/* Take up full width on small screens */
-}
-}
-
-
-@media (max-width: 768px) {
+@media (max-width: 1440px) and (min-width: 1200px) {
   .ourProcess-process-container {
-    width: 80%; /* Adjust width for smaller screens */
+    width: 90%;
   }
+
+  .ourProcess-process-wrapper {
+    flex-direction: row;
+  }
+
+  .ourProcess-process-wrappers {
+    flex-direction: row;
+  }
+
+  .ourProcess-process-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+
+
+
+
+}
+
+
+@media (max-width: 1024px) {
+
+  .ourProcess-process-wrapper {
+    flex-direction: column;
+  }
+
+  .ourProcess-process-wrappers {
+    flex-direction: column-reverse;
+  }
+
+  .ourProcess-process-container {
+    width: 90%;
+  }
+
+  .ourProcess-process-container h4 {
+    font-size: 20px;
+  }
+
+  .ourProcess-process-container h1 {
+    font-size: 32px;
+  }
+
   .ourProcess-process-title {
-    font-size: 36px; /* Adjust font size for smaller screens */
+    font-size: 24px;
+  }
+
+  .ourProcess-process-description {
+    padding: 15px;
+  }
+
+  .plantunittitle {
+    font-size: 26px;
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .ourProcess-process-wrapper {
+    flex-direction: column;
+    margin-top: 20%;
+  }
+
+  .ourProcess-process-wrappers {
+    flex-direction: column-reverse;
+    margin-top: 20%;
+
+  }
+
+  .ourProcess-process-container {
+    width: 100%;
+    margin-top: 20%;
+    padding-right: 5%;
+    padding-left: 5%;
+
+  }
+
+  .ourProcess-process-container h4 {
+    font-size: 16px;
+  }
+
+  .ourProcess-process-container h1 {
+    font-size: 28px;
+  }
+
+  .ourProcess-process-title {
+    font-size: 18px;
+  }
+
+  .ourProcess-process-description {
+    padding: 10px;
+  }
+
+  .plantunittitle {
+    font-size: 24px;
+    margin-top: 15%;
+    margin-bottom: 15%;
   }
 }
