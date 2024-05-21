@@ -19,7 +19,7 @@ const OurTeam = () => {
             .catch(error => {
                 console.error('Error fetching users:', error);
             }); 
-    }, []);
+    }, []); 
 
     const calculateExperienceInYears = (joiningDate) => {
         // Parse the joining date in ISO 8601 format
@@ -71,9 +71,9 @@ const OurTeam = () => {
                             <h1 className="teamMemberName">{el.designation}</h1>
                             <h1 className="teamMemberName">{el.name}</h1>
                         </div>
-                        <div className="hoverEffect" style={{ marginBottom: '20%' }}>
-                            <h1 className="hoverText" style={{ fontSize: '16px', fontFamily: 'Josefin Sans', marginBottom: '0' }}>{el.designation}</h1>
-                            <h1 className="hoverText" style={{ fontSize: '16px', fontFamily: 'Josefin Sans', marginBottom: '6px' }}>{el.name}</h1>
+                        <div className="hoverEffect hoverEffectMain">
+                            <h1 className="hoverText designationTeam" >{el.designation}</h1>
+                            <h1 className="hoverText designationTeam" style={{marginBottom: '6px' }}>{el.name}</h1>
                             <p className="hoverText hoverTextData">Total Experience: {el.experience}+ Years </p>
                             <p className="hoverText hoverTextData">Education:{el.education}</p>
                             <p className="hoverText hoverTextData">Time With JIL: {calculateExperienceInYears(el.joined_at)}</p>

@@ -14,15 +14,22 @@
     margin-top: 5%;
     margin-bottom: 10%;
 } 
-
+ .designationTeam{
+    font-size: 24px;
+    font-family: 'Josefin Sans';
+    margin-bottom: 0;
+ }
+ .hoverEffectMain{
+    margin-bottom: 20%;
+ }
 .imageMainDiv {
     margin-left: 5%;
     margin-right: 5%;
 }
 
 .TeamMember {
-    height: 250px;
-    width: 250px;
+    height: 400px;
+    width: 400px;
     border-radius: 5px;
 }
 
@@ -56,9 +63,9 @@
 } */
 
 .hoverTextData {
-    font-size: 16px;
-    font-family: 'Montserrat';
-    margin-bottom: 3px;
+    font-size: 21px;
+    font-family: 'Josefin Sans';
+    /* margin-bottom: 3px; */
     text-align: left;
 
 }
@@ -117,6 +124,7 @@
     .hoverTextData {
         font-size: 14px;
         margin-bottom: 5%;
+        font-family: 'Josefin Sans';
     }
 
     .teamMemberName {
@@ -169,7 +177,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    padding: 10px;
+    padding: 30px;
     display: none;
     z-index: 2;
   }
