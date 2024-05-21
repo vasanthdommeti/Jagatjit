@@ -39,7 +39,7 @@ function DateOfBirth() {
     }
 
     return (
-        <div className='loginMainDiv'>
+        <div className='loginMainDivDob'> 
             <div className='loginDiv'>
                 <img src={logo} alt='logo' className='logo' />
             </div>

@@ -31,11 +31,9 @@ export const DamnScotch = () => {
             <img src={firstSecimg} alt="acblack"/>
           </div>
           <div className="damnRowContent">
-            {/* <h1 className="damnHeading">
-              DAMN GOOD SCOTCH 
-            </h1> */}
-            <div className="logoImgTextCont"></div>
-            {/* <img src={headImg} alt="img"/> */}
+            <h1 className="damnHeading">
+              DAMN GOOD SCOTCH
+            </h1>
             <h4 className="damnsecondHeading">
               BLENDED SCOTCH WHISKEY
             </h4>
@@ -52,7 +50,6 @@ export const DamnScotch = () => {
           <h1 className="damnHeading">
             Royalty Redefined
           </h1>
-          {/* <div className="logoImgTextCont"></div> */}
           <p className="damnParagraph">
             A Scotch whisky of rare character, KING HENRY VIII truly lives up to its name.
           </p>
@@ -120,15 +117,15 @@ export const DamnScotch = () => {
             <p>Best Enjoyed How You Like Your Scotch</p>
           </div>
           <div className="damnimageText">
-            <img src={bottle} alt="block" className="damnlogoimage"  />
+            <img src={bottle} alt="block" className="damnlogoimage" style={{ marginRight: '12%', marginLeft: '3%' }} />
             <p>Bottled with care by state of the art bottling facilities</p>
           </div>
           <div className="damnlogodrumsimage">
-            <img src={drums} alt="block" className="damnlogoimage"/>
+            <img src={drums} alt="block" className="damnlogoimage" style={{ marginRight: '-3%', marginTop: '-10%', marginLeft: '-2%' }} />
             <p>Made with the finest Indian spirits</p>
           </div>
 
-        </div> 
+        </div>
       </div>
       {/* ///5 completed*/}
       <div className="damFifthDiv" >

@@ -1,5 +1,7 @@
-.loginMainDiv {
+.loginMainDivDob {
+    background-image: url('../../Assets/DOB/Dob.png');
     height: 100vh;
+    background-size: cover;
     color: #fff;
     background-color: black;
     display: flex;

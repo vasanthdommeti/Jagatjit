@@ -35,12 +35,6 @@
   letter-spacing: 3px;  
   text-align: left;
 }
-.logoImgTextCont{
-  background-image: url('../../../../Assets/Products/Liquor/DamnScotch/largimglogo.png');
-  height: 150px;
-  object-position: right;
-  background-repeat: no-repeat;
-}
 
 .damnsecondHeading {
   color: #ED4E11;
@@ -131,7 +125,6 @@
   align-items: flex-end;
   padding-right: 10%;
   padding-top: 10%;
-  /* align-self: center; */
   /* padding: 10%; */
   /* width: 60%; */
 }
@@ -150,9 +143,9 @@
 .damnimageText {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-end;
   /* margin-top: 2%; */
-  /* margin-bottom: 2%; */
+  margin-bottom: 3%;
   width: 30%;
   margin-right: 5%;
   justify-content: space-between;
@@ -166,7 +159,7 @@
   /* margin-top: 2%; */
   /* margin-bottom: 6%; */
   width: 30%;
-  margin-right: 5%;
+  margin-right: 8%;
   justify-content: space-between;
 }
 
@@ -301,8 +294,7 @@
 
   .damnthirdDivLine {
     font-family: 'Krona One';
-    /* font-family: 'Lobster', cursive; */
-    font-size: 18px;
+    font-size: calc(20px + 1vw);
     font-weight: 700;
     margin-bottom: 0;
     text-align: center;
@@ -318,7 +310,7 @@
     letter-spacing: 1px;
     font-weight: 100;
     opacity: 0.7;
-    text-align: center;
+    text-align: justify;
     margin-top: 5%;
   }
   .damnThirdDivContent {
@@ -366,12 +358,11 @@
 
 
   .damnsecondDiv {
-    background-image: url('../../../../Assets/Products/Liquor/DamnScotch/damn2ndSecimg.png');
-    background-position: bottom;
+    background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
     display: flex;
-    height: 80vh;
+    height: 40vh;
   }
 
   .damnThirdDiv {
@@ -389,23 +380,8 @@
 .damngoodiconlist{
   display: flex;
   justify-content: center;
-  align-self: flex-start;
   flex-direction: column;
 }
-.damnsecondRowContent {
-  display: flex;
-  flex-direction: column;
-  align-self: flex-start;
-  align-items: center;
-  width: auto;
-  margin-top: initial;
-}
-.logoImgTextCont{
-  background-image: url('../../../../Assets/Products/Liquor/DamnScotch/smallImgLogo.png');
-  height: 150px;
-  margin-left: 15%;
-  object-position: right;
-  background-repeat: no-repeat;
-}
+
 
 }
