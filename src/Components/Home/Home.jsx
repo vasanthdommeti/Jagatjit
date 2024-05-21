@@ -183,9 +183,9 @@ function Home() {
     const [activeId, setActiveId] = useState(section[0]?.id);
 
     useEffect(() => {
-      if (section.length > 0) {
-        setData(section[0]);
-      }
+        if (section.length > 0) {
+            setData(section[0]);
+        }
     }, [section, setData]);
 
     const handleClick = (id) => {
@@ -284,7 +284,7 @@ function Home() {
     };
 
     return (
-        <div className="App" ref={wrapperRef}> 
+        <div className="App" ref={wrapperRef}>
             {/* //1 */}
             <section className="main" data-pin="true"  >
                 <div id='sectionImage1' className='sectionBottleDiv'>
@@ -305,12 +305,10 @@ function Home() {
             </section>
 
             {/* //2 */}
-            <section className="section2ButtonChange">
+            <section className="section2ButtonChange" style={{ height: '100vh' }}>
                 <div id='sectionImage2' className='section2'>
                     <div className='section3MainDiv'>
-                        <div className="btn-click-image-wrap">
-                            <img src={data.largeImg} alt="bottle" className="section2img" />
-                        </div>
+                        <img src={data.largeImg} alt="bottle" className="section2img" />
                         <div className="secion2TextWrap">
                             <div className="sectionThreeHeadDiv">
                                 <h1 className="btnheading">{data.name}</h1>
@@ -323,7 +321,7 @@ function Home() {
                             <div className="sectionThreeImageDiv">
                                 <div className="smallImgDiv">
                                     {section.map((e) => (
-                                        <button onClick={() => handleButtonClick(e) } className={`smallImgButton ${activeId === e.id ?' bottle-active' : ''}`}>
+                                        <button onClick={() => handleButtonClick(e)} className={`smallImgButton ${activeId === e.id ? ' bottle-active' : ''}`}>
                                             <img src={e.smallImg} alt="bottle" title={e.name} />
                                         </button>
                                     ))}
@@ -335,7 +333,7 @@ function Home() {
                         <div className="sectionThreeImageDiv">
                             <div className="smallImgDiv">
                                 {section.map((e) => (
-                                    <button onClick={() =>  handleButtonClick(e) } className={`smallImgButton ${activeId === e.id ?' bottle-active' : ''}`}>
+                                    <button onClick={() => handleButtonClick(e)} className={`smallImgButton ${activeId === e.id ? ' bottle-active' : ''}`}>
                                         <img src={e.smallImg} alt="bottle" title={e.name} />
                                     </button>
                                 ))}
@@ -343,7 +341,7 @@ function Home() {
                         </div>
                     </div>
                 </div>
-            </section> 
+            </section>
             {/* /3/  completed*/}
             <section id='sectionImage3' className='section1' >
                 {/* <div Name='sectionThreeMainDiv'> */}
@@ -456,15 +454,15 @@ function Home() {
                             </div>
                         </div>
                         <div className="carousel-item">
-                        <picture>
-                            <source media="(max-width: 767px)" srcSet={imagemob2} />
-                            <img src={image2} className="d-block w-100" alt="image2" />
-                        </picture>
-                        <div className="carousel-caption slider-btn-link-2">
-                            <Link to={'/products/liquor/DamnGoodScotch'}>
-                                <button className='section-silder-Button'>Find Out More</button>
-                            </Link>
-                        </div>
+                            <picture>
+                                <source media="(max-width: 767px)" srcSet={imagemob2} />
+                                <img src={image2} className="d-block w-100" alt="image2" />
+                            </picture>
+                            <div className="carousel-caption slider-btn-link-2">
+                                <Link to={'/products/liquor/DamnGoodScotch'}>
+                                    <button className='section-silder-Button'>Find Out More</button>
+                                </Link>
+                            </div>
                         </div>
                         <div className="carousel-item">
                             <picture>
@@ -551,7 +549,7 @@ function Home() {
                             {markers.map(({ name, coordinates }) => (
                                 <Marker key={name} coordinates={coordinates}>
                                     <a data-tooltip-id="my-tooltip" data-tooltip-content={name}>
-                                        <circle r={5} fill="#fff"  />
+                                        <circle r={5} fill="#fff" />
                                     </a>
                                 </Marker>
                             ))}

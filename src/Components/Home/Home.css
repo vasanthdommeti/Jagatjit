@@ -11,6 +11,7 @@
     background-repeat: no-repeat;
     /* aspect-ratio: 14 / 7.3; */
 }
+
 .sectionBottleDivsec1 {
     position: relative;
     max-height: 85vh;
@@ -70,10 +71,6 @@
     letter-spacing: 3px;
 }
 
-.section2ButtonChange {
-    height: 100vh;
-}
-
 #sectionImage2 {
     background-image: url('../../Assets/Home/sec2backgroundImg.png');
 }
@@ -92,7 +89,7 @@
     gap: 60px;
 }
 
-.smallImgButton > img {
+.smallImgButton>img {
     width: 100%;
     height: auto;
 }
@@ -164,7 +161,7 @@
     /* aspect-ratio: 17 / 8.78; */
 }
 
-.carousel-item > img {
+.carousel-item>img {
     height: 100vh;
 }
 
@@ -250,7 +247,7 @@
     border: 0.5px solid #ECA533;
     border-radius: 18px;
     padding: 10px 35px;
-    font-size: 16PX;
+    font-size: 8PX;
     color: #ECA533;
     letter-spacing: 2px;
     margin-top: 30px;
@@ -427,13 +424,8 @@
     background-color: transparent;
 }
 
-.btn-click-image-wrap {
-    text-align: center;
-}
-
-.section3MainDiv  .section2img {
+.section3MainDiv>.section2img {
     transition: all 0.3s ease-in-out;
-    height: 500px;
 }
 
 .bottle-active {
@@ -448,6 +440,29 @@
     }
 }
 
+/* @media (min-width:641px) {
+
+    portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones
+    .section {
+        height: 45vh;
+    }
+    .section3MainDiv {
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+} */
+
+/* @media (min-width:961px) {
+
+    tablet, landscape iPad, lo-res laptops ands desktops
+    .section {
+        height: 65vh;
+    }
+    .section3MainDiv {
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+} */
 
 @media (min-width:1025px) {
 
@@ -465,8 +480,17 @@
     }
 }
 
+/* @media (max-width: 641px) {
+    .section3MainDiv {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+} */
 
 @media (min-width: 768px) and (max-width: 1024px) {
+
     .main,
     .sectionBottleDiv {
         height: 80vh;
@@ -485,7 +509,7 @@
     }
 
     .section2 {
-        height: auto;
+        height: 80vh;
     }
 
     #sectionImage3 {
@@ -498,23 +522,14 @@
         gap: 15px;
     }
 
-    .section2ButtonChange {
-        height: auto;
-    }
-
     .section3MainDiv {
-        padding: 30px;
-        height: auto;
+        padding: 0;
     }
 
-    .section3MainDiv  .section2img {
+    .section3MainDiv>.section2img {
         width: auto;
-        height: 350px;
+        height: 45%;
         margin: 0;
-    }
-
-    .btn-click-image-wrap {
-        text-align: center;
     }
 
     .sectionThreeImageDiv {
@@ -536,7 +551,7 @@
         font-size: 14px;
     }
 
-    .carousel-item > img,
+    .carousel-item>img,
     section:nth-child(4) {
         height: auto;
     }
@@ -555,7 +570,7 @@
         width: 100%;
     }
 
-    .App > div,
+    .App>div,
     .imageMapContainer {
         height: 45vh !important;
     }
@@ -564,12 +579,12 @@
         top: 45%;
         left: 45%;
     }
-    
+
     .slider-btn-link-2 {
         top: 38%;
         left: -23%;
     }
-    
+
     .slider-btn-link-3 {
         top: 38%;
         left: -35%;
@@ -578,19 +593,6 @@
 
 
 @media screen and (max-width: 767px) {
-
-    section {
-        height: auto !important;
-    }
-
-    section > div,
-    #sectionImage3 {
-        height: 100vh !important;
-    }
-
-    #sectionImage3 > div {
-        height: auto !important;
-    }
 
     .main {
         /* margin-top: 100px; */
@@ -603,6 +605,7 @@
         background-position: bottom;
         max-height: unset;
     }
+
     /* .sectionBottleDiv1sec {
         height: 100vh;
         background-size: cover;
@@ -626,48 +629,48 @@
         height: 600px;
     }
 
-    .secion2TextWrap > .sectionThreeImageDiv {
+    .secion2TextWrap>.sectionThreeImageDiv {
         display: none;
     }
 
     .mob-show-btn {
         display: block;
-        padding: 15px;
     }
 
     .sectionImage1Div .section3Button {
+        font-size: 12px;
         font-weight: 300;
         line-height: 12px;
         text-align: center;
     }
 
     #sectionImage2 {
-        height: 100vh;
+        height: auto;
         padding-bottom: 10%;
     }
 
     #sectionImage2 .section3MainDiv {
         display: flex;
         flex-direction: column-reverse;
-        padding: 7%;
+        padding: 10%;
         gap: 30px;
         height: auto;
     }
 
-    .section3MainDiv  .section2img {
+    .section3MainDiv>.section2img {
         width: auto;
-        height: 250px;
+        height: 300px;
         margin: 0;
     }
-    
-    .section3MainDiv > .secion2TextWrap {
+
+    .section3MainDiv>.secion2TextWrap {
         width: 100%;
         height: auto;
         text-align: center;
         z-index: 1;
     }
 
-    .smallImgButton > img {
+    .smallImgButton>img {
         width: 100%;
         height: 150px;
     }
@@ -698,6 +701,7 @@
     .secion2TextWrap .section3Button {
         color: #000;
         background-color: rgba(255, 153, 0, 1);
+        font-size: 12px;
         font-weight: 300;
         line-height: 12px;
         text-align: center;
@@ -708,11 +712,12 @@
         margin: 0;
     }
 
-    .sectionThreeImageDiv > .smallImgDiv {
+    .sectionThreeImageDiv>.smallImgDiv {
         display: flex;
         justify-content: space-evenly;
         flex-wrap: wrap-reverse;
         gap: 10px;
+        padding: 10px;
     }
 
     #sectionImage3 {
@@ -725,8 +730,9 @@
     .section3GroupImagesDiv {
         width: 100%;
     }
-    .carousel-item > img,
-    .App > section:nth-child(4) {
+
+    .carousel-item>img,
+    .App>section:nth-child(4) {
         height: auto;
     }
 
@@ -734,7 +740,7 @@
         height: 100vh;
     }
 
-    #sectionImage5 > .section5MainDiv {
+    #sectionImage5>.section5MainDiv {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -750,9 +756,10 @@
         letter-spacing: 0.09em;
     }
 
-    #sectionImage5  .section3Button {
+    #sectionImage5 .section3Button {
         border: 2px solid rgba(236, 165, 51, 1);
         color: rgba(236, 165, 51, 1);
+        font-size: 12px;
         font-weight: 400;
         line-height: 12px;
     }
@@ -763,7 +770,7 @@
         height: auto;
     }
 
-    .App > div {
+    .App>div {
         padding: 80px 0 0 0;
         height: auto !important;
     }
