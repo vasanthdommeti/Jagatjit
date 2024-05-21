@@ -26,21 +26,21 @@ import glass from '../../Assets/Products/Liquor/RoyalPride/glass.png';
 import royalpridethirdImg from '../../Assets/Products/Liquor/RoyalPride/royalpridethirdimg.png'
 // import LogoIcon from '../../Assests/LogoIcon.png'
 
-import bottle2 from '../../Assets/Home/SectionTwoImages/bottle1.png';
-import bottle3 from '../../Assets/Home/SectionTwoImages/bottle2.png';
-import bottle4 from '../../Assets/Home/SectionTwoImages/bottle3.png';
-import bottle5 from '../../Assets/Home/SectionTwoImages/bottle4.png';
-import bottle1 from '../../Assets/Home/SectionTwoImages/bottle5.png';
-import bottle6 from '../../Assets/Home/SectionTwoImages/bottle6.png';
-import bottle7 from '../../Assets/Home/SectionTwoImages/bottle7.png';
+import bottle2 from '../../Assets/Home/SectionTwoImages/bottles1.png';
+import bottle3 from '../../Assets/Home/SectionTwoImages/bottles2.png';
+import bottle4 from '../../Assets/Home/SectionTwoImages/bottles3.png';
+import bottle5 from '../../Assets/Home/SectionTwoImages/bottles4.png';
+import bottle1 from '../../Assets/Home/SectionTwoImages/bottles5.png';
+import bottle6 from '../../Assets/Home/SectionTwoImages/bottles6.png';
+import bottle7 from '../../Assets/Home/SectionTwoImages/bottles7.png';
 
-import bottle2main from '../../Assets/Home/SectionTwoImages/bottle1main.png';
-import bottle3main from '../../Assets/Home/SectionTwoImages/bottle2main.png';
-import bottle4main from '../../Assets/Home/SectionTwoImages/bottle3main.png';
-import bottle5main from '../../Assets/Home/SectionTwoImages/bottle4main.png';
-import bottle1main from '../../Assets/Home/SectionTwoImages/bottle5main.png';
-import bottle6main from '../../Assets/Home/SectionTwoImages/bottle6main.png';
-import bottle7main from '../../Assets/Home/SectionTwoImages/bottle7main.png';
+import bottle2main from '../../Assets/Home/SectionTwoImages/bottles1main.png';
+import bottle3main from '../../Assets/Home/SectionTwoImages/bottles2main.png';
+import bottle4main from '../../Assets/Home/SectionTwoImages/bottles3main.png';
+import bottle5main from '../../Assets/Home/SectionTwoImages/bottles4main.png';
+import bottle1main from '../../Assets/Home/SectionTwoImages/bottles5main.png';
+import bottle6main from '../../Assets/Home/SectionTwoImages/bottles6main.png';
+import bottle7main from '../../Assets/Home/SectionTwoImages/bottles7main.png';
 
 const section = [
     {
@@ -209,17 +209,17 @@ function Home() {
                 marginTop: getMarginTop(),
                 marginLeft: getMarginLeft(),
             }, {
-                scale: 0.7,
+                scale: 0.9,
                 rotate: 0,
                 marginTop: getMarginTopReset(),
                 marginLeft: getMarginLeftreset(),
                 // height: '100vh',
             });
             function getMarginTop() {
-                const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
-                if (vw < 768) {
+                const vh = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+                if (vh < 768) {
                     return '30vh';
-                } else if (vw >= 768 && vw < 1024) {
+                } else if (vh >= 768 && vh < 1024) {
                     return '25vh';
                 } else {
                     return '35vh';
@@ -236,10 +236,10 @@ function Home() {
                 }
             }
             function getMarginTopReset() {
-                const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
-                if (vw < 768) {
-                    return '40vh';
-                } else if (vw >= 768 && vw < 1024) {
+                const vh = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+                if (vh < 768) {
+                    return '15vh';
+                } else if (vh >= 768 && vh < 1024) {
                     return '20vh';
                 } else {
                     return '15vh';
@@ -248,11 +248,11 @@ function Home() {
             function getMarginLeftreset() {
                 const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
                 if (vw < 768) {
-                    return '35vw';
+                    return '50vw';
                 } else if (vw >= 768 && vw < 1024) {
                     return '70vw';
                 } else {
-                    return '75vw';
+                    return '70vw';
                 }
             }
             tl.add([firstTimeline]);
@@ -266,10 +266,10 @@ function Home() {
     };
 
     return (
-        <div className="App" ref={wrapperRef}>
+        <div className="App" ref={wrapperRef}> 
             {/* //1 */}
             <section className="main" data-pin="true"  >
-                <div id='sectionImage1' className='sectionBottleDiv' >
+                <div id='sectionImage1' className='sectionBottleDiv'>
                     <div className="sectionImage1Div">
                         <h1 className="section1Heading">Brewing Magic</h1>
                         <h1 className="section1subHeading">Since 1944</h1>
@@ -312,7 +312,7 @@ function Home() {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> 
             {/* /3/  completed*/}
             <section id='sectionImage3' className='section1' >
                 {/* <div className='sectionThreeMainDiv'> */}
@@ -322,7 +322,7 @@ function Home() {
                     <h1 className='section3Header'>of our favorite </h1>
                     <h1 className='section3Header'>Whiskey.</h1>
                     <p className='section3Paragraph'>Explore our history to find out how we did it.</p>
-                    <button className='section3Button'>OUR STORY</button>
+                    <button className='section3Button'>HERITAGE</button>
                 </div>
                 <div className='section3GroupImagesDiv'>
                     <img src={section3Image} alt='Img' className='section3Image' />
@@ -441,7 +441,7 @@ function Home() {
                 </div>
             </section>
             {/* //5 complete */}
-            <section id='sectionImage5'>
+            <section id='sectionImage5' style={{ height: '100vh', paddingTop:'15%'}}>
                 {/* <div id='sectionImage5' > */}
                 <div className='section3MainDiv'>
                     <div className='section3GroupHeaderDiv'>
@@ -465,7 +465,7 @@ function Home() {
             </section>
             {/* //6 */}
 
-            <div style={{ height: '100vh' }}>
+            <div style={{ height: '90vh' }}>
                 <h1 className='section6Header'>JIL's Presence & Reach</h1>
                 <div className="mapContainerDiv">
                     <Tooltip id="my-tooltip" />
@@ -503,7 +503,7 @@ function Home() {
                             {markers.map(({ name, coordinates }) => (
                                 <Marker key={name} coordinates={coordinates}>
                                     <a data-tooltip-id="my-tooltip" data-tooltip-content={name}>
-                                        <circle r={10} fill="#fff" stroke="gray" strokeWidth={2} />
+                                        <circle r={10} fill="#fff"  />
                                     </a>
                                 </Marker>
                             ))}

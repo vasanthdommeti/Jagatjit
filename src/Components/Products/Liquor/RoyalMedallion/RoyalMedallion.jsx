@@ -10,6 +10,7 @@ import medalionLastImg from '../../../../Assets/Products/Liquor/RoyalMedalon/roy
 import medalionsecondimg from '../../../../Assets/Products/Liquor/RoyalMedalon/royalmedalon2.png'
 import medalionlogo from '../../../../Assets/Products/Liquor/RoyalMedalon/aristocratlogo.png';
 import damnscotch from '../../../../Assets/Products/Liquor/AcBlack/damnscotch.png';
+import royalMImg from '../../../../Assets/Products/Liquor/RoyalMedalon/thrdImg.png'
 
 import candle from '../../../../Assets/Products/Liquor/RoyalMedalon/candle1.png';
 import hotglass from '../../../../Assets/Products/Liquor/RoyalMedalon/hotglass1.png';
@@ -64,7 +65,7 @@ export const RoyalMedallion = () => {
             <div className="medalionThirdDiv">
                 <div className="medalionThirdColumnContent">
                     <h1 className="medalionThirdDivHeading">
-                        A Legacy of taste
+                       Royal with every sip 
                     </h1>
                     <div className="medalionrowdiv">
                         <div className="medalioncandleimagesingle">
@@ -90,7 +91,7 @@ export const RoyalMedallion = () => {
 
             </div>
             <div className="mobileimgmed">
-                <img src="src/Assets/Products/Liquor/RoyalMedalon/Group 1000001742.png" />
+                <img src={royalMImg} alt="royalMImg"  style={{objectFit:'inherit', height:'25%'}}/>
             </div>
             {/* //4 */}
             <div>
