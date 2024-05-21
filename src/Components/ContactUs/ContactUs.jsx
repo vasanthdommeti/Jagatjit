@@ -72,6 +72,7 @@ const ContactUs = () => {
   };
 
   return (
+    <>
     <div className='container'>
       <div className='contactContactmain'>
         <div className='contactContact' >
@@ -130,11 +131,18 @@ const ContactUs = () => {
         </div>
       </div>
       {message && <p>{message}</p>}
-      <div style={{ display: 'flex', justifyContent: 'center', marginTop: '5%', marginBottom: '5%' }}>
+      {/* <div style={{ display: 'flex', justifyContent: 'center', marginTop: '5%', marginBottom: '5%' }}>
         <img src={mapImg} alt='mapImg' style={{ maxWidth: '80%' }} />
-      </div>
+      </div> */}
+
 
     </div>
+          <div class="cs_map">
+          <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6478.933552351611!2d75.43797944955092!3d31.457236818544185!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a4c716aaaaaab%3A0x8f489715c9a3d6c9!2sJagatjit%20Industries%20Limited!5e1!3m2!1sen!2sin!4v1705050817336!5m2!1sen!2sin"
+              allowfullscreen></iframe>
+      </div>
+      </>
   );
 };
 

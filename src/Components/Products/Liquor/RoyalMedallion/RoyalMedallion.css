@@ -205,8 +205,8 @@
 }
 
 .seconddivimgbot{
-    height: 55vh;   
-    margin-top: 1%;
+    height: 65vh;   
+    margin-top: 5%;
 }
 
 @media (max-width: 768px) {
@@ -377,8 +377,8 @@
     }
 
     .seconddivimgbot{
-        height: 50vh;   
-        margin-top: 1%;
+        height: 65vh;   
+        margin-top: 5%;
     }
     
 }
