@@ -70,6 +70,10 @@
     letter-spacing: 3px;
 }
 
+.section2ButtonChange {
+    height: 100vh;
+}
+
 #sectionImage2 {
     background-image: url('../../Assets/Home/sec2backgroundImg.png');
 }
@@ -246,7 +250,7 @@
     border: 0.5px solid #ECA533;
     border-radius: 18px;
     padding: 10px 35px;
-    font-size: 8PX;
+    font-size: 16PX;
     color: #ECA533;
     letter-spacing: 2px;
     margin-top: 30px;
@@ -423,8 +427,13 @@
     background-color: transparent;
 }
 
-.section3MainDiv > .section2img {
+.btn-click-image-wrap {
+    text-align: center;
+}
+
+.section3MainDiv  .section2img {
     transition: all 0.3s ease-in-out;
+    height: 500px;
 }
 
 .bottle-active {
@@ -439,29 +448,6 @@
     }
 }
 
-/* @media (min-width:641px) {
-
-    portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones
-    .section {
-        height: 45vh;
-    }
-    .section3MainDiv {
-        flex-direction: column;
-        justify-content: flex-end;
-    }
-} */
-
-/* @media (min-width:961px) {
-
-    tablet, landscape iPad, lo-res laptops ands desktops
-    .section {
-        height: 65vh;
-    }
-    .section3MainDiv {
-        flex-direction: column;
-        justify-content: flex-end;
-    }
-} */
 
 @media (min-width:1025px) {
 
@@ -479,14 +465,6 @@
     }
 }
 
-/* @media (max-width: 641px) {
-    .section3MainDiv {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-} */
 
 @media (min-width: 768px) and (max-width: 1024px) {
     .main,
@@ -507,7 +485,7 @@
     }
 
     .section2 {
-        height: 80vh;
+        height: auto;
     }
 
     #sectionImage3 {
@@ -520,14 +498,23 @@
         gap: 15px;
     }
 
-    .section3MainDiv {
-        padding: 0;
+    .section2ButtonChange {
+        height: auto;
     }
 
-    .section3MainDiv > .section2img {
+    .section3MainDiv {
+        padding: 30px;
+        height: auto;
+    }
+
+    .section3MainDiv  .section2img {
         width: auto;
-        height: 45%;
+        height: 350px;
         margin: 0;
+    }
+
+    .btn-click-image-wrap {
+        text-align: center;
     }
 
     .sectionThreeImageDiv {
@@ -592,6 +579,19 @@
 
 @media screen and (max-width: 767px) {
 
+    section {
+        height: auto !important;
+    }
+
+    section > div,
+    #sectionImage3 {
+        height: 100vh !important;
+    }
+
+    #sectionImage3 > div {
+        height: auto !important;
+    }
+
     .main {
         /* margin-top: 100px; */
         padding-top: 100px;
@@ -632,31 +632,31 @@
 
     .mob-show-btn {
         display: block;
+        padding: 15px;
     }
 
     .sectionImage1Div .section3Button {
-        font-size: 12px;
         font-weight: 300;
         line-height: 12px;
         text-align: center;
     }
 
     #sectionImage2 {
-        height: auto;
+        height: 100vh;
         padding-bottom: 10%;
     }
 
     #sectionImage2 .section3MainDiv {
         display: flex;
         flex-direction: column-reverse;
-        padding: 10%;
+        padding: 7%;
         gap: 30px;
         height: auto;
     }
 
-    .section3MainDiv > .section2img {
+    .section3MainDiv  .section2img {
         width: auto;
-        height: 300px;
+        height: 250px;
         margin: 0;
     }
     
@@ -698,7 +698,6 @@
     .secion2TextWrap .section3Button {
         color: #000;
         background-color: rgba(255, 153, 0, 1);
-        font-size: 12px;
         font-weight: 300;
         line-height: 12px;
         text-align: center;
@@ -714,7 +713,6 @@
         justify-content: space-evenly;
         flex-wrap: wrap-reverse;
         gap: 10px;
-        padding: 10px;
     }
 
     #sectionImage3 {
@@ -755,7 +753,6 @@
     #sectionImage5  .section3Button {
         border: 2px solid rgba(236, 165, 51, 1);
         color: rgba(236, 165, 51, 1);
-        font-size: 12px;
         font-weight: 400;
         line-height: 12px;
     }

@@ -308,7 +308,9 @@ function Home() {
             <section className="section2ButtonChange">
                 <div id='sectionImage2' className='section2'>
                     <div className='section3MainDiv'>
-                        <img src={data.largeImg} alt="bottle" className="section2img" />
+                        <div className="btn-click-image-wrap">
+                            <img src={data.largeImg} alt="bottle" className="section2img" />
+                        </div>
                         <div className="secion2TextWrap">
                             <div className="sectionThreeHeadDiv">
                                 <h1 className="btnheading">{data.name}</h1>
