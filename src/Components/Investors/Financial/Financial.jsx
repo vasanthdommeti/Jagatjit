@@ -26,7 +26,6 @@ const Financial = () => {
   useEffect(() => {
     axios.get('https://api.jagatjit.com/api/financials')
       .then(response => {
-        console.log('response', response);
         if (response.data && Array.isArray(response.data)) {
           let data = response.data.filter(report => new Date(report.file_date).getFullYear() === parseInt(year));
           data = data.sort((a, b) => new Date(b.file_date) - new Date(a.file_date));
