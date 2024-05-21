@@ -18,6 +18,10 @@ import orangevid from '../../../../Assets/Products/Liquor/Vodka/orangevid.png';
 import vodbg from '../../../../Assets/Products/Liquor/Vodka/vodbg.png';
 import vodkatrio from '../../../../Assets/Products/Liquor/Vodka/vodkatrio.png';
 import vodkafamily from '../../../../Assets/Products/Liquor/Vodka/vodkafamily.png';
+import { Link } from "react-router-dom";
+import { HiArrowLongLeft, HiOutlineArrowLongRight } from "react-icons/hi2";
+import damnScotch from '../../../../Assets/ArrowBottle/damnScotch.svg';
+import acDryGin from '../../../../Assets/ArrowBottle/acDryGin.svg';
 
 export const IceVodka = () => {
     return (
@@ -85,6 +89,27 @@ export const IceVodka = () => {
   <section>
     <img src={vodkafamily} alt="Vodka Trio" className="full-image" />
   </section>
+
+  <div className="acpNewarrowDiv">
+                    <Link to={'/products/liquor/DamnGoodScotch'} className="acppremiumleftArrowDiv">
+                        <div className="acpNewLeftDiv">
+                            <h1 className="acpNpremiumarrowHeading">Damn Good Scotch</h1>
+                            <HiArrowLongLeft className="leftIconImg" />
+                        </div>
+                        <div className="acpNewleftSmallImg">
+                            <img src={damnScotch} alt="block" />
+                        </div>
+                    </Link>
+                    <Link to={'/products/liquor/AcDryGin'} className="acppremiumrightArrowDiv">
+                        <div className="acpNewrightSmallImg" >
+                            <img src={acDryGin} alt="block" />
+                        </div>
+                        <div className="acpNewRightDiv">
+                            <h1 className="acpNpremiumarrowHeading">Aristocrat Dry Gin</h1>
+                            <HiOutlineArrowLongRight className="leftIconImg" />
+                        </div>
+                    </Link>
+                </div> 
 </section>
     )
 }

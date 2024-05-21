@@ -91,8 +91,8 @@
 @media only screen and (min-width: 992px) and (max-width: 1200px) {} */
 
 .bottleImgLogo {
-    height: 40%;
-    width: 50%;
+    height: 80%;
+    width: 80%;
 }
 
 .bottleImg {
@@ -272,7 +272,7 @@
     display: flex;
     justify-content: end;
     gap: 30px;
-    padding: 25px;
+    padding: 15px;
 }
 
 .acppremiumrightArrowDiv {
@@ -287,12 +287,12 @@
     display: flex;
     justify-content: left;
     gap: 30px;
-    padding: 25px;
+    padding: 15px;
 }
 
 .acpNpremiumarrowHeading {
-    font-family: Josefin Sans;
-    font-size: 48px;
+    font-family: 'Regular';
+    font-size: 38px;
     font-weight: 400;
     line-height: 52.99px;
     letter-spacing: 0.05em;
@@ -324,7 +324,7 @@
     font-family: "Krona One", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 28px;
+    font-size: 1.5rem;
     letter-spacing: 3px;
 }
 
@@ -332,7 +332,7 @@
     color: #FFFFFF;
     width: 100%;
     font-family: 'Josefin Sans';
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     letter-spacing: 1px;
     font-family: 'Light';
     text-align: center;
@@ -354,7 +354,7 @@
     color: #FFFFFF;
     width: 90%;
     font-family: 'Josefin Sans';
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     letter-spacing: 1px;
     font-family: 'Light';
     text-align: right;
@@ -364,7 +364,7 @@
 .sectionTwoParagraph span {
     color: #FFFFFF;
     font-family: 'Josefin Sans';
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     letter-spacing: 1px;
     font-family: 'Regular';
     text-decoration: none;
@@ -744,8 +744,8 @@
     }
 
     .acpNpremiumarrowHeading {
-        font-size: 18px;
-        line-height: 19px;
+        font-size: 16px;
+        line-height: 17px;
     }
 
     .acpNewleftSmallImg > img,

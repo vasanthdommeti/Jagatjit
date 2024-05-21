@@ -14,6 +14,8 @@ import lipglass from '../../../../Assets//Products/Liquor/AcpremiumOld/smooth.sv
 import acblack from '../../../../Assets/Products/Liquor/AcBlack/acblack.png';
 import damnscotch from '../../../../Assets/Products/Liquor/AcBlack/damnscotch.png';
 import { Link } from "react-router-dom";
+import RoyalPride from '../../../../Assets/ArrowBottle/royalPride.svg';
+import acpNew from '../../../../Assets/ArrowBottle/acpNew.svg';
 
 export const AcBlack = () => {
 
@@ -137,7 +139,7 @@ export const AcBlack = () => {
                         </video>
                     )}
                 </div>
-                <div className="acpNewarrowDiv">
+                {/* <div className="acpNewarrowDiv">
                     <Link to={'/products/liquor/ACpremiumNew'} className="acppremiumleftArrowDiv">
                         <div className="acpNewLeftDiv">
                             <h1 className="acpNpremiumarrowHeading">Aristocrat Premium</h1>
@@ -153,6 +155,26 @@ export const AcBlack = () => {
                         </div>
                         <div className="acpNewRightDiv">
                             <h1 className="acpNpremiumarrowHeading">Damn Good Scotch</h1>
+                            <HiOutlineArrowLongRight className="leftIconImg" />
+                        </div>
+                    </Link>
+                </div> */}
+                                <div className="acpNewarrowDiv">
+                    <Link to={'/products/liquor/ACpremiumNew'} className="acppremiumleftArrowDiv">
+                        <div className="acpNewLeftDiv">
+                            <h1 className="acpNpremiumarrowHeading">Aristocrat Premium (New)</h1>
+                            <HiArrowLongLeft className="leftIconImg" />
+                        </div>
+                        <div className="acpNewleftSmallImg">
+                            <img src={acpNew} alt="block" />
+                        </div>
+                    </Link>
+                    <Link to={'/products/liquor/RoyalPride'} className="acppremiumrightArrowDiv">
+                        <div className="acpNewrightSmallImg" >
+                            <img src={RoyalPride} alt="block" />
+                        </div>
+                        <div className="acpNewRightDiv">
+                            <h1 className="acpNpremiumarrowHeading">Royal Pride</h1>
                             <HiOutlineArrowLongRight className="leftIconImg" />
                         </div>
                     </Link>

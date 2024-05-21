@@ -227,7 +227,7 @@ function Home() {
                 marginTop: getMarginTop(),
                 marginLeft: getMarginLeft(),
             }, {
-                scale: 0.9,
+                scale: 0.7,
                 rotate: 0,
                 marginTop: getMarginTopReset(),
                 marginLeft: getMarginLeftreset(),
@@ -256,7 +256,7 @@ function Home() {
             function getMarginTopReset() {
                 const vh = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
                 if (vh < 768) {
-                    return '15vh';
+                    return '19vh';
                 } else if (vh >= 768 && vh < 1024) {
                     return '20vh';
                 } else {
@@ -305,7 +305,7 @@ function Home() {
             </section>
 
             {/* //2 */}
-            <section className="section2ButtonChange" style={{ height: '100vh' }}>
+            {/* <section className="section2ButtonChange" style={{ height: '100vh' }}>
                 <div id='sectionImage2' className='section2'>
                     <div className='section3MainDiv'>
                         <img src={data.largeImg} alt="bottle" className="section2img" />
@@ -341,7 +341,7 @@ function Home() {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
             {/* /3/  completed*/}
             <section id='sectionImage3' className='section1' >
                 {/* <div Name='sectionThreeMainDiv'> */}

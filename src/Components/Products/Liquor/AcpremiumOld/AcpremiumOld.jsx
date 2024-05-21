@@ -14,6 +14,9 @@ import acpsectiontwoimgs from '../../../../Assets/Products/Liquor/AcpremiumOld/s
 import acpblack from '../../../../Assets/Products/Liquor/AcpremiumNew/damnlink.svg';
 import acpnewImg from '../../../../Assets/Products/Liquor/AcpremiumNew/acpnewlink.svg';
 import acplast from '../../../../Assets/Products/Liquor/AcpremiumNew/acplastImg.png';
+// import acpNew from '../../../../Assets/Products/Liquor/AcpremiumNew/damnlink.svg';
+import royalMedol from '../../../../Assets/ArrowBottle/royalMedal.svg';
+import acpNew from '../../../../Assets/ArrowBottle/acpNew.svg';
 
 export const AcpremiumOld = () => {
     return (
@@ -105,7 +108,7 @@ export const AcpremiumOld = () => {
                     </video>
                 )}
                 </div> */}
-                <div className="acpNewarrowDiv">
+                {/* <div className="acpNewarrowDiv">
                     <Link to={'/products/liquor/ACpremiumNew'} className="acppremiumleftArrowDiv">
                         <div className="acpNewLeftDiv">
                             <h1 className="acpNpremiumarrowHeading">Aristocrat Premium</h1>
@@ -124,7 +127,27 @@ export const AcpremiumOld = () => {
                             <HiOutlineArrowLongRight className="leftIconImg" />
                         </div>
                     </Link>
-                </div>
+                </div> */}
+                               <div className="acpNewarrowDiv">
+                    <Link to={'/products/liquor/RoyalMedallion'} className="acppremiumleftArrowDiv">
+                        <div className="acpNewLeftDiv">
+                            <h1 className="acpNpremiumarrowHeading">Royal Medallion</h1>
+                            <HiArrowLongLeft className="leftIconImg" />
+                        </div>
+                        <div className="acpNewleftSmallImg">
+                            <img src={royalMedol} alt="block" /> 
+                        </div>
+                    </Link>
+                    <Link to={'/products/liquor/ACpremiumNew'} className="acppremiumrightArrowDiv">
+                        <div className="acpNewrightSmallImg" >
+                            <img src={acpNew} alt="block" />
+                        </div>
+                        <div className="acpNewRightDiv">
+                            <h1 className="acpNpremiumarrowHeading">Aristocrat Premium (New)</h1>
+                            <HiOutlineArrowLongRight className="leftIconImg" />
+                        </div>
+                    </Link>
+                </div>  
             </div>
         </div>
     )

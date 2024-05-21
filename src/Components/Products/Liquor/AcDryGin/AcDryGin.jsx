@@ -8,6 +8,8 @@ import acDryGinLastImg from '../../../../Assets/Products/Liquor/AcDryGin/aristoc
 import damnscotch from '../../../../Assets/Products/Liquor/AcBlack/damnscotch.png';
 import royalMedallon from '../../../../Assets/Products/Liquor/RoyalMedalon/royalmedalonlogo.png'
 import { Link } from "react-router-dom";
+import iceVodka from '../../../../Assets/ArrowBottle/iceVodka.svg';
+import royalMedol from '../../../../Assets/ArrowBottle/royalMedal.svg';
 
 
 export const AcDryGin = () => {
@@ -78,7 +80,7 @@ export const AcDryGin = () => {
                     </video>
                 )}
                 </div> */}
-                <div className="acpNewarrowDiv">
+                {/* <div className="acpNewarrowDiv">
                     <Link to={'/products/liquor/DamnGoodScotch'} className="acppremiumleftArrowDiv">
                         <div className="acpNewLeftDiv">
                             <h1 className="acpNpremiumarrowHeading">Damn Good Scotch</h1>
@@ -97,7 +99,27 @@ export const AcDryGin = () => {
                             <HiOutlineArrowLongRight className="leftIconImg" />
                         </div>
                     </Link>
-                </div>
+                </div> */}
+                <div className="acpNewarrowDiv">
+                    <Link to={'/products/liquor/IiceVodka'} className="acppremiumleftArrowDiv">
+                        <div className="acpNewLeftDiv">
+                            <h1 className="acpNpremiumarrowHeading">Iice Vodka</h1>
+                            <HiArrowLongLeft className="leftIconImg" />
+                        </div>
+                        <div className="acpNewleftSmallImg">
+                            <img src={iceVodka} alt="block" />
+                        </div>
+                    </Link>
+                    <Link to={'/products/liquor/RoyalMedallion'} className="acppremiumrightArrowDiv">
+                        <div className="acpNewrightSmallImg" >
+                            <img src={royalMedol} alt="block" />
+                        </div>
+                        <div className="acpNewRightDiv">
+                            <h1 className="acpNpremiumarrowHeading">Royal Medallion</h1>
+                            <HiOutlineArrowLongRight className="leftIconImg" />
+                        </div>
+                    </Link>
+                </div> 
             </div>
         </section>
     )

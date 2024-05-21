@@ -162,12 +162,14 @@
   flex-direction: column;
   align-items: flex-end;
   padding-right: 10%;
-  padding-top: 10%;
+  padding-top: 8%;
   /* align-self: center; */
   /* padding: 10%; */
   /* width: 60%; */
 }
-
+.damngoodiconbottle {
+    width: 42%;
+}
 .damnSecondDivHeading {
   font-family: 'Krona One';
   font-size: calc(28px + 1vw);
@@ -183,10 +185,12 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  height: 30%;
   /* margin-top: 2%; */
   /* margin-bottom: 2%; */
   width: 30%;
   margin-right: 5%;
+  margin-top: 0px;
   /* align-self: center; */
 }
 
@@ -207,7 +211,6 @@
   /* margin-bottom: 6%; */
   width: 30%;
   margin-right: 5%;
-  justify-content: space-between;
 }
 
 .damnlogoimage {
@@ -217,6 +220,7 @@
 /* //5 */
 .damFifthDiv {
   height: 100vh;
+  /* margin-bottom: -10%; */
 }
 
 .damnleftArrowDiv {
@@ -275,7 +279,9 @@
 }
 
 .damngoodimageText img {
-  width: 30%;
+  width: 40%;
+  padding-bottom: 10%;
+  flex-direction: row;
   vertical-align: middle;
   
 }
@@ -290,6 +296,7 @@
     flex-direction: column;
     align-self: center;
     margin-top: 30%;
+    height: auto;
   }
 
   .damnHeading {
@@ -307,11 +314,11 @@
     flex-direction: column-reverse;
     align-items: center;
     align-self: center;
-    padding-left: 2%;
-    padding-right: 2%;
+
   }
 
   .damnImgcontent {
+    width: 100%;
     align-items: center;
     align-self: center;
     justify-content: center;
@@ -354,10 +361,9 @@
   .damnParagraph {
     color: #FFFFFF;
     font-family: 'Josefin Sans';
-    font-size: 16px;
+    font-size: 14px;
     letter-spacing: 1px;
     font-weight: 100;
-    opacity: 0.7;
     text-align: center;
     margin-top: 5%;
   }
@@ -366,12 +372,12 @@
   }
 
   .damnRowContent {
+    width: 90%;
     text-align: center;
   }
 
   .damnColumnContent {
     align-items: center;
-    padding: 10%;
     text-align: center;
   }
 
@@ -404,14 +410,15 @@
     display: none;
   }
 
-
+  /* style={{alignSelf:'flex-start', backgroundColor:'red', marginBottom:'95%'}} */
   .damnsecondDiv {
     background-image: url('../../../../Assets/Products/Liquor/DamnScotch/damn2ndSecimg.png');
     background-position: bottom;
     background-size: contain;
     background-repeat: no-repeat;
     display: flex;
-    height: 80vh;
+    width: 100%;
+    height:auto;
   }
 
   .damnThirdDiv {
@@ -431,7 +438,7 @@
   justify-content: center;
   align-self: flex-start;
   flex-direction: column;
-  margin: 5%;
+  margin: 10%;
 }
 .damnsecondRowContent {
   display: flex;
@@ -439,8 +446,8 @@
   align-self: flex-start;
   align-items: center;
   width: auto;
-  margin-top: 20%;
-  margin-bottom: 0px;
+  margin-top: 10%;
+  margin-bottom: 85%;
 }
 .logoImgTextCont{
   background-image: url('../../../../Assets/Products/Liquor/DamnScotch/smallImgLogo.png');
@@ -455,18 +462,21 @@
   /* margin-top: 2%; */
   /* margin-bottom: 2%; */
   width: 30%;
-  padding-top: 10%;
   /* align-self: center; */
 }
 
 .damnimageText p{
   /* margin-top: 2%; */
   /* margin-bottom: 2%; */
-  width: 50%;
-  margin-left: 5%;
-  margin-top: 100%;
+  width: 60%;
+  margin-left: 2%;
   
   /* align-self: center; */
+}
+
+.damnlogoimage {
+  margin-right: 2%;
+  margin-bottom: 10%;
 }
 
 

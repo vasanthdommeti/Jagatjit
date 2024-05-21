@@ -16,11 +16,13 @@ import distik from '../../../../Assets/Products/Liquor/AcpremiumOld/distik.svg';
 import glasss from '../../../../Assets/Products/Liquor/AcpremiumOld/glass.png';
 import acblack from '../../../../Assets/Products/Liquor/AcBlack/acblack1.png';
 import damnscotch from '../../../../Assets/Products/Liquor/AcBlack/damnscotch.png';
+import acpblack from '../../../../Assets/ArrowBottle/acBlack.svg';
+import damnScotch from '../../../../Assets/ArrowBottle/damnScotch.svg';
 import { Link } from "react-router-dom";
 export const RoyalPride = () => {
 
     const [scrVideo, setScrVideo] = useState(""); 
-    useEffect(() => {
+    useEffect(() => { 
         axios.get('https://api.jagatjit.com/api/videos')
             .then(response => {
                 let data = response.data.data.find((el) => {
@@ -131,7 +133,7 @@ export const RoyalPride = () => {
                     <div className="icon-4-wrap">
                         <div className="royalimageText">
                             <img src={glasss} alt="block" className="royallogoimage" />
-                            <p>Best Enjoyed How You Like Your Scotch</p>
+                            <p>Best Enjoyed How You Like Your Whiskey</p>
                         </div>
                         <div className="royalimageText">
                             <img src={bottle} alt="block" className="royallogoimage" style={{ marginRight: '12%', marginLeft: '3%' }} />
@@ -168,7 +170,7 @@ export const RoyalPride = () => {
                         </video>
                     )}
                 </div>
-                <div className="acpNewarrowDiv">
+                {/* <div className="acpNewarrowDiv">
                     <Link to={'/products/liquor/ACpremiumBlack'} className="acppremiumleftArrowDiv">
                         <div className="acpNewLeftDiv">
                             <h1 className="acpNpremiumarrowHeading">Aristocrat Premium Black</h1>
@@ -187,7 +189,27 @@ export const RoyalPride = () => {
                             <HiOutlineArrowLongRight className="leftIconImg" />
                         </div>
                     </Link>
-                </div>
+                </div> */}
+                <div className="acpNewarrowDiv">
+<Link to={'/products/liquor/ACpremiumBlack'} className="acppremiumleftArrowDiv">
+    <div className="acpNewLeftDiv">
+        <h1 className="acpNpremiumarrowHeading">Aristocrat Black</h1>
+        <HiArrowLongLeft className="leftIconImg" />
+    </div>
+    <div className="acpNewleftSmallImg">
+        <img src={acpblack} alt="block" />
+    </div>
+</Link>
+<Link to={'/products/liquor/DamnGoodScotch'} className="acppremiumrightArrowDiv">
+    <div className="acpNewrightSmallImg" >
+        <img src={damnScotch} alt="block" />
+    </div>
+    <div className="acpNewRightDiv">
+        <h1 className="acpNpremiumarrowHeading">Damn Good Scotch</h1>
+        <HiOutlineArrowLongRight className="leftIconImg" />
+    </div>
+</Link>
+</div> 
             </div>
         </section>
     )

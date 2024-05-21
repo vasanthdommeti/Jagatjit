@@ -15,7 +15,8 @@ import distik from '../../../../Assets/Products/Liquor/AcpremiumOld/distik.svg';
 import glass from '../../../../Assets/Products/Liquor/AcpremiumOld/glass.png';
 import acpsectiononelogo from '../../../../Assets/Products/Liquor/AcpremiumNew/acpsectiononelogo.png';
 import acpsectiontwoimg from '../../../../Assets/Products/Liquor/AcpremiumNew/acpremiumsecBottleImg.png';
-import acpblack from '../../../../Assets/Products/Liquor/AcpremiumNew/acblackImg.png';
+import acpblack from '../../../../Assets/ArrowBottle/acBlack.svg';
+import acpOld from '../../../../Assets/ArrowBottle/acpOld.svg';
 import acpnewImg from '../../../../Assets/Products/Liquor/AcpremiumNew/acpnewImg.png';
 import acplast from '../../../../Assets/Products/Liquor/AcpremiumNew/AcpProducts.png';
 import acpsectiontwoimgs from '../../../../Assets/Products/Liquor/AcpremiumNew/acpnewImg.png';
@@ -111,9 +112,9 @@ export const AcpremiumNew = () => {
                         </div>
                     </div>
                     <div className="imageText">
-                        <img src={distik} alt="bottleImg" className="acpnewlogoText" />
+                        <img src={distik} alt="bottleImg" className="acpnewlogoText distik"  />
                         <div>
-                            <p className="acpNlogoTextParagraph">Made With The Finest Indian Spirits</p>
+                            <p className="acpNlogoTextParagraph" style={{marginLeft:'10%'}}>   Made With The Finest Indian Spirits</p>
                         </div>
                     </div>
                 </div>
@@ -137,7 +138,7 @@ export const AcpremiumNew = () => {
                         </video>
                     )}
                 </div>
-                <div className="acpNewarrowDiv">
+                {/* <div className="acpNewarrowDiv">
                     <Link to={'/products/liquor/ACpremiumOld'} className="acppremiumleftArrowDiv">
                         <div className="acpNewLeftDiv">
                             <h1 className="acpNpremiumarrowHeading">Aristocrat Premium (OLD)</h1>
@@ -156,7 +157,28 @@ export const AcpremiumNew = () => {
                             <HiOutlineArrowLongRight className="leftIconImg" />
                         </div>
                     </Link>
+                </div> */}            
+                <div className="acpNewarrowDiv">
+                    <Link to={'/products/liquor/ACpremiumOld'} className="acppremiumleftArrowDiv">
+                        <div className="acpNewLeftDiv">
+                            <h1 className="acpNpremiumarrowHeading">Aristocrat Premium (Old)</h1>
+                            <HiArrowLongLeft className="leftIconImg" />
+                        </div>
+                        <div className="acpNewleftSmallImg">
+                            <img src={acpOld} alt="block" />
+                        </div>
+                    </Link>
+                    <Link to={'/products/liquor/ACpremiumBlack'} className="acppremiumrightArrowDiv">
+                        <div className="acpNewrightSmallImg" >
+                            <img src={acpblack} alt="block" />
+                        </div>
+                        <div className="acpNewRightDiv">
+                            <h1 className="acpNpremiumarrowHeading">Aristocrat Black</h1>
+                            <HiOutlineArrowLongRight className="leftIconImg" />
+                        </div>
+                    </Link>
                 </div>
+
             </div>
         </div>
     )

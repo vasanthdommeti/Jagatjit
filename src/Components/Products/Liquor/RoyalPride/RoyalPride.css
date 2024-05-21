@@ -506,7 +506,11 @@
     }
     
     .royalthirdDivLine {
+        font-size: 22px;
         padding: 0;
+    }
+    .royalthirdDivLine span {
+        font-size: 22px;
     }
 
     .royalprideThirdDivContent {
@@ -587,6 +591,12 @@
     .royalFourthDiv > div:nth-child(1) img{
         width: 100%;
         height: auto;
+    }
+
+    .icon-4-wrap {
+        display: flex;
+        flex-direction: column;
+        margin-top: 30%;
     }
 
 }

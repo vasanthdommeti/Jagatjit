@@ -12,14 +12,16 @@ import lipglass from '../../../../Assets/Products/Liquor/RoyalPride/lipglass.png
 import glass from '../../../../Assets/Products/Liquor/RoyalPride/glass.png';
 import candles from '../../../../Assets/Products/Liquor/AcBlack/candles.png';
 
-import acblack from '../../../../Assets/Products/Liquor/AcDryGin/royalims.png';
-import damnscotch from '../../../../Assets/Products/Liquor/AcDryGin/dryginimg.png';
+import acblack from '../../../../Assets/Products/Liquor/AcBlack/acblack.png';
+import damnscotch from '../../../../Assets/Products/Liquor/AcBlack/damnscotch.png';
 //section4thsmall img
 import bottle from '../../../../Assets/Products/Liquor/DamnScotch/damngoodiconbottle.png';
 import distik from '../../../../Assets/Products/Liquor/DamnScotch/damngooddrums.png';
 import glasss from '../../../../Assets/Products/Liquor/DamnScotch/damngoodiconglass.png';
 import drums from '../../../../Assets/Products/Liquor/RoyalPride/drums.png';
 import { Link } from "react-router-dom";
+import RoyalPride from '../../../../Assets/ArrowBottle/royalPride.svg';
+import iceVodka from '../../../../Assets/ArrowBottle/iceVodka.svg';
 
 export const DamnScotch = () => {
   return (
@@ -59,7 +61,7 @@ export const DamnScotch = () => {
         </div>
       </div>
       {/* //3rd */}
-      <img src={candles} alt="block" className="royalcandleimagehide" />
+      {/* <img src={candles} alt="block" className="royalcandleimagehide" /> */}
       <div className="damnThirdDiv">
         <div className="damnThirdDivContent">
           {/* <div style={{alignItems:'flex-end', display:'flex', paddingTop:'5%',}}>
@@ -112,15 +114,15 @@ export const DamnScotch = () => {
 
       </div>
       <div className="damnFourthDiv">
-        <div className="damnForthDivContent royalprideshow" >
+        <div className="damnForthDivContent" >
           <h1 className="damnSecondDivHeading" >Aged for 3 years in</h1>
           <h1 className="damnSecondDivHeading" >The Scottish Highlands</h1>
-          <div className="damnimageText" style={{ marginTop: '5%' }}>
+          <div className="damnimageText" style={{ marginTop: '2%' }}> 
             <img src={glasss} alt="block" className="damnlogoimage" />
             <p>Best Enjoyed How You Like Your Scotch</p>
           </div>
           <div className="damnimageText">
-            <img src={bottle} alt="block" className="damnlogoimage"  />
+            <img src={bottle} alt="block" className="damnlogoimage damngoodiconbottle"  />
             <p>Bottled with care by state of the art bottling facilities</p>
           </div>
           <div className="damnlogodrumsimage">
@@ -132,29 +134,49 @@ export const DamnScotch = () => {
       </div>
       {/* ///5 completed*/}
       <div className="damFifthDiv" >
-        <div style={{ justifyContent: 'center', display: 'flex', height: '50%', marginTop: '5%' }}>
+        <div style={{ justifyContent: 'center', display: 'flex', height: '70%', marginTop: '5%' }}>
           <img src={lastSecimg} alt="lastImg" />
         </div>
-        <div style={{ justifyContent: 'center', display: 'flex', flexDirection: 'row', marginTop: '5%' }}>
-          <Link to={'/products/liquor/RoyalPride'} className="damnleftArrowDiv">
-            <div style={{ textAlign: 'right', alignSelf: 'center', }}>
+        {/* <div className="acpNewarrowDiv" style={{marginTop:'5%', marginBottom:'0%'}}>
+          <Link to={'/products/liquor/RoyalPride'} className="acppremiumleftArrowDiv">
+            <div className="acpNewLeftDiv">
               <h1 className="damnarrowHeading">Royal Pride</h1>
-              <HiArrowLongLeft style={{ fontSize: '55px' }} />
+              <HiArrowLongLeft className="leftIconImg" />
             </div>
             <div>
-              <img src={acblack} alt="block" style={{ height: '150px', marginLeft: '25px', marginRight: '25px' }} />
+              <img src={acblack} alt="block" className="acpNewleftSmallImg" />
             </div>
           </Link>
-          <Link to={'/products/liquor/AcDryGin'} className="damnrightArrowDiv">
+          <Link to={'/products/liquor/AcDryGin'} className="acppremiumrightArrowDiv">
             <div>
-              <img src={damnscotch} alt="block" style={{ height: '150px', marginLeft: '25px', marginRight: '25px' }} />
+              <img src={damnscotch} alt="block"  className="acpNewrightSmallImg" />
             </div>
-            <div style={{ textAlign: 'left', alignSelf: 'center' }}>
+            <div className="acpNewRightDiv">
               <h1 className="damnarrowHeading">Aristocrat Dry Gin</h1>
-              <HiOutlineArrowLongRight style={{ fontSize: '55px' }} />
+              <HiOutlineArrowLongRight  className="leftIconImg" />
             </div>
           </Link>
-        </div> 
+        </div> */}
+                        <div className="acpNewarrowDiv">
+                    <Link to={'/products/liquor/RoyalPride'} className="acppremiumleftArrowDiv">
+                        <div className="acpNewLeftDiv">
+                            <h1 className="acpNpremiumarrowHeading">Royal Pride</h1>
+                            <HiArrowLongLeft className="leftIconImg" />
+                        </div>
+                        <div className="acpNewleftSmallImg">
+                            <img src={RoyalPride} alt="block" />
+                        </div>
+                    </Link>
+                    <Link to={'/products/liquor/IiceVodka'} className="acppremiumrightArrowDiv">
+                        <div className="acpNewrightSmallImg" >
+                            <img src={iceVodka} alt="block" />
+                        </div>
+                        <div className="acpNewRightDiv">
+                            <h1 className="acpNpremiumarrowHeading">Iice Vodka</h1>
+                            <HiOutlineArrowLongRight className="leftIconImg" />
+                        </div>
+                    </Link>
+                </div> 
       </div>
     </section>
   )

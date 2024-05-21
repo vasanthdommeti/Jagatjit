@@ -19,7 +19,7 @@
 }
 
 .acpNewTextDiv {
-    margin-left: 10px;
+    margin-left: 5%;
     display: flex;
     align-items: center;
     width: 60%;
@@ -169,7 +169,7 @@
     font-style: normal;
     font-family: "Krona One", sans-serif;
     letter-spacing: 1px;
-    line-height: 10px;
+    line-height: 0px;
 }
 
 .sectionTwoParagraph {
@@ -193,12 +193,13 @@
 }
 
 .sectionTwoParagraphdiv p {
+    margin-top: 10%;
     color: #FFFFFF;
     width: 90%;
     font-family: 'Josefin Sans';
     font-size: 1.6rem;
     letter-spacing: 1px;
-    line-height: 100%;
+    line-height: 170%;
     font-family: 'Light';
     text-align: right;
 }
@@ -208,7 +209,7 @@
     font-family: 'Josefin Sans';
     font-size: 1.6rem;
     letter-spacing: 1px;
-    
+    font-family: 'Regular';
     text-align: right;
 }
 /* <style>
@@ -319,6 +320,7 @@
 
 .acpNewImg1 {
     height: 90vh;
+    margin-right: 10%;
     /* width: 50%; */
 }
 
@@ -422,12 +424,18 @@
 }
 
 .botleImg2 {
-    margin-left: 10%;
+    width: 15%;
+    margin-left: 7%;
+}
+.distik {
+    width: 100%;
+    margin-right: 16%;
+    margin-left: -35px;
 }
 
+
 .acpnewlogoText {
-    /* height: 50%; */
-    /* width: 50%; */
+    width: 20%;
     margin-right: 10%;
 }
 
@@ -440,7 +448,7 @@
     font-size: 16px;
     letter-spacing: 1px;
     line-height: 15px;
-    opacity: 0.6;
+    opacity: 0.8;
 }
 
 .acpNflavourDivHeader {
@@ -544,9 +552,9 @@
 }
 
 .pageSecondText h1 {
-    font-size: 2.2rem;
+    font-size: 2.4rem;
     margin-right: 10%;
-    margin-bottom: 10%;
+    margin-bottom: 1%;
     margin-top: 5%;
 }
 
@@ -912,5 +920,9 @@
         letter-spacing: 1px;
         
         text-align: right;
+}
+.distik {
+    width: 110%;
+    margin-right: -40px;
 }
 }
