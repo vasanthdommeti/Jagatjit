@@ -287,7 +287,7 @@ function Home() {
             </section>
 
             {/* //2 */}
-            <section >
+            <section className="section2ButtonChange">
                 <div id='sectionImage2' className='section2'>
                     <div className='section3MainDiv'>
                         <img src={data.largeImg} alt="bottle" className="section2img" />
@@ -304,10 +304,21 @@ function Home() {
                                 <div className="smallImgDiv">
                                     {section.map((e) => (
                                         <button className="smallImgButton" onClick={() => setData(e)}>
-                                            <img src={e.smallImg} alt="bottle" style={{ height: '80px' }} />
+                                            <img src={e.smallImg} alt="bottle" />
                                         </button>
                                     ))}
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="mob-show-btn">
+                        <div className="sectionThreeImageDiv">
+                            <div className="smallImgDiv">
+                                {section.map((e) => (
+                                    <button className="smallImgButton" onClick={() => setData(e)}>
+                                        <img src={e.smallImg} alt="bottle" />
+                                    </button>
+                                ))}
                             </div>
                         </div>
                     </div>
@@ -315,7 +326,7 @@ function Home() {
             </section> 
             {/* /3/  completed*/}
             <section id='sectionImage3' className='section1' >
-                {/* <div className='sectionThreeMainDiv'> */}
+                {/* <div Name='sectionThreeMainDiv'> */}
                 <div className='section3GroupHeaderDiv'>
                     <h1 className='section3Header'>We sold over</h1>
                     <h1 style={{ color: '#ECA533' }} className='section3Header'>30 Billion Cases</h1>
@@ -404,46 +415,54 @@ function Home() {
             </section> */}
 
             <section className="section1">
-                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
+                    <div className="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
                     </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
+                    <div className="carousel-inner">
+                        <div className="carousel-item active">
                             <picture>
-                                <source media="(max-width: 767px)" srcset={imagemob1} />
-                                <img src={image1} class="d-block w-100" alt="image1" />
+                                <source media="(max-width: 767px)" srcSet={imagemob1} />
+                                <img src={image1} className="d-block w-100" alt="image1" />
                             </picture>
                         </div>
-                        <div class="carousel-item">
+                        <div className="carousel-item">
                         <picture>
-                            <source media="(max-width: 767px)" srcset={imagemob2} />
-                            <img src={image2} class="d-block w-100" alt="image2" />
+                            <source media="(max-width: 767px)" srcSet={imagemob2} />
+                            <img src={image2} className="d-block w-100" alt="image2" />
                         </picture>
                         </div>
-                        <div class="carousel-item">
+                        <div className="carousel-item">
                             <picture>
-                                <source media="(max-width: 767px)" srcset={imagemob3} />
-                                <img src={image3} class="d-block w-100" alt="image3" />
+                                <source media="(max-width: 767px)" srcSet={imagemob3} />
+                                <img src={image3} className="d-block w-100" alt="image3" />
                             </picture>
                         </div>
+                        <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span className="visually-hidden">Previous</span>
+                        </button>
+                        <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span className="visually-hidden">Next</span>
+                        </button>
                     </div>
-                    {/* <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
+                    {/* <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span className="visually-hidden">Previous</span>
   </button> */}
-                    {/* <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
+                    {/* <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+    <span className="visually-hidden">Next</span>
   </button> */}
                 </div>
             </section>
             {/* //5 complete */}
-            <section id='sectionImage5' style={{ height: '100vh', paddingTop:'15%'}}>
+            <section id='sectionImage5'>
                 {/* <div id='sectionImage5' > */}
-                <div className='section3MainDiv'>
+                <div className='section5MainDiv'>
                     <div className='section3GroupHeaderDiv'>
                         <h1 className='section5Header'>Where does all the</h1>
                         <h1 className='section5Header'>magic come from ?</h1>
@@ -503,7 +522,7 @@ function Home() {
                             {markers.map(({ name, coordinates }) => (
                                 <Marker key={name} coordinates={coordinates}>
                                     <a data-tooltip-id="my-tooltip" data-tooltip-content={name}>
-                                        <circle r={10} fill="#fff"  />
+                                        <circle r={5} fill="#fff"  />
                                     </a>
                                 </Marker>
                             ))}

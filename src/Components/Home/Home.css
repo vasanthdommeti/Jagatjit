@@ -74,19 +74,32 @@
     background-image: url('../../Assets/Home/sec2backgroundImg.png');
 }
 
-.sectionThreeHeadDiv {
-    /* style={{height:'35%', background:'red', position:'fixed', alignSelf:'center', justifyContent:'flex-end'}} */
-    height: 45%;
-    position: fixed;
-    margin-top: 3%;
-    margin-left: 35%;
+.section3MainDiv {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 10%;
+    align-items: center;
+    height: 100vh;
 }
 
-.sectionThreeImageDiv {
-    /* style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }} */
-    margin-top: 20%;
-    margin-left: 25%;
-    position: fixed;
+.secion2TextWrap {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.smallImgButton > img {
+    width: 100%;
+    height: auto;
+}
+
+.mob-show-btn {
+    display: none;
+}
+
+.smallImgDiv {
+    display: flex;
+    gap: 40px;
 }
 
 #sectionImage3 {
@@ -94,9 +107,6 @@
     display: flex;
     justify-content: center;
     padding: 10%;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center; */
 }
 
 #sectionImage4 {
@@ -105,15 +115,26 @@
 
 #sectionImage5 {
     background-image: url('../../Assets/Home/sec5backgroundImg.png');
-    /* width: 100%; */
     background-size: cover;
     background-position: right;
     place-items: center;
     height: 100vh;
-    /* aspect-ratio: 16 / 8.71; */
-    /* display: flex;
+    padding: 0;
+}
+
+.section5MainDiv {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 10%;
+    align-items: center;
+    height: 100vh;
+}
+
+.section5GroupImagesDiv {
+    display: flex;
     flex-direction: column;
-    justify-content: center; */
+    align-items: end;
+    gap: 50px;
 }
 
 #sectionImage6 {
@@ -141,18 +162,6 @@
 
 .carousel-item > img {
     height: 100vh;
-}
-
-.smallImgDiv {
-    display: flex;
-    /* flex-wrap: wrap; */
-    object-fit: cover;
-    align-items: last baseline;
-    align-self: last baseline;
-    flex-direction: row;
-    /* margin-right: -45%; */
-    /* justify-content: flex-end; */
-    /* align-items: flex-end; */
 }
 
 .btnheading {
@@ -210,18 +219,6 @@
     display: flex;
     align-self: center;
     align-items: center;
-}
-
-.section3MainDiv {
-    display: flex;
-    /* padding: 8% 5% 5% 5%; */
-    /* flex-direction: row; */
-    justify-content: space-around;
-    width: 100%;
-    /* align-items: center; */
-    /* margin: auto; */
-    padding: 10%;
-    /* width: 70%; */
 }
 
 .section3Header {
@@ -290,8 +287,7 @@
 
 .section5secondImage {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    gap: 50px;
 }
 
 .section5Image {
@@ -396,18 +392,6 @@
     object-fit: cover;
 }
 
-.section3MainDiv > .section2img{
-    width: auto;
-    height: 500px;
-    margin-right: 45%;
-}
-
-.secion2TextWrap {
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    width: 50%;
-}
 
 @media only screen and (max-width: 1200px) {
     .section3Header {
@@ -465,7 +449,7 @@
 
 } */
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 1024px) {
     .main,
     .sectionBottleDiv {
         height: 80vh;
@@ -483,14 +467,6 @@
         padding: 10%;
     }
 
-    .section2 .section3MainDiv {
-        justify-content: unset;
-        padding: 7%;
-        flex-direction: column-reverse;
-        text-align: center;
-        align-items: center;
-    }
-
     .section2 {
         height: 80vh;
     }
@@ -501,29 +477,37 @@
     }
 
     .secion2TextWrap {
-        position: unset;
         width: 100%;
         gap: 15px;
     }
 
+    .section3MainDiv {
+        padding: 0;
+    }
+
     .section3MainDiv > .section2img {
-        width: unset;
-        height: 500px;
+        width: auto;
+        height: 45%;
         margin: 0;
     }
 
-    .sectionThreeHeadDiv,
     .sectionThreeImageDiv {
-        position: unset;
-        margin: 0;
-        text-align: center;
-        align-items: center;
         display: flex;
-        flex-direction: column;
     }
 
     .smallImgDiv {
+        display: grid;
         align-self: unset;
+        grid-template-columns: repeat(4, auto);
+    }
+
+    .btnheading {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .btnsubheading {
+        font-size: 14px;
     }
 
     .carousel-item > img,
@@ -532,11 +516,13 @@
     }
 
     #sectionImage5 {
-        height: 65vh;
+        height: 70vh;
     }
 
-    #sectionImage5 .section3MainDiv {
+    #sectionImage5 .section5MainDiv {
         flex-direction: column;
+        display: flex;
+        padding: 7%;
     }
 
     .section3GroupHeaderDiv {
@@ -545,7 +531,7 @@
 
     .App > div,
     .imageMapContainer {
-        height: 50vh;
+        height: 45vh !important;
     }
 }
 
@@ -555,8 +541,6 @@
     .main {
         /* margin-top: 100px; */
         padding-top: 100px;
-        position: relative;
-        z-index: 1;
     }
 
     .sectionBottleDiv {
@@ -588,6 +572,14 @@
         height: 600px;
     }
 
+    .secion2TextWrap > .sectionThreeImageDiv {
+        display: none;
+    }
+
+    .mob-show-btn {
+        display: block;
+    }
+
     .sectionImage1Div .section3Button {
         font-size: 12px;
         font-weight: 300;
@@ -595,27 +587,35 @@
         text-align: center;
     }
 
-    .section3MainDiv {
+    #sectionImage2 {
+        height: auto;
+        padding-bottom: 10%;
+    }
+
+    #sectionImage2 .section3MainDiv {
         display: flex;
         flex-direction: column-reverse;
+        padding: 10%;
+        gap: 30px;
+        height: auto;
     }
 
     .section3MainDiv > .section2img {
-        width: 50%;
-        height: 200px;
+        width: auto;
+        height: 300px;
         margin: 0;
-        position: absolute;
-        top: 24%;
-        left: 25%;
-
     }
     
     .section3MainDiv > .secion2TextWrap {
         width: 100%;
         height: auto;
-        position: unset;
         text-align: center;
         z-index: 1;
+    }
+
+    .smallImgButton > img {
+        width: 100%;
+        height: 150px;
     }
 
     .btnheading {
@@ -652,15 +652,7 @@
 
     .sectionThreeHeadDiv,
     .sectionThreeImageDiv {
-        position: unset;
         margin: 0;
-        padding-top: 10%;
-    }
-
-    .sectionThreeImageDiv {
-        position: absolute;
-        top: 28%;
-        left: 0;
     }
 
     .sectionThreeImageDiv > .smallImgDiv {
@@ -686,13 +678,16 @@
     }
 
     #sectionImage5 {
-        height: 85vh;
+        height: 100vh;
     }
 
-    #sectionImage5 > .section3MainDiv {
+    #sectionImage5 > .section5MainDiv {
+        display: flex;
         flex-direction: column;
+        justify-content: center;
         padding: 50px 20px;
         gap: 50px;
+        height: 100vh;
     }
 
     .section5Header {

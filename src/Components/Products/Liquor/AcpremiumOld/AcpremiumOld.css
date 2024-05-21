@@ -652,6 +652,10 @@
         height: auto;
     }
 
+    .pageSecondText {
+        padding-top: 30px;
+    }
+
     .acpoldSecondHeading {
         font-size: 20px;
         margin-left: 0;
