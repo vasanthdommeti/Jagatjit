@@ -99,7 +99,7 @@
     width: auto;
 }
 .bottleImgfirst{
-    margin-right: 10%;
+    margin-right: 20%;
 }
 .section2BotleImg{
     height: 90vh;
@@ -326,7 +326,7 @@
 
 .sectionTwoParagraph span {
     color: #FFFFFF;
-    font-family: 'Josefin Sans';
+    font-family: 'Regular';
     font-size: 1.8rem;
     letter-spacing: 1px;
     font-family: 'Regular';
@@ -650,10 +650,6 @@
     .section2BotleImg {
         width: 100%;
         height: auto;
-    }
-
-    .pageSecondText {
-        padding-top: 30px;
     }
 
     .acpoldSecondHeading {

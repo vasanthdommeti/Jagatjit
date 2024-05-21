@@ -17,13 +17,44 @@
 
 .damnRowContent {
   align-self: center;
-  width: 75%;
+  width: 70%;
+  text-align: justify;
+  color: #FFFFFF;
+  font-family: 'Josefin Sans';
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  line-height: 100%;
+  font-family: 'Light';
+}
+
+.damnRowContent p {
+  text-align: justify;
+  color: #FFFFFF;
+  font-family: 'Josefin Sans';
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  line-height: 120%;
+  font-family: 'Light';
+  letter-spacing: 1px;
+  width: 90%;
 }
 
 .damnsecondRowContent {
   align-self: flex-end;
   width: 30%;
   margin: 10%;
+  margin-bottom: 15%;
+}
+.damnsecondRowContent p {
+  text-align: justify;
+    color: #FFFFFF;
+    font-family: 'Josefin Sans';
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    line-height: 100%;
+    font-family: 'Light';
+    letter-spacing: 1px;
+    width: 80%;
 }
 
 .damnHeading {
@@ -52,13 +83,14 @@
 }
 
 .damnParagraph {
+  text-align: justify;
   color: #FFFFFF;
   font-family: 'Josefin Sans';
-  font-size: calc(16px + 1vw);
+  font-size: 1.8rem;
   letter-spacing: 1px;
-  font-weight: 100;
-  opacity: 0.8;
-  text-align: justify;
+  line-height: 100%;
+  font-family: 'Light';
+  letter-spacing: 1px;  
   margin-top: 5%;
 }
 
@@ -155,7 +187,15 @@
   /* margin-bottom: 2%; */
   width: 30%;
   margin-right: 5%;
-  justify-content: space-between;
+  /* align-self: center; */
+}
+
+.damnimageText p{
+  /* margin-top: 2%; */
+  /* margin-bottom: 2%; */
+  width: 50%;
+  margin-left: 5%;
+  
   /* align-self: center; */
 }
 
@@ -241,7 +281,7 @@
 }
 
 .damngoodlogoimage {
-  margin-right: 1%;
+  width: 100%;
 }
 
 
@@ -391,6 +431,7 @@
   justify-content: center;
   align-self: flex-start;
   flex-direction: column;
+  margin: 5%;
 }
 .damnsecondRowContent {
   display: flex;
@@ -398,7 +439,8 @@
   align-self: flex-start;
   align-items: center;
   width: auto;
-  margin-top: initial;
+  margin-top: 20%;
+  margin-bottom: 0px;
 }
 .logoImgTextCont{
   background-image: url('../../../../Assets/Products/Liquor/DamnScotch/smallImgLogo.png');
@@ -407,5 +449,25 @@
   object-position: right;
   background-repeat: no-repeat;
 }
+
+.damnimageText {
+  align-items: center;
+  /* margin-top: 2%; */
+  /* margin-bottom: 2%; */
+  width: 30%;
+  padding-top: 10%;
+  /* align-self: center; */
+}
+
+.damnimageText p{
+  /* margin-top: 2%; */
+  /* margin-bottom: 2%; */
+  width: 50%;
+  margin-left: 5%;
+  margin-top: 100%;
+  
+  /* align-self: center; */
+}
+
 
 }

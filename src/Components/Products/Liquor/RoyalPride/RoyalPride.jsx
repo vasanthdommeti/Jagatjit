@@ -13,13 +13,13 @@ import lipglass from '../../../../Assets//Products/Liquor/AcpremiumOld/smooth.sv
 import royalpridethirdImg from '../../../../Assets/Products/Liquor/RoyalPride/royalpridethirdimg.png'
 import bottle from '../../../../Assets/Products/Liquor/AcpremiumOld/bottle.svg';
 import distik from '../../../../Assets/Products/Liquor/AcpremiumOld/distik.svg';
-import glasss from '../../../../Assets/Products/Liquor/AcpremiumOld/glass.svg';
-import acblack from '../../../../Assets/Products/Liquor/AcBlack/acblack.png';
+import glasss from '../../../../Assets/Products/Liquor/AcpremiumOld/glass.png';
+import acblack from '../../../../Assets/Products/Liquor/AcBlack/acblack1.png';
 import damnscotch from '../../../../Assets/Products/Liquor/AcBlack/damnscotch.png';
 import { Link } from "react-router-dom";
 export const RoyalPride = () => {
 
-    const [scrVideo, setScrVideo] = useState("");
+    const [scrVideo, setScrVideo] = useState(""); 
     useEffect(() => {
         axios.get('https://api.jagatjit.com/api/videos')
             .then(response => {
