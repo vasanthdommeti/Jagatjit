@@ -99,11 +99,12 @@
     width: auto;
 }
 .bottleImgfirst{
-    margin-right: 20%;
+    margin-right: 10%;
 }
 .section2BotleImg{
     height: 90vh;
     width: auto;
+    margin-right: 10%;
 }
 .favBotGroupImg{
     margin-bottom: -15% 
@@ -146,10 +147,10 @@
     align-self: center;
 }
 .acpsecDiv{
-    margin-left: 80px;
+    margin-left: 20%;
     display: flex;
     align-items: center;
-    width: 50%;
+    width: 100%;
     flex-direction: column;
 }
 
@@ -295,7 +296,7 @@
     font-family: 'Light';
     text-align: center;
     max-width: 90%;
-    margin-left: 40px;
+
 
     /* line-height: 15px; */
     /* margin-left: 60px; */
@@ -326,7 +327,7 @@
 
 .sectionTwoParagraph span {
     color: #FFFFFF;
-    font-family: 'Regular';
+    font-family: 'Josefin Sans';
     font-size: 1.8rem;
     letter-spacing: 1px;
     font-family: 'Regular';
@@ -650,6 +651,10 @@
     .section2BotleImg {
         width: 100%;
         height: auto;
+    }
+
+    .pageSecondText {
+        padding-top: 30px;
     }
 
     .acpoldSecondHeading {
