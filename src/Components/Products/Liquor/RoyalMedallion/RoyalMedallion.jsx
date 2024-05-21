@@ -1,7 +1,3 @@
-
-
-
-
 import React from "react";
 import '../RoyalMedallion/RoyalMedallion.css';
 import { HiArrowLongLeft, HiOutlineArrowLongRight } from "react-icons/hi2";
@@ -17,8 +13,6 @@ import hotglass from '../../../../Assets/Products/Liquor/RoyalMedalon/hotglass1.
 import lipglass from '../../../../Assets/Products/Liquor/RoyalMedalon/lipglass1.png';
 import glass from '../../../../Assets/Products/Liquor/RoyalMedalon/glass1.png';
 import { Link } from "react-router-dom";
-
-
 
 export const RoyalMedallion = () => {
     return (
@@ -65,7 +59,7 @@ export const RoyalMedallion = () => {
             <div className="medalionThirdDiv">
                 <div className="medalionThirdColumnContent">
                     <h1 className="medalionThirdDivHeading">
-                       Royal with every sip 
+                        Royal with every sip
                     </h1>
                     <div className="medalionrowdiv">
                         <div className="medalioncandleimagesingle">
@@ -91,7 +85,7 @@ export const RoyalMedallion = () => {
 
             </div>
             <div className="mobileimgmed">
-                <img src={royalMImg} alt="royalMImg"  style={{objectFit:'inherit', height:'25%'}}/>
+                <img src={royalMImg} alt="royalMImg" style={{ objectFit: 'inherit', height: '60vh', width: '100vw', marginTop: '30%', marginBottom: '30%' }} />
             </div>
             {/* //4 */}
             <div>
