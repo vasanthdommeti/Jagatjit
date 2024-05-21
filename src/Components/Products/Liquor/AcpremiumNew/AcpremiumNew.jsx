@@ -15,7 +15,7 @@ import distik from '../../../../Assets/Products/Liquor/AcpremiumOld/distik.svg';
 import glass from '../../../../Assets/Products/Liquor/AcpremiumOld/glass.png';
 import acpsectiononelogo from '../../../../Assets/Products/Liquor/AcpremiumNew/acpsectiononelogo.png';
 import acpsectiontwoimg from '../../../../Assets/Products/Liquor/AcpremiumNew/acpremiumsecBottleImg.png';
-// import acpblack from '../../../../Assets/Products/Liquor/AcpremiumNew/acblackImg.png';
+import acpblack from '../../../../Assets/Products/Liquor/AcpremiumNew/acblackImg.png';
 import acpnewImg from '../../../../Assets/Products/Liquor/AcpremiumNew/acpnewImg.png';
 import acplast from '../../../../Assets/Products/Liquor/AcpremiumNew/AcpProducts.png';
 import acpsectiontwoimgs from '../../../../Assets/Products/Liquor/AcpremiumNew/acpnewImg.png';
