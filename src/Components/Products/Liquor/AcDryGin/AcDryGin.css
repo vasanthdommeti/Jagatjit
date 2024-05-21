@@ -36,13 +36,14 @@
   width: 100%;
 }
 .acDryGinParagraph {
-  color: #FFFFFF;
-  font-family: 'Regular';
-  font-size: calc(16px + 1vw);
+  font-family: 'Josefin Sans';
+  font-size: 1.8rem;
   letter-spacing: 1px;
-  font-weight: 100;
-  opacity: 0.7;
+  line-height: 100%;
+  font-family: 'Light';
   text-align: justify;
+  width: 80%;
+  margin-top: 3%;
 }
 
 /* 22 */
@@ -77,14 +78,16 @@
 }
 
 .acDryGinSecondDivParagraph {
-  width: 25%;
-  text-align: right;
-  font-family: 'Regular';
-  font-weight: 100;
-  opacity: 0.8;
+  width: 30%;
+  font-family: 'Josefin Sans';
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  line-height: 100%;
+  font-family: 'Light';
   font-size: 24px;
   letter-spacing: 1px;
-  margin-top: 3%;
+  margin-top: 2%;
+  text-align: right;
 }
 
 /* /33 */
@@ -114,11 +117,11 @@
 .acDryGinThirdDivParagraph{
   /* width: 25%; */
   text-align: left;
-  font-family: 'Regular';
-  font-weight: 100;
-  opacity: 0.8;
-  font-size: 24px;
-  letter-spacing: 2px;
+  font-family: 'Josefin Sans';
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    line-height: 100%;
+    font-family: 'Light';
   margin-top: 3%;
 }
 .acDryGinThirdColumnContent{
@@ -197,6 +200,7 @@
     font-family: 'Light';
     font-size: 16px;
     text-align: center;
+    width: 95%;
   }
   .acDryGinImgcontent{
     display: flex;
@@ -227,7 +231,7 @@
     padding-top: 15%;
   }
   .acDryGinSecondDivParagraph {
-    width: 65%;
+    width: 80%;
     text-align: center;
     font-family: 'Light';
     font-weight: 100;

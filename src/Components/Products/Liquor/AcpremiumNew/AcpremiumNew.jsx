@@ -57,11 +57,11 @@ export const AcpremiumNew = () => {
                         <h1 className="sectionTwoHeading">THE ESSENCE OF</h1>
                         <h1 className="sectionTwoHeading">SOPHISTICATION</h1>
                     </div>
-                    <div>
-                        <p className="sectionTwoParagraph">Distinctive and refined in both taste and look, it is</p>
-                        <p className="sectionTwoParagraph">blended with pure grain and select imported</p>
-                        <p className="sectionTwoParagraph">Scotch malts, bringing a <span>honeyed and delightful</span></p>
-                        <p className="sectionTwoParagraph"><span>experince</span> to its loyal patrons</p>
+                    <div className="sectionTwoParagraphdiv">
+                        <p className="sectionTwoParagraph">Distinctive and refined in both taste and look, it is
+                        blended with pure grain and select imported
+                        Scotch malts, bringing a <span>honeyed and delightful</span>
+                        <span> experince</span> to its loyal patrons</p>
                     </div>
                 </div>
             </div>

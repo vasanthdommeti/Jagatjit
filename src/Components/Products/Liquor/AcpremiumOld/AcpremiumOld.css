@@ -288,13 +288,13 @@
 
 .acpoldParagraph {
     color: #FFFFFF;
-    font-weight: 100;
-    font-style: normal;
-    font-family: "Fredoka", sans-serif;
-    font-size: 16px;
+    width: 100%;
+    font-family: 'Josefin Sans';
+    font-size: 1.8rem;
     letter-spacing: 1px;
+    font-family: 'Light';
     text-align: center;
-    max-width: 350px;
+    max-width: 90%;
     margin-left: 40px;
 
     /* line-height: 15px; */
@@ -307,7 +307,7 @@
     font-weight: 400;
     font-style: normal;
     font-family: "Krona One", sans-serif;
-    font-size: 30px;
+    font-size: 2.2rem;
     letter-spacing: 1px;
     line-height: 10px;
     text-align: end;
@@ -315,20 +315,24 @@
 
 .sectionTwoParagraph {
     color: #FFFFFF;
-    font-weight: 100;
-    font-style: normal;
+    width: 90%;
     font-family: 'Josefin Sans';
-    font-size: 16px;
+    font-size: 1.8rem;
     letter-spacing: 1px;
-    line-height: 15px;
-    text-align: end;
+    font-family: 'Light';
+    text-align: right;
+    max-width: 100%;
 }
 
 .sectionTwoParagraph span {
-    font-weight: 400;
-    font-size: 16px;
+    color: #FFFFFF;
     font-family: 'Josefin Sans';
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    font-family: 'Regular';
     text-decoration: none;
+    text-align: right;
+    max-width: 100%;
 }
 
 /* <style>
@@ -680,14 +684,15 @@
     }
     
     .sectionTwoParagraph {
-        font-weight: 300;
-        line-height: 17px;
+        font-size: 1.2rem;
+        line-height: 100%;
         max-width: 100%;
         text-align: center;
     }
 
     .sectionTwoParagraph > span {
-        line-height: 17px;
+        font-size: 1.2rem;
+        line-height: 100%;
     }
 
     .sectionThree {

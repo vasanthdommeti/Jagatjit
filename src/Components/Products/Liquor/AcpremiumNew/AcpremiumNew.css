@@ -151,13 +151,13 @@
 
 .aristocratParagraph {
     color: #FFFFFF;
-    font-weight: 100;
-    font-style: normal;
-    font-family: "Fredoka", sans-serif;
-    font-size: 16px;
+    width: 100%;
+    font-family: 'Josefin Sans';
+    font-size: 1.8rem;
     letter-spacing: 1px;
+    font-family: 'Light';
     text-align: center;
-    max-width: 450px;
+    max-width: 50%;
     margin-left: 40px;
 
     /* line-height: 15px; */
@@ -168,28 +168,49 @@
     font-weight: 400;
     font-style: normal;
     font-family: "Krona One", sans-serif;
-    font-size: 30px;
     letter-spacing: 1px;
     line-height: 10px;
 }
 
 .sectionTwoParagraph {
     color: #FFFFFF;
-    font-weight: 100;
-    font-style: normal;
+    width: 90%;
     font-family: 'Josefin Sans';
-    font-size: 16px;
+    font-size: 2rem;
     letter-spacing: 1px;
-    line-height: 15px;
+    font-family: 'Light';
+    text-align: justify;
 }
 
 .sectionTwoParagraph span {
-    font-weight: 400;
-    font-size: 16px;
+    color: #FFFFFF;
+    width: 100%;
     font-family: 'Josefin Sans';
-    text-decoration: none;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    font-family: 'Light';
+    text-align: justify;
 }
 
+.sectionTwoParagraphdiv p {
+    color: #FFFFFF;
+    width: 90%;
+    font-family: 'Josefin Sans';
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    line-height: 100%;
+    font-family: 'Light';
+    text-align: right;
+}
+.sectionTwoParagraphdiv p span {
+    color: #FFFFFF;
+    width: 100%;
+    font-family: 'Josefin Sans';
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    
+    text-align: right;
+}
 /* <style>
 .acpremiumfirstSectionImage {
     background-image: url(/src/Assests/acpremiumfirstsection.png);
@@ -415,7 +436,7 @@
     color: #FFFFFF;
     font-weight: 100;
     font-style: normal;
-    font-family: 'Regular';
+    font-family: 'Light';
     font-size: 16px;
     letter-spacing: 1px;
     line-height: 15px;
@@ -520,6 +541,13 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+}
+
+.pageSecondText h1 {
+    font-size: 2.2rem;
+    margin-right: 10%;
+    margin-bottom: 10%;
+    margin-top: 5%;
 }
 
 /* acpsecondfourthSectionImage */
@@ -695,7 +723,9 @@
     }
 
     .aristocratParagraph {
+        font-size: 1.2rem;
         text-align: center;
+        max-width: 90%;    
         margin: 0;
     }
 
@@ -704,7 +734,7 @@
         flex-direction: column-reverse;
         text-align: center;
         height: auto;
-        padding: 0 15px;
+        padding-left: 5%;
     }
 
     .acpNewScondSectionTwoImage>img {
@@ -724,6 +754,7 @@
         margin-left: 0px;
         width: 100%;
     }
+    
 
     .profileN-icon-1::before,
     .profileN-icon-2::before,
@@ -854,4 +885,32 @@
     .acppremiumrightArrowDiv {
         width: 50%;
     }
+
+    .pageSecondText h1 {
+        font-size: 1.5rem;
+        margin-bottom: 10%;
+        margin-top: 5%;
+        text-align: center;
+    }
+
+    .sectionTwoParagraphdiv p {
+        color: #FFFFFF;
+        width: 90%;
+        font-family: 'Josefin Sans';
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+        line-height: 110%;
+        font-family: 'Light';
+        text-align: center;
+        
+    }
+    .sectionTwoParagraphdiv p span {
+        color: #FFFFFF;
+        width: 80%;
+        font-family: 'Josefin Sans';
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+        
+        text-align: right;
+}
 }
