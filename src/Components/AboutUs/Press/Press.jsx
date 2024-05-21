@@ -13,7 +13,6 @@ const Press = () => {
     useEffect(() => {
         axios.get(`https://api.jagatjit.com/api/news`)
         .then(response => {
-          console.log('response',response);
             setNews(response.data.news)
             setAchievement(response.data.achievement)
         })
