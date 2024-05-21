@@ -423,8 +423,13 @@
     background-color: transparent;
 }
 
+.section3MainDiv > .section2img {
+    transition: all 0.3s ease-in-out;
+}
+
 .bottle-active {
-    box-shadow: 0px 0px 46.4px 0px rgba(255, 160, 19, 1), inset 0px 0px 100.4px 0px rgba(243, 149, 8, 0.884);
+    box-shadow: 0px 0px 46.4px 0px rgba(255, 160, 19, 1), inset 0px 0px 100.4px 0px rgba(212, 131, 9, 0.726);
+    transform: scale(1.1);
 }
 
 @media only screen and (max-width: 1200px) {
@@ -709,6 +714,7 @@
         justify-content: space-evenly;
         flex-wrap: wrap-reverse;
         gap: 10px;
+        padding: 10px;
     }
 
     #sectionImage3 {
