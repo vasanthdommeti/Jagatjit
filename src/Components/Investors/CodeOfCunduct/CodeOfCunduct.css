@@ -19,7 +19,7 @@ body {
 /* Style for 'code-of-conduct' heading only */
 .code-of-conduct .headingmain {
   font-family: 'Josefin Sans', serif;
-  font-size: 3.4rem;
+  font-size: 52px;
   text-align: center; /* Center align 'code-of-conduct' heading */
   color: white; /* Set color to white for 'code-of-conduct' heading */
 }
@@ -27,7 +27,7 @@ body {
 .code-of-conduct {
   font-family: 'Josefin Sans', serif;
   color: white;
-  padding-top: 8%;
+  padding-top: 10%;
   margin: 20px auto; /* Use 'auto' for horizontal centering */
   /* padding: 15px; */
   width: 80%; /* Set width to 80% */
@@ -66,7 +66,7 @@ li{
   /* Style for 'code-of-conduct' heading only */
   .code-of-conduct .headingmain {
     font-family: 'Josefin Sans', serif;
-    font-size: 2.4rem;
+    font-size: 40px;
     text-align: center; /* Center align 'code-of-conduct' heading */
     color: white; /* Set color to white for 'code-of-conduct' heading */
   }

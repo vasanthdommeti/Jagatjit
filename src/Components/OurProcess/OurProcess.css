@@ -40,7 +40,7 @@
   font-weight: 400;
   font-size: 42px;
   margin-bottom: 5%;
-
+  
 }
 
 .ourProcess-process-container p {
@@ -53,11 +53,13 @@
 }
 
 .ourProcess-process-container h4 {
-  font-family: 'Josefin Sans';
-  font-size: 22px;
-  font-weight: 100;
-  letter-spacing: 0.2em;
+  font-family: 'Montserrat';
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 0.3em;
   color: #FFFFFF;
+  margin-top: 5%;
+  margin-bottom: 2%;
 }
 
 .ourProcess-process-wrapper,
@@ -118,25 +120,22 @@
   .ourProcess-process-container {
     width: 90%;
   }
-
   .ourProcess-process-wrapper {
     flex-direction: row;
   }
-
   .ourProcess-process-wrappers {
-    flex-direction: row;
+    flex-direction: row; 
   }
-
   .ourProcess-process-image img {
     width: 100%;
-    height: auto;
+    height: 60vh;
     object-fit: cover;
   }
 
 
 
-
-
+ 
+ 
 }
 
 
@@ -145,7 +144,6 @@
   .ourProcess-process-wrapper {
     flex-direction: column;
   }
-
   .ourProcess-process-wrappers {
     flex-direction: column-reverse;
   }
@@ -195,7 +193,7 @@
     margin-top: 20%;
     padding-right: 5%;
     padding-left: 5%;
-
+    
   }
 
   .ourProcess-process-container h4 {

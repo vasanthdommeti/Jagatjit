@@ -8,7 +8,7 @@ body {
 .sustainability {
   width: 80%;
   /* Adjust width as needed (optional) */
-  margin: 10% auto;
+  margin: 10% 10% 0% 10%;
   /* margin: 5%; */
   /* Use vh for vertical margin */
   /* padding: 30px; */
@@ -17,16 +17,13 @@ body {
 }
 
 .headingmain {
+  font-family: 'Josefin Sans', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 52px;
+  line-height: 110.41%;
   text-align: center;
-  margin-top: 5%; 
-  margin-bottom: 5%;
-  /* Center align headingmain */
-  color: #ECA533;
-  /* Set color to orange */
-  font-size: 4.2rem;
-  font-weight: 1000;
   color: #FFFFFF;
-  /* Adjust font size (28px = 2.8rem) */
 }
 
 .headingmainsmall {
@@ -42,6 +39,7 @@ body {
   /* Center align all paragraphs (optional, adjust if needed) */
   line-height: 1.5;
   margin-bottom: 15px;
+  font-family: 'Josefin Sans', sans-serif;
   
 }
 
@@ -59,12 +57,13 @@ body {
   
 .headingmain {
   text-align: center;
-  
-  /* Center align headingmain */
+  font-family: 'Josefin Sans', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 110.41%;
+  text-align: center;
   color: #FFFFFF;
-  /* Set color to orange */
-  font-size: 2.2rem;
-  /* Adjust font size (28px = 2.8rem) */
   margin: 10%;
   margin-top: 20%;
 }
@@ -73,7 +72,7 @@ body {
   font-family: 'Josefin Sans', sans-serif;
   text-align: left;
   color: #ECA533;
-  font-size: 1rem;
+  font-size: 16px;
 }
 
 .sustainability {
@@ -90,6 +89,7 @@ body {
 
 .sustainability p {
   text-align: justify;
+  font-family: 'Josefin Sans', sans-serif;
   /* Center align all paragraphs (optional, adjust if needed) */
   line-height: 1.3;
   font-size: 16px;
@@ -103,21 +103,20 @@ body {
   /* Tablet specific styles */
 
   .headingmain {
-    margin-top: 15%;
+    font-family: 'Josefin Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 52px;
+    line-height: 110.41%;
     text-align: center;
-    /* Center align headingmain */
     color: #FFFFFF;
-    /* Set color to orange */
-    font-size: 3rem;
-    font-weight: 900;
-    /* Adjust font size (28px = 2.8rem) */
   }
   
   .headingmainsmall {
     font-family: 'Josefin Sans', sans-serif;
     text-align: left;
     color: #ECA533;
-    font-size: 1.2rem;
+    font-size: 16px;
     font-weight: 800;
   }
 
