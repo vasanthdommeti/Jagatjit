@@ -155,8 +155,10 @@ export const Heritage = () => {
                 <div className="topimgagetwo">
                     <img src={mainImg2} />
                 </div>
-                <div style={{ paddingLeft: '5%', textAlign: 'justify' }}>
-                    The next few decades saw the development and introduction of several premium brands of liquor (including the iconic Aristocrat and Teachers whiskies), as well as malted milk food (Ovaltine/Maltova), which cemented the company’s pioneering position in the industry, and delivered on its promise of a ‘Heritage of Quality’. In 2023, JIL got approval for its Ethanol plant.
+                <div className="topinfoimg">
+                    <div style={{ textAlign: 'justify' }}>
+                        The next few decades saw the development and introduction of several premium brands of liquor (including the iconic Aristocrat and Teachers whiskies), as well as malted milk food (Ovaltine/Maltova), which cemented the company’s pioneering position in the industry, and delivered on its promise of a ‘Heritage of Quality’. In 2023, JIL got approval for its Ethanol plant.
+                    </div>
                 </div>
             </div>
             <div className="topinfoimg">
@@ -167,12 +169,12 @@ export const Heritage = () => {
                     <img src={mainImg3} />
                 </div>
             </div>
-            <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginTop: '10%', marginBottom: '10%' }}>
+            <div className="topinfoimglast">
                 <div style={{ textAlign: 'justify' }}>
                     Jagatjit Industries Limited (JIL) is now one of world’s leaders in the premium drinks segment. We have the largest integrated distilleries manufacturing potable alcohol in Asia; and in India, we are the first to possess in-house capabilities for producing molasses and non-molasses based potable alcohol from fully automated distillation plants. JIL manufactures and markets alcoholic beverages, malt, malt extract, nutritious planned food, milk powder, ghee, and dairy products. We also manufacture malted milk foods. JIL’s guiding philosophy – ‘A Heritage of Quality’ – finds expression through all the company’s activities: quality in manufacturing, state-of-the-art-technology, and enduring relationships with employees, dealers and customers.
                 </div>
             </div>
-            <div style={{ margin: '5%' }}>
+            <div style={{ textAlign: 'justify' }}>
                 <h1 className="heritage-headingtwo">
                     Milestones
                 </h1>

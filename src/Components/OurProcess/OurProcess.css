@@ -40,7 +40,7 @@
   font-weight: 400;
   font-size: 42px;
   margin-bottom: 5%;
-  
+
 }
 
 .ourProcess-process-container p {
@@ -120,12 +120,15 @@
   .ourProcess-process-container {
     width: 90%;
   }
+
   .ourProcess-process-wrapper {
     flex-direction: row;
   }
+
   .ourProcess-process-wrappers {
-    flex-direction: row; 
+    flex-direction: row;
   }
+
   .ourProcess-process-image img {
     width: 100%;
     height: 60vh;
@@ -134,8 +137,8 @@
 
 
 
- 
- 
+
+
 }
 
 
@@ -144,6 +147,7 @@
   .ourProcess-process-wrapper {
     flex-direction: column;
   }
+
   .ourProcess-process-wrappers {
     flex-direction: column-reverse;
   }
@@ -193,7 +197,7 @@
     margin-top: 20%;
     padding-right: 5%;
     padding-left: 5%;
-    
+
   }
 
   .ourProcess-process-container h4 {
