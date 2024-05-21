@@ -1,5 +1,5 @@
 
-import React, { useRef, useLayoutEffect, useState } from "react";
+import React, { useRef, useLayoutEffect, useState, useEffect } from "react";
 import { ComposableMap, Geographies, Geography, Marker } from "react-simple-maps";
 import { Tooltip } from 'react-tooltip'
 import '../Home/Home.css';
@@ -108,6 +108,8 @@ const section = [
     }
 ]
 
+
+
 const markers = [
     {
         name: "Angola",
@@ -178,6 +180,22 @@ const markers = [
 function Home() {
     const [data, setData] = useState(section[0]);
     const [content, setContent] = useState("");
+    const [activeId, setActiveId] = useState(section[0]?.id);
+
+    useEffect(() => {
+      if (section.length > 0) {
+        setData(section[0]);
+      }
+    }, [section, setData]);
+
+    const handleClick = (id) => {
+        setActiveId(id);
+    };
+
+    const handleButtonClick = (item) => {
+        setData(item);
+        handleClick(item.id);
+    };
 
     gsap.registerPlugin(ScrollTrigger);
 
@@ -303,8 +321,8 @@ function Home() {
                             <div className="sectionThreeImageDiv">
                                 <div className="smallImgDiv">
                                     {section.map((e) => (
-                                        <button className="smallImgButton" onClick={() => setData(e)}>
-                                            <img src={e.smallImg} alt="bottle" />
+                                        <button onClick={() => handleButtonClick(e) } className={`smallImgButton ${activeId === e.id ?' bottle-active' : ''}`}>
+                                            <img src={e.smallImg} alt="bottle" title={e.name} />
                                         </button>
                                     ))}
                                 </div>
@@ -315,8 +333,8 @@ function Home() {
                         <div className="sectionThreeImageDiv">
                             <div className="smallImgDiv">
                                 {section.map((e) => (
-                                    <button className="smallImgButton" onClick={() => setData(e)}>
-                                        <img src={e.smallImg} alt="bottle" />
+                                    <button onClick={() =>  handleButtonClick(e) } className={`smallImgButton ${activeId === e.id ?' bottle-active' : ''}`}>
+                                        <img src={e.smallImg} alt="bottle" title={e.name} />
                                     </button>
                                 ))}
                             </div>
@@ -333,7 +351,9 @@ function Home() {
                     <h1 className='section3Header'>of our favorite </h1>
                     <h1 className='section3Header'>Whiskey.</h1>
                     <p className='section3Paragraph'>Explore our history to find out how we did it.</p>
-                    <button className='section3Button'>HERITAGE</button>
+                    <Link to={'/AboutUs/Heritage'}>
+                        <button className='section3Button'>HERITAGE</button>
+                    </Link>
                 </div>
                 <div className='section3GroupImagesDiv'>
                     <img src={section3Image} alt='Img' className='section3Image' />
@@ -427,27 +447,42 @@ function Home() {
                                 <source media="(max-width: 767px)" srcSet={imagemob1} />
                                 <img src={image1} className="d-block w-100" alt="image1" />
                             </picture>
+                            <div className="carousel-caption slider-btn-link-1">
+                                <Link to={'/products/liquor/RoyalPride'}>
+                                    <button className='section-silder-Button'>Find Out More</button>
+                                </Link>
+                            </div>
                         </div>
                         <div className="carousel-item">
                         <picture>
                             <source media="(max-width: 767px)" srcSet={imagemob2} />
                             <img src={image2} className="d-block w-100" alt="image2" />
                         </picture>
+                        <div className="carousel-caption slider-btn-link-2">
+                            <Link to={'/products/liquor/DamnGoodScotch'}>
+                                <button className='section-silder-Button'>Find Out More</button>
+                            </Link>
+                        </div>
                         </div>
                         <div className="carousel-item">
                             <picture>
                                 <source media="(max-width: 767px)" srcSet={imagemob3} />
                                 <img src={image3} className="d-block w-100" alt="image3" />
                             </picture>
+                            <div className="carousel-caption slider-btn-link-3">
+                                <Link to={'/products/liquor/ACpremiumBlack'}>
+                                    <button className='section-silder-Button'>Find Out More</button>
+                                </Link>
+                            </div>
                         </div>
-                        <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                        {/* <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                             <span className="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span className="visually-hidden">Previous</span>
                         </button>
                         <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
                             <span className="carousel-control-next-icon" aria-hidden="true"></span>
                             <span className="visually-hidden">Next</span>
-                        </button>
+                        </button> */}
                     </div>
                     {/* <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
     <span className="carousel-control-prev-icon" aria-hidden="true"></span>

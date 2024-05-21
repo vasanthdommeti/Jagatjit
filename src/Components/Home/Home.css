@@ -190,6 +190,8 @@
 .smallImgButton {
     background-color: transparent;
     border-color: transparent;
+    border: 0;
+    border-radius: 10px;
 }
 
 .section2 {
@@ -202,7 +204,7 @@
 }
 
 .section3GroupHeaderDiv {
-    width: 50%;
+    width: 100%;
     align-self: center;
     justify-content: center;
 }
@@ -392,6 +394,38 @@
     object-fit: cover;
 }
 
+.slider-btn-link-1 {
+    top: 45%;
+    left: 45%;
+}
+
+.slider-btn-link-2 {
+    top: 40%;
+    left: -37%;
+}
+
+.slider-btn-link-3 {
+    top: 42%;
+    left: -48%;
+}
+
+.carousel-caption .section-silder-Button {
+    font-family: Josefin Sans;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 20px;
+    text-align: center;
+    border: 0.5px solid #ECA533;
+    border-radius: 25px;
+    padding: 10px 35px;
+    color: #ECA533;
+    letter-spacing: 2px;
+    background-color: transparent;
+}
+
+.bottle-active {
+    box-shadow: 0px 0px 40.4px 0px rgba(255, 160, 19, 1), inset 0px 0px 40.4px 0px rgba(255, 160, 19, 1);
+}
 
 @media only screen and (max-width: 1200px) {
     .section3Header {
@@ -532,6 +566,21 @@
     .App > div,
     .imageMapContainer {
         height: 45vh !important;
+    }
+
+    .slider-btn-link-1 {
+        top: 45%;
+        left: 45%;
+    }
+    
+    .slider-btn-link-2 {
+        top: 38%;
+        left: -23%;
+    }
+    
+    .slider-btn-link-3 {
+        top: 38%;
+        left: -35%;
     }
 }
 
@@ -718,5 +767,20 @@
 
     .imageMapContainer {
         height: auto;
+    }
+
+    .slider-btn-link-1 {
+        top: 22%;
+        left: 13%;
+    }
+
+    .slider-btn-link-2 {
+        top: 52%;
+        left: 13%;
+    }
+
+    .slider-btn-link-3 {
+        top: 51%;
+        left: 10%;
     }
 }
