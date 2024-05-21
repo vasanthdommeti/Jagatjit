@@ -36,6 +36,9 @@
     margin-top: -50px;
     width: 250px;
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .footerRights,
@@ -43,7 +46,7 @@
     margin-top: 20px;
     font-size: 0.8rem;
     text-align: center;
-    letter-spacing: 2p;
+    letter-spacing: 2px;
 }
 
 .footerCreditsText {
@@ -63,6 +66,7 @@
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+    gap: 10px;
 }
 
 h1,

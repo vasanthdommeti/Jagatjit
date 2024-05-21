@@ -125,36 +125,22 @@ export const RoyalPride = () => {
                     {/* <img src={candles} alt="block" className="candleimage" /> */}
                 </div>
             </div>
-            {/* /4/  completed*/}
-            <div className="royalpridehide">
-                <div className="royalimageText">
-                    <img src={glasss} alt="block" className="royallogoimage" />
-                    <p>Best Enjoyed How You Like Your Scotch</p>
-                </div>
-                <div className="royalimageText">
-                    <img src={bottle} alt="block" className="royallogoimage" />
-                    <p>Bottled With Care By State Of The Art Bottling Facilities</p>
-                </div>
-                <div className="royalimageText">
-                    <img src={distik} alt="block" className="royallogoimage" />
-                    <p>Made With The Finest Indian Spirits</p>
-                </div>
-
-            </div>
             <div className="royalPrideFourthDiv">
-                <div className="royalThirdDivContent royalprideshow" style={{ width: '45%', }}>
+                <div className="royalThirdDivContent royalprideshow">
                     <h1 className="royalPrideSecondDivHeading" >Crafted for your Inner Connoisseur </h1>
-                    <div className="royalimageText">
-                        <img src={glasss} alt="block" className="royallogoimage" />
-                        <p>Best Enjoyed How You Like Your Scotch</p>
-                    </div>
-                    <div className="royalimageText">
-                        <img src={bottle} alt="block" className="royallogoimage" style={{ marginRight: '12%', marginLeft: '3%' }} />
-                        <p>Bottled With Care By State Of The Art Bottling Facilities</p>
-                    </div>
-                    <div className="royalimageText">
-                        <img src={distik} alt="block" className="royallogoimage" />
-                        <p>Made With The Finest Indian Spirits</p>
+                    <div className="icon-4-wrap">
+                        <div className="royalimageText">
+                            <img src={glasss} alt="block" className="royallogoimage" />
+                            <p>Best Enjoyed How You Like Your Scotch</p>
+                        </div>
+                        <div className="royalimageText">
+                            <img src={bottle} alt="block" className="royallogoimage" style={{ marginRight: '12%', marginLeft: '3%' }} />
+                            <p>Bottled With Care By State Of The Art Bottling Facilities</p>
+                        </div>
+                        <div className="royalimageText">
+                            <img src={distik} alt="block" className="royallogoimage" />
+                            <p>Made With The Finest Indian Spirits</p>
+                        </div>
                     </div>
 
                 </div>
