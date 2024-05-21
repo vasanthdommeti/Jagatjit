@@ -424,7 +424,7 @@
 }
 
 .bottle-active {
-    box-shadow: 0px 0px 40.4px 0px rgba(255, 160, 19, 1), inset 0px 0px 40.4px 0px rgba(255, 160, 19, 1);
+    box-shadow: 0px 0px 46.4px 0px rgba(255, 160, 19, 1), inset 0px 0px 100.4px 0px rgba(243, 149, 8, 0.884);
 }
 
 @media only screen and (max-width: 1200px) {
