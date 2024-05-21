@@ -69,7 +69,7 @@ const OurTeam = () => {
                         <img src={el.team_image} alt="Team" className="TeamMember" />
                         <div className="teamnameDiv">
                             <h1 className="teamMemberName">{el.designation}</h1>
-                            <h1 className="teamMemberName">{el.name}</h1>
+                            <h1 className="teamMemberName" style={{fontFamily:'Light'}}>{el.name}</h1>
                         </div>
                         <div className="hoverEffect hoverEffectMain">
                             <h1 className="hoverText designationTeam" >{el.designation}</h1>
