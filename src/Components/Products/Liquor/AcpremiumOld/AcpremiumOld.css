@@ -90,35 +90,42 @@
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {} */
 
-.bottleImgLogo{
+.bottleImgLogo {
     height: 40%;
     width: 50%;
 }
-.bottleImg{
+
+.bottleImg {
     height: 90vh;
     width: auto;
 }
-.bottleImgfirst{
+
+.bottleImgfirst {
     margin-right: 10%;
 }
-.section2BotleImg{
+
+.section2BotleImg {
     height: 90vh;
     width: auto;
     margin-right: 10%;
 }
-.favBotGroupImg{
-    margin-bottom: -15% 
+
+.favBotGroupImg {
+    margin-bottom: -15%
 }
+
 .acpoldpagesRowDiv {
     display: flex;
 }
-.acpremium5ImgDiv{
+
+.acpremium5ImgDiv {
     justify-content: center;
     display: flex;
     height: 50%;
     margin-top: 5%;
 }
-.acpremiumleftrightDiv{
+
+.acpremiumleftrightDiv {
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 50%;
@@ -126,27 +133,33 @@
     justify-content: center;
     margin: 5% 0;
 }
-.premiumleftarrowDiv{
+
+.premiumleftarrowDiv {
     text-align: right;
     align-self: center;
 }
-.leftImgBtn{
- height: 150px;
- margin-left: 25px;
- margin-right: 25px;
+
+.leftImgBtn {
+    height: 150px;
+    margin-left: 25px;
+    margin-right: 25px;
 }
-.rightImgBtn{
+
+.rightImgBtn {
     height: 150px;
     margin-left: 5px;
 }
-.acparrowSize{
+
+.acparrowSize {
     font-size: 55px;
 }
-.premiumrightarrow{
+
+.premiumrightarrow {
     text-align: left;
     align-self: center;
 }
-.acpsecDiv{
+
+.acpsecDiv {
     margin-left: 20%;
     display: flex;
     align-items: center;
@@ -164,7 +177,7 @@
     gap: 30px;
 }
 
-.profile-icon-wrap > div {
+.profile-icon-wrap>div {
     color: #FFFFFF;
     width: calc(100% / 4);
     height: auto;
@@ -179,7 +192,7 @@
     gap: 15px;
 }
 
-.profile-icon-1::before, 
+.profile-icon-1::before,
 .profile-icon-2::before,
 .profile-icon-3::before,
 .profile-icon-4::before {
@@ -195,12 +208,15 @@
 .profile-icon-1::before {
     background-image: url('../../../../Assets//Products/Liquor/AcpremiumOld/elegant.svg');
 }
+
 .profile-icon-2::before {
     background-image: url('../../../../Assets//Products/Liquor/AcpremiumOld/sweet.svg');
 }
+
 .profile-icon-3::before {
     background-image: url('../../../../Assets//Products/Liquor/AcpremiumOld/deep.svg');
 }
+
 .profile-icon-4::before {
     background-image: url('../../../../Assets//Products/Liquor/AcpremiumOld/smooth.svg');
 }
@@ -225,48 +241,76 @@
     /* justify-content: space-around; */
     /* align-self: flex-end; */
 }
+
 .acppremiumfifthhDiv {
     height: 50vh;
     display: flex;
     flex-direction: column;
-  }
+}
 
+.video-link-redirect {
+    width: 100%;
+    height: auto;
+    margin: 50px 0;
+}
+
+.acpNewarrowDiv {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 40% 40%;
+}
 
 .acppremiumleftArrowDiv {
-    border-color: white;
-    padding: 1%;
+    width: 100%;
+    height: auto;
     color: #FFFFFF;
     text-decoration: none;
-    border-width: 1px;
-    border-style: solid;
+    border: 2px solid rgba(255, 255, 255, 1);
     border-left-color: black;
-    border-top-right-radius: 15%;
-    border-bottom-right-radius: 15%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
     display: flex;
-    text-align: right;
-    align-self: center;
-  }
-  
-  .acppremiumrightArrowDiv {
-    border-color: white;
-    padding: 1%;
+    justify-content: end;
+    gap: 30px;
+    padding: 25px;
+}
+
+.acppremiumrightArrowDiv {
+    width: 100%;
+    height: auto;
     color: #FFFFFF;
     text-decoration: none;
-    border-width: 1px;
-    border-style: solid;
+    border: 2px solid rgba(255, 255, 255, 1);
     border-right-color: black;
-    border-top-left-radius: 15%;
-    border-bottom-left-radius: 15%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
     display: flex;
-    align-self: center;
-  }
-  
-  .acppremiumarrowHeading {
-    font-size: 21px;
-    margin-bottom: 0%;
-  }
-   
-  
+    justify-content: left;
+    gap: 30px;
+    padding: 25px;
+}
+
+.acpNpremiumarrowHeading {
+    font-family: Josefin Sans;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 52.99px;
+    letter-spacing: 0.05em;
+}
+
+.acpNewrightSmallImg,
+.acpNewleftSmallImg {
+    width: auto;
+    height: auto;
+    margin: 0;
+}
+    
+
+.acpNewleftSmallImg > img,
+.acpNewrightSmallImg > img {
+    width: auto;
+    height: 150px;
+}
 
 .pagesTextDivTwo {
     display: flex;
@@ -282,9 +326,6 @@
     font-style: normal;
     font-size: 28px;
     letter-spacing: 3px;
-    margin-left: 40px;
-
-    /* line-height: 30px; */
 }
 
 .acpoldParagraph {
@@ -296,11 +337,6 @@
     font-family: 'Light';
     text-align: center;
     max-width: 90%;
-
-
-    /* line-height: 15px; */
-    /* margin-left: 60px; */
-
 }
 
 .sectionTwoHeading {
@@ -336,97 +372,34 @@
     max-width: 100%;
 }
 
-/* <style>
-.acpremiumfirstSectionImage {
-    background-image: url(/src/Assests/acpremiumfirstsection.png);
-    width: 100%;
-    height: auto;
-    /* background-size: 10%; */
-/* background-repeat: no-repeat; */
-/* max-width: 100vw; */
-/* max-height: 100vh; */
-/* background-size: contain; */
-/* background-position: right; */
-/* place-items: center; */
-/* display: block; */
-/* text-align: center; */
-/* object-fit: cover; */
-/* aspect-ratio: 16 / 8.71; */
 .acpremiumfirstSectionImage {
     background-image: url('../../Assests/acpremiumfirstsection.png');
-    /* width: 100vw;
-        height: 100vh;
-        max-width: 100vw;
-        max-height: 100vh;
-        background-size: cover;
-        background-position: right;
-        place-items: center; */
-        width: 100%;
+    width: 100%;
     height: auto;
     background-repeat: no-repeat;
-        background-size: contain;
-        place-items: center;
-        aspect-ratio: 16 / 8.71;
-        /* display: block; */
-        /* background-position: ; */
-        /* padding-top: 50%;
-    background-position: right;
     background-size: contain;
-    background-repeat: no-repeat;
-        */
-        /* text-align: center; */
+    place-items: center;
+    aspect-ratio: 16 / 8.71;
 }
 
 .acpremiumsecondSectionImage {
     background-image: url('../../Assests/acpremiumsecontiontwoBg.png');
-    /* width: 100vw;
+    width: 100%;
     height: auto;
-    padding-top: 50%;
-    background-position: left;
-    background-size: cover;
-    background-repeat: no-repeat;
-        */
-        /* width: 100vw;
-        height: 100vh;
-        max-width: 100vw;
-        max-height: 100vh;
-        background-size: cover;
-        background-position: left;
-        place-items: center; */
-        width: 100%;
-        height: auto;
     background-repeat: no-repeat;
     background-size: contain;
-        place-items: center;
-        aspect-ratio: 16 / 8.71;
+    place-items: center;
+    aspect-ratio: 16 / 8.71;
 }
 
 .acpremiumfourthSectionImage {
-    /* background-image: url('../../Assests/Products/aristoprembg.png'); */
-        background-image: url('../../Assests/aristoprembg1.png');
-        /* width: 100vw;
+    background-image: url('../../Assests/aristoprembg1.png');
+    width: 100%;
     height: auto;
-    padding-top: 45%;
-    background-position: right;
-    background-size: cover;
     background-repeat: no-repeat;
-    text-align: center;
-        */
-        /* width: 100vw;
-        height: 100vh;
-        max-width: 100vw;
-        max-height: 100vh;
-        background-size: auto;
-        background-position:right;
-        background-repeat: no-repeat;
-        place-items: center; */
-        width: 100%;
-        height: auto;
-        background-repeat: no-repeat;
-        background-size: contain;
-        place-items: center;
-        /* aspect-ratio: 16 / 8.71; */
-        aspect-ratio: 16 / 8.71;
+    background-size: contain;
+    place-items: center;
+    aspect-ratio: 16 / 8.71;
 }
 
 .sectionThree {
@@ -437,7 +410,7 @@
     justify-content: space-between;
 }
 
-.sectionThree > div:nth-child(odd) {
+.sectionThree>div:nth-child(odd) {
     position: relative;
     top: -28px;
     z-index: -1;
@@ -513,59 +486,30 @@
     background-size: cover;
     background-position: bottom;
     place-items: center;
-        /* aspect-ratio: 16 / 8.71; */
 }
 
 .acpScondSectionTwoImage {
     background-image: url('../../../../Assets/Products/Liquor/AcpremiumNew/acpsecondpageBg.png');
-    /* width: 100vw;
-    height: auto;
-    padding-top: 50%;
-    background-position: left;
-    background-size: contain;
-    background-repeat: no-repeat;
-    text-align: center;
-        */
-    /* width: 100vw;
-    height: 100vh;
-    background-repeat: no-repeat;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center; */
-    /* width: 100%; */
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
     place-items: center;
-        /* aspect-ratio: 16 / 8.71; */
 }
 
 .acpsecondfourthSectionImage {
     background-image: url('../../../../Assets/Products/Liquor/AcpremiumNew/acpforthsecImg.png');
-    /* width: 100vw;
-    height: auto;
-    padding-top: 30%;
-    background-position: right;
-    background-size: cover;
+    height: 100vh;
     background-repeat: no-repeat;
-    text-align: center;
-        */ 
-        /* width: 100%; */
-        height: 100vh;
-        background-repeat: no-repeat;
-        background-position: right;
-        background-size: contain;
-        place-items: center;
-        display: flex;
-        /* aspect-ratio: 16 / 8.71; */
+    background-position: right;
+    background-size: contain;
+    place-items: center;
+    display: flex;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px){
+@media only screen and (min-width: 768px) and (max-width: 991px) {
 
-    .acpremium-container > div {
+    .acpremium-container>div {
         padding: 0 15px;
     }
 
@@ -579,7 +523,7 @@
         margin: 0;
     }
 
-    .acpsecDiv > img {
+    .acpsecDiv>img {
         width: 100%;
         height: auto;
     }
@@ -601,10 +545,10 @@
     }
 
     .acpScondSectionTwoImage,
-    .sectionThree ,
+    .sectionThree,
     .acpsecondfourthSectionImage,
     .acppremiumfifthhDiv,
-    .acpremium5ImgDiv > img {
+    .acpremium5ImgDiv>img {
         width: 100%;
         height: auto;
     }
@@ -614,7 +558,7 @@
         padding: 0;
     }
 
-    .sectionThree > div:nth-child(odd) {
+    .sectionThree>div:nth-child(odd) {
         position: relative;
         top: -16px;
     }
@@ -627,6 +571,11 @@
         width: 100%;
         justify-content: unset;
         gap: 40px;
+    }
+
+    .acpNewarrowDiv {
+        display: grid;
+        grid-template-columns: 50% 50%;
     }
 }
 
@@ -641,7 +590,7 @@
         height: auto;
     }
 
-    .acpsecDiv{
+    .acpsecDiv {
         margin-left: 0;
         width: 100%;
     }
@@ -667,14 +616,14 @@
         text-align: center;
         margin: 0;
     }
-        
+
     .pagesTextDivTwo {
         flex-direction: column-reverse;
         text-align: center;
         height: auto;
         padding: 0 15px;
     }
-    
+
     .pagesTextDiv {
         width: 100%;
         padding: 0;
@@ -687,7 +636,7 @@
         max-width: 100%;
         text-align: center;
     }
-    
+
     .sectionTwoParagraph {
         font-size: 1.2rem;
         line-height: 100%;
@@ -695,7 +644,7 @@
         text-align: center;
     }
 
-    .sectionTwoParagraph > span {
+    .sectionTwoParagraph>span {
         font-size: 1.2rem;
         line-height: 100%;
     }
@@ -706,7 +655,7 @@
         padding: 30px 15px;
     }
 
-    .sectionThree > div:nth-child(odd) {
+    .sectionThree>div:nth-child(odd) {
         display: none;
     }
 
@@ -715,24 +664,27 @@
         justify-content: unset;
         gap: 30px;
     }
-    
+
     .profile-icon-wrap {
         display: grid;
         gap: 30px;
         grid-template-columns: 1fr 1fr;
     }
 
-    .profile-icon-wrap > div {
+    .profile-icon-wrap>div {
         width: 100%;
         font-size: 14px;
         line-height: 11px;
     }
 
-    .profile-icon-1::before, .profile-icon-2::before, .profile-icon-3::before, .profile-icon-4::before {
+    .profile-icon-1::before,
+    .profile-icon-2::before,
+    .profile-icon-3::before,
+    .profile-icon-4::before {
         width: 30px;
         height: 50px;
     }
-    
+
     .acpsecondfourthSectionImage {
         width: 100%;
         height: auto;
@@ -740,7 +692,7 @@
         aspect-ratio: 16 / 9;
     }
 
-    .pagesTextbetween > .pagesTextFavorDivHeader {
+    .pagesTextbetween>.pagesTextFavorDivHeader {
         margin-top: -55%;
         margin-bottom: 50px;
         width: 100%;
@@ -767,14 +719,38 @@
         margin-bottom: 20px;
     }
 
-    .acpremium5ImgDiv > img {
+    .acpremium5ImgDiv>img {
         width: 100%;
         height: auto;
     }
-    .bottleImgfirst{
+
+    .bottleImgfirst {
         margin-right: 0%;
     }
-    .logoTextParagraph{
+
+    .logoTextParagraph {
         font-size: 12px;
+    }
+
+    .acpNewarrowDiv {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    .acppremiumrightArrowDiv,
+    .acppremiumleftArrowDiv {
+        padding: 15px;
+        gap: 10px;
+    }
+
+    .acpNpremiumarrowHeading {
+        font-size: 18px;
+        line-height: 19px;
+    }
+
+    .acpNewleftSmallImg > img,
+    .acpNewrightSmallImg > img {
+        width: auto;
+        height: 100px;
     }
 }

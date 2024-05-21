@@ -11,8 +11,8 @@ import distik from '../../../../Assets/Products/Liquor/AcpremiumOld/distik.svg';
 import glass from '../../../../Assets/Products/Liquor/AcpremiumOld/glass.png';
 import acpsectiononelogo from '../../../../Assets/Products/Liquor/AcpremiumNew/acpsectiononelogo.png';
 import acpsectiontwoimgs from '../../../../Assets/Products/Liquor/AcpremiumOld/sec1bottle.png';
-import acpblack from '../../../../Assets/Products/Liquor/AcpremiumNew/acblackImg.png';
-import acpnewImg from '../../../../Assets/Products/Liquor/AcpremiumNew/acpnewImg.png';
+import acpblack from '../../../../Assets/Products/Liquor/AcpremiumNew/damnlink.svg';
+import acpnewImg from '../../../../Assets/Products/Liquor/AcpremiumNew/acpnewlink.svg';
 import acplast from '../../../../Assets/Products/Liquor/AcpremiumNew/acplastImg.png';
 
 export const AcpremiumOld = () => {
@@ -47,11 +47,11 @@ export const AcpremiumOld = () => {
                     <h1 className="flavourDivHeader">FLAVOUR PROFILE</h1>
                     <img src={flavourGroup} alt="groupBtl" className="image favBotGroupImg" />
                     {/* <img src={flavourImg} alt="flavours" className="image" /> */}
-                    <div class="profile-icon-wrap">
-                        <div class="profile-icon-1">Elegant and Long Lasting</div>
-                        <div class="profile-icon-2">Sweet, Floral with a touch of spices</div>
-                        <div class="profile-icon-3">Deep Gold to the eyes</div>
-                        <div class="profile-icon-4">Smooth, with a hint of Fruit & Spices</div>
+                    <div className="profile-icon-wrap">
+                        <div className="profile-icon-1">Elegant and Long Lasting</div>
+                        <div className="profile-icon-2">Sweet, Floral with a touch of spices</div>
+                        <div className="profile-icon-3">Deep Gold to the eyes</div>
+                        <div className="profile-icon-4">Smooth, with a hint of Fruit & Spices</div>
                     </div>
                 </div>
                 <div><img src={curtainImg} alt="rightCurtain" className="curtainImage image img-dec" /></div>
@@ -87,7 +87,7 @@ export const AcpremiumOld = () => {
             </section>
             {/* //5 */}
 
-            <div>
+            <div className="video-link-redirect">
                 {/* <div className="acpvideoDiv">
                 {scrVideo && (
                     <video
@@ -111,16 +111,16 @@ export const AcpremiumOld = () => {
                             <h1 className="acpNpremiumarrowHeading">Aristocrat Premium</h1>
                             <HiArrowLongLeft className="leftIconImg" />
                         </div>
-                        <div>
-                            <img src={acpnewImg} alt="block" className="acpNewleftSmallImg" />
+                        <div className="acpNewleftSmallImg">
+                            <img src={acpnewImg} alt="block" />
                         </div>
                     </Link>
-                    <Link to={'/products/liquor/ACpremiumBlack'} className="acppremiumrightArrowDiv">
-                        <div>
-                            <img src={acpblack} alt="block" className="acpNewrightSmallImg" />
+                    <Link to={'/products/liquor/DamnGoodScotch'} className="acppremiumrightArrowDiv">
+                        <div className="acpNewrightSmallImg" >
+                            <img src={acpblack} alt="block" />
                         </div>
                         <div className="acpNewRightDiv">
-                            <h1 className="acpNpremiumarrowHeading">Aristocrat Black</h1>
+                            <h1 className="acpNpremiumarrowHeading">Damn Good Scotch</h1>
                             <HiOutlineArrowLongRight className="leftIconImg" />
                         </div>
                     </Link>
