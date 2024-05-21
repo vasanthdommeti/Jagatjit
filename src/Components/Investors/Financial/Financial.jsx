@@ -1,6 +1,3 @@
-
-
-
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import '../Reports/Reports.css';
@@ -10,12 +7,12 @@ import { HiSortDescending } from "react-icons/hi";
 import { CiFilter } from "react-icons/ci";
 import { IoIosSearch } from "react-icons/io";
 
-
-const Financial = () => {
+const Report = () => {
   const [reports, setReports] = useState([]);
   const [filteredReports, setFilteredReports] = useState([]);
   const [fileName, setFileName] = useState('');
-  const [categoryId, setCategoryId] = useState('');
+  const [categoryName, setCategoryName] = useState('');
+  const [categories, setCategories] = useState([]);
   const [month, setMonth] = useState('');
   const [year, setYear] = useState('');
   const [monthError, setMonthError] = useState('');
@@ -26,15 +23,15 @@ const Financial = () => {
   useEffect(() => {
     axios.get('https://api.jagatjit.com/api/financials')
       .then(response => {
-        if (response.data && Array.isArray(response.data)) {
-          let data = response.data.filter(report => new Date(report.file_date).getFullYear() === parseInt(year));
-          data = data.sort((a, b) => new Date(b.file_date) - new Date(a.file_date));
-          setReports(data);
-          setFilteredReports(data);
-        } else if (response.data && Array.isArray(response.data.data)) {
+        console.log("response", response);
+        if (response.data && Array.isArray(response.data.data)) {
           let data = response.data.data.sort((a, b) => new Date(b.file_date) - new Date(a.file_date));
           setReports(data);
           setFilteredReports(data);
+
+          // Extract unique category names
+          const uniqueCategories = [...new Set(data.map(report => report.category_name))];
+          setCategories(uniqueCategories);
         } else {
           console.error('API response does not contain an array');
         }
@@ -50,8 +47,8 @@ const Financial = () => {
     if (fileName) {
       filtered = filtered.filter(report => report.file_name.toLowerCase().includes(fileName.toLowerCase()));
     }
-    if (categoryId) {
-      filtered = filtered.filter(report => report.category_id === parseInt(categoryId));
+    if (categoryName) {
+      filtered = filtered.filter(report => report.category_name === categoryName);
     }
     if (month) {
       filtered = filtered.filter(report => new Date(report.file_date).getMonth() + 1 === parseInt(month));
@@ -66,10 +63,9 @@ const Financial = () => {
     setFilteredReports(filtered);
   };
 
-
   useEffect(() => {
     filterReports();
-  }, [fileName, categoryId, month, year]);
+  }, [fileName, categoryName, month, year, reports]);
 
   const handleMonthChange = (e) => {
     const value = parseInt(e.target.value);
@@ -98,39 +94,34 @@ const Financial = () => {
         <p className='reportPara'>Our yearly reports</p>
       </div>
       <div className='reportInputFieldDiv reportinputField'>
-      <div class="search-container">
-    <input placeholder='Search Reports' type="text" value={fileName} onChange={(e) => setFileName(e.target.value)} className='reportinputField searchBar' />
-    <i class="icon search-icon"> <IoIosSearch style={{color:'black', fontSize:'21px'}}/></i>
-</div>
-        {/* <input placeholder='Search Reports' style={{ width: '40%' }} type="text" value={fileName} onChange={(e) => setFileName(e.target.value)} className='reportinputField' /> */}
+        <div className="search-container">
+          <input placeholder='Search Reports' type="text" value={fileName} onChange={(e) => setFileName(e.target.value)} className='reportinputField searchBar' />
+          <i className="icon search-icon"> <IoIosSearch style={{ color: 'black', fontSize: '21px' }} /></i>
+        </div>
         <div style={{ position: 'relative', display: 'inline-block' }} className='reportinputField'>
           <select
             className='reportinputField'
             onChange={handleYearChange}
-            style={{ paddingRight: '30px',  appearance: 'none' }} // Adjust the padding to accommodate the icon
+            style={{ paddingRight: '30px', appearance: 'none' }}
           >
             <option value="" disabled selected>By Year</option>
             {[...Array(new Date().getFullYear() - 1943).keys()].map((index) => (
-  <option key={index} value={new Date().getFullYear() - index}>
-    {new Date().getFullYear() - index}
-  </option>
-))}
+              <option key={index} value={new Date().getFullYear() - index}>
+                {new Date().getFullYear() - index}
+              </option>
+            ))}
           </select>
           <div style={{ position: 'absolute', top: '50%', right: '5px', transform: 'translateY(-60%) translateX(-10%)' }}>
-            {/* Place your icon component or HTML here */}
-            <CiFilter style={{color:'black', fontSize:'21px'}}/>
+            <CiFilter style={{ color: 'black', fontSize: '21px' }} />
           </div>
         </div>
-        {/* <input placeholder='By Year' type="number" value={year} onChange={handleYearChange} className='reportinputField' /> */}
         {yearError && <span style={{ color: 'red' }}>{yearError}</span>}
-                {/* //monthfield */}
-                <div style={{ position: 'relative', display: 'inline-block' }} className='reportinputField'>
+        <div style={{ position: 'relative', display: 'inline-block' }} className='reportinputField'>
           <select
-            placeholder='By Month'
             value={month}
             onChange={handleMonthChange}
             className='reportinputField'
-            style={{ paddingRight: '30px', appearance: 'none'}}
+            style={{ paddingRight: '30px', appearance: 'none' }}
           >
             <option value="" disabled selected>By Month</option>
             <option value="1">January</option>
@@ -147,39 +138,28 @@ const Financial = () => {
             <option value="12">December</option>
           </select>
           <div style={{ position: 'absolute', top: '50%', right: '5px', transform: 'translateY(-60%) translateX(-10%)' }}>
-            {/* Place your icon component or HTML here */}
-            <CiFilter style={{color:'black', fontSize:'21px'}}/>
+            <CiFilter style={{ color: 'black', fontSize: '21px' }} />
           </div>
         </div>
-        {/* <input placeholder='By Month' type="number" value={month} onChange={handleMonthChange} className='reportinputField' /> */}
         {monthError && <span style={{ color: 'red' }}>{monthError}</span>}
-                {/* //categoryId */}
-                <div style={{ position: 'relative', display: 'inline-block' }} className='reportinputField'>
+        <div style={{ position: 'relative', display: 'inline-block' }} className='reportinputField'>
           <select
-            placeholder='Category'
-            value={categoryId}
-            onChange={(e) => setCategoryId(e.target.value)}
+            value={categoryName}
+            onChange={(e) => setCategoryName(e.target.value)}
             className='reportinputField'
-            style={{ paddingRight: '30px', appearance: 'none', backgroundImage: `url('path_to_custom_icon.svg')`, backgroundRepeat: 'no-repeat', backgroundPosition: 'right center' }}
+            style={{ paddingRight: '30px', appearance: 'none' }}
           >
             <option value="" disabled selected>Category</option>
-            <option value="1">Category 1</option>
-            <option value="2">Category 2</option>
-            <option value="3">Category 3</option>
-            <option value="4">Category 4</option>
-            <option value="5">Category 5</option>
-            <option value="6">Category 6</option>
-            <option value="7">Category 7</option>
-            <option value="8">Category 8</option>
-            <option value="9">Category 9</option>
-            <option value="10">Category 10</option>
+            {categories.map((category, index) => (
+              <option key={index} value={category}>
+                {category}
+              </option>
+            ))}
           </select>
           <div style={{ position: 'absolute', top: '50%', right: '5px', transform: 'translateY(-60%) translateX(-10%)' }}>
-            {/* Place your icon component or HTML here */}
-            <HiSortDescending  style={{color:'black', fontSize:'21px'}}/>
+            <HiSortDescending style={{ color: 'black', fontSize: '21px' }} />
           </div>
         </div>
-        {/* <input placeholder='Category' type="number" value={categoryId} onChange={(e) => setCategoryId(e.target.value)} className='reportinputField' /> */}
       </div>
       <div className='reportmainDiv'>
         {Array.isArray(filteredReports) && filteredReports.length > 0 ? (
@@ -187,7 +167,7 @@ const Financial = () => {
             <div key={idx} className='reportDiv'>
               <a href={report.file_url} target='_blank' rel='noopener noreferrer' style={{ textDecoration: 'none' }}>
                 <img src={noteImg} alt='report' className='reportImg' />
-                <h1 style={{ marginBottom: '0%', color: 'white', marginRight:'10px' }}>{report.file_name}</h1>
+                <h1 style={{ marginBottom: '0%', color: 'white', marginRight: '10px' }}>{report.file_name}</h1>
                 <p style={{ color: 'white' }}>{report.file_date}</p>
               </a>
             </div>
@@ -200,4 +180,4 @@ const Financial = () => {
   );
 };
 
-export default Financial;
+export default Report;
