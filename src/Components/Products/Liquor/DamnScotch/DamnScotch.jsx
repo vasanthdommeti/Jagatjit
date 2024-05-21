@@ -12,8 +12,8 @@ import lipglass from '../../../../Assets/Products/Liquor/RoyalPride/lipglass.png
 import glass from '../../../../Assets/Products/Liquor/RoyalPride/glass.png';
 import candles from '../../../../Assets/Products/Liquor/AcBlack/candles.png';
 
-import acblack from '../../../../Assets/Products/Liquor/AcBlack/acblack.png';
-import damnscotch from '../../../../Assets/Products/Liquor/AcBlack/damnscotch.png';
+import acblack from '../../../../Assets/Products/Liquor/AcDryGin/royalims.png';
+import damnscotch from '../../../../Assets/Products/Liquor/AcDryGin/dryginimg.png';
 //section4thsmall img
 import bottle from '../../../../Assets/Products/Liquor/DamnScotch/damngoodiconbottle.png';
 import distik from '../../../../Assets/Products/Liquor/DamnScotch/damngooddrums.png';
@@ -154,7 +154,7 @@ export const DamnScotch = () => {
               <HiOutlineArrowLongRight style={{ fontSize: '55px' }} />
             </div>
           </Link>
-        </div>
+        </div> 
       </div>
     </section>
   )

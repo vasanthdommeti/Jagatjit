@@ -41,7 +41,7 @@ const ContactUs = () => {
     }
 
     if (!formData.body) {
-      formErrors.body = 'Body is required';
+      formErrors.body = 'Message is required';
       isValid = false;
     }
 
@@ -116,7 +116,7 @@ const ContactUs = () => {
               <textarea
                 className='textareainput'
                 name="body"
-                placeholder='What would you ike to know about?'
+                placeholder='What would you like to know about?'
                 cols={30}
                 rows={5}
                 style={{ backgroundColor: 'black', color: 'white', width: '100%', padding: '15px 20px' }}

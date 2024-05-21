@@ -8,6 +8,10 @@ nav {
     position:fixed;
     /* position: calc(0); */
     width: 100%;
+    background-color: black;
+    backdrop-filter: blur(32px);
+    -webkit-backdrop-filter: blur(32px);
+    transition: transform 0.7s ease-in;
     top: 0;
     z-index: 2;
     font-family: 'Regular';
