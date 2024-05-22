@@ -163,12 +163,13 @@
   align-items: flex-end;
   padding-right: 10%;
   padding-top: 8%;
+  height: 90%;
   /* align-self: center; */
   /* padding: 10%; */
   /* width: 60%; */
 }
 .damngoodiconbottle {
-    width: 42%;
+    width: 50%;
 }
 .damnSecondDivHeading {
   font-family: 'Krona One';
@@ -181,7 +182,7 @@
   /* margin-bottom: 10%; */
 }
 
-.damnimageText {
+.damnimageText { 
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -189,7 +190,7 @@
   /* margin-top: 2%; */
   /* margin-bottom: 2%; */
   width: 30%;
-  margin-right: 5%;
+  margin-right: 2%;
   margin-top: 0px;
   /* align-self: center; */
 }
@@ -198,19 +199,19 @@
   /* margin-top: 2%; */
   /* margin-bottom: 2%; */
   width: 50%;
-  margin-left: 5%;
+  margin-left: 3%;
   
   /* align-self: center; */
 }
 
-.damnlogodrumsimage {
+.damnlogodrumsimage { 
   display: flex;
   flex-direction: row;
   align-items: center;
   /* margin-top: 2%; */
   /* margin-bottom: 6%; */
   width: 30%;
-  margin-right: 5%;
+  margin-right: 3%;
 }
 
 .damnlogoimage {
@@ -482,7 +483,7 @@
 
 }
 
-
+ 
 @media (max-width: 1024px){
   .damnimageText, .damnlogodrumsimage {
   align-items: center;
@@ -496,4 +497,4 @@
   padding-left: 10%;
   padding-right: 20%;
 }
-}
+} 

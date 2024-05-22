@@ -11,7 +11,7 @@ export const FoodProducts = () => {
                 <img src={mainImg} alt="img" />
                 <h1 className="foodtexthead">Food Products</h1>
             </div>
-            <div className="foodparaone" style={{ marginTop: '15%' }}>
+            <div className="foodparaone">
                 <p>Jagatjit Industries Limited’s food division is versatile and diverse. JIL has a malt house, malt extract plant, a modern dairy and a malted milk food manufacturing unit. The malted milk food division has two units with a capacity to manufacture 120 tons per day of high quality malted milk food. JIL manufactures primer malted milk food for Unilever formerly know as GlaxoSmithKline Consumer Healthcare Ltd’s makers of Boost, Maltova and Horlicks, the leading brands in the country. Our own brands, Champion and Compleat are exported and loved in international markets.</p>
             </div>
 
@@ -36,7 +36,9 @@ export const FoodProducts = () => {
             <section className="smartmilksec">
                 <div>
                     <h1 className="foodtextheadsmall">Smart Milk</h1>
-                    <p className="foodparaonelast">This nutritious malt-based food product manufactured by us is supplied to the Indian army for its personnel. It is available in the domestic market as well as exported.</p>
+                    <div className="foodparaonelast">
+                    <p>This nutritious malt-based food product manufactured by us is supplied to the Indian army for its personnel. It is available in the domestic market as well as exported.</p>
+                    </div>
                 </div>
                 <div>
                     <img src={milkproducts} alt="Smart milk product" className="smartmilkimg" />

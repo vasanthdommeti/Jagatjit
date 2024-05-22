@@ -215,6 +215,10 @@ span {
         margin-top: 0;
         margin-left: 0;
     }
+    .footerBrand {
+        width: auto;
+        margin-bottom: 10px;
+    }
 
 }
 

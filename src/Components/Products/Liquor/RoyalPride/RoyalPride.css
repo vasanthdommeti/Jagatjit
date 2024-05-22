@@ -17,7 +17,11 @@
     width: 100%;
     margin: 0;
 }
-
+.royalPride3Img{
+    align-items: flex-end;
+    display: block;
+    padding-top: 5%;
+}
 .royalFirstDiv {
     width: 100%;
     padding-left: 15px;
@@ -511,6 +515,7 @@
     
     .royalPrideThirdDiv {
         background-position: bottom;
+        height: 70vh;
 
     }
     
@@ -572,7 +577,7 @@
 
     .royalPrideFourthDiv {
         background-position: bottom;
-        height: 70vh;
+        height: 100vh;
         margin-bottom: 40px;
     }
 
@@ -607,5 +612,10 @@
         flex-direction: column;
         margin-top: 30%;
     }
+    .royalPride3Img{
+        align-items: flex-end;
+        display: none;
+        padding-top: 5%;
+    }
 
-}
+} 

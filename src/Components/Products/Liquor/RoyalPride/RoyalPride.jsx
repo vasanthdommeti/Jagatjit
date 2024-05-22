@@ -21,7 +21,7 @@ import damnScotch from '../../../../Assets/ArrowBottle/damnScotch.svg';
 import { Link } from "react-router-dom";
 export const RoyalPride = () => {
 
-    const [scrVideo, setScrVideo] = useState("");
+    const [scrVideo, setScrVideo] = useState(""); 
     useEffect(() => {
         axios.get('https://api.jagatjit.com/api/videos')
             .then(response => {
@@ -94,7 +94,7 @@ export const RoyalPride = () => {
             {/* <img src={candles} alt="block" className="royalcandleimagehide" /> */}
             <div className="royalPrideThirdDiv">
                 <div className="royalprideThirdDivContent">
-                    <div style={{ alignItems: 'flex-end', display: 'flex', paddingTop: '5%', }}>
+                    <div className="royalPride3Img">
                         <img src={royalpridethirdImg} alt="image" style={{ height: '100vh' }} />
                     </div>
                     <div style={{ padding: '5%' }}>

@@ -35,7 +35,7 @@ function Footer() {
                         <Link to={'/globalpresence'} className='contactParagraph'><p>Global Presence</p></Link>
                         <Link to={'/contactus'} className='contactParagraph'><p>Contact Us</p></Link>
                     </div>
-                </div>
+                </div> 
             </div>
             <div className='footerRights'>
                 <p className='firstParagraphInFooterRights'>All rights reserved. All other trademarks and trade names are properties of their respective owners.</p>

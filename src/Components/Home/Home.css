@@ -733,6 +733,9 @@
     .section3GroupImagesDiv {
         width: 100%;
     }
+    .section3GroupHeaderDiv{
+        margin-left: 45px;
+    }
 
     .carousel-item>img,
     .App>section:nth-child(4) {
