@@ -1,82 +1,35 @@
-import React from "react";
-import '../Ethnol/Ethnol.css'
-import bio from '../../../Assets/Products/Ethnol/biotank.png';
-import grains from '../../../Assets/Products/Ethnol/grains.png';
-import drop from '../../../Assets/Products/Ethnol/waterdrop.png';
 
-export const Ethanol = () => {
-    return (
-        <section>
-            <div className="ethanolfirstDiv">
-                <h1 className="ethanolHeading">Manufacturing</h1>
-                <h1 className="ethanolHeading">Grain-Based Ethanol</h1>
-            </div>
-            <div style={{ paddingLeft: '10%', paddingRight: '10%', marginTop: '10%', paddingBottom: '2%' }}>
-                <h1 className="ethanolsubHeading">
-                    What is Ethanol?
-                </h1>
-                <p className="maltparagraph">
-                    Ethanol is a green, low-carbon fuel. Also known as ethyl alcohol or grain alcohol, it is a versatile substance with a surprising number of uses. One of those various uses is blending ethanol with petrol reduces air pollution considerably.
-                </p>
-            </div>
-            <div className="mainlogoContent">
-                <div className="logoContentrice">
-                    <img src={grains} className="logoImgDroprice" />
-                    <p className="logoTxt">
-                        Made from Rice and Maiz
-                    </p>
-                </div>
-                <div className="logoContent">
-                    <img src={bio} className="logoImgDrop" />
-                    <p className="logoTxt">
-                        Bio Fuel with low carbon emmisions
-                    </p>
-                </div>
-                <div className="logoContent">
-                    <img src={drop} className="logoImgDrop" />
-                    <p className="logoTxt">
-                        Cleaner and Sustainable
-                    </p>
-                </div>
-            </div>
-            <div style={{ paddingLeft: '10%', paddingRight: '10%', paddingBottom: '15%', marginTop: '10%' }}>
-                <h1 className="ethanolsubHeading">
-                    How we manufacture Ethanol?
-                </h1>
-                <p className="maltparagraph">
-                    JIL manufactures ethanol from rice grains and maize in a greenfield manufacturing facility at Hamira, Kapurthala district, Punjab, spread across 25 acres. It has the capacity to produce 200 kilolitres of Ethanol per day (200 KLPD) for supply to oil marketing companies. A production capacity of this size and scale underscores our commitment to sustainability by providing environmentally friendly fuel alternatives for India.
-                </p>
-                <p className="maltparagraph">
-                    This is especially so, because our Ethanol production has received exclusive approval from the Government for supply to governmental entities only, aligning with the Government's strategic plan for blending Ethanol with petrol.
-                </p>
-                <p className="maltparagraph">
-                    The primary raw materials for our Ethanol production process are rice grains. This choice is part of our strategic approach to utilize renewable resources and promote agricultural sustainability, providing more jobs, cleaner air, and contributing to a sustainable future.
-                </p>
-            </div>
-        </section>
-    )
-}
+import '../Csr/Csr.css';
 
-{/* <section>
-    <div><br /><span>
-        What is Ethanol?
-        <br /><br /></span><span>
-            Ethanol is a green, low-carbon fuel. Also known as ethyl alcohol or grain alcohol, it is a versatile substance with a surprising number of uses. One of those various uses is blending ethanol with petrol reduces air pollution considerably.
-        </span></div>
-    <div ><span ><br /></span><span>
-        How we manufacture Ethanol?
-        <br /><br /></span><span>
-            JIL manufactures ethanol from rice grains and maize in a greenfield manufacturing facility at Hamira, Kapurthala district, Punjab, spread across 25 acres. It has the capacity to produce 200 kilolitres of Ethanol per day (200 KLPD) for supply to oil marketing companies. A production capacity of this size and scale underscores our commitment to sustainability by providing environmentally friendly fuel alternatives for India.
-            <br /><br />
-            This is especially so, because our Ethanol production has received exclusive approval from the Government for supply to governmental entities only, aligning with the Government's strategic plan for blending Ethanol with petrol.
-        </span></div>
-    <div>
-        The primary raw materials for our Ethanol production process are rice grains. This choice is part of our strategic approach to utilize renewable resources and promote agricultural sustainability, providing more jobs, cleaner air, and contributing to a sustainable future.
-
+export const Csr = () => {
+  return (
+    <div className="corporate-responsibility">
+    <h1 className="csr-heading">CSR</h1>
+    <p className="corporate-citizen">  JIL’s business activities directly affect the lives of millions of people across the country – from our consumers and employees to our investors and commercial partners. We take our responsibility to be a good corporate citizen seriously, ensuring all our stakeholders benefit from the relationship.
+    </p>
+    <div className="responsibility-sections">
+      <div className="responsibility-section">
+        <h3>Social Responsibility</h3>
+        <p>
+          JIL focuses its efforts on areas where its impact is the greatest and where it can make the most difference. The company strives to create the right conditions for a durable, successful business – thus helping our employees reach their full potential, and building communities that are prosperous and stable in every way.
+        </p>
+        
+        <div className="responsibility-sections">
+          <div className="responsibility-section">
+            <h3>Environment</h3>
+            <p>
+              JIL manages its operations in sustainable ways that protect the environment and preserve biodiversity. Each of our businesses is committed to meeting high standards of performance, and the company imposes exacting controls on all processes that have environmental implications. JIL’s business partners, suppliers and contractors are encouraged to attain similar high levels of green protocols. The company has installed a modern effluent treatment plant that converts the distillery effluent into valuable fuel for its boilers. The steam produced from the effluents is fed into a modern turbine to generate valuable clean power. Besides this, JIL has constructed several rain harvesting trenches throughout its premises to replenish the natural aquifer and for water conservation.
+            </p>
+          </div>
+          <div className="responsibility-section">
+            <h3>Responsible Drinking</h3>
+            <p>
+              JIL aims to make an effective contribution towards creating a more responsible manner of alcohol consumption in our society. We endeavor to minimize misuse, and actively promote the social and health benefits of responsible drinking. Jagatjit has set world-className standards in the liquor industry for responsible marketing and is working either directly or through partnerships to run programs that raise awareness around responsible drinking and changing attitudes and behavior towards alcohol.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-
-
-    <div ><span>Made from Rice and Maiz</span><span >e</span></div>
-
-    <div>Bio Fuel with low carbon emmisions</div>
-</section> */}
+  </div>
+  )
+}

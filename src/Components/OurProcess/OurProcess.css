@@ -44,8 +44,10 @@
 }
 
 .ourProcess-process-container p {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 17px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Light';
+  font-weight: 100;
+  font-size: 20px;
   text-align: justify;
   line-height: 1.5;
   margin-top: 5%;
@@ -206,6 +208,13 @@
 
   .ourProcess-process-container h1 {
     font-size: 28px;
+  }
+
+  .ourProcess-process-container p {
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Light';
+    font-weight: 18px;
+    text-align: center;
   }
 
   .ourProcess-process-title {

@@ -52,18 +52,28 @@ body {
     margin-top: 15%;
   }
 
+  .corporate-responsibility p {
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Light';
+    font-weight: 100;
+    
+  }
+
   .corporate-citizen,
 .responsibility-section p {
   font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Light';
+    font-weight: 100;
   font-size: 16px;
   line-height: 144%;
   color: #FFFFFF;
-  text-align: justify;
+  text-align: left;
+  margin-bottom: 10%;
 }
 
 .corporate-citizen {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 10%;
 }
 
 .responsibility-section h3 {

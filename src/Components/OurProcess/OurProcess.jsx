@@ -94,7 +94,7 @@ export const OurProcess = () => {
       </FadeInOnScroll>
 
       <FadeInOnScroll>
-        <div className="ourProcess-process-description" style={{ paddingLeft: '5%', paddingRight: '5%', marginBottom: '5%', textAlign: 'justify' }}>
+        <div className="ourProcess-process-description" style={{ paddingLeft: '5%', paddingRight: '5%', marginBottom: '5%'}}>
           <h1 className="ourProcess-process-title">Plants and Units</h1>
           <p>Large scale production and processing of alcohol takes place at JIL’s own modern manufacturing units in the States of Rajasthan (Behror), and Goa. The company has a state-of-the-art manufacturing and distillation base which is located at Jagatjit Nagar, Kapurthala District in the State of Punjab. Since its establishment in 1971, the R&amp;D unit has safeguarded the consistent quality of our products, and fueled better processes to enhance and streamline new product development and reduce costs by improving production yields. JIL has company-owned plants and collaborations with bottlers all over India giving it a truly national presence.Address:&nbsp;Jagatjit Nagar, Hamira, Kapurthala Dist, 144802, Punjab, India</p>
         </div>

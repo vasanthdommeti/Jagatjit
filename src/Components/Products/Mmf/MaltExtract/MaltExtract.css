@@ -273,14 +273,20 @@
   }
 
   .maltprocess-list {
+    width: 100%;
     margin-top: 10%;
     font-style: normal;
     text-align: left;
     font-weight: 400;
     font-size: 18px;
     line-height: 26px;
-    text-align: left;
     color: #FFFFFF;
+  }
+
+  .maltprocess-list li {
+    width: 100%;
+    font-style: normal;
+    text-align: left;
   }
 
   .maltprocess-description {
@@ -325,7 +331,7 @@
     font-weight: 400;
     font-size: 18px;
     line-height: 24px;
-    text-align: justify;
+    text-align: left;
     color: #FFFFFF;
     /* Allow text to grow and shrink */
   }
@@ -336,13 +342,27 @@
     width: 100%;
     flex-direction: row;
     font-family: 'Josefin Sans';
-    font-size: 18px;
+    font-size: 16px;
     line-height: 20px;
     justify-content: center;
-    text-align: justify;
+    text-align: center;
     /* All text within this element will be justified */
     color: #FFFFFF;
   }
+
+  .malt-description p {
+
+    width: 90%;
+    font-family: 'Josefin Sans';
+    font-size: 18px;
+    line-height: 26px;
+    justify-content: center;
+    text-align: center;
+    /* All text within this element will be justified */
+  
+    color: #FFFFFF;
+  }
+  
 
   .malttexthead {
     position: absolute;
@@ -354,34 +374,14 @@
     font-family: 'Josefin Sans';
     font-style: normal;
     font-weight: 400;
-    font-size: 40px;
+    font-size: 30px;
   }
 
-  .malt-description {
-    padding-top: 10%;
-    width: 100%;
-    flex-direction: row;
-    font-family: 'Josefin Sans';
-    font-size: 18px;
-    line-height: 26px;
-    justify-content: center;
-    text-align: justify;
-  }
 
-  .maltprocess-list {
-    width: 60%;
-    margin-left: 10%;
-    margin-right: 20%;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 26px;
-    text-align: left;
-    color: #FFFFFF;
-  }
 
   .maltprocess-description p {
-    width: 90%;
+    width: 100%;
     font-size: 18px;
+    text-align: left;
   }
 }

@@ -52,7 +52,7 @@
   font-family: 'Regular';
   margin-left: 10%;
   margin-right: 10%;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 26px;
   text-align: justify;
   color: #FFFFFF;
@@ -64,7 +64,7 @@
   width: 80%;
   margin-left: 10%;
   margin-right: 3%;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 26px;
   text-align: justify;
   color: #FFFFFF;
@@ -136,6 +136,30 @@
     margin-left: 20%;
     justify-content: center;
   }
+}
+
+.foodparaone {
+  margin-top: 10%;
+  font-family: 'Regular';
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  color: #FFFFFF;
+  line-height: 24px;
+}
+
+.foodparaonelast {
+  font-family: 'Montserrat';
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 3%;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: left;
+  color: #FFFFFF;
+  line-height: 24px;
 }
 
 
