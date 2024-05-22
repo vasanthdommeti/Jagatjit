@@ -26,19 +26,19 @@ import glass from '../../Assets/Products/Liquor/RoyalPride/glass.png';
 import royalpridethirdImg from '../../Assets/Products/Liquor/RoyalPride/royalpridethirdimg.png'
 // import LogoIcon from '../../Assests/LogoIcon.png'
 
-import bottle2 from '../../Assets/Home/SectionTwoImages/bottles1.png';
-import bottle3 from '../../Assets/Home/SectionTwoImages/bottles2.png';
-import bottle4 from '../../Assets/Home/SectionTwoImages/bottles3.png';
-import bottle5 from '../../Assets/Home/SectionTwoImages/bottles4.png';
-import bottle1 from '../../Assets/Home/SectionTwoImages/bottles5.png';
+import bottle1 from '../../Assets/Home/SectionTwoImages/bottles1.png';
+import bottle2 from '../../Assets/Home/SectionTwoImages/bottles2.png';
+import bottle3 from '../../Assets/Home/SectionTwoImages/bottles3.png';
+import bottle4 from '../../Assets/Home/SectionTwoImages/bottles4.png';
+import bottle5 from '../../Assets/Home/SectionTwoImages/bottles5.png';
 import bottle6 from '../../Assets/Home/SectionTwoImages/bottles6.png';
 import bottle7 from '../../Assets/Home/SectionTwoImages/bottles7.png';
 
-import bottle2main from '../../Assets/Home/SectionTwoImages/bottles1main.png';
-import bottle3main from '../../Assets/Home/SectionTwoImages/bottles2main.png';
-import bottle4main from '../../Assets/Home/SectionTwoImages/bottles3main.png';
-import bottle5main from '../../Assets/Home/SectionTwoImages/bottles4main.png';
-import bottle1main from '../../Assets/Home/SectionTwoImages/bottles5main.png';
+import bottle1main from '../../Assets/Home/SectionTwoImages/bottles1main.png';
+import bottle2main from '../../Assets/Home/SectionTwoImages/bottles2main.png';
+import bottle3main from '../../Assets/Home/SectionTwoImages/bottles3main.png';
+import bottle4main from '../../Assets/Home/SectionTwoImages/bottles4main.png';
+import bottle5main from '../../Assets/Home/SectionTwoImages/bottles5main.png';
 import bottle6main from '../../Assets/Home/SectionTwoImages/bottles6main.png';
 import bottle7main from '../../Assets/Home/SectionTwoImages/bottles7main.png';
 import Footer from "../Footer/Footer";
@@ -228,7 +228,7 @@ function Home() {
                 marginTop: getMarginTop(),
                 marginLeft: getMarginLeft(),
             }, {
-                scale: 0.7,
+                scale: 0.8,
                 rotate: 0,
                 marginTop: getMarginTopReset(),
                 marginLeft: getMarginLeftreset(),
@@ -257,7 +257,7 @@ function Home() {
             function getMarginTopReset() {
                 const vh = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
                 if (vh < 768) {
-                    return '19vh';
+                    return '11vh';
                 } else if (vh >= 768 && vh < 1024) {
                     return '20vh';
                 } else {
@@ -267,7 +267,7 @@ function Home() {
             function getMarginLeftreset() {
                 const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
                 if (vw < 768) {
-                    return '50vw';
+                    return '53vw';
                 } else if (vw >= 768 && vw < 1024) {
                     return '70vw';
                 } else {
@@ -307,7 +307,7 @@ function Home() {
 
             {/* //2 */}
             <section className="section2ButtonChange">
-                <div id='sectionImage2' className='section2'>
+                <div id='sectionImage2' className='section2 royalsectwo'>
                     <div className='section3MainDiv'>
                         <img src={data.largeImg} alt="bottle" className="section2img" />
                         <div className="secion2TextWrap">
