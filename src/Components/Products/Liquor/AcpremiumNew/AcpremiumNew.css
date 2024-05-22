@@ -190,7 +190,7 @@
     letter-spacing: 1px;
     font-family: 'Light';
     text-align: justify;
-}
+} 
 
 .sectionTwoParagraphdiv p {
     margin-top: 10%;
@@ -693,6 +693,7 @@
         width: 40%;
         align-self: center;
         margin-right: 50%;
+        /* background-color: #FF0002; */
     }
 
     .acpfavsectImg {
@@ -702,6 +703,10 @@
 
 
 }
+
+/* @media (min-width:846px){
+
+} */
 
 @media only screen and (max-width: 767px) {
 
