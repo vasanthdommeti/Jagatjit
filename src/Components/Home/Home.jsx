@@ -41,6 +41,7 @@ import bottle5main from '../../Assets/Home/SectionTwoImages/bottles4main.png';
 import bottle1main from '../../Assets/Home/SectionTwoImages/bottles5main.png';
 import bottle6main from '../../Assets/Home/SectionTwoImages/bottles6main.png';
 import bottle7main from '../../Assets/Home/SectionTwoImages/bottles7main.png';
+import Footer from "../Footer/Footer";
 
 const section = [
     {
@@ -216,7 +217,7 @@ function Home() {
                         trigger: wrapperRef.current,
                         pin: true,
                         scrub: 1.5,
-                        end: () => "+=" + wrapperRef.current.offsetWidth,
+                        end: () => "+=100%" ,
                     },
                 });
 
@@ -305,7 +306,7 @@ function Home() {
             </section>
 
             {/* //2 */}
-            {/* <section className="section2ButtonChange" style={{ height: '100vh' }}>
+            <section className="section2ButtonChange">
                 <div id='sectionImage2' className='section2'>
                     <div className='section3MainDiv'>
                         <img src={data.largeImg} alt="bottle" className="section2img" />
@@ -341,7 +342,7 @@ function Home() {
                         </div>
                     </div>
                 </div>
-            </section> */}
+            </section>
             {/* /3/  completed*/}
             <section id='sectionImage3' className='section1' >
                 {/* <div Name='sectionThreeMainDiv'> */}
@@ -557,6 +558,7 @@ function Home() {
                     </div>
                 </div>
             </div>
+            <Footer/>
         </div>
     )
 }

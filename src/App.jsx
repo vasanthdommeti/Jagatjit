@@ -54,6 +54,7 @@ function App() {
   };
 
   useEffect(() => {
+    console.log('das',pathname);
     if (pathname !== previousPathname) {
       setLoading(true);
       setPreviousPathname(pathname);
@@ -105,7 +106,7 @@ function App() {
         <Route path="/our-Process" element={<OurProcess />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>}
-      {pathname !==  '/' && !loading  && <Footer /> }
+      {(pathname !==  '/'  && pathname !==  '/home') && !loading  && <Footer /> }
     </>
   )
 }
