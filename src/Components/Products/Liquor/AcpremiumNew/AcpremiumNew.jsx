@@ -60,9 +60,9 @@ export const AcpremiumNew = () => {
                     </div>
                     <div className="sectionTwoParagraphdiv">
                         <p className="sectionTwoParagraph">Distinctive and refined in both taste and look, it is
-                        blended with pure grain and select imported
-                        Scotch malts, bringing a <span>honeyed and delightful</span>
-                        <span> experince</span> to its loyal patrons</p>
+                            blended with pure grain and select imported
+                            Scotch malts, bringing a <span>honeyed and delightful</span>
+                            <span> experince</span> to its loyal patrons</p>
                     </div>
                 </div>
             </div>
@@ -112,9 +112,9 @@ export const AcpremiumNew = () => {
                         </div>
                     </div>
                     <div className="imageText">
-                        <img src={distik} alt="bottleImg" className="acpnewlogoText distik"  />
+                        <img src={distik} alt="bottleImg" className="acpnewlogoText distik" />
                         <div>
-                            <p className="acpNlogoTextParagraph" style={{marginLeft:'10%'}}>   Made With The Finest Indian Spirits</p>
+                            <p className="acpNlogoTextParagraph" style={{ marginLeft: '10%' }}>   Made With The Finest Indian Spirits</p>
                         </div>
                     </div>
                 </div>
@@ -157,11 +157,11 @@ export const AcpremiumNew = () => {
                             <HiOutlineArrowLongRight className="leftIconImg" />
                         </div>
                     </Link>
-                </div> */}            
+                </div> */}
                 <div className="acpNewarrowDiv">
                     <Link to={'/products/liquor/acpremiumold'} className="acppremiumleftArrowDiv">
                         <div className="acpNewLeftDiv">
-                            <h1 className="acpNpremiumarrowHeading">Aristocrat Premium (Old)</h1>
+                            <h1 className="acpNpremiumarrowHeading">AC Premium (Old)</h1>
                             <HiArrowLongLeft className="leftIconImg" />
                         </div>
                         <div className="acpNewleftSmallImg">
