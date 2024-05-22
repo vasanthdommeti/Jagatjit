@@ -9,30 +9,105 @@ body {
 .privacy-policy {
   padding: 8%;
   text-align: justify;
-  width: 100%;
-  /* Adjust width as needed (optional) */
-  margin: 2;
-  /* Use vh for vertical margin */
-  color: #fff;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 2%;
+  
+
+  color: #FFFFFF;
   /* Set text color to white */
+}
+
+.privacy-policy h1 {
+  color: #FFFFFF;
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 4rem;
+  font-family: 'Josefin Sans';
+  font-weight: 300;
+  margin-bottom: 5%;
 }
 
 .privacyheading {
   text-align: center;
-  color: #fff;
-  font-size: 4rem;
+  color: #FFFFFF;
+  font-weight: 100;
   font-family: 'Josefin Sans';
 }
 
-.privacy-policy h1,
 .privacy-policy h2 {
   color: #ECA533;
+  font-size: 2rem;
   /* Set heading color to orange */
   margin-bottom: 20px;
+  margin-top: 5%;
   font-weight: bold;
+  font-weight: 100;
+  font-family: 'Josefin Sans';
 }
 
 .privacy-policy p {
   line-height: 1.5;
   margin-bottom: 15px;
+}
+
+
+@media (max-width: 768px) {
+  .privacy-policy {
+    padding: 8%;
+    text-align: justify;
+    width: 100%;
+    /* Adjust width as needed (optional) */
+    margin: 2%;
+    /* Use vh for vertical margin */
+    color: #FFFFFF;
+    /* Set text color to white */
+  }
+  
+  .privacy-policy h1 {
+    color: #FFFFFF;
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 2rem;
+    font-family: 'Josefin Sans';
+    font-weight: 300;
+    margin-top: 25%;
+  }
+  
+  .privacyheading {
+    text-align: center;
+    color: #FFFFFF;
+    font-weight: 100;
+    font-family: 'Josefin Sans';
+  }
+  
+  .privacy-policy h2 {
+    color: #ECA533;
+    font-size: 1.5rem;
+    /* Set heading color to orange */
+    margin-bottom: 20px;
+    margin-top: 5%;
+    font-weight: bold;
+    font-weight: 100;
+    font-family: 'Josefin Sans';
+  }
+  
+  .privacy-policy p {
+    line-height: 1;
+    margin-bottom: 15px;
+  }
+
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {.privacy-policy h1 {
+  color: #FFFFFF;
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 2.2rem;
+  font-family: 'Josefin Sans';
+  font-weight: 300;
+  margin-top: 10%;
+}
+
 }

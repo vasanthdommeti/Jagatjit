@@ -1,8 +1,4 @@
 
-
-
-
-
 import React, { useState } from 'react';
 import axios from 'axios';
 import '../ContactUs/ContactUs.css'
@@ -10,7 +6,7 @@ import { CiLocationOn } from "react-icons/ci";
 import { FiMail } from "react-icons/fi";
 import { GrPhone } from "react-icons/gr";
 import mapImg from '../../Assets/ContactUs/Rectangle.png';
-import {useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -45,7 +41,7 @@ const ContactUs = () => {
     }
 
     if (!formData.body) {
-      formErrors.body = 'Body is required';
+      formErrors.body = 'Message is required';
       isValid = false;
     }
 
@@ -76,65 +72,77 @@ const ContactUs = () => {
   };
 
   return (
-    <div style={{marginTop : '10%'}}>
-<div style={{ display:'flex', justifyContent:'space-around', alignSelf:'center'}}>
-<div className='contactContact' >
-        <h1 className='contactHeading'>Get in Touch with Us</h1>
-        <p className='contactusParagraph'><GrPhone className='contacticons' /><a href="tel:0181-2783112" style={{textDecoration : 'none', color : 'white'}}>0181-2783112</a></p>
-        <p className='contactusParagraph'><FiMail className='contacticons' /> <a href="mailto:jil@jagatjit.com" style={{textDecoration : 'none', color : 'white'}}>jil@jagatjit.com</a></p>
-        <div style={{ display: 'flex', flexDirection: 'row' }}><CiLocationOn className='contacticons' size={28} style={{ marginTop: '25px', marginLeft:'20px', marginRight:'-15px' }} /><p className='contactusParagraph'> <a href="https://maps.app.goo.gl/LAcFgCDhUC7ajYTXA" style={{textDecoration : 'none', color : 'white'}}>Jagatjit Nagar, Hamira, Kapurthala Dist, 144802, Punjab, India.</a></p></div>
+    <>
+    <div className='container'>
+      <div className='contactContactmain'>
+        <div className='contactContact' >
+          <h1 className='contactHeading'>Get in Touch with Us</h1>
+          <p className='contactusParagraph'><GrPhone className='contacticons' /><a href="tel:0181-2783112" style={{ textDecoration: 'none', color: 'white' }}>0181-2783112</a></p>
+          <p className='contactusParagraph'><FiMail className='contacticons' /> <a href="mailto:jil@jagatjit.com" style={{ textDecoration: 'none', color: 'white' }}>jil@jagatjit.com</a></p>
+          <div style={{ display: 'flex', flexDirection: 'row' }}><CiLocationOn className='contacticons' size={28} style={{ marginTop: '25px', marginLeft: '20px', marginRight: '-15px' }} /><p className='contactusParagraph'> <a href="https://maps.app.goo.gl/LAcFgCDhUC7ajYTXA" style={{ textDecoration: 'none', color: 'white' }}>Jagatjit Nagar, Hamira, Kapurthala Dist, 144802, Punjab, India.</a></p></div>
+        </div>
+        <div>
+          <h1 className='inputFieldHeading'>Fill in the details and we'll</h1>
+          <h1 className='inputFieldHeading'>get right back to you.</h1>
+          <form onSubmit={handleSubmit}>
+            <div style={{ marginTop: '6%' }}>
+              {/* <label>Name:</label> */}
+              <input
+                className='inputField'
+                type="text"
+                placeholder='Name'
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                style={{ width: '100%', padding: '15px 20px' }}
+              />
+              {errors.name && <p style={{ color: 'red' }}>{errors.name}</p>}
             </div>
-    <div>
-        <h1 className='inputFieldHeading'>Fill in the details and we'll</h1>
-        <h1 className='inputFieldHeading'>get right back to you.</h1>
-    <form onSubmit={handleSubmit}>
-        <div style={{marginTop:'6%'}}>
-          {/* <label>Name:</label> */}
-          <input
-            className='inputField'
-            type="text"
-            placeholder='Name'
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-          />
-          {errors.name && <p style={{ color: 'red' }}>{errors.name}</p>}
+            <div>
+              {/* <label>Email:</label> */}
+              <input
+                className='inputField'
+                type="email"
+                placeholder='Email'
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                style={{ width: '100%', padding: '15px 20px' }}
+              />
+              {errors.email && <p style={{ color: 'red' }}>{errors.email}</p>}
+            </div>
+            <div>
+              {/* <label>Body:</label> */}
+              <textarea
+                className='textareainput'
+                name="body"
+                placeholder='What would you like to know about?'
+                cols={30}
+                rows={5}
+                style={{ backgroundColor: 'black', color: 'white', width: '100%', padding: '15px 20px' }}
+                value={formData.body}
+                onChange={handleChange}
+
+              />
+              {errors.body && <p style={{ color: 'red' }}>{errors.body}</p>}
+            </div>
+            <button className='submitBtn' type="submit">Submit</button>
+          </form>
         </div>
-        <div>
-          {/* <label>Email:</label> */}
-          <input
-            className='inputField'
-            type="email"
-            placeholder='Email'
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-          />
-          {errors.email && <p style={{ color: 'red' }}>{errors.email}</p>}
-        </div>
-        <div>
-          {/* <label>Body:</label> */}
-          <textarea
-            name="body"
-            placeholder='What would you ike to know about?'
-            cols={30}
-            rows={5}
-            style={{backgroundColor:'black', color:'white'}}
-            value={formData.body}
-            onChange={handleChange}
-          />
-          {errors.body && <p style={{ color: 'red' }}>{errors.body}</p>}
-        </div>
-        <button className='submitBtn' type="submit">Submit</button>
-      </form>
-    </div>
-</div>
-    {message && <p>{message}</p>}
-    <div style={{display:'flex', justifyContent:'center', marginTop:'5%', marginBottom:'5%'}}>
-        <img src={mapImg} alt='mapImg' style={{maxWidth:'80%'}}/>
-    </div>
+      </div>
+      {message && <p>{message}</p>}
+      {/* <div style={{ display: 'flex', justifyContent: 'center', marginTop: '5%', marginBottom: '5%' }}>
+        <img src={mapImg} alt='mapImg' style={{ maxWidth: '80%' }} />
+      </div> */}
+
 
     </div>
+          <div class="cs_map">
+          <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6478.933552351611!2d75.43797944955092!3d31.457236818544185!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a4c716aaaaaab%3A0x8f489715c9a3d6c9!2sJagatjit%20Industries%20Limited!5e1!3m2!1sen!2sin!4v1705050817336!5m2!1sen!2sin"
+              allowfullscreen></iframe>
+      </div>
+      </>
   );
 };
 

@@ -1,17 +1,16 @@
-
-
 /* ethanol page */
 .ethanolfirstDiv {
   background-image: url('../../../Assets/Products/Ethnol/ethanolBg.png');
   width: 100%;
   background-position: center;
-  height: 100vh;
+  height: 70vh;
   background-repeat: no-repeat;
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center; 
+  justify-content: center;
   top: 0;
+  margin: 0px;
 }
 
 .ethanolHeading {
@@ -20,17 +19,20 @@
   font-family: 'Josefin Sans';
   align-self: center;
 }
+
 .ethanolsubHeading {
-  font-size: 28px;
+  font-size: 26px;
   font-weight: bold;
   letter-spacing: 1px;
 }
+
 .maltparagraph {
   font-size: 18px;
   font-weight: 500;
   letter-spacing: 1px;
-  text-align: left;
+  text-align: justify;
 }
+
 .mainlogoContent {
   display: flex;
   flex-direction: row;
@@ -38,24 +40,131 @@
   flex-wrap: wrap;
   margin: 5%;
 }
+
 .logoContent {
-  width: 150px;
-  margin: 20px; 
+  width: 10vw;
+  margin-left: 5%;
+  margin-right: 5%;
+  justify-content: center;
+  align-self: center;
   /* background-color: blanchedalmond; */
 }
+
 .logoImgDrop {
-  height: 150px; 
-  width: 150px;
+  height: 100px;
+  width: 10vw;
   object-fit: contain;
+  align-self: center;
+  justify-content: center;
 }
+
 .logoTxt {
   font-size: 16px;
   font-weight: 100;
-  margin-left: 10%;
-  opacity: 0.7;
   margin-top: 10%;
   font-family: 'Light';
   text-align: center;
   align-self: center;
+  justify-content: center;
   /* width: 30%; */
+}
+
+.logoContentrice {
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 10vw;
+  justify-content: center;
+  /* background-color: blanchedalmond; */
+}
+
+.logoImgDroprice {
+  height: 100px;
+  width: 10vw;
+  object-fit: contain;
+  align-self: center;
+  justify-content: center;
+}
+
+@media (max-width:768px) {
+  .ethanolfirstDiv {
+    width: 100%;
+    background-position: center;
+    height: 50vh;
+    margin: 0px;
+  }
+
+  .ethanolHeading {
+    font-size: 24px;
+    font-weight: 400;
+    font-family: 'Josefin Sans';
+    align-self: center;
+  }
+
+  .ethanolsubHeading {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+
+  .maltparagraph {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-align: left;
+  }
+
+
+
+  .mainlogoContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .logoContent {
+    width: 130px;
+    margin-left: 5%;
+    margin-right: 5%;
+    justify-content: center;
+    align-self: center;
+    margin-top: 10%;
+    /* background-color: blanchedalmond; */
+  }
+
+  .logoImgDrop {
+    height: 100px;
+    width: 110px;
+    object-fit: contain;
+    align-self: center;
+    justify-content: center;
+  }
+
+  .logoTxt {
+    font-size: 16px;
+    font-weight: 100;
+    margin-top: 10%;
+    font-family: 'Light';
+    text-align: center;
+    align-self: center;
+    justify-content: center;
+    /* width: 30%; */
+  }
+
+  .logoContentrice {
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 80vw;
+    justify-content: center;
+    /* background-color: blanchedalmond; */
+  }
+
+  .logoImgDroprice {
+    height: 100px;
+    width: 80vw;
+    object-fit: contain;
+    align-self: center;
+    justify-content: center;
+  }
+
 }

@@ -1,79 +1,107 @@
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import '../DateOfBirth/DateOfBirth.css'
 import logo from '../../Assets/LogoIcon.png'
+import { Link, useNavigate } from 'react-router-dom';
 
 function DateOfBirth() {
-    const [date, setDate] = useState(localStorage.getItem('date') || '');
+    const data = localStorage.getItem("date");
+    const dates = JSON.parse(data)
+    const [day, setDay] = useState(dates?.day || '');
+    const [month, setMonth] = useState(dates?.month || '');
+    const [year, setYear] = useState(dates?.year || '');
+    const monthInputRef = useRef(null);
+    const yearInputRef = useRef(null);
+    const navitage = useNavigate();
+
     const ne = new Date();
     const years = ne.getFullYear();
-    const dateObj = new Date(date);
-    const year = dateObj.getFullYear();
+
     useEffect(() => {
-        console.log('date', date.length);
-        if (date.length >= 10 && (years - year) >= 18) {
-            console.log('its move to home page');
-            // Move to the home page
+        const value = parseInt(years) - parseInt(year)
+        if ( value >= 18 && year.length === 4 && month.length === 2 && day.length === 2) {
+        const data ={'day':day, 'month': month, 'year': year}
+        localStorage.setItem("date",JSON.stringify(data));
+            navitage('/home')
         }
-    }, [date])
+        if (day.length === 2) {
+            monthInputRef.current.focus();
+        }
+        if (month.length === 2) {
+            yearInputRef.current.focus();
+        }
+    }, [year,day,month])
 
     const checkBoxClick = () => {
-        console.log('ites clikk', date)
-        localStorage.setItem('date', date);
+        const data ={'day':day, 'month': month, 'year': year}
+        localStorage.setItem("date",JSON.stringify(data))
+
     }
 
-    const handleDateChange = (event) => {
-        setDate(event.target.value);
-        const birthday = new Date(e.target.value);
-        const today = new Date();
-        const age = today.getFullYear() - birthday.getFullYear();
-        if (age >= 18) {
-            console.log('adult');
-        } else {
-            console.log('child');
-        }
-    };
-
-    // const verifyDate = (e) => {
-    //     setDate(e.target.value);
-    // const ne = new Date();
-    // const year = ne.getFullYear();
-    // console.log(year);
-    // const dateObj = new Date(date);
-    // const year = dateObj.getFullYear();
-    // console.log(year);
-    //     if (ne - date > 18) {
-    //         console.log('adult')
-    //     }
-    //     else {
-    //         console.log('child')
-    //     }
-    // }
-
     return (
-        <div className='loginMainDiv'>
+        <div className='loginMainDivDob'> 
             <div className='loginDiv'>
                 <img src={logo} alt='logo' className='logo' />
             </div>
-            <div>
-                <h1>To Access our websites you must be of legal age for</h1>
-                <h1>consuming alcohol.</h1>
+            <div className='dobheadingDiv'>
+                <h1 className='dobheading'>To Access our websites you must be of legal age for</h1>
+                <h1 className='dobheading'>consuming alcohol.</h1>
+                
             </div>
             <div>
-                <h1>Your Date of Birth:</h1>
-                <input type='date' className='dateDiv' value={date} onChange={handleDateChange} />
+            <h1 className='dobparagraph'>Your Date of Birth:</h1>
+                <div className='dobinputFields'>
+                <input
+                    type='number'
+                    id='day'
+                    required
+                    autoComplete='on'
+                    placeholder='DD'
+                    min="01"
+                    max="31"
+                    value={day}
+                    className='dateDiv'
+                    onChange={(e) => setDay(e.target.value.slice(0, 2))}
+                />
+                <input
+                    type='number'
+                    ref={monthInputRef}
+                    id='month'
+                    required
+                    autoComplete='off'
+                    placeholder='MM'
+                    min="01"
+                    max="12"
+                    value={month}
+                    className='dateDiv'
+                    onChange={(e) => setMonth(e.target.value.slice(0, 2))}
+                />
+                <input
+                    type='number'
+                    ref={yearInputRef}
+                    id='year'
+                    required
+                    autoComplete='off'
+                    placeholder='YYYY'
+                    min="1900"
+                    max="2022"
+                    value={year}
+                    className='dateDiv'
+                    onChange={(e) => setYear(e.target.value.slice(0,4))}
+                />
+                </div>
                 <div className='remeberBoxDiv'>
                     <input type='checkbox' className='checkbox' id='checkboxId' onClick={() => checkBoxClick()} />
-                    <label htmlFor='checkboxId'>Remember Me</label>
+                    <label htmlFor='checkboxId' className='dobRemember'>Remember Me</label>
                 </div>
+ 
 
             </div>
             <div>
-                <div className='footerRights'>
-                    <p className='firstParagraphInFooterRights'>All rights reserved. All other trademarks and trade names are properties of their respective owners.</p>
-                    <p className='secondParagraphInFooterRights'>TO FIND OUT MORE ABOUT RESPONSIBLE CONSUMPTION</p>
-                    <p className='secondParagraphInFooterRights'>VISIT <a href='https://www.responsibility.org/' className='ancherTag'>RESPONSIBILITY.ORG</a> AND <a href='https://ourthinkingaboutdrinking.com/' className='ancherTag'>OURTHINKINGABOUTDRINKING.COM</a></p>
-                    <p className='thirdParagraphInFooterRights'>Please do not share or forward with anyone under the legal drinking age.</p>
+            <div className='dobRights'>
+                    <p className='firstParagraphdobFooterRights'>All rights reserved. All other trademarks and trade names are properties of their respective owners.</p>
+                    <p className='secondParagraphdobFooterRights'>TO FIND OUT MORE ABOUT RESPONSIBLE CONSUMPTION. VISIT <Link to='https://www.responsibility.org/' className='ancherTag'>RESPONSIBILITY.ORG</Link> AND <Link to='https://ourthinkingaboutdrinking.com/' className='ancherTag'>OURTHINKINGABOUTDRINKING.COM</Link></p>
+                    <p className='thirdParagraphdobFooterRights'>Please do not share or forward with anyone under the legal drinking age.</p>
                 </div>
             </div>
         </div>

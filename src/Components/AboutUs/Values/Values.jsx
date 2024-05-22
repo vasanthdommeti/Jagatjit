@@ -21,18 +21,18 @@ export const Values = () => {
                 <p className="firstDivParagraph">What we believe in.</p>
             </div>
             {/* //1 */}
-            <div className="logoTextDiv"> 
+            <div className="logoTextDiv">
                 <div className="logoDiv">
-                    <img src={responsibility} alt="alwayslearing" />
+                    <img src={responsibility} alt="alwayslearing" className="img" />
                     <h1 className="logoTxtHeader">
-                        Responsibility
+                        Taking Ownership
                     </h1>
                     <p className="logoTxtParagraph">
                         We take ownership of the work we do.
                     </p>
                 </div>
                 <div className="logoDiv">
-                    <img src={teamwork} alt="creative" />
+                    <img src={teamwork} alt="creative" className="img" />
                     <h1 className="logoTxtHeader">
                         Team Work
                     </h1>
@@ -44,18 +44,18 @@ export const Values = () => {
             {/* //2 */}
             <div className="logoTextDiv">
                 <div className="logoDiv">
-                    <img src={respect} alt="alwayslearing" />
+                    <img src={respect} alt="alwayslearing" className="img" />
                     <h1 className="logoTxtHeader">
-                        Respect
+                        Respect & Trust
                     </h1>
                     <p className="logoTxtParagraph">
                         We respect and trust each other.
                     </p>
                 </div>
                 <div className="logoDiv">
-                    <img src={equality} alt="creative" />
+                    <img src={equality} alt="creative" className="img" />
                     <h1 className="logoTxtHeader">
-                        Equality
+                        Gender Equality
                     </h1>
                     <p className="logoTxtParagraph">
                         We are not afraid to treat women as equals.
@@ -65,39 +65,39 @@ export const Values = () => {
             {/* //3 */}
             <div className="logoTextDiv">
                 <div className="logoDiv">
-                    <img src={creative} alt="alwayslearing" />
+                    <img src={creative} alt="alwayslearing" className="img" />
                     <h1 className="logoTxtHeader">
-                        Creative
+                        Creatity
                     </h1>
                     <p className="logoTxtParagraph">
                         We encourage creativity and out of the box thinking.
                     </p>
                 </div>
                 <div className="logoDiv">
-                    <img src={alwayslearning} alt="creative" />
+                    <img src={alwayslearning} alt="creative" className="img" />
                     <h1 className="logoTxtHeader">
-                        Always Learning
+                        Constant Learning
                     </h1>
                     <p className="logoTxtParagraph">
-                        We are never too old to learn.
+                        We are never too old to learn..
                     </p>
                 </div>
             </div>
             {/* //4 */}
             <div className="logoTextDiv">
                 <div className="logoDiv">
-                    <img src={more} alt="alwayslearing" />
+                    <img src={more} alt="alwayslearing" className="img" />
                     <h1 className="logoTxtHeader">
-                        More
+                        Optimizing Resources
                     </h1>
                     <p className="logoTxtParagraph">
                         We do more with less.
                     </p>
                 </div>
                 <div className="logoDiv">
-                    <img src={loyal} alt="creative" />
+                    <img src={loyal} alt="creative" className="img" />
                     <h1 className="logoTxtHeader">
-                        Loyal
+                        Honesty
                     </h1>
                     <p className="logoTxtParagraph">
                         We do not cheat.
@@ -107,9 +107,9 @@ export const Values = () => {
             {/* //5 */}
             <div className="logoTextDiv">
                 <div className="logoDiv">
-                    <img src={smart} alt="creative" />
+                    <img src={smart} alt="creative" className="img" />
                     <h1 className="logoTxtHeader">
-                        Smart
+                        Consistency
                     </h1>
                     <p className="logoTxtParagraph">
                         We will be consistent and efficient.

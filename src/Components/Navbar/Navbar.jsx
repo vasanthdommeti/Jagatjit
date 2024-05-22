@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../Navbar/Navbar.css'
 import logo from '../../Assets/LogoIcon.png'
 import Dropdown from 'react-bootstrap/Dropdown';
@@ -7,15 +7,19 @@ import { MdClose } from "react-icons/md";
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import { IoClose, IoMenu } from "react-icons/io5";
 import { Link } from 'react-router-dom';
-function Navbar() {
+function Navbar({show}) {
     const [menuOpen, setMenuOpen] = useState(false);
 
+    useEffect(() => {
+        setMenuOpen(false)
+    },[])
+ 
     const closeNav = () => {
         setMenuOpen(!menuOpen)
     };
 
     return (
-        <nav>
+        <nav style={{display:show ? 'flex' :'none'}}>
             <div className='mainNavDiv'>
                 <div className="firstLogo">
                     <Link to="/" className="title">
@@ -31,7 +35,7 @@ function Navbar() {
             <div>
                 <ul className={menuOpen ? "open" : "close"}>
                     <li className='dropdown-li'>
-                        <Link to={'/'} onClick={closeNav}>HOME</Link>
+                        <Link to={'/home'} onClick={closeNav}>HOME</Link>
                     </li>
                     <li>
                         <DropdownButton id="dropdown-basic-button" className="dropdown-about borderChange" title="ABOUT US">

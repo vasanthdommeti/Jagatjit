@@ -1,5 +1,7 @@
 
-import React, { useRef, useLayoutEffect, useState } from "react";
+import React, { useRef, useLayoutEffect, useState, useEffect } from "react";
+import { ComposableMap, Geographies, Geography, Marker } from "react-simple-maps";
+import { Tooltip } from 'react-tooltip'
 import '../Home/Home.css';
 import { Link } from "react-router-dom";
 import section3Image from '../../Assets/Home/sec3bottleImg.png';
@@ -10,9 +12,12 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import mapImage from '../../Assets/Home/sec6backgroundImg.png';
 
-import image1 from '../../Assets/Home/SectionThreeImages/sec1.png';
-import image2 from '../../Assets/Home/SectionThreeImages/sec2.png';
-import image3 from '../../Assets/Home/SectionThreeImages/sec3.png';
+import image1 from '../../Assets/Home/SectionThreeImages/sec1.svg';
+import image2 from '../../Assets/Home/SectionThreeImages/sec2.svg';
+import image3 from '../../Assets/Home/SectionThreeImages/sec3.svg';
+import imagemob1 from '../../Assets/Home/SectionThreeImages/secmob1.svg';
+import imagemob2 from '../../Assets/Home/SectionThreeImages/secmob2.svg';
+import imagemob3 from '../../Assets/Home/SectionThreeImages/secmob3.svg';
 
 import candle from '../../Assets/Products/Liquor/RoyalPride/candle.png';
 import hotglass from '../../Assets/Products/Liquor/RoyalPride/hotglass.png';
@@ -21,21 +26,22 @@ import glass from '../../Assets/Products/Liquor/RoyalPride/glass.png';
 import royalpridethirdImg from '../../Assets/Products/Liquor/RoyalPride/royalpridethirdimg.png'
 // import LogoIcon from '../../Assests/LogoIcon.png'
 
-import bottle2 from '../../Assets/Home/SectionTwoImages/bottle1.png';
-import bottle3 from '../../Assets/Home/SectionTwoImages/bottle2.png';
-import bottle4 from '../../Assets/Home/SectionTwoImages/bottle3.png';
-import bottle5 from '../../Assets/Home/SectionTwoImages/bottle4.png';
-import bottle1 from '../../Assets/Home/SectionTwoImages/bottle5.png';
-import bottle6 from '../../Assets/Home/SectionTwoImages/bottle6.png';
-import bottle7 from '../../Assets/Home/SectionTwoImages/bottle7.png';
+import bottle2 from '../../Assets/Home/SectionTwoImages/bottles1.png';
+import bottle3 from '../../Assets/Home/SectionTwoImages/bottles2.png';
+import bottle4 from '../../Assets/Home/SectionTwoImages/bottles3.png';
+import bottle5 from '../../Assets/Home/SectionTwoImages/bottles4.png';
+import bottle1 from '../../Assets/Home/SectionTwoImages/bottles5.png';
+import bottle6 from '../../Assets/Home/SectionTwoImages/bottles6.png';
+import bottle7 from '../../Assets/Home/SectionTwoImages/bottles7.png';
 
-import bottle2main from '../../Assets/Home/SectionTwoImages/bottle1main.png';
-import bottle3main from '../../Assets/Home/SectionTwoImages/bottle2main.png';
-import bottle4main from '../../Assets/Home/SectionTwoImages/bottle3main.png';
-import bottle5main from '../../Assets/Home/SectionTwoImages/bottle4main.png';
-import bottle1main from '../../Assets/Home/SectionTwoImages/bottle5main.png';
-import bottle6main from '../../Assets/Home/SectionTwoImages/bottle6main.png';
-import bottle7main from '../../Assets/Home/SectionTwoImages/bottle7main.png';
+import bottle2main from '../../Assets/Home/SectionTwoImages/bottles1main.png';
+import bottle3main from '../../Assets/Home/SectionTwoImages/bottles2main.png';
+import bottle4main from '../../Assets/Home/SectionTwoImages/bottles3main.png';
+import bottle5main from '../../Assets/Home/SectionTwoImages/bottles4main.png';
+import bottle1main from '../../Assets/Home/SectionTwoImages/bottles5main.png';
+import bottle6main from '../../Assets/Home/SectionTwoImages/bottles6main.png';
+import bottle7main from '../../Assets/Home/SectionTwoImages/bottles7main.png';
+import Footer from "../Footer/Footer";
 
 const section = [
     {
@@ -103,8 +109,95 @@ const section = [
     }
 ]
 
+
+
+const markers = [
+    {
+        name: "Angola",
+        coordinates: [17.8739, -11.2027]
+    },
+    {
+        name: "United Arab Emirates",
+        coordinates: [53.8478, 23.4241]
+    },
+    {
+        name: "Democratic Republic of the Congo",
+        coordinates: [21.7587, -4.0383]
+    },
+    {
+        name: "Ghana",
+        coordinates: [-1.0232, 7.9465]
+    },
+    {
+        name: "Guinea",
+        coordinates: [-9.6966, 9.9456]
+    },
+    {
+        name: "India",
+        coordinates: [78.9629, 20.5937]
+    },
+    {
+        name: "Italy",
+        coordinates: [12.5674, 41.8719]
+    },
+    {
+        name: "Kenya",
+        coordinates: [36.8219, -1.2921]
+    },
+    {
+        name: "Mali",
+        coordinates: [-3.9962, 17.5707]
+    },
+    {
+        name: "Oman",
+        coordinates: [55.9754, 21.4735]
+    },
+    {
+        name: "Togo",
+        coordinates: [0.8248, 8.6195]
+    },
+    {
+        name: "United States",
+        coordinates: [-95.7129, 37.0902]
+    },
+    {
+        name: "South Africa",
+        coordinates: [22.9375, -30.5595]
+    },
+    {
+        name: "Zambia",
+        coordinates: [27.8493, -13.1339]
+    },
+    {
+        name: "Mauritius",
+        coordinates: [57.5522, -20.3484]
+    },
+    {
+        name: "Singapore",
+        coordinates: [103.8198, 1.3521]
+    }
+];
+
 function Home() {
-    const [data, setData] = useState(section[0])
+    const [data, setData] = useState(section[0]);
+    const [content, setContent] = useState("");
+    const [activeId, setActiveId] = useState(section[0]?.id);
+
+    useEffect(() => {
+        if (section.length > 0) {
+            setData(section[0]);
+        }
+    }, [section, setData]);
+
+    const handleClick = (id) => {
+        setActiveId(id);
+    };
+
+    const handleButtonClick = (item) => {
+        setData(item);
+        handleClick(item.id);
+    };
+
     gsap.registerPlugin(ScrollTrigger);
 
     const firstRef = useRef(null);
@@ -124,7 +217,7 @@ function Home() {
                         trigger: wrapperRef.current,
                         pin: true,
                         scrub: 1.5,
-                        end: () => "+=" + wrapperRef.current.offsetWidth,
+                        end: () => "+=100%" ,
                     },
                 });
 
@@ -132,30 +225,70 @@ function Home() {
             const firstTimeline = gsap.timeline().fromTo(firstRef.current, {
                 scale: 1.6,
                 rotate: '30deg',
-                marginTop: '35vh',
-                marginLeft: '35vw',
+                marginTop: getMarginTop(),
+                marginLeft: getMarginLeft(),
             }, {
                 scale: 0.7,
                 rotate: 0,
-                marginTop: '10vh',
-                marginLeft: '75vw',
+                marginTop: getMarginTopReset(),
+                marginLeft: getMarginLeftreset(),
                 // height: '100vh',
             });
-
-
+            function getMarginTop() {
+                const vh = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+                if (vh < 768) {
+                    return '30vh';
+                } else if (vh >= 768 && vh < 1024) {
+                    return '25vh';
+                } else {
+                    return '35vh';
+                }
+            }
+            function getMarginLeft() {
+                const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+                if (vw < 768) {
+                    return '20vw';
+                } else if (vw >= 768 && vw < 1024) {
+                    return '30vw';
+                } else {
+                    return '35vw';
+                }
+            }
+            function getMarginTopReset() {
+                const vh = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+                if (vh < 768) {
+                    return '19vh';
+                } else if (vh >= 768 && vh < 1024) {
+                    return '20vh';
+                } else {
+                    return '15vh';
+                }
+            }
+            function getMarginLeftreset() {
+                const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+                if (vw < 768) {
+                    return '50vw';
+                } else if (vw >= 768 && vw < 1024) {
+                    return '70vw';
+                } else {
+                    return '70vw';
+                }
+            }
             tl.add([firstTimeline]);
-
-
         }, [wrapperRef, firstRef]);
 
         return () => ctx.revert();
     }, []);
 
+    const isHighlightedCountry = (countryName) => {
+        return markers.some(marker => marker.name.includes(countryName));
+    };
+
     return (
         <div className="App" ref={wrapperRef}>
             {/* //1 */}
             <section className="main" data-pin="true"  >
-                <div id='sectionImage1' className='sectionBottleDiv' >
+                <div id='sectionImage1' className='sectionBottleDiv'>
                     <div className="sectionImage1Div">
                         <h1 className="section1Heading">Brewing Magic</h1>
                         <h1 className="section1subHeading">Since 1944</h1>
@@ -173,12 +306,12 @@ function Home() {
             </section>
 
             {/* //2 */}
-            <section >
+            <section className="section2ButtonChange">
                 <div id='sectionImage2' className='section2'>
                     <div className='section3MainDiv'>
-                        <img src={data.largeImg} alt="bottle" style={{ height: '450px' }} />
-                        <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-around' }}>
-                            <div> 
+                        <img src={data.largeImg} alt="bottle" className="section2img" />
+                        <div className="secion2TextWrap">
+                            <div className="sectionThreeHeadDiv">
                                 <h1 className="btnheading">{data.name}</h1>
                                 <p className="btnsubheading">{data.heading}</p>
                                 <p className="btnparagraph"> {data.para}</p>
@@ -186,14 +319,25 @@ function Home() {
                                     <button className='section3Button'>Read More</button>
                                 </Link>
                             </div>
-                            <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
+                            <div className="sectionThreeImageDiv">
                                 <div className="smallImgDiv">
                                     {section.map((e) => (
-                                        <button className="smallImgButton" onClick={() => setData(e)}>
-                                            <img src={e.smallImg} alt="bottle" style={{ height: '80px' }} />
+                                        <button onClick={() => handleButtonClick(e)} className={`smallImgButton ${activeId === e.id ? ' bottle-active' : ''}`}>
+                                            <img src={e.smallImg} alt="bottle" title={e.name} />
                                         </button>
                                     ))}
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="mob-show-btn">
+                        <div className="sectionThreeImageDiv">
+                            <div className="smallImgDiv">
+                                {section.map((e) => (
+                                    <button onClick={() => handleButtonClick(e)} className={`smallImgButton ${activeId === e.id ? ' bottle-active' : ''}`}>
+                                        <img src={e.smallImg} alt="bottle" title={e.name} />
+                                    </button>
+                                ))}
                             </div>
                         </div>
                     </div>
@@ -201,14 +345,16 @@ function Home() {
             </section>
             {/* /3/  completed*/}
             <section id='sectionImage3' className='section1' >
-                {/* <div className='sectionThreeMainDiv'> */}
+                {/* <div Name='sectionThreeMainDiv'> */}
                 <div className='section3GroupHeaderDiv'>
                     <h1 className='section3Header'>We sold over</h1>
                     <h1 style={{ color: '#ECA533' }} className='section3Header'>30 Billion Cases</h1>
                     <h1 className='section3Header'>of our favorite </h1>
                     <h1 className='section3Header'>Whiskey.</h1>
                     <p className='section3Paragraph'>Explore our history to find out how we did it.</p>
-                    <button className='section3Button'>OUR STORY</button>
+                    <Link to={'/AboutUs/Heritage'}>
+                        <button className='section3Button'>HERITAGE</button>
+                    </Link>
                 </div>
                 <div className='section3GroupImagesDiv'>
                     <img src={section3Image} alt='Img' className='section3Image' />
@@ -290,37 +436,61 @@ function Home() {
             </section> */}
 
             <section className="section1">
-                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
+                    <div className="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
                     </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src={image1} class="d-block w-100" alt="image1" />
+                    <div className="carousel-inner">
+                        <div className="carousel-item active">
+                            <picture>
+                                <source media="(max-width: 767px)" srcSet={imagemob1} />
+                                <img src={image1} className="d-block w-100" alt="image1" />
+                            </picture>
+                            <div className="carousel-caption slider-btn-link-1">
+                                <Link to={'/products/liquor/RoyalPride'}>
+                                    <button className='section-silder-Button'>Find Out More</button>
+                                </Link>
+                            </div>
                         </div>
-                        <div class="carousel-item">
-                            <img src={image2} class="d-block w-100" alt="image2" />
+                        <div className="carousel-item">
+                            <picture>
+                                <source media="(max-width: 767px)" srcSet={imagemob2} />
+                                <img src={image2} className="d-block w-100" alt="image2" />
+                            </picture>
+                            <div className="carousel-caption slider-btn-link-2">
+                                <Link to={'/products/liquor/DamnGoodScotch'}>
+                                    <button className='section-silder-Button'>Find Out More</button>
+                                </Link>
+                            </div>
                         </div>
-                        <div class="carousel-item">
-                            <img src={image3} class="d-block w-100" alt="image3" />
+                        <div className="carousel-item">
+                            <picture>
+                                <source media="(max-width: 767px)" srcSet={imagemob3} />
+                                <img src={image3} className="d-block w-100" alt="image3" />
+                            </picture>
+                            <div className="carousel-caption slider-btn-link-3">
+                                <Link to={'/products/liquor/ACpremiumBlack'}>
+                                    <button className='section-silder-Button'>Find Out More</button>
+                                </Link>
+                            </div>
                         </div>
+                        <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span className="visually-hidden">Previous</span>
+                        </button>
+                        <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span className="visually-hidden">Next</span>
+                        </button>
                     </div>
-                    {/* <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button> */}
-                    {/* <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button> */}
                 </div>
             </section>
             {/* //5 complete */}
             <section id='sectionImage5'>
                 {/* <div id='sectionImage5' > */}
-                <div className='section3MainDiv'>
+                <div className='section5MainDiv'>
                     <div className='section3GroupHeaderDiv'>
                         <h1 className='section5Header'>Where does all the</h1>
                         <h1 className='section5Header'>magic come from ?</h1>
@@ -342,10 +512,53 @@ function Home() {
             </section>
             {/* //6 */}
 
-            <div style={{ height: '100vh' }}>
+            <div style={{ height: '90vh' }}>
                 <h1 className='section6Header'>JIL's Presence & Reach</h1>
-                <img src={mapImage} alt="mapImage" style={{ width: '100%' }} />
+                <div className="mapContainerDiv">
+                    <Tooltip id="my-tooltip" />
+                    <div>
+                        <ComposableMap data-tooltip-id="my-tooltip" data-tooltip-content={content} className="imageMapContainer">
+                            <Geographies geography="/features.json">
+                                {({ geographies }) =>
+                                    geographies.map((geo) => {
+                                        const { name } = geo.properties;
+                                        const isHighlighted = isHighlightedCountry(name);
+
+                                        return (
+                                            <Geography
+                                                key={geo.rsmKey}
+                                                geography={geo}
+                                                style={{
+                                                    default: {
+                                                        fill: isHighlighted ? "#D38A14" : "gray",
+                                                        outline: "none"
+                                                    },
+                                                    hover: {
+                                                        fill: isHighlighted ? "#D38A14" : "gray",
+                                                        outline: "none"
+                                                    },
+                                                    pressed: {
+                                                        fill: isHighlighted ? "#D38A14" : "gray",
+                                                        outline: "none"
+                                                    }
+                                                }}
+                                            />
+                                        );
+                                    })
+                                }
+                            </Geographies>
+                            {markers.map(({ name, coordinates }) => (
+                                <Marker key={name} coordinates={coordinates}>
+                                    <a data-tooltip-id="my-tooltip" data-tooltip-content={name}>
+                                        <circle r={5} fill="#fff" />
+                                    </a>
+                                </Marker>
+                            ))}
+                        </ComposableMap>
+                    </div>
+                </div>
             </div>
+            <Footer/>
         </div>
     )
 }

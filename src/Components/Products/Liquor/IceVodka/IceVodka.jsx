@@ -3,6 +3,9 @@ import React from "react";
 import '../IceVodka/IceVodka.css';
 
 import vodka1 from '../../../../Assets/Products/Liquor/Vodka/vodka1.svg';
+import iconBite from '../../../../Assets/Products/Liquor/Vodka/icon4-bite.svg';
+import iconBare from '../../../../Assets/Products/Liquor/Vodka/icon4-bare.svg';
+import iconorange from '../../../../Assets/Products/Liquor/Vodka/icon4-orange.svg';
 import vodka2 from '../../../../Assets/Products/Liquor/Vodka/vodka2.png';
 import vodka3 from '../../../../Assets/Products/Liquor/Vodka/vodka3.png';
 import vodka4 from '../../../../Assets/Products/Liquor/Vodka/vodka4.png';
@@ -15,6 +18,10 @@ import orangevid from '../../../../Assets/Products/Liquor/Vodka/orangevid.png';
 import vodbg from '../../../../Assets/Products/Liquor/Vodka/vodbg.png';
 import vodkatrio from '../../../../Assets/Products/Liquor/Vodka/vodkatrio.png';
 import vodkafamily from '../../../../Assets/Products/Liquor/Vodka/vodkafamily.png';
+import { Link } from "react-router-dom";
+import { HiArrowLongLeft, HiOutlineArrowLongRight } from "react-icons/hi2";
+import damnScotch from '../../../../Assets/ArrowBottle/damnScotch.svg';
+import acDryGin from '../../../../Assets/ArrowBottle/acDryGin.svg';
 
 export const IceVodka = () => {
     return (
@@ -23,11 +30,11 @@ export const IceVodka = () => {
     <img src={vodka1} alt="Vodka 1" className="vodka-image" />
     <img src={vodka2} alt="Vodka 2" className="vodka-image" />
   </section>
-  <section className="image-container">
+  <section className="image-container container-2">
     <img src={vodka3} alt="Vodka 3" />
     <img src={vodka4} alt="Vodka 4" className="vodka-imagess" />
   </section>
-  <section className="split-section">
+  <section className="split-section container-3">
     <div className="image-container">
       <img src={bareitvod} alt="IICE Vodka" className="split-image" />
     </div>
@@ -36,7 +43,10 @@ export const IceVodka = () => {
       <p className="info-text">
         The plain variant of IICE Vodka, Bare It All, has clean, fresh notes and is smooth and mellow on the tongue.
       </p>
-      <img src={vodkainfo1} alt="Vodka Information" className="info-image" />
+      <picture>
+        <source media="(max-width:767px)" srcset={iconBare} />
+        <img src={vodkainfo1} alt="Vodka Information" className="info-image" />
+      </picture>
     </div>
   </section>
 
@@ -47,7 +57,10 @@ export const IceVodka = () => {
       <p className="info-text">
         With every sip you take of this flavored variant of IICE Vodka, you feel like you're biting into a fresh green apple. Made from natural ingredients, clear and smooth, with no added sugar, fresh and fruity to the end.
       </p>
-      <img src={vodkainfo2} alt="Vodka Information" className="info-image" />
+      <picture>
+        <source media="(max-width:767px)" srcset={iconBite} />
+        <img src={vodkainfo2} alt="Vodka Information" className="info-image"/>
+      </picture>
     </div>
     <div className="image-container">
       <img src={applevod} alt="IICE Vodka" className="split-image" />
@@ -63,7 +76,11 @@ export const IceVodka = () => {
       <p className="info-text">
         Undress the Orange is a variant of IICE Vodka that delivers the freshness of a juicy orange with every drink. Popular among folks who savor a good cocktail with a zesty and citrus-based vibe.
       </p>
-      <img src={vodkainfo3} alt="Vodka Information" className="info-image" />
+
+      <picture>
+        <source media="(max-width:767px)" srcset={iconorange} />
+        <img src={vodkainfo3} alt="Vodka Information" className="info-image" />
+      </picture>
     </div>
   </section>
   <section className="full-image-container">
@@ -72,6 +89,27 @@ export const IceVodka = () => {
   <section>
     <img src={vodkafamily} alt="Vodka Trio" className="full-image" />
   </section>
+
+  <div className="acpNewarrowDiv">
+                    <Link to={'/products/liquor/DamnGoodScotch'} className="acppremiumleftArrowDiv">
+                        <div className="acpNewLeftDiv">
+                            <h1 className="acpNpremiumarrowHeading">Damn Good Scotch</h1>
+                            <HiArrowLongLeft className="leftIconImg" />
+                        </div>
+                        <div className="acpNewleftSmallImg">
+                            <img src={damnScotch} alt="block" />
+                        </div>
+                    </Link>
+                    <Link to={'/products/liquor/AcDryGin'} className="acppremiumrightArrowDiv">
+                        <div className="acpNewrightSmallImg" >
+                            <img src={acDryGin} alt="block" />
+                        </div>
+                        <div className="acpNewRightDiv">
+                            <h1 className="acpNpremiumarrowHeading">Aristocrat Dry Gin</h1>
+                            <HiOutlineArrowLongRight className="leftIconImg" />
+                        </div>
+                    </Link>
+                </div> 
 </section>
     )
 }

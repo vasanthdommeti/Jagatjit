@@ -17,13 +17,44 @@
 
 .damnRowContent {
   align-self: center;
-  width: 75%;
+  width: 70%;
+  text-align: justify;
+  color: #FFFFFF;
+  font-family: 'Josefin Sans';
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  line-height: 100%;
+  font-family: 'Light';
+}
+
+.damnRowContent p {
+  text-align: justify;
+  color: #FFFFFF;
+  font-family: 'Josefin Sans';
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  line-height: 120%;
+  font-family: 'Light';
+  letter-spacing: 1px;
+  width: 90%;
 }
 
 .damnsecondRowContent {
   align-self: flex-end;
   width: 30%;
   margin: 10%;
+  margin-bottom: 15%;
+}
+.damnsecondRowContent p {
+  text-align: justify;
+    color: #FFFFFF;
+    font-family: 'Josefin Sans';
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    line-height: 100%;
+    font-family: 'Light';
+    letter-spacing: 1px;
+    width: 80%;
 }
 
 .damnHeading {
@@ -32,8 +63,14 @@
   font-size: calc(35px + 1vw);
   font-weight: bold;
   margin-bottom: 0;
-  letter-spacing: 3px;
+  letter-spacing: 3px;  
   text-align: left;
+}
+.logoImgTextCont{
+  background-image: url('../../../../Assets/Products/Liquor/DamnScotch/largimglogo.png');
+  height: 150px;
+  object-position: right;
+  background-repeat: no-repeat;
 }
 
 .damnsecondHeading {
@@ -46,25 +83,27 @@
 }
 
 .damnParagraph {
+  text-align: justify;
   color: #FFFFFF;
   font-family: 'Josefin Sans';
-  font-size: calc(16px + 1vw);
+  font-size: 1.8rem;
   letter-spacing: 1px;
-  font-weight: 100;
-  opacity: 0.8;
-  text-align: justify;
+  line-height: 100%;
+  font-family: 'Light';
+  letter-spacing: 1px;  
   margin-top: 5%;
 }
 
 
 /* //3rddiv */
 .damnThirdDiv {
-  background-image: url('../../../../Assets/Products/Liquor/DamnScotch/damn3rdSecimg.png');
+  background-image: url('../../../../Assets/Products/Liquor/DamnScotch/damngoodsecbg.png');
   background-position: left;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   /* aspect-ratio: 16/8.81; */
   height: 100vh;
+  margin-top: 5%;
 
 }
 
@@ -82,6 +121,7 @@
   text-align: left;
   letter-spacing: 4px;
   padding-right: 15%;
+  margin-left: 10%;
   /* margin-bottom: 10%; */
 }
 
@@ -99,8 +139,12 @@
   align-items: center;
   text-align: center;
   object-fit: cover;
-  margin-right: 5%;
+  margin-right: 3%;
   width: 30%;
+}
+
+.damncandleimagesingle img {
+  width: 25%;
 }
 
 /* //4 */
@@ -118,11 +162,14 @@
   flex-direction: column;
   align-items: flex-end;
   padding-right: 10%;
-  padding-top: 10%;
+  padding-top: 8%;
+  /* align-self: center; */
   /* padding: 10%; */
   /* width: 60%; */
 }
-
+.damngoodiconbottle {
+    width: 42%;
+}
 .damnSecondDivHeading {
   font-family: 'Krona One';
   font-size: calc(28px + 1vw);
@@ -137,12 +184,22 @@
 .damnimageText {
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
+  align-items: center;
+  height: 30%;
   /* margin-top: 2%; */
-  margin-bottom: 3%;
+  /* margin-bottom: 2%; */
   width: 30%;
   margin-right: 5%;
-  justify-content: space-between;
+  margin-top: 0px;
+  /* align-self: center; */
+}
+
+.damnimageText p{
+  /* margin-top: 2%; */
+  /* margin-bottom: 2%; */
+  width: 50%;
+  margin-left: 5%;
+  
   /* align-self: center; */
 }
 
@@ -153,8 +210,7 @@
   /* margin-top: 2%; */
   /* margin-bottom: 6%; */
   width: 30%;
-  margin-right: 8%;
-  justify-content: space-between;
+  margin-right: 5%;
 }
 
 .damnlogoimage {
@@ -164,6 +220,7 @@
 /* //5 */
 .damFifthDiv {
   height: 100vh;
+  /* margin-bottom: -10%; */
 }
 
 .damnleftArrowDiv {
@@ -197,24 +254,130 @@
   font-size: 21px;
   margin-bottom: 0%;
 }
+.damnfirstdiveitems{
+  display: flex;
+  align-items: center;
+  align-self: center;
+  padding-left: 8%;
+  padding-right: 8%;
+}
 
+.damnImgcontent img {
+  width: 100%;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  text-align: center;
+}
+.damngoodiconlist{
+  display: none;
+}
+.damngoodimageText {
+  display: flex;
+  flex-direction: row;
+  vertical-align: middle;
+}
 
+.damngoodimageText img {
+  width: 40%;
+  padding-bottom: 10%;
+  flex-direction: row;
+  vertical-align: middle;
+  
+}
 
+.damngoodlogoimage {
+  width: 100%;
+}
 
 
 @media (max-width: 768px) {
   .damnFirstDiv {
     flex-direction: column;
     align-self: center;
+    margin-top: 30%;
+    height: auto;
+  }
+
+  .damnHeading {
+    color: #FFFFFF;
+    font-family: 'Krona One';
+    font-size: calc(22px + 1vw);
+    font-weight: bold;
+    margin-bottom: 0;
+    letter-spacing: 3px;  
+    text-align: center;
+  }
+
+  .damnfirstdiveitems{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    align-self: center;
+
+  }
+
+  .damnImgcontent {
+    width: 100%;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+  text-align: center;
+  }
+
+  .damnsecondHeading {
+    color: #ED4E11;
+    font-family: "Andika";
+    font-size: calc(16px + 1vw);
+    letter-spacing: 5px;
+    text-align: center;
+    margin-bottom: 35px;
+  }
+  
+  .damnFourthDiv {
+    display: none;
+  }
+
+  .damnImgcontent img {
+    width: 60%;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+  text-align: center;
+  }
+
+  .damnthirdDivLine {
+    font-family: 'Krona One';
+    /* font-family: 'Lobster', cursive; */
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 0;
+    text-align: center;
+    letter-spacing: 4px;
+
+    /* margin-bottom: 10%; */
+  }
+
+  .damnParagraph {
+    color: #FFFFFF;
+    font-family: 'Josefin Sans';
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 100;
+    text-align: center;
+    margin-top: 5%;
+  }
+  .damnThirdDivContent {
+    padding-left: 1%;
   }
 
   .damnRowContent {
+    width: 90%;
     text-align: center;
   }
 
   .damnColumnContent {
     align-items: center;
-    padding: 10%;
     text-align: center;
   }
 
@@ -246,5 +409,75 @@
   .damnprideshow {
     display: none;
   }
+
+  /* style={{alignSelf:'flex-start', backgroundColor:'red', marginBottom:'95%'}} */
+  .damnsecondDiv {
+    background-image: url('../../../../Assets/Products/Liquor/DamnScotch/damn2ndSecimg.png');
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    width: 100%;
+    height:auto;
+  }
+
+  .damnThirdDiv {
+  background-image: url('../../../../Assets/Products/Liquor/DamnScotch/damngoodmobileimg.png');
+  background-position: left;
+  background-size: contain;
+  background-repeat: no-repeat;
+  /* aspect-ratio: 16/8.81; */
+  height: 100vh;
+  width: 100vw;
+  margin-top: 15%;
+
+}
+
+.damngoodiconlist{
+  display: flex;
+  justify-content: center;
+  align-self: flex-start;
+  flex-direction: column;
+  margin: 10%;
+}
+.damnsecondRowContent {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  align-items: center;
+  width: auto;
+  margin-top: 10%;
+  margin-bottom: 85%;
+}
+.logoImgTextCont{
+  background-image: url('../../../../Assets/Products/Liquor/DamnScotch/smallImgLogo.png');
+  height: 150px;
+  margin-left: 15%;
+  object-position: right;
+  background-repeat: no-repeat;
+}
+
+.damnimageText {
+  align-items: center;
+  /* margin-top: 2%; */
+  /* margin-bottom: 2%; */
+  width: 30%;
+  /* align-self: center; */
+}
+
+.damnimageText p{
+  /* margin-top: 2%; */
+  /* margin-bottom: 2%; */
+  width: 60%;
+  margin-left: 2%;
+  
+  /* align-self: center; */
+}
+
+.damnlogoimage {
+  margin-right: 2%;
+  margin-bottom: 10%;
+}
+
 
 }

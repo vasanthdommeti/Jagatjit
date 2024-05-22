@@ -11,13 +11,33 @@
     background-repeat: no-repeat;
     /* aspect-ratio: 14 / 7.3; */
 }
- .imageContainer1{
+
+.sectionBottleDivsec1 {
+    position: relative;
+    max-height: 85vh;
+    background-size: cover;
+    background-position: center;
+    /* position: fixed; */
+    background-repeat: no-repeat;
+    /* aspect-ratio: 14 / 7.3; */
+}
+
+.imageContainer1 {
+    height: 90vh;
+}
+
+.mapContainerDiv {
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.main {
     height: 100vh;
- }
- .main{
-    height: 100vh;
- }
-.sectionImage1Div{
+}
+
+.sectionImage1Div {
     display: flex;
     flex-direction: column;
     /* justify-content: flex-end; */
@@ -25,7 +45,8 @@
     position: absolute;
     padding: 13%;
 }
-.section1Heading{
+
+.section1Heading {
     font-size: 75px;
     color: #ECA533;
     font-family: 'Josefin Sans';
@@ -33,33 +54,60 @@
     letter-spacing: 3px;
     margin-bottom: 0;
 }
-.section1subHeading{
+
+.section1subHeading {
     font-size: 60px;
     color: #fff;
     font-family: 'Josefin Sans';
     font-weight: 600;
     letter-spacing: 3px;
 }
-.section1paragraph{
+
+.section1paragraph {
     font-size: 24px;
     color: #fff;
     /* font-family: 'Josefin Sans'; */
     font-weight: 100;
     letter-spacing: 3px;
 }
+
 #sectionImage2 {
     background-image: url('../../Assets/Home/sec2backgroundImg.png');
 }
 
+.section3MainDiv {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 10%;
+    align-items: center;
+    height: 100vh;
+}
+
+.secion2TextWrap {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.smallImgButton>img {
+    width: 100%;
+    height: auto;
+}
+
+.mob-show-btn {
+    display: none;
+}
+
+.smallImgDiv {
+    display: flex;
+    gap: 40px;
+}
 
 #sectionImage3 {
     background-image: url('../../Assets/Home/sec3backgroundImg.png');
     display: flex;
     justify-content: center;
     padding: 10%;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center; */
 }
 
 #sectionImage4 {
@@ -68,15 +116,26 @@
 
 #sectionImage5 {
     background-image: url('../../Assets/Home/sec5backgroundImg.png');
-    /* width: 100%; */
     background-size: cover;
     background-position: right;
     place-items: center;
     height: 100vh;
-    /* aspect-ratio: 16 / 8.71; */
-    /* display: flex;
+    padding: 0;
+}
+
+.section5MainDiv {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 10%;
+    align-items: center;
+    height: 100vh;
+}
+
+.section5GroupImagesDiv {
+    display: flex;
     flex-direction: column;
-    justify-content: center; */
+    align-items: end;
+    gap: 50px;
 }
 
 #sectionImage6 {
@@ -102,29 +161,19 @@
     /* aspect-ratio: 17 / 8.78; */
 }
 
-.d-block {
+.carousel-item>img {
     height: 100vh;
 }
 
-.smallImgDiv{
-    display: flex;
-    /* flex-wrap: wrap; */
-    object-fit: cover;
-    align-items: last baseline;
-    align-self: last baseline;
-    flex-direction: row;
-    /* margin-right: -45%; */
-    /* justify-content: flex-end; */
-    /* align-items: flex-end; */
-}
-.btnheading{
+.btnheading {
     font-size: 35px;
     font-family: 'Josefin Sans';
     font-weight: bold;
     letter-spacing: 4px;
     margin-bottom: 0;
 }
-.btnsubheading{
+
+.btnsubheading {
     font-size: 25px;
     font-family: 'Josefin Sans';
     font-weight: bold;
@@ -132,14 +181,18 @@
     color: #ECA533;
     margin-bottom: 0;
 }
-.btnparagraph{
+
+.btnparagraph {
     font-size: 18px;
     margin-bottom: 0;
     font-weight: 200;
 }
-.smallImgButton{
- background-color: transparent;
- border-color: transparent;
+
+.smallImgButton {
+    background-color: transparent;
+    border-color: transparent;
+    border: 0;
+    border-radius: 10px;
 }
 
 .section2 {
@@ -152,7 +205,7 @@
 }
 
 .section3GroupHeaderDiv {
-    width: 50%;
+    width: 100%;
     align-self: center;
     justify-content: center;
 }
@@ -165,24 +218,14 @@
     /* margin: 5%; */
 }
 
-.sectionThreeMainDiv{
+.sectionThreeMainDiv {
     display: flex;
     align-self: center;
     align-items: center;
 }
-.section3MainDiv {
-    display: flex;
-    /* padding: 8% 5% 5% 5%; */
-    /* flex-direction: row; */
-    justify-content: space-around;
-    /* align-items: center; */
-    /* margin: auto; */
-    padding: 10%;
-    /* width: 70%; */
-}
 
 .section3Header {
-    font-size: 52px;
+    font-size: 32px;
     font-family: 'Josefin Sans';
     font-weight: 100;
     letter-spacing: 7px;
@@ -193,7 +236,7 @@
 }
 
 .section3Paragraph {
-    font-size: 18px;
+    font-size: 13px;
     font-family: 'Montserrat';
     font-weight: bold;
     letter-spacing: 1px;
@@ -201,16 +244,17 @@
 }
 
 .section3Button {
-    border-color: #ECA533;
-    background-color: black;
-    border-width: 0.5px solid;
+    border: 0.5px solid #ECA533;
     border-radius: 18px;
     padding: 10px 35px;
+    font-size: 8PX;
     color: #ECA533;
     letter-spacing: 2px;
     margin-top: 30px;
+    background-color: transparent;
 }
-.section4Button{
+
+.section4Button {
     border-color: #ECA533;
     background-color: black;
     border-width: 0.5px solid;
@@ -220,24 +264,22 @@
     letter-spacing: 2px;
     margin-top: 30px;
 }
- 
-.subparaheading{
+
+.subparaheading {
     font-size: 16px;
     font-family: 'Lobster', cursive;
     font-weight: bold;
     letter-spacing: 1px;
     text-align: center;
 }
-.subparaheading span{
+
+.subparaheading span {
     font-size: 16px;
     font-family: 'Lobster', cursive;
     font-weight: bold;
     letter-spacing: 2px;
     color: #ECA533;
     text-decoration: none;
-}
-.section5GroupImagesDiv {
-    /* width: 420px; */
 }
 
 .section5firstImage {
@@ -248,8 +290,7 @@
 
 .section5secondImage {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    gap: 50px;
 }
 
 .section5Image {
@@ -275,9 +316,16 @@
     letter-spacing: 4px;
     margin-bottom: 0%;
     text-align: center;
-    margin: 80px 0 20px 0;
+    margin: 30px 0 20px 0;
 
 }
+
+.imageMapContainer {
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+}
+
 
 .mainDiv {
     padding-left: 5%;
@@ -294,10 +342,11 @@
 .sectionMargin {
     padding-top: 15%;
 }
-.section3GroupImagesDiv{
+
+.section3GroupImagesDiv {
     width: 50%;
     /* object-fit: contain; */
-    
+
 }
 
 .section6firstThirdDiv {
@@ -309,6 +358,7 @@
     width: 100vw;
     height: 100vh;
 }
+
 .section6firstThirdDivContent {
     display: flex;
     flex-direction: row;
@@ -316,6 +366,7 @@
     align-self: flex-end;
     /* padding: 10%; */
 }
+
 .section6firstthirdDivLine {
     font-family: 'Krona One';
     font-size: calc(30px + 1vw);
@@ -326,6 +377,7 @@
     padding-right: 5%;
     margin-bottom: 2%;
 }
+
 .section6firstrowdiv {
     display: flex;
     width: 80%;
@@ -334,6 +386,7 @@
     align-self: center;
     /* align-items: center; */
 }
+
 .section6firstcandleimagesingle {
     display: flex;
     flex-direction: column;
@@ -341,72 +394,43 @@
     text-align: center;
     object-fit: cover;
 }
-/* @media (min-width:320px) {
 
-    smartphones, iPhone, portrait 480x320 phones
-    .section {
-        height: 35vh;
-    }
+.slider-btn-link-1 {
+    top: 45%;
+    left: 45%;
 }
 
-@media (min-width:481px)  { 
-    portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. 
-    .section {
-        height: 45vh;
-    }
-} */
-@media only screen and (max-width: 600px) {
-    .section3MainDiv {
-        display: flex;
-        padding: 8% 5% 5% 5%;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        /* padding: 10%; */
-        /* width: 70%; */
-    }
+.slider-btn-link-2 {
+    top: 40%;
+    left: -37%;
+}
 
-    .section {
-        background-repeat: no-repeat;
-        background-size: cover;
-        place-items: center;
-        height: auto;
-        background-position: center;
-    }
+.slider-btn-link-3 {
+    top: 42%;
+    left: -48%;
+}
 
-    .section1 {
-        background-repeat: no-repeat;
-        background-size: cover;
-        place-items: center;
-        height: auto;
-        background-position: center;
-    }
+.carousel-caption .section-silder-Button {
+    font-family: Josefin Sans;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 20px;
+    text-align: center;
+    border: 0.5px solid #ECA533;
+    border-radius: 25px;
+    padding: 10px 35px;
+    color: #ECA533;
+    letter-spacing: 2px;
+    background-color: transparent;
+}
 
-    #sectionImage5 {
-        opacity: 0.6;
-    }
+.section3MainDiv>.section2img {
+    transition: all 0.3s ease-in-out;
+}
 
-    .section3GroupHeaderDiv {
-        padding-left: 7%;
-        margin-bottom: 5%;
-    }
-
-
-    .section5Image {
-        width: 150px;
-        height: 150px;
-        margin: 6px 6px 6px 5px;
-        border-radius: 12px;
-    }
-
-    #sectionImage6 {
-        background-size: cover;
-        background-color: #ECA533;
-    }
-
-    .sectionThreeMainDiv {
-        /* padding-top: 15%; */
-    }
+.bottle-active {
+    box-shadow: 0px 0px 46.4px 0px rgba(255, 160, 19, 1), inset 0px 0px 100.4px 0px rgba(212, 131, 9, 0.726);
+    transform: scale(1.1);
 }
 
 @media only screen and (max-width: 1200px) {
@@ -464,3 +488,309 @@
     }
 
 } */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .main,
+    .sectionBottleDiv {
+        height: 80vh;
+    }
+
+    .sectionBottleDiv {
+        max-height: unset;
+    }
+
+    .imageContainer1 {
+        height: 500px;
+    }
+
+    .sectionImage1Div {
+        padding: 10%;
+    }
+
+    .section2 {
+        height: 80vh;
+    }
+
+    #sectionImage3 {
+        height: 50vh;
+        padding: 7%;
+    }
+
+    .secion2TextWrap {
+        width: 100%;
+        gap: 15px;
+    }
+
+    .section3MainDiv {
+        padding: 0;
+    }
+
+    .section3MainDiv>.section2img {
+        width: auto;
+        height: 45%;
+        margin: 0;
+    }
+
+    .sectionThreeImageDiv {
+        display: flex;
+    }
+
+    .smallImgDiv {
+        display: grid;
+        align-self: unset;
+        grid-template-columns: repeat(4, auto);
+    }
+
+    .btnheading {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .btnsubheading {
+        font-size: 14px;
+    }
+
+    .carousel-item>img,
+    section:nth-child(4) {
+        height: auto;
+    }
+
+    #sectionImage5 {
+        height: 70vh;
+    }
+
+    #sectionImage5 .section5MainDiv {
+        flex-direction: column;
+        display: flex;
+        padding: 7%;
+    }
+
+    .section3GroupHeaderDiv {
+        width: 100%;
+    }
+
+    .App>div,
+    .imageMapContainer {
+        height: 45vh !important;
+    }
+
+    .slider-btn-link-1 {
+        top: 45%;
+        left: 45%;
+    }
+
+    .slider-btn-link-2 {
+        top: 38%;
+        left: -23%;
+    }
+
+    .slider-btn-link-3 {
+        top: 38%;
+        left: -35%;
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+
+    .main {
+        /* margin-top: 100px; */
+        padding-top: 100px;
+    }
+
+    .sectionBottleDiv {
+        height: 90vh;
+        background-size: cover;
+        background-position: bottom;
+        max-height: unset;
+    }
+
+    /* .sectionBottleDiv1sec {
+        height: 100vh;
+        background-size: cover;
+    } */
+
+    .sectionImage1Div {
+        padding: 0 15px;
+    }
+
+    .section1Heading,
+    .section1subHeading {
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 41.6px;
+        letter-spacing: 0.07em;
+        text-align: left;
+        margin: 0;
+    }
+
+    .imageContainer1 {
+        height: 600px;
+    }
+
+    .secion2TextWrap>.sectionThreeImageDiv {
+        display: none;
+    }
+
+    .mob-show-btn {
+        display: block;
+    }
+
+    .sectionImage1Div .section3Button {
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 12px;
+        text-align: center;
+    }
+
+    #sectionImage2 {
+        height: auto;
+        padding-bottom: 10%;
+    }
+
+    #sectionImage2 .section3MainDiv {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 10%;
+        gap: 30px;
+        height: auto;
+    }
+
+    .section3MainDiv>.section2img {
+        width: auto;
+        height: 300px;
+        margin: 0;
+    }
+
+    .section3MainDiv>.secion2TextWrap {
+        width: 100%;
+        height: auto;
+        text-align: center;
+        z-index: 1;
+    }
+
+    .smallImgButton>img {
+        width: 100%;
+        height: 150px;
+    }
+
+    .btnheading {
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 35.33px;
+        letter-spacing: 0.1em;
+        margin-bottom: 10px;
+    }
+
+    .btnsubheading {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 22.08px;
+        letter-spacing: 0.18em;
+        margin-bottom: 10px;
+    }
+
+    .btnparagraph {
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17.07px;
+    }
+
+    .secion2TextWrap .section3Button {
+        color: #000;
+        background-color: rgba(255, 153, 0, 1);
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 12px;
+        text-align: center;
+    }
+
+    .sectionThreeHeadDiv,
+    .sectionThreeImageDiv {
+        margin: 0;
+    }
+
+    .sectionThreeImageDiv>.smallImgDiv {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap-reverse;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    #sectionImage3 {
+        flex-direction: column;
+        padding: 0 15px;
+        gap: 50px;
+    }
+
+    .section3GroupHeaderDiv,
+    .section3GroupImagesDiv {
+        width: 100%;
+    }
+
+    .carousel-item>img,
+    .App>section:nth-child(4) {
+        height: auto;
+    }
+
+    #sectionImage5 {
+        height: 100vh;
+    }
+
+    #sectionImage5>.section5MainDiv {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 50px 20px;
+        gap: 50px;
+        height: 100vh;
+    }
+
+    .section5Header {
+        font-size: 32px;
+        font-weight: 300;
+        line-height: 33.13px;
+        letter-spacing: 0.09em;
+    }
+
+    #sectionImage5 .section3Button {
+        border: 2px solid rgba(236, 165, 51, 1);
+        color: rgba(236, 165, 51, 1);
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 12px;
+    }
+
+
+    .section5GroupImagesDiv img {
+        width: 150px;
+        height: auto;
+    }
+
+    .App>div {
+        padding: 80px 0 0 0;
+        height: auto !important;
+    }
+
+    .imageMapContainer {
+        height: auto;
+    }
+
+    .slider-btn-link-1 {
+        top: 22%;
+        left: 13%;
+    }
+
+    .slider-btn-link-2 {
+        top: 52%;
+        left: 13%;
+    }
+
+    .slider-btn-link-3 {
+        top: 51%;
+        left: 10%;
+    }
+}

@@ -1,25 +1,27 @@
-
 .maltbodySection {
+  width: 100%;
   background-color: #010101;
-  margin: 0;
-  /* font-family: 'Light'; */
-  /* Remove left/right margins for better layout control */
-  /* width: 80%; */
   text-align: center;
   justify-content: center;
   margin: 0 auto;
 
 }
-.maltImage{
-  width: 200px;
-  height: 300px;
-  object-fit: cover;
+
+.mainimagemalt {
+  overflow: hidden;
+  margin: 0px;
+  background-size: contain;
+  height: 50vh;
+  width: 100%;
 }
-.maltImage1{
-  width: 30%;
-  height: 20%;
-  object-fit: cover;
+
+
+
+.maltImage {
+  width: 50%;
+  height: 100%;
 }
+
 .maltSectionDiv {
   position: relative;
   width: 100vw;
@@ -28,12 +30,11 @@
 }
 
 .maltSectionDiv img {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  overflow: hidden;
+  margin: 0px;
 }
 
 .malttexthead {
@@ -43,10 +44,10 @@
   transform: translate(-50%, -50%);
   text-align: center;
   margin: 0;
-  font-family: 'Josefin Sans'; 
+  font-family: 'Josefin Sans';
   font-style: normal;
   font-weight: 400;
-  font-size: 52px; 
+  font-size: 52px;
 }
 
 #malt-bg {
@@ -78,43 +79,55 @@
   color: #FFFFFF;
 }
 
-/* Container for main content (header and description) */
 .maltcontent-container {
-  /* width: 80%; */
+  width: 100%;
   /* Adjust container width as needed */
   /* margin: 0 auto; */
   /* Center container horizontally */
   /* padding: 20px; */
-  padding-left: 5%;
+  padding-left: 10%;
   padding-right: 5%;
-  margin-top: 5%;
+  margin-top: 9%;
   align-self: center;
   align-content: center;
-  /* align-items: center; */
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
 
-  /* Add some padding for spacing */
-  text-align: center;
-  justify-content: center;
 }
-.maltcontent-container1 {
-  padding-left: 5%;
-  padding-right: 5%;
+
+.maltcontent-containerone {
+  width: 100%;
+  padding-left: 10%;
+  padding-right: 10%;
   margin-top: 5%;
+  margin-bottom: 10%;
   align-self: center;
   align-content: center;
-  text-align: center;
-  justify-content: center;
+  display: flex;
+  flex-direction: row;
 }
 
 /* Malt extract description (all text justified) */
 .malt-description {
-  padding-top: 15%;
+  padding-top: 10%;
   width: 100%;
-  display: flex;
   flex-direction: row;
   font-family: 'Josefin Sans';
-  font-style: normal;
-  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  justify-content: center;
+  text-align: justify;
+  /* All text within this element will be justified */
+
+  color: #FFFFFF;
+}
+
+.malt-description p {
+
+  width: 90%;
+  font-family: 'Josefin Sans';
   font-size: 22px;
   line-height: 26px;
   justify-content: center;
@@ -126,13 +139,13 @@
 
 /* Malt extract process (combined description, image, and list) */
 .maltprocess-description {
-  width: 100%;
+  width: 90%;
+  height: 90%;
   margin-top: 20px;
   /* Add spacing after description */
   display: flex;
   flex-direction: row;
   font-family: 'Josefin Sans';
-
   font-style: normal;
   font-weight: 400;
   font-size: 22px;
@@ -142,67 +155,233 @@
   color: #FFFFFF;
 }
 
-/* Image within process description */
-.maltprocess-description img {
-  width: 58%;
-  padding-left: 3%;
-  float: right;
-  /* Make images float to the right */
-  display: block;
-  /* Ensures image occupies full width on its line */
-  margin: 10px;
-  /* Add margin for spacing and center horizontally */
+
+
+.maltprocess-description p {
+  width: 90%;
 }
 
 /* Malt extract process list (already justified) */
 .maltprocess-list {
-  margin-top: -180px;
-  font-style: normal;
+  width: 60%;
+  margin-top: -20%;
   margin-left: 10%;
+  margin-right: 20%;
+  font-style: normal;
   font-weight: 400;
   font-size: 24px;
   line-height: 26px;
   text-align: left;
-  /* All text within this element will be justified */
   color: #FFFFFF;
 }
 
 .maltmilling-description {
   width: 100%;
-  margin-top: 5px;
-  /* Add spacing after description */
-  display: flex;
-  flex-direction: row;
-  font-family: 'Josefin Sans';
-
-  font-style: normal;
-  font-weight: 400;
-  font-size: 22px;
-  line-height: 26px;
-  text-align: justify;
-  /* All text within this element will be justified */
-  color: #FFFFFF;
 }
 
+.maltmilling-descriptionfive {
+  width: 60%;
+}
+
+.maltmilling-descriptionfive img {
+  width: 95%;
+}
+
+
 .maltmilling-description img {
-  width: 50%;
-  margin-top: -50px;
-  padding-left: 8%;
-  float: right;
-  /* Make images float to the right */
-  display: block;
-  /* Ensures image occupies full width on its line */
-  margin: 10px;
+  width: 70%;
+  height: 100%;
 }
 
 .maltmilling-description h2 {
+  margin-top: 5%;
+  font-size: 3.2rem;
   text-align: left;
-
   font-family: 'Josefin Sans';
   color: #FFFFFF;
 }
 
 .maltmilling-description p {
-  flex: 1;
+  width: 100%;
+  margin-top: 2%;
+  align-items: left;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: justify;
+  color: #FFFFFF;
   /* Allow text to grow and shrink */
+}
+
+
+.maltmilling-descriptionlast {
+  width: 100%;
+  margin-top: 2%;
+  align-items: left;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: justify;
+  color: #FFFFFF;
+  /* Allow text to grow and shrink */
+}
+
+.maltImageone {
+  width: 70%;
+  height: 50%;
+  object-fit: contain;
+  margin-left: 15%;
+  margin-right: 10%;
+}
+
+@media (max-width: 768px) {
+
+  .maltcontent-container {
+    width: 100%;
+    /* Adjust container width as needed */
+    /* margin: 0 auto; */
+    /* Center container horizontally */
+    /* padding: 20px; */
+    padding-left: 10%;
+    padding-right: 5%;
+    margin-top: 9%;
+    align-self: center;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .maltcontent-containerone {
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    align-self: center;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .maltprocess-list {
+    width: 100%;
+    margin-top: 10%;
+    font-style: normal;
+    text-align: left;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    color: #FFFFFF;
+  }
+
+  .maltprocess-list li {
+    width: 100%;
+    font-style: normal;
+    text-align: left;
+  }
+
+  .maltprocess-description {
+    width: 100%;
+  }
+
+  .maltmilling-description h2 {
+    margin-top: 5%;
+    font-size: 2rem;
+    text-align: left;
+    font-family: 'Josefin Sans';
+    color: #FFFFFF;
+  }
+
+  .maltmilling-description img {
+    margin-top: 10%;
+    width: 90%;
+    height: 100%;
+  }
+
+  .maltmilling-descriptionlast {
+    margin-top: 10%;
+    margin-bottom: 30%;
+    width: 100%;
+    height: 100%;
+  }
+
+  .maltmilling-descriptionfive {
+    width: 100%;
+  }
+
+  .maltmilling-descriptionfive img {
+    width: 90%;
+  }
+
+  .maltmilling-description p {
+    width: 95%;
+    margin-top: 2%;
+    align-items: left;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: left;
+    color: #FFFFFF;
+    /* Allow text to grow and shrink */
+  }
+
+  .malt-description {
+    padding-top: 10%;
+    margin: 0;
+    width: 100%;
+    flex-direction: row;
+    font-family: 'Josefin Sans';
+    font-size: 16px;
+    line-height: 20px;
+    justify-content: center;
+    text-align: center;
+    /* All text within this element will be justified */
+    color: #FFFFFF;
+  }
+
+  .malt-description p {
+
+    width: 90%;
+    font-family: 'Josefin Sans';
+    font-size: 18px;
+    line-height: 26px;
+    justify-content: center;
+    text-align: center;
+    /* All text within this element will be justified */
+  
+    color: #FFFFFF;
+  }
+  
+
+  .malttexthead {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin: 0;
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+  }
+
+
+
+  .maltprocess-description p {
+    width: 100%;
+    font-size: 18px;
+    text-align: left;
+  }
 }

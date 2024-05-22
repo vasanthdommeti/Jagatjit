@@ -26,11 +26,90 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    padding: 10%;
+    padding-right: 10%;
+    
+}
+.acsec1div{
+    display: flex;
+    align-self: center;
+    padding-left: 7%;
+    padding-right: 5%;
+}
+.acfirstImg{
+    width: 100%;
+}
+.aciconsDiv{
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    margin: 5%;
+    width: 40%;
+    height: 20%;
+}
+.aciconsDiv p {
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    justify-self: center;
+    margin-top: 6%;
+    margin-left: 4%;
+
+}
+.aciconsDiv img {
+    width: 25%;
+    height: 25%;
+}
+.aciconsDivopp{
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    margin-top: 4%;
+    width: 40%;
+    height: 20%;
 }
 
-/* acblacksecondimg.png */
+.aciconsDivopp p {
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    justify-self: center;
+    margin-top: 6%;
+    margin-left: 4%;
+}
 
+
+.aciconsDivopp img {
+    width: 25%;
+    height: 25%;
+}
+
+.accandleDiv{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.acsec4secimg{
+    height: 60%;
+    width: 60%;
+}
+.acsec4imgDiv{
+    justify-content: center;
+    display: flex;
+}
+.acleftarrowDiv{
+    text-align: right;
+    align-self: center;
+}
+.acrightarowDiv{
+    text-align: left;
+    align-self: center;
+}
+.acarrowImg{
+    height: 150px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+/* acblacksecondimg.png */
 .acblackSecondDiv {
     background-image: url('../../../../Assets/Products/Liquor/AcBlack/acblacksecondimg.png');
     background-position: bottom;
@@ -71,9 +150,11 @@
 
 .acblackParagraph {
     color: #FFFFFF;
+    width: 80%;
     font-family: 'Josefin Sans';
-    font-size: calc(18px + 1vw);
+    font-size: calc(12px + 1vw);
     letter-spacing: 1px;
+    font-family: 'Light';
     text-align: justify;
 }
 
@@ -105,11 +186,14 @@
 }
 
 .acblackSecondDivParagraph {
-    width: 40%;
-    text-align: right;
+    color: #FFFFFF;
+    width: 50%;
+    margin-top: 1%;
     font-family: 'Josefin Sans';
-    font-weight: 100;
-    opacity: 0.6;
+    font-size: calc(12px + 1vw);
+    letter-spacing: 1px;
+    font-family: 'Light';
+    text-align: right;
 }
 
 
@@ -118,7 +202,21 @@
 }
 
 .acblackFourthDiv {
+    width: 100%;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.pre-next-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-self: center;
+}
+
+.pre-next-wrap > .rightArrowDiv img,
+.pre-next-wrap > .leftArrowDiv img {
+   margin: 10px !important;
 }
 
 .arrowHeading {
@@ -176,34 +274,95 @@
     margin-right: 3%;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 992px) and (max-width: 1024px) {
     .acblackFirstDiv {
-        flex-direction: column;
-        align-self: center;
+        height: 60vh;
     }
 
-    .acblackRowContent {
-        text-align: center;
-        padding: 10%;
+    .acblackSecondDiv {
+        height: 50vh;
+    }
+
+    .acblackThirdDiv {
+        height: 45vh;
+    }
+
+    .acblackFourthDiv > div > img {
+        height: auto;
+        width: 100%;
+    }
+    
+    .acblackColumnContent {
+        padding: 0 10%;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .acblackFirstDiv {
+        height: 85vh;
+    }
+
+    .acblackRowContent{
+        width: 100%;
     }
 
     .acblackColumnContent {
-        align-items: center;
-        padding: 10%;
+        padding: 10px 10%;
+    }
+
+    .acblackThirdDiv {
+        width: 110vw;
+        height: 65vh;
+        background-position: right;
+    }
+
+    .candle-image-wrap-desk > div > p {
+        text-align: center;
+    }
+
+    .acblackFirstDiv > div,
+    .candle-image-wrap-desk > div {
+        flex-direction: column;
+    }
+
+    .acblackSecondDiv,
+    .acblackFourthDiv {
+        height: 65vh;
+    }
+
+    .acblackFourthDiv > div > img {
+        height: auto !important;
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .acblackFirstDiv {
+        flex-direction: column;
+        height: auto;
+        margin-top: 30%;
+    }
+
+    .acblackFirstDiv > div {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .acblackRowContent {
+        width: 100%;
         text-align: center;
     }
 
     .acblackSecondDiv {
-        aspect-ratio: 9/7.41;
+        width: 100%;
+        height: auto;
+        margin: 50px 0;
     }
 
     .acblackThirdDiv {
-        aspect-ratio: 4/2.20;
-    }
-
-    .acblackSecondDivParagraph {
-        width: 60%;
-        text-align: right;
+       height: 250px;
+       width: 100%;
+       background-position: right;
     }
 
     .acblackThirdDivContent {
@@ -215,28 +374,92 @@
         width: 100%;
         height: 100%;
         display: flex;
-        align-self: center;
-        padding: 5%;
+        padding: 10% 5%;
     }
 
-    .candleimage {
-        display: none;
+    .candle-image-wrap {
+        justify-content: center;
+    }
+
+    .candle-image-wrap > div {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .candle-image-wrap p {
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 13.25px;
+        letter-spacing: 0.07em;
+    }
+
+    .candleimage,
+    .acblackThirdDivContent > div {
+        display: none !important;
     }
 
     .acblackHeading {
-        font-size: 20px;
-        margin-bottom: 0;
-        font-weight: 500;
-        letter-spacing: 4px;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 10.6px;
+        letter-spacing: 0.11em;
     }
 
     .acblacksecondHeading {
-        font-size: 14px;
-        margin-bottom: 35px;
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 55px;
+        letter-spacing: 0.07em;
+        margin: 0;
     }
 
     .acblackParagraph {
-        font-size: 12px;
-        width: 70%;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 17.66px;
+        letter-spacing: 0.09em;
+        text-align: left;
+        margin: 15px 0;
+    }
+
+    .acblackSecondDivHeading {
+        font-family: Lobster;
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 37.44px;
+        letter-spacing: 0.07em;
+        text-align: right;
+    }
+
+    .acblackSecondDivParagraph {
+        width: 100%;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 17.66px;
+        letter-spacing: 0.09em;
+        margin-top: 20px;
+    }
+
+    .acblackColumnContent {
+        padding: 30px 30px 50% 15px;
+    }
+
+    .acblackThirdDivHeading {
+        font-family: Lobster;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 26.5px;
+        letter-spacing: 0.09em;
+    }
+
+    .acblackFourthDiv {
+        width: 100%;
+        height: auto;
+        margin: 40px 0;
+    }
+
+    .acblackFourthDiv > div > img {
+        height: auto;
+        width: 100%;
     }
 }

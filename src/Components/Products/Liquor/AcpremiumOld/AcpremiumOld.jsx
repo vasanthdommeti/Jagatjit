@@ -1,9 +1,3 @@
-
-
-
-
-
-
 import React from "react";
 import "../AcpremiumOld/AcpremiumOld.css";
 import { HiArrowLongLeft, HiOutlineArrowLongRight } from "react-icons/hi2";
@@ -12,59 +6,64 @@ import { Link } from "react-router-dom";
 import curtainImg from '../../../../Assets/Products/Liquor/AcpremiumOld/sectionCurtain.png';
 import flavourImg from '../../../../Assets/Products/Liquor/AcpremiumOld/sectionFlavours.png';
 import flavourGroup from '../../../../Assets/Products/Liquor/AcpremiumOld/flavourGroup.png'
-import bottle from '../../../../Assets/Products/Liquor/AcpremiumOld/bottles.png';
-import distik from '../../../../Assets/Products/Liquor/AcpremiumOld/distik.png';
+import bottle from '../../../../Assets/Products/Liquor/AcpremiumOld/bottle.svg';
+import distik from '../../../../Assets/Products/Liquor/AcpremiumOld/distik.svg';
 import glass from '../../../../Assets/Products/Liquor/AcpremiumOld/glass.png';
 import acpsectiononelogo from '../../../../Assets/Products/Liquor/AcpremiumNew/acpsectiononelogo.png';
 import acpsectiontwoimgs from '../../../../Assets/Products/Liquor/AcpremiumOld/sec1bottle.png';
-import acpblack from '../../../../Assets/Products/Liquor/AcpremiumNew/acblackImg.png';
-import acpnewImg from '../../../../Assets/Products/Liquor/AcpremiumNew/acpnewImg.png';
+import acpblack from '../../../../Assets/Products/Liquor/AcpremiumNew/damnlink.svg';
+import acpnewImg from '../../../../Assets/Products/Liquor/AcpremiumNew/acpnewlink.svg';
 import acplast from '../../../../Assets/Products/Liquor/AcpremiumNew/acplastImg.png';
+// import acpNew from '../../../../Assets/Products/Liquor/AcpremiumNew/damnlink.svg';
+import royalMedol from '../../../../Assets/ArrowBottle/royalMedal.svg';
+import acpNew from '../../../../Assets/ArrowBottle/acpNew.svg';
 
 export const AcpremiumOld = () => {
     return (
-        <div>
+        <div className="acpremium-container">
             {/* //1 */}
             <div className="acpoldpagesRowDiv acpoldSecondPageSectionOneImage">
-                <div style={{marginLeft:'80px', alignSelf:'center'}}>
-                    <img src={acpsectiononelogo} alt="bottleImg" style={{ height: '40%', width: '50%' }} />
+                <div className="acpsecDiv">
+                    <img src={acpsectiononelogo} alt="bottleImg" className="bottleImgLogo" />
                     <h2 className="acpoldSecondHeading">CLASSIC WHISKEY</h2>
-                    <p className="acpoldParagraph">One of India's most-loved whiskey brands with</p>
-                    <p className="acpoldParagraph">its iconic gold and deep-red bottle.</p>
+                    <p className="acpoldParagraph">One of India's most-loved whiskey brands with its iconic gold and deep-red bottle.</p>
                 </div>
-            <img src={acpsectiontwoimgs} alt="bottleImg" style={{ height: '90vh', width: '50%' }} />
+                <img src={acpsectiontwoimgs} alt="bottleImg" className="bottleImg bottleImgfirst" />
             </div>
             {/* //2 */}
             <div className="pagesTextDivTwo acpScondSectionTwoImage">
-            <img src={acplast} alt="bottleImg" style={{ height: '90vh', width: '50%' }} />
+                <img src={acplast} alt="bottleImg" className="section2BotleImg" />
                 <div className="pagesTextDiv">
                     <div className="pageSecondText">
                         <h1 className="sectionTwoHeading">THE ESSENCE OF</h1>
                         <h1 className="sectionTwoHeading">SOPHISTICATION</h1>
                     </div>
                     <div>
-                        <p className="sectionTwoParagraph">Distinctive and refined in both taste and look, it is</p>
-                        <p className="sectionTwoParagraph">blended with pure grain and select imported</p>
-                        <p className="sectionTwoParagraph">Scotch malts, bringing a <span>honeyed and delightful</span></p>
-                        <p className="sectionTwoParagraph"><span>experince</span> to its loyal patrons</p>
+                        <p className="sectionTwoParagraph">Distinctive and refined in both taste and look, it is blended with pure grain and select imported Scotch malts, bringing a <span>honeyed and delightful experince</span> to its loyal patrons</p>
                     </div>
                 </div>
             </div>
             {/* //3 */}
             <section className="sectionThree">
-                <div><img src={curtainImg} alt="leftCurtain" className="image" /></div>
+                <div><img src={curtainImg} alt="leftCurtain" className="image img-dec" /></div>
                 <div className="flavourDiv">
                     <h1 className="flavourDivHeader">FLAVOUR PROFILE</h1>
-                    <img src={flavourGroup} alt="groupBtl" className="image" style={{marginBottom:'-15%'}}/>
-                    <img src={flavourImg} alt="flavours" className="image" />
+                    <img src={flavourGroup} alt="groupBtl" className="image favBotGroupImg" />
+                    {/* <img src={flavourImg} alt="flavours" className="image" /> */}
+                    <div className="profile-icon-wrap">
+                        <div className="profile-icon-1">Elegant and Long Lasting</div>
+                        <div className="profile-icon-2">Sweet, Floral with a touch of spices</div>
+                        <div className="profile-icon-3">Deep Gold to the eyes</div>
+                        <div className="profile-icon-4">Smooth, with a hint of Fruit & Spices</div>
+                    </div>
                 </div>
-                <div><img src={curtainImg} alt="rightCurtain" className="curtainImage image" /></div>
+                <div><img src={curtainImg} alt="rightCurtain" className="curtainImage image img-dec" /></div>
             </section>
             {/* //4 */}
             <section className="acpsecondfourthSectionImage">
                 <div className="pagesTextbetween">
                     <h2 className="pagesTextFavorDivHeader">BEYOND LUXURY LIES LEGACY.</h2>
-                    <div>
+                    <div className="legacy-img-wrap">
                         <div className="imageText">
                             <img src={glass} alt="bottleImg" className="logoText" />
                             <div>
@@ -75,45 +74,80 @@ export const AcpremiumOld = () => {
                         <div className="imageText">
                             <img src={bottle} alt="bottleImg" className="logoText" />
                             <div>
-                                <p className="logoTextParagraph">Best Enjoyed How You</p>
-                                <p className="logoTextParagraph">Like Your Scotch</p>
+                                <p className="logoTextParagraph">Bottled With Care By State</p>
+                                <p className="logoTextParagraph">Of the Art Bottling Facilities</p>
                             </div>
                         </div>
                         <div className="imageText">
                             <img src={distik} alt="bottleImg" className="logoText" />
                             <div>
-                                <p className="logoTextParagraph">Best Enjoyed How You</p>
-                                <p className="logoTextParagraph">Like Your Scotch</p>
+                                <p className="logoTextParagraph">Made With The Finest</p>
+                                <p className="logoTextParagraph">Indian Spirits</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
             {/* //5 */}
-            <div className="acppremiumfifthhDiv">
-                <div style={{ justifyContent: 'center', display: 'flex', height: '50%', marginTop: '5%' }}>
-                    <img src={acplast} alt="lastImg" />
-                </div>
-                <div style={{ justifyContent: 'center', display: 'flex', flexDirection: 'row',marginTop: '5%' }}>
-                    <Link to={'/products/liquor/DamnGoodScotch'} className="acppremiumleftArrowDiv">
-                        <div style={{ textAlign: 'right', alignSelf: 'center', }}>
-                            <h1 className="acppremiumarrowHeading">Aristocrat Premium (OLD)</h1>
-                            <HiArrowLongLeft style={{ fontSize: '55px' }} />
+
+            <div className="video-link-redirect">
+                {/* <div className="acpvideoDiv">
+                {scrVideo && (
+                    <video
+                        className="videoContent"
+                        width="100%"
+                        height="100%"
+                        // controls
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                    >
+                        <source src={scrVideo} type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                )}
+                </div> */}
+                {/* <div className="acpNewarrowDiv">
+                    <Link to={'/products/liquor/ACpremiumNew'} className="acppremiumleftArrowDiv">
+                        <div className="acpNewLeftDiv">
+                            <h1 className="acpNpremiumarrowHeading">Aristocrat Premium</h1>
+                            <HiArrowLongLeft className="leftIconImg" />
                         </div>
-                        <div>
-                            <img src={acpnewImg} alt="block" style={{ height: '150px', marginLeft: '25px', marginRight: '25px' }} />
+                        <div className="acpNewleftSmallImg">
+                            <img src={acpnewImg} alt="block" />
                         </div>
                     </Link>
-                    <Link to={'/products/liquor/RoyalMedallion'} className="acppremiumrightArrowDiv">
-                        <div>
-                            <img src={acpblack} alt="block" style={{ height: '150px',marginRight: '5px' }} />
+                    <Link to={'/products/liquor/DamnGoodScotch'} className="acppremiumrightArrowDiv">
+                        <div className="acpNewrightSmallImg" >
+                            <img src={acpblack} alt="block" />
                         </div>
-                        <div style={{ textAlign: 'left', alignSelf: 'center' }}>
-                            <h1 className="acppremiumarrowHeading">Aristocrat Black</h1>
-                            <HiOutlineArrowLongRight style={{ fontSize: '55px' }} />
+                        <div className="acpNewRightDiv">
+                            <h1 className="acpNpremiumarrowHeading">Damn Good Scotch</h1>
+                            <HiOutlineArrowLongRight className="leftIconImg" />
                         </div>
                     </Link>
-                </div>
+                </div> */}
+                               <div className="acpNewarrowDiv">
+                    <Link to={'/products/liquor/RoyalMedallion'} className="acppremiumleftArrowDiv">
+                        <div className="acpNewLeftDiv">
+                            <h1 className="acpNpremiumarrowHeading">Royal Medallion</h1>
+                            <HiArrowLongLeft className="leftIconImg" />
+                        </div>
+                        <div className="acpNewleftSmallImg">
+                            <img src={royalMedol} alt="block" /> 
+                        </div>
+                    </Link>
+                    <Link to={'/products/liquor/ACpremiumNew'} className="acppremiumrightArrowDiv">
+                        <div className="acpNewrightSmallImg" >
+                            <img src={acpNew} alt="block" />
+                        </div>
+                        <div className="acpNewRightDiv">
+                            <h1 className="acpNpremiumarrowHeading">Aristocrat Premium (New)</h1>
+                            <HiOutlineArrowLongRight className="leftIconImg" />
+                        </div>
+                    </Link>
+                </div>  
             </div>
         </div>
     )

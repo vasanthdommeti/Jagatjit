@@ -8,6 +8,7 @@
     border-top-left-radius: 35px;
     border-top-right-radius: 35px;
     padding-left: 10vw;
+    position: relative;
 }
 
 .footerImage {
@@ -35,6 +36,9 @@
     margin-top: -50px;
     width: 250px;
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .footerRights,
@@ -42,7 +46,7 @@
     margin-top: 20px;
     font-size: 0.8rem;
     text-align: center;
-    letter-spacing: 2p;
+    letter-spacing: 2px;
 }
 
 .footerCreditsText {
@@ -62,6 +66,7 @@
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+    gap: 10px;
 }
 
 h1,
@@ -104,7 +109,8 @@ p {
 
 .contactParagraph {
     letter-spacing: 1px;
-    line-height: 21px;
+    /* line-height: 21px; */
+    /* margin-bottom: auto; */
     text-decoration: none;
     color: #fff;
 }
@@ -178,5 +184,14 @@ span {
     .footerInfo {
         margin-top: 0;
         margin-left: 0;
+    }
+
+}
+
+@media (max-width: 986px) {
+
+    .footerContact,
+    .footerInfo {
+        margin-top: 0;
     }
 }
