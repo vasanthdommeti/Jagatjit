@@ -572,6 +572,11 @@
         justify-content: unset;
         gap: 40px;
     }
+    .acppremiumrightArrowDiv,
+    .acppremiumleftArrowDiv {
+        padding: 11px;
+        gap: 10px;
+    }
 
     .acpNewarrowDiv {
         display: grid;
@@ -753,4 +758,30 @@
         width: auto;
         height: 100px;
     }
+}
+
+@media (max-width: 1024px) {
+    .acppremiumrightArrowDiv,
+    .acppremiumleftArrowDiv {
+        padding: 11px;
+        gap: 10px;
+    }
+        .acpNpremiumarrowHeading {
+        font-size: 16px;
+        line-height: 17px;
+    }
+
+    .acpNewleftSmallImg > img,
+    .acpNewrightSmallImg > img {
+        width: auto;
+        height: 100px;
+    }
+    .sectionTwoHeading {
+        font-size: 21px;
+        line-height: 40px;
+        margin-bottom: 10px;
+        max-width: 100%;
+        text-align: center;
+    }
+    
 }

@@ -481,3 +481,19 @@
 
 
 }
+
+
+@media (max-width: 1024px){
+  .damnimageText, .damnlogodrumsimage {
+  align-items: center;
+  gap: 10px;
+  width: 45%;
+}
+.damnThirdDivContent {
+  display: block;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding-left: 10%;
+  padding-right: 20%;
+}
+}

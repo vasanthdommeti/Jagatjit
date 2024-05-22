@@ -142,7 +142,7 @@ export const AcBlack = () => {
                 <div className="acpNewarrowDiv">
                     <Link to={'/products/liquor/ACpremiumNew'} className="acppremiumleftArrowDiv">
                         <div className="acpNewLeftDiv">
-                            <h1 className="acpNpremiumarrowHeading">Aristocrat Premium (New)</h1>
+                            <h1 className="acpNpremiumarrowHeading">Aristocrat Premium</h1>
                             <HiArrowLongLeft className="leftIconImg" />
                         </div>
                         <div className="acpNewleftSmallImg">

@@ -143,7 +143,7 @@ export const AcpremiumOld = () => {
                             <img src={acpNew} alt="block" />
                         </div>
                         <div className="acpNewRightDiv">
-                            <h1 className="acpNpremiumarrowHeading">Aristocrat Premium (New)</h1>
+                            <h1 className="acpNpremiumarrowHeading">Aristocrat Premium</h1>
                             <HiOutlineArrowLongRight className="leftIconImg" />
                         </div>
                     </Link>
