@@ -411,16 +411,16 @@
 }
 
 .carousel-caption .section-silder-Button {
-    font-family: Josefin Sans;
-    font-size: 20px;
+    font-family: 'Regular';
+    font-size: 10px;
     font-weight: 300;
     line-height: 20px;
     text-align: center;
     border: 0.5px solid #ECA533;
     border-radius: 25px;
-    padding: 10px 35px;
+    padding: 5px 25px;
     color: #ECA533;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     background-color: transparent;
 }
 

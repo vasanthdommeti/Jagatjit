@@ -21,8 +21,8 @@ import damnScotch from '../../../../Assets/ArrowBottle/damnScotch.svg';
 import { Link } from "react-router-dom";
 export const RoyalPride = () => {
 
-    const [scrVideo, setScrVideo] = useState(""); 
-    useEffect(() => { 
+    const [scrVideo, setScrVideo] = useState("");
+    useEffect(() => {
         axios.get('https://api.jagatjit.com/api/videos')
             .then(response => {
                 let data = response.data.data.find((el) => {
@@ -43,7 +43,7 @@ export const RoyalPride = () => {
                 <div style={{ display: 'flex', alignSelf: 'center', paddingLeft: '7%' }}>
 
                     <div className="royalRowContent">
-                        <div className="animated"> <h1 className="royalHeading animated">
+                        <div className="animated"> <h1 className="royalHeading">
                             ROYAL PRIDE
                         </h1>
 
@@ -71,23 +71,20 @@ export const RoyalPride = () => {
                     </h1> */}
 
                     <h1 className="royalSecondDivHeading">
-                        <div className="animated">
-                            Made with the
-                        </div>
+
+                        Made with the
                     </h1>
 
                     <h1 className="royalSecondDivHeading">
-                        <div className="animated">
-                            finest grains
-                        </div>
+
+                        finest grains
+
                     </h1>
 
                     <p className="royalSecondDivParagraph">
-                        <div className="animated">
-                            Launched in 2022, Royal Pride is crafted by our Scottish master blenders with the
-                            <span> finest grain spirits</span> and
-                            <span> imported Scotch malts.</span>
-                        </div>
+                        Launched in 2022, Royal Pride is crafted by our Scottish master blenders with the
+                        <span> finest grain spirits</span> and
+                        <span> imported Scotch malts.</span>
                     </p>
 
                 </div>
@@ -191,25 +188,25 @@ export const RoyalPride = () => {
                     </Link>
                 </div> */}
                 <div className="acpNewarrowDiv">
-<Link to={'/products/liquor/acpremiumblack'} className="acppremiumleftArrowDiv">
-    <div className="acpNewLeftDiv">
-        <h1 className="acpNpremiumarrowHeading">Aristocrat Black</h1>
-        <HiArrowLongLeft className="leftIconImg" />
-    </div>
-    <div className="acpNewleftSmallImg">
-        <img src={acpblack} alt="block" />
-    </div>
-</Link>
-<Link to={'/products/liquor/damngoodscotch'} className="acppremiumrightArrowDiv">
-    <div className="acpNewrightSmallImg" >
-        <img src={damnScotch} alt="block" />
-    </div>
-    <div className="acpNewRightDiv">
-        <h1 className="acpNpremiumarrowHeading">Damn Good Scotch</h1>
-        <HiOutlineArrowLongRight className="leftIconImg" />
-    </div>
-</Link>
-</div> 
+                    <Link to={'/products/liquor/acpremiumblack'} className="acppremiumleftArrowDiv">
+                        <div className="acpNewLeftDiv">
+                            <h1 className="acpNpremiumarrowHeading">Aristocrat Black</h1>
+                            <HiArrowLongLeft className="leftIconImg" />
+                        </div>
+                        <div className="acpNewleftSmallImg">
+                            <img src={acpblack} alt="block" />
+                        </div>
+                    </Link>
+                    <Link to={'/products/liquor/damngoodscotch'} className="acppremiumrightArrowDiv">
+                        <div className="acpNewrightSmallImg" >
+                            <img src={damnScotch} alt="block" />
+                        </div>
+                        <div className="acpNewRightDiv">
+                            <h1 className="acpNpremiumarrowHeading">Damn Good Scotch</h1>
+                            <HiOutlineArrowLongRight className="leftIconImg" />
+                        </div>
+                    </Link>
+                </div>
             </div>
         </section>
     )

@@ -10,6 +10,19 @@
     padding-left: 10vw;
     position: relative;
 }
+.footer a:hover{
+    color:#ECA533;
+}
+.footer a{
+    color: white;
+}
+.footerContactInfo,.footerContact a:hover{
+    color:#ECA533;
+}
+.footerContactInfo,.footerContact a{
+    color: white;
+    text-decoration: none;
+}
 
 .footerImage {
     text-align: left;
@@ -58,8 +71,14 @@
 
 .icons {
     color: #ECA533;
-    margin-bottom: -3px;
+    margin-bottom: -1px;
     margin-right: 5px;
+}
+.mapicons {
+    color: #ECA533;
+    margin-top: -13px;
+    margin-right: 5px;
+    font-size: 55px;
 }
 
 .footerContactInfo {
@@ -171,10 +190,21 @@ span {
     }
 
     .footerImage {
-        text-align: left;
+        text-align: center;
         margin-left: 0;
 
     }
+    .logoHeaderName, .logoPagraph{
+        text-align: center;
+    }
+    /* .footerContact h1, .footerInfo h1{
+        margin-left: 50px;
+        margin-bottom: 0%;
+    } */
+    /* .contactParagraph{
+        margin-left: 50px;
+        color: aqua;
+    } */
 
     .footerContactInfo {
         flex-direction: column;
