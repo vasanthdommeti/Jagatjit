@@ -106,7 +106,7 @@ export const AcBlack = () => {
                             <img src={glass} alt="" />
                             <p>Elegant and long-lasting</p>
                         </div>
-                        <div className="aciconsDiv">
+                        <div className="aciconsDivopp">
                             <img src={candle} alt="" />
                             <p>Deep Gold</p>
                         </div>
@@ -114,7 +114,7 @@ export const AcBlack = () => {
                             <img src={lipglass} alt="" />
                             <p>Smooth on the palate, green apple and spices</p>
                         </div>
-                        <div className="aciconsDiv">
+                        <div className="aciconsDivopp">
                             <img src={hotglass} alt="" />
                             <p>Honeyed, floral, with malty notes and a touch of spices</p>
                         </div>
@@ -139,27 +139,7 @@ export const AcBlack = () => {
                         </video>
                     )}
                 </div>
-                {/* <div className="acpNewarrowDiv">
-                    <Link to={'/products/liquor/ACpremiumNew'} className="acppremiumleftArrowDiv">
-                        <div className="acpNewLeftDiv">
-                            <h1 className="acpNpremiumarrowHeading">Aristocrat Premium</h1>
-                            <HiArrowLongLeft className="leftIconImg" />
-                        </div>
-                        <div>
-                            <img src={acblack} alt="block" className="acpNewleftSmallImg" />
-                        </div>
-                    </Link>
-                    <Link to={'/products/liquor/DamnGoodScotch'} className="acppremiumrightArrowDiv">
-                        <div>
-                            <img src={damnscotch} alt="block" className="acpNewrightSmallImg" />
-                        </div>
-                        <div className="acpNewRightDiv">
-                            <h1 className="acpNpremiumarrowHeading">Damn Good Scotch</h1>
-                            <HiOutlineArrowLongRight className="leftIconImg" />
-                        </div>
-                    </Link>
-                </div> */}
-                                <div className="acpNewarrowDiv">
+                <div className="acpNewarrowDiv">
                     <Link to={'/products/liquor/ACpremiumNew'} className="acppremiumleftArrowDiv">
                         <div className="acpNewLeftDiv">
                             <h1 className="acpNpremiumarrowHeading">Aristocrat Premium (New)</h1>

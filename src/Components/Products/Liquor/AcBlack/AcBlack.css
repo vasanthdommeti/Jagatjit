@@ -41,18 +41,48 @@
 .aciconsDiv{
     display: flex;
     align-items: center;
-    margin: 2%;
+    vertical-align: middle;
+    margin: 5%;
     width: 40%;
+    height: 20%;
 }
 .aciconsDiv p {
     display: flex;
     align-items: center;
     vertical-align: middle;
     justify-self: center;
-    margin-top: 7%;
+    margin-top: 6%;
     margin-left: 4%;
 
 }
+.aciconsDiv img {
+    width: 25%;
+    height: 25%;
+}
+.aciconsDivopp{
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    margin-top: 4%;
+    width: 40%;
+    height: 20%;
+}
+
+.aciconsDivopp p {
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    justify-self: center;
+    margin-top: 6%;
+    margin-left: 4%;
+}
+
+
+.aciconsDivopp img {
+    width: 25%;
+    height: 25%;
+}
+
 .accandleDiv{
     display: flex;
     flex-direction: row;
