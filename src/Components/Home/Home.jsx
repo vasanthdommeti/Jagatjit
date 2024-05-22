@@ -55,7 +55,7 @@ const section = [
     },
     {
         id: 2,
-        name: 'ARISTOCAT',
+        name: 'ARISTOCRAT',
         heading: "PREMIUM WHISKEY",
         para: "One of india's most loved whiskey.",
         smallImg: bottle2,
