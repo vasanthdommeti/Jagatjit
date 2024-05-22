@@ -26,19 +26,19 @@ import glass from '../../Assets/Products/Liquor/RoyalPride/glass.png';
 import royalpridethirdImg from '../../Assets/Products/Liquor/RoyalPride/royalpridethirdimg.png'
 // import LogoIcon from '../../Assests/LogoIcon.png'
 
-import bottle2 from '../../Assets/Home/SectionTwoImages/bottles1.png';
-import bottle3 from '../../Assets/Home/SectionTwoImages/bottles2.png';
-import bottle4 from '../../Assets/Home/SectionTwoImages/bottles3.png';
-import bottle5 from '../../Assets/Home/SectionTwoImages/bottles4.png';
-import bottle1 from '../../Assets/Home/SectionTwoImages/bottles5.png';
+import bottle1 from '../../Assets/Home/SectionTwoImages/bottles1.png';
+import bottle2 from '../../Assets/Home/SectionTwoImages/bottles2.png';
+import bottle3 from '../../Assets/Home/SectionTwoImages/bottles3.png';
+import bottle4 from '../../Assets/Home/SectionTwoImages/bottles4.png';
+import bottle5 from '../../Assets/Home/SectionTwoImages/bottles5.png';
 import bottle6 from '../../Assets/Home/SectionTwoImages/bottles6.png';
 import bottle7 from '../../Assets/Home/SectionTwoImages/bottles7.png';
 
-import bottle2main from '../../Assets/Home/SectionTwoImages/bottles1main.png';
-import bottle3main from '../../Assets/Home/SectionTwoImages/bottles2main.png';
-import bottle4main from '../../Assets/Home/SectionTwoImages/bottles3main.png';
-import bottle5main from '../../Assets/Home/SectionTwoImages/bottles4main.png';
-import bottle1main from '../../Assets/Home/SectionTwoImages/bottles5main.png';
+import bottle1main from '../../Assets/Home/SectionTwoImages/bottles1main.png';
+import bottle2main from '../../Assets/Home/SectionTwoImages/bottles2main.png';
+import bottle3main from '../../Assets/Home/SectionTwoImages/bottles3main.png';
+import bottle4main from '../../Assets/Home/SectionTwoImages/bottles4main.png';
+import bottle5main from '../../Assets/Home/SectionTwoImages/bottles5main.png';
 import bottle6main from '../../Assets/Home/SectionTwoImages/bottles6main.png';
 import bottle7main from '../../Assets/Home/SectionTwoImages/bottles7main.png';
 import Footer from "../Footer/Footer";
@@ -51,7 +51,7 @@ const section = [
         para: "Reinvent yourself with Every sip.",
         smallImg: bottle1,
         largeImg: bottle1main,
-        link: '/products/liquor/RoyalPride',
+        link: '/products/liquor/royalpride',
     },
     {
         id: 2,
@@ -60,7 +60,7 @@ const section = [
         para: "One of india's most loved whiskey.",
         smallImg: bottle2,
         largeImg: bottle2main,
-        link: 'products/liquor/ACpremiumNew',
+        link: '/products/liquor/acpremium',
     },
     {
         id: 3,
@@ -69,7 +69,7 @@ const section = [
         para: "Old is gold, our best in the most recognixable bottle.",
         smallImg: bottle3,
         largeImg: bottle3main,
-        link: '/products/liquor/ACpremiumOld',
+        link: '/products/liquor/acpremiumold',
     },
     {
         id: 4,
@@ -78,7 +78,7 @@ const section = [
         para: "A drink made for kings.",
         smallImg: bottle4,
         largeImg: bottle4main,
-        link: '/products/liquor/DamnGoodScotch',
+        link: '/products/liquor/damngoodscotch',
     },
     {
         id: 5,
@@ -87,7 +87,7 @@ const section = [
         para: "Just endless possibilities.",
         smallImg: bottle5,
         largeImg: bottle5main,
-        link: '/products/liquor/ACpremiumBlack',
+        link: '/products/liquor/acpremiumblack',
     },
     {
         id: 6,
@@ -96,7 +96,7 @@ const section = [
         para: "Heritage of Quality.",
         smallImg: bottle6,
         largeImg: bottle6main,
-        link: '/products/liquor/RoyalPride',
+        link: '/products/liquor/royalpride',
     },
     {
         id: 7,
@@ -105,7 +105,7 @@ const section = [
         para: "Like I Like it",
         smallImg: bottle7,
         largeImg: bottle7main,
-        link: '/products/liquor/IiceVodka',
+        link: '/products/liquor/iicevodka',
     }
 ]
 
@@ -228,7 +228,7 @@ function Home() {
                 marginTop: getMarginTop(),
                 marginLeft: getMarginLeft(),
             }, {
-                scale: 0.7,
+                scale: 0.8,
                 rotate: 0,
                 marginTop: getMarginTopReset(),
                 marginLeft: getMarginLeftreset(),
@@ -257,7 +257,7 @@ function Home() {
             function getMarginTopReset() {
                 const vh = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
                 if (vh < 768) {
-                    return '19vh';
+                    return '11vh';
                 } else if (vh >= 768 && vh < 1024) {
                     return '20vh';
                 } else {
@@ -267,7 +267,7 @@ function Home() {
             function getMarginLeftreset() {
                 const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
                 if (vw < 768) {
-                    return '50vw';
+                    return '53vw';
                 } else if (vw >= 768 && vw < 1024) {
                     return '70vw';
                 } else {
@@ -307,7 +307,7 @@ function Home() {
 
             {/* //2 */}
             <section className="section2ButtonChange">
-                <div id='sectionImage2' className='section2'>
+                <div id='sectionImage2' className='section2 royalsectwo'>
                     <div className='section3MainDiv'>
                         <img src={data.largeImg} alt="bottle" className="section2img" />
                         <div className="secion2TextWrap">
@@ -352,7 +352,7 @@ function Home() {
                     <h1 className='section3Header'>of our favorite </h1>
                     <h1 className='section3Header'>Whiskey.</h1>
                     <p className='section3Paragraph'>Explore our history to find out how we did it.</p>
-                    <Link to={'/AboutUs/Heritage'}>
+                    <Link to={'/aboutus/heritage'}>
                         <button className='section3Button'>HERITAGE</button>
                     </Link>
                 </div>
@@ -449,7 +449,7 @@ function Home() {
                                 <img src={image1} className="d-block w-100" alt="image1" />
                             </picture>
                             <div className="carousel-caption slider-btn-link-1">
-                                <Link to={'/products/liquor/RoyalPride'}>
+                                <Link to={'/products/liquor/royalpride'}>
                                     <button className='section-silder-Button'>Find Out More</button>
                                 </Link>
                             </div>
@@ -460,7 +460,7 @@ function Home() {
                                 <img src={image2} className="d-block w-100" alt="image2" />
                             </picture>
                             <div className="carousel-caption slider-btn-link-2">
-                                <Link to={'/products/liquor/DamnGoodScotch'}>
+                                <Link to={'/products/liquor/damngoodscotch'}>
                                     <button className='section-silder-Button'>Find Out More</button>
                                 </Link>
                             </div>
@@ -471,7 +471,7 @@ function Home() {
                                 <img src={image3} className="d-block w-100" alt="image3" />
                             </picture>
                             <div className="carousel-caption slider-btn-link-3">
-                                <Link to={'/products/liquor/ACpremiumBlack'}>
+                                <Link to={'/products/liquor/acpremiumblack'}>
                                     <button className='section-silder-Button'>Find Out More</button>
                                 </Link>
                             </div>
@@ -494,7 +494,7 @@ function Home() {
                     <div className='section3GroupHeaderDiv'>
                         <h1 className='section5Header'>Where does all the</h1>
                         <h1 className='section5Header'>magic come from ?</h1>
-                        <Link to={'/our-Process'}>
+                        <Link to={'/ourprocess'}>
                             <button className='section3Button'>OUR PROCESS</button>
                         </Link>
                     </div>

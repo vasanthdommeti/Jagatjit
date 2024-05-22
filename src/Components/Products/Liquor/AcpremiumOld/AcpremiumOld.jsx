@@ -129,7 +129,7 @@ export const AcpremiumOld = () => {
                     </Link>
                 </div> */}
                                <div className="acpNewarrowDiv">
-                    <Link to={'/products/liquor/RoyalMedallion'} className="acppremiumleftArrowDiv">
+                    <Link to={'/products/liquor/royalmedallion'} className="acppremiumleftArrowDiv">
                         <div className="acpNewLeftDiv">
                             <h1 className="acpNpremiumarrowHeading">Royal Medallion</h1>
                             <HiArrowLongLeft className="leftIconImg" />
@@ -138,12 +138,12 @@ export const AcpremiumOld = () => {
                             <img src={royalMedol} alt="block" /> 
                         </div>
                     </Link>
-                    <Link to={'/products/liquor/ACpremiumNew'} className="acppremiumrightArrowDiv">
+                    <Link to={'/products/liquor/acpremium'} className="acppremiumrightArrowDiv">
                         <div className="acpNewrightSmallImg" >
                             <img src={acpNew} alt="block" />
                         </div>
                         <div className="acpNewRightDiv">
-                            <h1 className="acpNpremiumarrowHeading">Aristocrat Premium (New)</h1>
+                            <h1 className="acpNpremiumarrowHeading">Aristocrat Premium</h1>
                             <HiOutlineArrowLongRight className="leftIconImg" />
                         </div>
                     </Link>

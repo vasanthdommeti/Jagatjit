@@ -28,10 +28,10 @@ function Footer() {
                     </div>
                     <div className='footerInfo'>
                         <h1>MORE INFO</h1>
-                        <Link to={'/Sustainability'} className='contactParagraph'><p>Sustainability</p></Link>
-                        <Link to={'/aboutUs/Press'} className='contactParagraph'><p>Press</p></Link>
-                        <Link to={'/GlobalPresence'} className='contactParagraph'><p>Global Presence</p></Link>
-                        <Link to={'/ContactUs'} className='contactParagraph'><p>Contact Us</p></Link>
+                        <Link to={'/sustainability'} className='contactParagraph'><p>Sustainability</p></Link>
+                        <Link to={'/aboutus/press'} className='contactParagraph'><p>Press</p></Link>
+                        <Link to={'/globalpresence'} className='contactParagraph'><p>Global Presence</p></Link>
+                        <Link to={'/contactus'} className='contactParagraph'><p>Contact Us</p></Link>
                     </div>
                 </div>
             </div>
@@ -43,7 +43,7 @@ function Footer() {
             </div>
             <div className='footerCredits footerCreditsText'>
                 <p className='allRightsparagraph'>All rights reserved. 2024.</p>
-                <div style={{ justifyContent: 'space-between', display: 'flex' }}><Link to={'/PrivacyPolicy'} style={{ marginRight: 20, textDecoration: 'none', color: 'white' }}><span>Privacy Policy</span></Link>
+                <div style={{ justifyContent: 'space-between', display: 'flex' }}><Link to={'/privacypolicy'} style={{ marginRight: 20, textDecoration: 'none', color: 'white' }}><span>Privacy Policy</span></Link>
                     {/* <Link to={'/Terms&Condition'} style={{ marginLeft: 20, textDecoration:'none', color:'white' }}>Terms And Conditions</Link> */}
                 </div>
             </div>

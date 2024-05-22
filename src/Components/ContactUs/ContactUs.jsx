@@ -64,7 +64,7 @@ const ContactUs = () => {
         const response = await axios.post('https://api.jagatjit.com/api/contact', formData);
         setMessage('Form submitted successfully!');
         setFormData({ name: '', email: '', body: '' }); // Clear form after successful submission
-        navigate("/");
+        navigate("/home");
       } catch (error) {
         setMessage(`Error: ${error.response ? error.response.data : 'Network Error'}`);
       }
