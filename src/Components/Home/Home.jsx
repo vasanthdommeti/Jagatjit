@@ -10,7 +10,7 @@ import brewImage from '../../Assets/Home/brewingImage.png';
 import storageImage from '../../Assets/Home/storageImage.png';
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import mapImage from '../../Assets/Home/sec6backgroundImg.png';
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
 import image1 from '../../Assets/Home/SectionThreeImages/sec1.svg';
 import image2 from '../../Assets/Home/SectionThreeImages/sec2.svg';
@@ -183,6 +183,8 @@ function Home() {
     const [content, setContent] = useState("");
     const [activeId, setActiveId] = useState(section[0]?.id);
 
+    const secondSectionRef = useRef(null);
+
     useEffect(() => {
         if (section.length > 0) {
             setData(section[0]);
@@ -198,14 +200,14 @@ function Home() {
         handleClick(item.id);
     };
 
-    gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
     const firstRef = useRef(null);
 
     const wrapperRef = useRef(null);
 
     useLayoutEffect(() => {
-        gsap.registerPlugin(ScrollTrigger);
+        // gsap.registerPlugin(ScrollTrigger);
 
         const ctx = gsap.context((self) => {
             const tl = gsap
@@ -217,7 +219,7 @@ function Home() {
                         trigger: wrapperRef.current,
                         pin: true,
                         scrub: 1.5,
-                        end: () => "+=100%" ,
+                        end: () => "+=100%",
                     },
                 });
 
@@ -284,6 +286,12 @@ function Home() {
         return markers.some(marker => marker.name.includes(countryName));
     };
 
+    const handleBrowseMoreClick = () => {
+        if (secondSectionRef.current) {
+            gsap.to(window, { duration: 1, scrollTo: secondSectionRef.current });
+        }
+    };
+
     return (
         <div className="App" ref={wrapperRef}>
             {/* //1 */}
@@ -294,7 +302,7 @@ function Home() {
                         <h1 className="section1subHeading">Since 1944</h1>
                         <p className="section1paragraph">Explore our curated selection of</p>
                         <p className="section1paragraph">premium liquor</p>
-                        <button className='section3Button'>BROWSE MORE</button>
+                        <button className='section3Button' onClick={handleBrowseMoreClick}>BROWSE MORE</button>
                     </div>
                     <img
                         ref={firstRef}
@@ -306,7 +314,7 @@ function Home() {
             </section>
 
             {/* //2 */}
-            <section className="section2ButtonChange">
+            <section className="section2ButtonChange" >
                 <div id='sectionImage2' className='section2 royalsectwo'>
                     <div className='section3MainDiv'>
                         <img src={data.largeImg} alt="bottle" className="section2img" />
@@ -344,7 +352,7 @@ function Home() {
                 </div>
             </section>
             {/* /3/  completed*/}
-            <section id='sectionImage3' className='section1' >
+            <section id='sectionImage3' className='section1' ref={secondSectionRef}>
                 {/* <div Name='sectionThreeMainDiv'> */}
                 <div className='section3GroupHeaderDiv'>
                     <h1 className='section3Header'>We sold over</h1>
@@ -558,7 +566,7 @@ function Home() {
                     </div>
                 </div>
             </div>
-            <Footer/>
+            <Footer />
         </div>
     )
 }
