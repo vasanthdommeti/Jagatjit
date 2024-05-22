@@ -191,7 +191,7 @@ export const RoyalPride = () => {
                     </Link>
                 </div> */}
                 <div className="acpNewarrowDiv">
-<Link to={'/products/liquor/ACpremiumBlack'} className="acppremiumleftArrowDiv">
+<Link to={'/products/liquor/acpremiumblack'} className="acppremiumleftArrowDiv">
     <div className="acpNewLeftDiv">
         <h1 className="acpNpremiumarrowHeading">Aristocrat Black</h1>
         <HiArrowLongLeft className="leftIconImg" />
@@ -200,7 +200,7 @@ export const RoyalPride = () => {
         <img src={acpblack} alt="block" />
     </div>
 </Link>
-<Link to={'/products/liquor/DamnGoodScotch'} className="acppremiumrightArrowDiv">
+<Link to={'/products/liquor/damngoodscotch'} className="acppremiumrightArrowDiv">
     <div className="acpNewrightSmallImg" >
         <img src={damnScotch} alt="block" />
     </div>

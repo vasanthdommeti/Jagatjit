@@ -7,19 +7,19 @@ import { MdClose } from "react-icons/md";
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import { IoClose, IoMenu } from "react-icons/io5";
 import { Link } from 'react-router-dom';
-function Navbar({show}) {
+function Navbar({ show }) {
     const [menuOpen, setMenuOpen] = useState(false);
 
     useEffect(() => {
         setMenuOpen(false)
-    },[])
- 
+    }, [])
+
     const closeNav = () => {
         setMenuOpen(!menuOpen)
     };
 
     return (
-        <nav style={{display:show ? 'flex' :'none'}}>
+        <nav style={{ display: show ? 'flex' : 'none' }}>
             <div className='mainNavDiv'>
                 <div className="firstLogo">
                     <Link to="/" className="title">
@@ -30,7 +30,7 @@ function Navbar({show}) {
                     <span></span>
                     <span></span>
                     <span></span>
-                </div> 
+                </div>
             </div>
             <div>
                 <ul className={menuOpen ? "open" : "close"}>
@@ -39,59 +39,59 @@ function Navbar({show}) {
                     </li>
                     <li>
                         <DropdownButton id="dropdown-basic-button" className="dropdown-about borderChange" title="ABOUT US">
-                            <Dropdown.Item as={Link} to="/AboutUs/Heritage" onClick={closeNav}>
+                            <Dropdown.Item as={Link} to="/aboutus/heritage" onClick={closeNav}>
                                 HERITAGE
                             </Dropdown.Item>
-                            <Dropdown.Item as={Link} to="/aboutUs/OurTeam" onClick={closeNav}>
+                            <Dropdown.Item as={Link} to="/aboutus/ourteam" onClick={closeNav}>
                                 OUR TEAM
                             </Dropdown.Item>
-                            <Dropdown.Item as={Link} to="/aboutUs/values" onClick={closeNav}>
+                            <Dropdown.Item as={Link} to="/aboutus/values" onClick={closeNav}>
                                 VALUES
                             </Dropdown.Item>
-                            <Dropdown.Item as={Link} to="/aboutUs/Press" onClick={closeNav}>
+                            <Dropdown.Item as={Link} to="/aboutus/press" onClick={closeNav}>
                                 PRESS
                             </Dropdown.Item>
-                        </DropdownButton> 
-                    </li>  
-                    <li> 
+                        </DropdownButton>
+                    </li>
+                    <li>
                         <DropdownButton id="dropdown-basic-button" drop='down' className="dropdown-about" title="PRODUCTS">
                             <DropdownButton id="dropdown-basic-button" drop='left' className="dropdown-liquor dropdown-about" title="LIQUOR">
-                                <Dropdown.Item as={Link} to="/products/liquor/ACpremiumOld" onClick={closeNav}>
+                                <Dropdown.Item as={Link} to="/products/liquor/acpremiumold" onClick={closeNav}>
                                     AC PREMIUM (OLD)
                                 </Dropdown.Item>
-                                <Dropdown.Item as={Link} to="/products/liquor/ACpremiumNew" onClick={closeNav}>
+                                <Dropdown.Item as={Link} to="/products/liquor/acpremium" onClick={closeNav}>
                                     AC PREMIUM
                                 </Dropdown.Item>
-                                <Dropdown.Item as={Link} to="/products/liquor/ACpremiumBlack" onClick={closeNav}>
+                                <Dropdown.Item as={Link} to="/products/liquor/acpremiumblack" onClick={closeNav}>
                                     AC BLACK
                                 </Dropdown.Item>
-                                <Dropdown.Item as={Link} to="/products/liquor/RoyalPride" onClick={closeNav}>
+                                <Dropdown.Item as={Link} to="/products/liquor/royalpride" onClick={closeNav}>
                                     ROYAL PRIDE
                                 </Dropdown.Item>
-                                <Dropdown.Item as={Link} to="/products/liquor/DamnGoodScotch" onClick={closeNav}>
+                                <Dropdown.Item as={Link} to="/products/liquor/damngoodscotch" onClick={closeNav}>
                                     DAMN GOOD SCOTCH
                                 </Dropdown.Item>
-                                <Dropdown.Item as={Link} to="/products/liquor/IiceVodka" onClick={closeNav}>
+                                <Dropdown.Item as={Link} to="/products/liquor/iicevodka" onClick={closeNav}>
                                     IICE VODKA
                                 </Dropdown.Item>
-                                <Dropdown.Item as={Link} to="/products/liquor/AcDryGin" onClick={closeNav}>
+                                <Dropdown.Item as={Link} to="/products/liquor/acdrygin" onClick={closeNav}>
                                     AC DRY GIN
                                 </Dropdown.Item>
-                                <Dropdown.Item as={Link} to="/products/liquor/RoyalMedallion" onClick={closeNav}>
+                                <Dropdown.Item as={Link} to="/products/liquor/royalmedallion" onClick={closeNav}>
                                     ROYAL MEDALLION
                                 </Dropdown.Item>
                             </DropdownButton>
                             {/* <Dropdown.Item as={Link} to="/products/mff" onClick={closeNav}>
                                 MFF
                             </Dropdown.Item> */}
-        <DropdownButton id="dropdown-basic-button" className="dropdown-liquor dropdown-about" title="MMF">
-            <Dropdown.Item as={Link} to="/products/mmf/food-products" onClick={closeNav}>
-                FOOD PRODUCTS
-            </Dropdown.Item>
-            <Dropdown.Item as={Link} to="/products/mmf/malt-extract" onClick={closeNav}>
-                MALT EXTRACT
-            </Dropdown.Item>
-        </DropdownButton>
+                            <DropdownButton id="dropdown-basic-button" className="dropdown-liquor dropdown-about" title="MMF">
+                                <Dropdown.Item as={Link} to="/products/mmf/foodproducts" onClick={closeNav}>
+                                    FOOD PRODUCTS
+                                </Dropdown.Item>
+                                <Dropdown.Item as={Link} to="/products/mmf/maltextract" onClick={closeNav}>
+                                    MALT EXTRACT
+                                </Dropdown.Item>
+                            </DropdownButton>
                             <Dropdown.Item as={Link} to="/products/ethnol" onClick={closeNav}>
                                 ETHNOL
                             </Dropdown.Item>
@@ -101,7 +101,7 @@ function Navbar({show}) {
                         <img src={logo} alt="logo" />
                     </li>
                     <li className='dropdown-li'>
-                        <Link to="/our-Process" onClick={closeNav}>
+                        <Link to="/ourprocess" onClick={closeNav}>
                             OUR PROCESS
                         </Link>
                     </li>
@@ -116,17 +116,17 @@ function Navbar({show}) {
                             <Dropdown.Item as={Link} to="/investors/csr" onClick={closeNav}>
                                 CSR
                             </Dropdown.Item>
-                            <Dropdown.Item as={Link} to="/investors/codeOfCunduct" onClick={closeNav}>
+                            <Dropdown.Item as={Link} to="/investors/codeofconduct" onClick={closeNav}>
                                 CODE OF CONDUCT
                             </Dropdown.Item>
                         </DropdownButton>
                     </li>
                     <li className='dropdown-li'>
-                    <Link to="/ContactUs" onClick={closeNav}>CONTACT US</Link>
+                        <Link to="/contactus" onClick={closeNav}>CONTACT US</Link>
                     </li>
                 </ul>
-                <div className="menu" style={{zIndex:2, marginRight:'7%'}} id="nav-close" onClick={closeNav}>
-                    {menuOpen &&<IoClose fontSize={75}/>}
+                <div className="menu" style={{ zIndex: 2, marginRight: '7%' }} id="nav-close" onClick={closeNav}>
+                    {menuOpen && <IoClose fontSize={75} />}
                 </div>
             </div>
         </nav>

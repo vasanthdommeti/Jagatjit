@@ -158,7 +158,7 @@ export const DamnScotch = () => {
           </Link>
         </div> */}
                         <div className="acpNewarrowDiv">
-                    <Link to={'/products/liquor/RoyalPride'} className="acppremiumleftArrowDiv">
+                    <Link to={'/products/liquor/royalpride'} className="acppremiumleftArrowDiv">
                         <div className="acpNewLeftDiv">
                             <h1 className="acpNpremiumarrowHeading">Royal Pride</h1>
                             <HiArrowLongLeft className="leftIconImg" />
@@ -167,7 +167,7 @@ export const DamnScotch = () => {
                             <img src={RoyalPride} alt="block" />
                         </div>
                     </Link>
-                    <Link to={'/products/liquor/IiceVodka'} className="acppremiumrightArrowDiv">
+                    <Link to={'/products/liquor/iicevodka'} className="acppremiumrightArrowDiv">
                         <div className="acpNewrightSmallImg" >
                             <img src={iceVodka} alt="block" />
                         </div>

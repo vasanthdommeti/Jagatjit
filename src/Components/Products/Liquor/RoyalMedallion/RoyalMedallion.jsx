@@ -129,7 +129,7 @@ export const RoyalMedallion = () => {
                     </Link>
                 </div> */}
                                 <div className="acpNewarrowDiv">
-                    <Link to={'/products/liquor/AcDryGin'} className="acppremiumleftArrowDiv">
+                    <Link to={'/products/liquor/acdrygin'} className="acppremiumleftArrowDiv">
                         <div className="acpNewLeftDiv">
                             <h1 className="acpNpremiumarrowHeading">Aristocrat Dry Gin</h1>
                             <HiArrowLongLeft className="leftIconImg" />
@@ -138,7 +138,7 @@ export const RoyalMedallion = () => {
                             <img src={acDryGin} alt="block" />
                         </div>
                     </Link>
-                    <Link to={'/products/liquor/ACpremiumOld'} className="acppremiumrightArrowDiv">
+                    <Link to={'/products/liquor/acpremiumold'} className="acppremiumrightArrowDiv">
                         <div className="acpNewrightSmallImg" >
                             <img src={acpOld} alt="block" />
                         </div>

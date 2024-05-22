@@ -91,7 +91,7 @@ export const IceVodka = () => {
   </section>
 
   <div className="acpNewarrowDiv">
-                    <Link to={'/products/liquor/DamnGoodScotch'} className="acppremiumleftArrowDiv">
+                    <Link to={'/products/liquor/damngoodscotch'} className="acppremiumleftArrowDiv">
                         <div className="acpNewLeftDiv">
                             <h1 className="acpNpremiumarrowHeading">Damn Good Scotch</h1>
                             <HiArrowLongLeft className="leftIconImg" />
@@ -100,7 +100,7 @@ export const IceVodka = () => {
                             <img src={damnScotch} alt="block" />
                         </div>
                     </Link>
-                    <Link to={'/products/liquor/AcDryGin'} className="acppremiumrightArrowDiv">
+                    <Link to={'/products/liquor/acdrygin'} className="acppremiumrightArrowDiv">
                         <div className="acpNewrightSmallImg" >
                             <img src={acDryGin} alt="block" />
                         </div>

@@ -78,32 +78,41 @@ function App() {
       <Loading/>
       :
       <Routes>
+        {/* Single routes */}
         <Route exact path="/" element={<DateOfBirth />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/products/liquor/ACpremiumOld" element={<AcpremiumOld />} />
-        <Route path="/products/liquor/ACpremiumNew" element={<AcpremiumNew />} />
-        <Route path="/products/liquor/ACpremiumBlack" element={<AcBlack />} />
-        <Route path="/products/liquor/RoyalPride" element={<RoyalPride />} />
-        <Route path="/products/liquor/DamnGoodScotch" element={<DamnScotch />} />
-        <Route path="/products/liquor/AcDryGin" element={<AcDryGin />} />
-        <Route path="/products/liquor/RoyalMedallion" element={<RoyalMedallion />} />
-        <Route path="/products/liquor/IiceVodka" element={<IceVodka />} />
-        <Route path="/products/mmf/food-products" element={<FoodProducts />} />
-        <Route path="/products/mmf/malt-extract" element={<MaltExtract />} />
+        <Route path="/sustainability" element={<Sustainability />} />
+        <Route path="/privacypolicy" element={<PrivacyPolicy />} />
+        <Route path="/globalpresence" element={<GlobalPresence />} />
+        <Route path="/contactus" element={<ContactUs />} />
+        <Route path="/ourprocess" element={<OurProcess />} />
+
+        {/* Products routes */}
+        <Route path="/products/liquor/acpremiumold" element={<AcpremiumOld />} />
+        <Route path="/products/liquor/acpremium" element={<AcpremiumNew />} />
+        <Route path="/products/liquor/acpremiumblack" element={<AcBlack />} />
+        <Route path="/products/liquor/royalpride" element={<RoyalPride />} />
+        <Route path="/products/liquor/damngoodscotch" element={<DamnScotch />} />
+        <Route path="/products/liquor/acdrygin" element={<AcDryGin />} />
+        <Route path="/products/liquor/royalmedallion" element={<RoyalMedallion />} />
+        <Route path="/products/liquor/iicevodka" element={<IceVodka />} />
+        <Route path="/products/mmf/foodproducts" element={<FoodProducts />} />
+        <Route path="/products/mmf/maltextract" element={<MaltExtract />} />
         <Route path="/products/ethnol" element={<Ethanol />} />
-        <Route path="/aboutUs/values" element={<Values />} />
-        <Route path="/Sustainability" element={<Sustainability />} />
-        <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
-        <Route path="/GlobalPresence" element={<GlobalPresence />} />
-        <Route path="/investors/csr" element={<Csr />} />
-        <Route path="/investors/codeOfCunduct" element={<CodeOfCunduct />} />
-        <Route path="/AboutUs/Heritage" element={<Heritage />} />
-        <Route path="/ContactUs" element={<ContactUs />} />
+
+        {/* Investors routes */}
         <Route path="/investors/reports" element={<Report />} />
         <Route path="/investors/financial" element={<Financial />} />
-        <Route path="/aboutUs/OurTeam" element={<OurTeam />} />
-        <Route path="/aboutUs/Press" element={<Press />} />
-        <Route path="/our-Process" element={<OurProcess />} />
+        <Route path="/investors/csr" element={<Csr />} />
+        <Route path="/investors/codeofconduct" element={<CodeOfCunduct />} />
+
+        {/* About us routes */}
+        <Route path="/aboutus/ourteam" element={<OurTeam />} />
+        <Route path="/aboutus/heritage" element={<Heritage />} />
+        <Route path="/aboutus/values" element={<Values />} />
+        <Route path="/aboutus/press" element={<Press />} />
+
+        {/* Error route */}
         <Route path="*" element={<ErrorPage />} />
       </Routes>}
       {(pathname !==  '/'  && pathname !==  '/home') && !loading  && <Footer /> }
