@@ -211,8 +211,8 @@
 .section3GroupHeaderDiv {
     width: 100%;
     align-self: center;
-    justify-content: center;
-    margin-left: 10%;
+    justify-content: flex-end;
+    padding-left: 6%;
 }
 
 .section3Image {
