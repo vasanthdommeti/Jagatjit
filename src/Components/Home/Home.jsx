@@ -74,7 +74,7 @@ const section = [
     {
         id: 4,
         name: 'DAMN GOOD SCOTCH',
-        heading: "Blended Scotch Whiskey",
+        heading: "BLENDED SCOTCH WHISKEY",
         para: "A drink made for kings.",
         smallImg: bottle4,
         largeImg: bottle4main,
@@ -100,16 +100,14 @@ const section = [
     },
     {
         id: 7,
-        name: 'IICE VODKA',
-        heading: "Premium Vodka",
+        name: 'IICE',
+        heading: "PREMIUM VODKA",
         para: "Like I Like it",
         smallImg: bottle7,
         largeImg: bottle7main,
         link: '/products/liquor/iicevodka',
     }
 ]
-
-
 
 const markers = [
     {
@@ -318,7 +316,7 @@ function Home() {
                 <div id='sectionImage2' className='section2 royalsectwo'>
                     <div className='section3MainDiv'>
                         <div className="imageDivsow">
-                        <img src={data.largeImg} alt="bottle" className="section2img" />
+                            <img src={data.largeImg} alt="bottle" className="section2img" />
                         </div>
                         <div className="secion2TextWrap">
                             <div className="sectionThreeHeadDiv">
@@ -349,7 +347,7 @@ function Home() {
                                     </button>
                                 ))}
                             </div>
-                        </div> 
+                        </div>
                     </div>
                 </div>
             </section>
@@ -357,8 +355,8 @@ function Home() {
             <section id='sectionImage3' className='section1' ref={secondSectionRef}>
                 {/* <div Name='sectionThreeMainDiv'> */}
                 <div className='section3GroupHeaderDiv'>
-                    <h1 className='section3Header sec3headwidth'>We've sold over <br/><span style={{ color: '#ECA533' }} className='section3Header spansec3head'>30 Billion Cases </span>
-                    of our premium Whiskey.</h1>
+                    <h1 className='section3Header sec3headwidth'>We've sold over <br /><span style={{ color: '#ECA533' }} className='section3Header spansec3head'>30 Billion Cases </span>
+                        of our premium Whiskey.</h1>
                     <p className='section3Paragraph'>Explore our history to find out how we did it.</p>
                     <Link to={'/aboutus/heritage'}>
                         <button className='section3Button'>HERITAGE</button>
@@ -519,7 +517,7 @@ function Home() {
             </section>
             {/* //6 */}
 
-            <div style={{ height: '90vh', marginBottom:'5%' }}>
+            <div style={{ height: '90vh', marginBottom: '5%' }}>
                 <h1 className='section6Header'>JIL's Presence & Reach</h1>
                 <div className="mapContainerDiv">
                     <Tooltip id="my-tooltip" />
