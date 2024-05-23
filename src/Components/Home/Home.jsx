@@ -356,7 +356,7 @@ function Home() {
                 {/* <div Name='sectionThreeMainDiv'> */}
                 <div className='section3GroupHeaderDiv'>
                     <h1 className='section3Header sec3headwidth'>We've sold over <br /><span style={{ color: '#ECA533' }} className='section3Header spansec3head'>30 Billion Cases </span>
-                        of our premium Whiskey.</h1>
+                    <br/> of our premium Whiskey.</h1>
                     <p className='section3Paragraph'>Explore our history to find out how we did it.</p>
                     <Link to={'/aboutus/heritage'}>
                         <button className='section3Button'>HERITAGE</button>

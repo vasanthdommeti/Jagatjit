@@ -240,7 +240,7 @@
     /* width: 50vw; */
 }
 .sec3headwidth{
-    width: 50%;
+    /* width: 50%; */
     margin-left: -15px;
     /* font-size: 3rem; */
 }
@@ -360,7 +360,7 @@
 }
 
 .section3GroupImagesDiv {
-    width: 50%;
+    width: 100%;
     /* object-fit: contain; */
 
 }
