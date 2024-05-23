@@ -32,7 +32,7 @@ const ContactUs = () => {
     if (!formData.name) {
       formErrors.name = 'Name is required';
       isValid = false;
-    }
+    } 
 
     if (!formData.email) {
       formErrors.email = 'Email is required';
@@ -84,7 +84,7 @@ const ContactUs = () => {
             <h1 className='contactHeading'>Get in Touch with Us</h1>
             <p className='contactusParagraph'><GrPhone className='contacticons' /><a href="tel:0181-2783112" style={{ textDecoration: 'none', color: 'white' }}>0181-2783112</a></p>
             <p className='contactusParagraph'><FiMail className='contacticons' /> <a href="mailto:jil@jagatjit.com" style={{ textDecoration: 'none', color: 'white' }}>jil@jagatjit.com</a></p>
-            <div style={{ display: 'flex', flexDirection: 'row' }}><CiLocationOn className='contacticons' size={28} style={{ marginTop: '5px', marginLeft: '20px', marginRight: '-15px' }} /><p className='contactusParagraph'> <a href="https://maps.app.goo.gl/LAcFgCDhUC7ajYTXA" style={{ textDecoration: 'none', color: 'white' }}>Jagatjit Nagar, Hamira, Kapurthala Dist, 144802, Punjab, India.</a></p></div>
+            <div style={{ display: 'flex', flexDirection: 'row' }}><CiLocationOn className='locts' /><p className='contactusParagraph'> <a href="https://maps.app.goo.gl/LAcFgCDhUC7ajYTXA" style={{ textDecoration: 'none', color: 'white' }}>Jagatjit Nagar, Hamira, Kapurthala Dist, 144802, Punjab, India.</a></p></div>
           </div>
           <div>
             <h1 className='inputFieldHeading'>Fill in the details and we'll</h1>
