@@ -74,7 +74,7 @@ const section = [
     {
         id: 4,
         name: 'DAMN GOOD SCOTCH',
-        heading: "",
+        heading: "Blended Scotch Whiskey",
         para: "A drink made for kings.",
         smallImg: bottle4,
         largeImg: bottle4main,
@@ -101,7 +101,7 @@ const section = [
     {
         id: 7,
         name: 'IICE VODKA',
-        heading: "",
+        heading: "Premium Vodka",
         para: "Like I Like it",
         smallImg: bottle7,
         largeImg: bottle7main,
@@ -332,7 +332,7 @@ function Home() {
                             <div className="sectionThreeImageDiv">
                                 <div className="smallImgDiv">
                                     {section.map((e) => (
-                                        <button onClick={() => handleButtonClick(e)} className={`smallImgButton ${activeId === e.id ? ' bottle-active' : ' inactiveBotle'}`}>
+                                        <button onClick={() => handleButtonClick(e)} className={`smallImgButton ${activeId === e.id ? 'bottle-active' : 'inactiveBotle'}`}>
                                             <img src={e.smallImg} alt="bottle" title={e.name} />
                                         </button>
                                     ))}
@@ -344,12 +344,12 @@ function Home() {
                         <div className="sectionThreeImageDiv">
                             <div className="smallImgDiv">
                                 {section.map((e) => (
-                                    <button onClick={() => handleButtonClick(e)} className={`smallImgButton ${activeId === e.id ? ' bottle-active' : 'inactiveBotle'}`}>
+                                    <button onClick={() => handleButtonClick(e)} className={`smallImgButton ${activeId === e.id ? 'bottle-active' : 'inactiveBotle'}`}>
                                         <img src={e.smallImg} alt="bottle" title={e.name} />
                                     </button>
                                 ))}
                             </div>
-                        </div>
+                        </div> 
                     </div>
                 </div>
             </section>
@@ -519,7 +519,7 @@ function Home() {
             </section>
             {/* //6 */}
 
-            <div style={{ height: '90vh' }}>
+            <div style={{ height: '90vh', marginBottom:'5%' }}>
                 <h1 className='section6Header'>JIL's Presence & Reach</h1>
                 <div className="mapContainerDiv">
                     <Tooltip id="my-tooltip" />

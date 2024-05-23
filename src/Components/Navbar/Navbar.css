@@ -11,6 +11,7 @@ nav {
     /* position: calc(0); */
     width: 100%;
     background-color: black;
+    opacity: 0.7;
     transition: ease-in-out;
     top: 0;
     z-index: 2;
@@ -22,7 +23,7 @@ nav .title {
     font-size: 1.5rem;
     margin: 2rem;
     font-weight: bold;
-    text-decoration: none;
+    text-decoration: none; 
     color: white;
 }
 
@@ -223,6 +224,7 @@ nav ul.open:selection{
         display: flex;
         top: 30%;
         height: 1.5rem;
+
     }
 
     .firstLogo {
@@ -259,6 +261,9 @@ nav ul.open:selection{
         height: 100vh;
         -webkit-text-fill-color: #fff;
         -webkit-text-stroke: 1;
+    }
+    nav{
+        opacity: 1;
     }
 
     .nav__close {
