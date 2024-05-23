@@ -117,7 +117,7 @@ export const DamnScotch = () => {
         <div className="damnForthDivContent" >
           <h1 className="damnSecondDivHeading" >Aged for 3 years in</h1>
           <h1 className="damnSecondDivHeading" >The Scottish Highlands</h1>
-          <div className="damnimageText" style={{ marginTop: '2%' }}> 
+          <div className="damnimageText"> 
             <img src={glasss} alt="block" className="damnlogoimage" />
             <p>Best Enjoyed How You Like Your Scotch</p>
           </div>
@@ -125,9 +125,9 @@ export const DamnScotch = () => {
             <img src={bottle} alt="block" className="damnlogoimage damngoodiconbottle"  />
             <p>Bottled with care by state of the art bottling facilities</p>
           </div>
-          <div className="damnlogodrumsimage">
+          <div className="damnimageText">
             <img src={drums} alt="block" className="damnlogoimage"/>
-            <p>Made with the finest Indian spirits</p>
+            <p>Stored in Oak Wood Barrels from Scotland</p>
           </div>
 
         </div> 

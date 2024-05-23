@@ -162,7 +162,7 @@
   flex-direction: column;
   align-items: flex-end;
   padding-right: 10%;
-  padding-top: 8%;
+  padding-top: 4%;
   height: 90%;
   /* align-self: center; */
   /* padding: 10%; */
@@ -170,6 +170,7 @@
 }
 .damngoodiconbottle {
     width: 50%;
+    margin-right: -20px;
 }
 .damnSecondDivHeading {
   font-family: 'Krona One';
@@ -186,20 +187,23 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  height: 30%;
+  margin-top: 1%;
+  height: 25%;
+  justify-content: center;
   /* margin-top: 2%; */
   /* margin-bottom: 2%; */
-  width: 30%;
-  margin-right: 2%;
-  margin-top: 0px;
+  width: 35%;
   /* align-self: center; */
+}
+
+.damnimageText img {
+  width: 60%;
 }
 
 .damnimageText p{
   /* margin-top: 2%; */
   /* margin-bottom: 2%; */
   width: 50%;
-  margin-left: 3%;
   
   /* align-self: center; */
 }
@@ -211,7 +215,9 @@
   /* margin-top: 2%; */
   /* margin-bottom: 6%; */
   width: 30%;
+  height: 30%;
   margin-right: 3%;
+  justify-content: center;
 }
 
 .damnlogoimage {
@@ -362,11 +368,16 @@
   .damnParagraph {
     color: #FFFFFF;
     font-family: 'Josefin Sans';
-    font-size: 14px;
+    font-size: 16px;
     letter-spacing: 1px;
     font-weight: 100;
     text-align: center;
     margin-top: 5%;
+  }
+
+  .damnRowContent p {
+    font-size: 1.2rem;
+    text-align: center;
   }
   .damnThirdDivContent {
     padding-left: 1%;
@@ -450,6 +461,12 @@
   margin-top: 10%;
   margin-bottom: 85%;
 }
+
+.damnsecondRowContent p {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
 .logoImgTextCont{
   background-image: url('../../../../Assets/Products/Liquor/DamnScotch/smallImgLogo.png');
   height: 150px;
