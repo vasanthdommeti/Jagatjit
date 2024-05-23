@@ -68,7 +68,7 @@ export const AcpremiumNew = () => {
             </div>
             {/* //3 */}
             <section className="acpNsectionThree">
-                <div><img src={curtainImg} alt="leftCurtain" className="image" /></div>
+                <div><img src={curtainImg} alt="leftCurtain" className="image" style={{height:'95vh'}}/></div>
                 <div className="acpNflavourDiv">
                     <h1 className="acpNflavourDivHeader">FLAVOUR PROFILE</h1>
                     <div className="acpNewFavIconImgDiv">
@@ -87,7 +87,7 @@ export const AcpremiumNew = () => {
 
                     </div>
                 </div>
-                <div><img src={curtainImg} alt="rightCurtain" className="curtainImage image" /></div>
+                <div><img src={curtainImg} alt="rightCurtain" className="curtainImage image" style={{height:'95vh'}} /></div>
             </section>
             {/* //4 */}
 
