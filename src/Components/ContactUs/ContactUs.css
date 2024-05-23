@@ -49,10 +49,15 @@
     margin-bottom: 0;
     font-weight: 100;
     font-family: 'Josefin Sans';
+    margin-bottom: 10%;
 }
 
 .contactusParagraph {
-    margin: 5%;
+
+   
+    margin-bottom: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .textareainput {
@@ -99,10 +104,24 @@
         margin-top: 20%;
     }
 
+    .inputFieldHeading {
+        font-size: 18px;
+        margin-bottom: 0;
+        font-weight: 100;
+        font-family: 'Josefin Sans';
+        text-align: center;
+    }
+
     .contactHeading {
         font-size: 24px;
         margin-bottom: 0;
         font-weight: 100;
         font-family: 'Josefin Sans';
+        text-align: center;
     }
+
+    .contactContact h1 {
+        text-align: center;
+    }
+
 }

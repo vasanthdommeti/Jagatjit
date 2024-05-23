@@ -20,7 +20,7 @@ export const RoyalMedallion = () => {
     return (
         <section>
             {/* //1 */}
-            <div className="medalionFirstDiv" style={{ display: 'flex', alignSelf: 'center', paddingLeft: '7%', paddingRight: '5%' }}>
+            <div className="medalionFirstDiv" style={{ display: 'flex', alignSelf: 'center'}}>
                 <div className="medalionRowContent">
                     <h1 className="medalionHeading">
                         ROYAL
@@ -87,7 +87,7 @@ export const RoyalMedallion = () => {
 
             </div>
             <div className="mobileimgmed">
-                <img src={royalMImg} alt="royalMImg" style={{ objectFit: 'inherit', height: '60vh', width: '100vw', marginTop: '30%', marginBottom: '30%' }} />
+                <img src={royalMImg} alt="royalMImg" style={{ objectFit: 'inherit', marginTop: '30%', marginBottom: '30%' }} />
             </div>
             {/* //4 */}
             <div>
@@ -128,7 +128,7 @@ export const RoyalMedallion = () => {
                         </div>
                     </Link>
                 </div> */}
-                <div className="acpNewarrowDiv">
+                                <div className="acpNewarrowDiv">
                     <Link to={'/products/liquor/acdrygin'} className="acppremiumleftArrowDiv">
                         <div className="acpNewLeftDiv">
                             <h1 className="acpNpremiumarrowHeading">Aristocrat Dry Gin</h1>
@@ -147,7 +147,7 @@ export const RoyalMedallion = () => {
                             <HiOutlineArrowLongRight className="leftIconImg" />
                         </div>
                     </Link>
-                </div>
+                </div> 
             </div>
         </section>
     )

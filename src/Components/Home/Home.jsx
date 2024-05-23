@@ -40,7 +40,7 @@ import bottle3main from '../../Assets/Home/SectionTwoImages/bottles3main.png';
 import bottle4main from '../../Assets/Home/SectionTwoImages/bottles4main.png';
 import bottle5main from '../../Assets/Home/SectionTwoImages/bottles5main.png';
 import bottle6main from '../../Assets/Home/SectionTwoImages/bottles6main.png';
-import bottle7main from '../../Assets/Home/SectionTwoImages/bottles7main.png';
+import bottle7main from '../../Assets/Home/SectionTwoImages/bottles7main.svg';
 import Footer from "../Footer/Footer";
 
 const section = [
@@ -317,7 +317,9 @@ function Home() {
             <section className="section2ButtonChange" >
                 <div id='sectionImage2' className='section2 royalsectwo'>
                     <div className='section3MainDiv'>
+                        <div className="imageDivsow">
                         <img src={data.largeImg} alt="bottle" className="section2img" />
+                        </div>
                         <div className="secion2TextWrap">
                             <div className="sectionThreeHeadDiv">
                                 <h1 className="btnheading">{data.name}</h1>
@@ -330,7 +332,7 @@ function Home() {
                             <div className="sectionThreeImageDiv">
                                 <div className="smallImgDiv">
                                     {section.map((e) => (
-                                        <button onClick={() => handleButtonClick(e)} className={`smallImgButton ${activeId === e.id ? ' bottle-active' : ''}`}>
+                                        <button onClick={() => handleButtonClick(e)} className={`smallImgButton ${activeId === e.id ? ' bottle-active' : ' inactiveBotle'}`}>
                                             <img src={e.smallImg} alt="bottle" title={e.name} />
                                         </button>
                                     ))}
@@ -342,7 +344,7 @@ function Home() {
                         <div className="sectionThreeImageDiv">
                             <div className="smallImgDiv">
                                 {section.map((e) => (
-                                    <button onClick={() => handleButtonClick(e)} className={`smallImgButton ${activeId === e.id ? ' bottle-active' : ''}`}>
+                                    <button onClick={() => handleButtonClick(e)} className={`smallImgButton ${activeId === e.id ? ' bottle-active' : 'inactiveBotle'}`}>
                                         <img src={e.smallImg} alt="bottle" title={e.name} />
                                     </button>
                                 ))}
@@ -351,14 +353,12 @@ function Home() {
                     </div>
                 </div>
             </section>
-            {/* /3/  completed*/}
+            {/* /3/  completed  <h1 className='section3Header'></h1><h1 className='section3Header'> */}
             <section id='sectionImage3' className='section1' ref={secondSectionRef}>
                 {/* <div Name='sectionThreeMainDiv'> */}
                 <div className='section3GroupHeaderDiv'>
-                    <h1 className='section3Header'>We sold over</h1>
-                    <h1 style={{ color: '#ECA533' }} className='section3Header'>30 Billion Cases</h1>
-                    <h1 className='section3Header'>of our favorite </h1>
-                    <h1 className='section3Header'>Whiskey.</h1>
+                    <h1 className='section3Header sec3headwidth'>We've sold over <br/><span style={{ color: '#ECA533' }} className='section3Header spansec3head'>30 Billion Cases </span>
+                    of our premium Whiskey.</h1>
                     <p className='section3Paragraph'>Explore our history to find out how we did it.</p>
                     <Link to={'/aboutus/heritage'}>
                         <button className='section3Button'>HERITAGE</button>
@@ -500,8 +500,7 @@ function Home() {
                 {/* <div id='sectionImage5' > */}
                 <div className='section5MainDiv'>
                     <div className='section3GroupHeaderDiv'>
-                        <h1 className='section5Header'>Where does all the</h1>
-                        <h1 className='section5Header'>magic come from ?</h1>
+                        <h1 className='section5Header'>Where does all the magic come from ?</h1>
                         <Link to={'/ourprocess'}>
                             <button className='section3Button'>OUR PROCESS</button>
                         </Link>

@@ -82,6 +82,10 @@
     align-items: center;
     height: 100vh;
 }
+.imageDivsow{
+    display: flex;
+    justify-content: center;
+}
 
 .secion2TextWrap {
     display: flex;
@@ -225,14 +229,22 @@
 }
 
 .section3Header {
-    font-size: 32px;
-    font-family: 'Josefin Sans';
-    font-weight: 100;
-    letter-spacing: 7px;
+    font-size: 45px;
+    font-family: 'Regular';
+    font-weight: 600;
+    letter-spacing: 4px;
     text-decoration: none;
     margin-bottom: 0%;
     opacity: 0.9;
     /* width: 50vw; */
+}
+.sec3headwidth{
+    width: 43%;
+    /* font-size: 3rem; */
+}
+.spansec3head{
+    font-size: 45px;
+    letter-spacing: 5px;
 }
 
 .section3Paragraph {
@@ -301,11 +313,12 @@
 }
 
 .section5Header {
-    font-size: 35px;
+    font-size: 38px;
     font-family: 'Josefin Sans';
     font-weight: bold;
     letter-spacing: 4px;
     margin-bottom: 0;
+    width: 60%;
 }
 
 .section6Header {
@@ -425,7 +438,7 @@
 }
 
 .section3MainDiv>.section2img {
-    transition: all 0.3s ease-in-out;
+    /* transition: all 0.3s ease-in-out; */
 }
 
 .bottle-active {
@@ -720,7 +733,11 @@
         justify-content: space-evenly;
         flex-wrap: wrap-reverse;
         gap: 10px;
-        padding: 10px;
+        padding: 5px;
+    }
+    .smallImgDiv{
+        height: auto;
+        width: auto;
     }
 
     #sectionImage3 {
@@ -746,6 +763,41 @@
         height: 100vh;
     }
 
+    .sec3headwidth{
+        width: 100%;
+        font-size: 35px;
+        letter-spacing: 5px;
+    }
+    .spansec3head{
+        font-size: 38;
+        font-family: 'Josefin Sans';
+    }
+    .section3Paragraph {
+        font-size: 12px;
+        font-weight: bold;
+        letter-spacing: 0.5px;
+        opacity: 0.8;
+    }
+    .bottle-active {
+        /* box-shadow: 0px 0px 5px 0px rgb(242, 155, 4), inset 0px 0px 3px 0px rgba(8, 64, 133, 0.726); */
+        /* box-shadow: 0px 0px 5px 0px rgba(255, 160, 19, 1), inset 0px 0px 3px 0px rgba(212, 131, 9, 0.726); */
+        box-shadow: #ECA533;
+        /* transform: scale(0.7); */
+        scale: 0.9;
+
+        /* padding: 1px; */
+        /* transform: scale(0.5); */
+    }
+    .inactiveBotle{
+        /* transform: scale(0.7); */
+        scale: 0.9;
+    }
+    .imageDivsow{
+        height: 400px;
+        width: auto;
+        object-fit: cover;
+    }
+
     #sectionImage5>.section5MainDiv {
         display: flex;
         flex-direction: column;
@@ -760,6 +812,7 @@
         font-weight: 300;
         line-height: 33.13px;
         letter-spacing: 0.09em;
+        width: 90%;
     }
 
     #sectionImage5 .section3Button {
@@ -798,5 +851,13 @@
     .slider-btn-link-3 {
         top: 51%;
         left: 10%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .section2img{
+        height: 350px;
+        width: auto;
+        object-fit: cover;
     }
 }
