@@ -9,6 +9,7 @@
 .medalionRowContent {
     align-self: center;
     width: 75%;
+    margin-left: 5%;
 }
 
 .medalionRowContent p {
@@ -230,8 +231,8 @@
     .medalionRowContent {
         align-self: center;
         width: 90%;
-        margin-left: 5%;
-        margin-right: 5%;
+        margin-left: 8%;
+        margin-right: 2%;
         margin-top: 40%;
     }
 
@@ -239,7 +240,7 @@
         color: #FFFFFF;
         width: 90%;
         font-family: 'Josefin Sans';
-        font-size: 1.6rem;
+        font-size: 1.3rem;
         letter-spacing: 1px;
         line-height: 100%;
         font-family: 'Light';
@@ -252,7 +253,7 @@
         font-size: 1.2rem;
         font-weight: bold;
         margin-bottom: 0;
-        text-align: left;
+        text-align: center;
         letter-spacing: 10px;
     }
 
@@ -273,7 +274,7 @@
         letter-spacing: 1px;
         font-weight: 100;
         opacity: 0.7;
-        text-align: justify;
+        text-align: center;
     }
 
     /* 22 */
@@ -287,7 +288,7 @@
         flex-direction: column;
         justify-content: space-between;
         padding-left: 5%;
-        margin-top: 10%;
+        margin-top: 30%;
 
         /* aspect-ratio: 15/7.2; */
     }
@@ -313,9 +314,8 @@
     .medalionSecondDivHeading {
         /* font-family: 'Lobster', cursive; */
         font-family: 'Krona One';
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         font-weight: 700;
-        margin-bottom: 0;
         margin: 2%;
         text-align: center;
         /* text-align: right; */
@@ -373,17 +373,18 @@
 
     .mobileimgmed {
         display: flex;
+        margin-top: 30%;
         /* Change to 'inline' or 'inline-block' if needed */
     }
 
     .mobileimgmed img {
-        margin-top: 5%;
+        
         /* Adjust height based on your needs */
-        max-height: 70vh;
+        max-height: 100vh;
         /* Set a maximum height */
         width: 100%;
         /* Ensure image scales to full width */
-        object-fit: cover;
+        object-fit: contain;
         /* Maintain aspect ratio and crop if necessary */
         overflow: hidden;
     }
@@ -417,8 +418,8 @@
     .medalionRowContent {
         align-self: center;
         width: 90%;
-        margin-left: 5%;
-        margin-right: 5%;
+        margin-left: 15%;
+        margin-right: 15%;
         margin-top: 20%;
     }
 
@@ -426,7 +427,7 @@
         font-family: 'Josefin Sans';
         font-size: 1.rem;
         letter-spacing: 1px;
-        width: 90%;
+        width: 1070%;
         font-family: 'Josefin Sans';
         font-style: normal;
         font-weight: 300;
@@ -439,7 +440,7 @@
         font-size: 1.6rem;
         font-weight: bold;
         margin-bottom: 0;
-        text-align: left;
+        text-align: center;
         letter-spacing: 10px;
     }
 

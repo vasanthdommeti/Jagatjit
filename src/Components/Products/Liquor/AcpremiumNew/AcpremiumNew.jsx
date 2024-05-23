@@ -114,7 +114,7 @@ export const AcpremiumNew = () => {
                     <div className="imageText">
                         <img src={distik} alt="bottleImg" className="acpnewlogoText distik" />
                         <div>
-                            <p className="acpNlogoTextParagraph" style={{ marginLeft: '10%' }}>   Made With The Finest Indian Spirits</p>
+                            <p className="acpNlogoTextParagraph" style={{marginLeft:'8%'}}>   Made With The Finest Indian Spirits</p>
                         </div>
                     </div>
                 </div>

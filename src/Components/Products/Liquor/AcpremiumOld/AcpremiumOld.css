@@ -442,8 +442,8 @@
 }
 
 .logoText {
-    height: 7%;
-    width: 7%;
+    height: 9%;
+    width: 9%;
     margin-right: 3%;
 }
 
@@ -453,10 +453,10 @@
     font-weight: 100;
     font-style: normal;
     font-family: 'Light';
-    font-size: 16px;
+    font-size: 17px;
     letter-spacing: 1px;
-    line-height: 15px;
-    opacity: 0.6;
+    line-height: 120%;
+    opacity: 0.9;
 }
 
 .flavourDivHeader {
