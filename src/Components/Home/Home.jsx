@@ -258,7 +258,10 @@ function Home() {
                 const vh = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
                 if (vh < 768) {
                     return '15vh';
-                } else if (vh >= 768 && vh < 1024) {
+                } else if (vh >= 768 && vh < 800){
+                    return '35vh';
+                }
+                else if (vh >= 768 && vh < 1024) {
                     return '20vh';
                 } else {
                     return '10vh';
@@ -515,7 +518,7 @@ function Home() {
                 </div>
                 {/* </div> */}
             </section>
-            {/* //6 */}
+            {/* //6 */} 
 
             <div className="lastsecmainDiv">
                 <h1 className='section6Header'>JIL's Presence & Reach</h1>
