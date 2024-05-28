@@ -930,3 +930,15 @@
     margin-right: -40px;
 }
 }
+
+@media screen and (max-width: 14in) {
+    .rowIconVisible {
+        height: 50%;
+        width: 30%;
+        align-self: center;
+    }
+    .distik {
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+  }
