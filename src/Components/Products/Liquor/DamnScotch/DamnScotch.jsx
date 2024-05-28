@@ -31,7 +31,7 @@ export const DamnScotch = () => {
         <div className="damnfirstdiveitems">
           <div className="damnImgcontent">
             <img src={firstSecimg} alt="acblack"/>
-          </div>
+          </div> 
           <div className="damnRowContent">
             {/* <h1 className="damnHeading">
               DAMN GOOD SCOTCH 
@@ -134,7 +134,7 @@ export const DamnScotch = () => {
       </div>
       {/* ///5 completed*/}
       <div className="damFifthDiv" >
-        <div style={{ justifyContent: 'center', display: 'flex', height: '70%', marginTop: '5%' }}>
+        <div className='lastSecDivScoth' >
           <img src={lastSecimg} alt="lastImg" />
         </div>
         {/* <div className="acpNewarrowDiv" style={{marginTop:'5%', marginBottom:'0%'}}>

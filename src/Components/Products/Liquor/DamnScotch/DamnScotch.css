@@ -5,7 +5,7 @@
   align-self: center;
   height: 100vh;
 }
-
+ 
 .damnsecondDiv {
   background-image: url('../../../../Assets/Products/Liquor/DamnScotch/damn2ndSecimg.png');
   background-position: right;
@@ -109,7 +109,9 @@
 
 .damnThirdDivContent {
   display: flex;
-  padding-left: 40%;
+  flex-direction: row;
+  justify-content: space-between;
+  /* padding-left: 40%; */
   align-self: flex-end;
 }
 
@@ -127,7 +129,8 @@
 
 .damnrowdiv {
   display: flex;
-  /* width: 5%; */
+  width: 50%;
+  flex-wrap: wrap;
   margin-top: 2%;
   justify-content: space-between;
   align-self: center;
@@ -140,6 +143,7 @@
   text-align: center;
   object-fit: cover;
   margin-right: 3%;
+  margin-left: 3%;
   width: 30%;
 }
 
@@ -147,6 +151,15 @@
   width: 25%;
 }
 
+.lastSecDivScoth{
+  justify-content: center;
+  display: flex;
+  height: 70%;
+  margin-top: 5%;
+  padding-bottom: 5%;
+}
+
+/* style={{ justifyContent: 'center', display: 'flex', height: '70%', marginTop: '5%', marginBottom:'5%' }} */
 /* //4 */
 .damnFourthDiv {
   background-image: url('../../../../Assets/Products/Liquor/DamnScotch/damn4Secimg.png');
@@ -189,7 +202,8 @@
   height: 30%;
   /* margin-top: 2%; */
   /* margin-bottom: 2%; */
-  width: 30%;
+  width: 35%;
+
   margin-right: 2%;
   margin-top: 0px;
   /* align-self: center; */
@@ -198,8 +212,8 @@
 .damnimageText p{
   /* margin-top: 2%; */
   /* margin-bottom: 2%; */
-  width: 50%;
-  margin-left: 3%;
+  /* width: 50%; */
+  margin-left: 1%;
   
   /* align-self: center; */
 }
@@ -216,6 +230,7 @@
 
 .damnlogoimage {
   margin-right: 10%;
+
 }
 
 /* //5 */
@@ -298,6 +313,9 @@
     align-self: center;
     margin-top: 30%;
     height: auto;
+  }
+  .lastSecDivScoth{
+    margin-bottom: 7%;
   }
 
   .damnHeading {
@@ -505,6 +523,7 @@
     background-size: contain;
     object-fit: cover;
   }
+  
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1440px) {
@@ -514,4 +533,14 @@
     background-size: contain;
     object-fit: cover;
   }
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px){
+.damncandleimagesingle img {
+  width: 30%;
+}
+.damncandleimagesingle {
+  width: 50%;
+}
 }

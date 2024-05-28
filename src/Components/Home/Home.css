@@ -397,7 +397,7 @@
 .lastsecmainDiv{
     height: 100vh;
     margin-bottom: 5%;
-}
+} 
 .section6firstrowdiv {
     display: flex;
     width: 80%;
@@ -856,6 +856,13 @@
     .imageContainer1 {
         height: 80vh;
     }
+    .sectionBottleDiv {
+        height: 100vh;
+        background-size: cover;
+        background-position: bottom;
+        max-height: unset;
+    }
+    
   }
   
 
