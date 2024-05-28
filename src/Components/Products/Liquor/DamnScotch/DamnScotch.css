@@ -109,10 +109,8 @@
 
 .damnThirdDivContent {
   display: flex;
-  /* padding-left: 40%; */
-  flex-direction: row;
-  justify-content: space-around;
-  align-self: center;
+  padding-left: 40%;
+  align-self: flex-end;
 }
 
 .damnthirdDivLine {
@@ -123,17 +121,16 @@
   text-align: left;
   letter-spacing: 4px;
   padding-right: 15%;
-  margin-left: 20%;
+  margin-left: 10%;
+  /* margin-bottom: 10%; */
 }
 
 .damnrowdiv {
   display: flex;
   /* width: 5%; */
-  flex-wrap: wrap;
   margin-top: 2%;
-  justify-content: space-around;
+  justify-content: space-between;
   align-self: center;
-  justify-content: flex-end;
 }
 
 .damncandleimagesingle {
@@ -165,7 +162,7 @@
   flex-direction: column;
   align-items: flex-end;
   padding-right: 10%;
-  padding-top: 4%;
+  padding-top: 8%;
   height: 90%;
   /* align-self: center; */
   /* padding: 10%; */
@@ -173,7 +170,6 @@
 }
 .damngoodiconbottle {
     width: 50%;
-    margin-right: -20px;
 }
 .damnSecondDivHeading {
   font-family: 'Krona One';
@@ -190,23 +186,20 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-top: 1%;
-  height: 25%;
-  justify-content: center;
+  height: 30%;
   /* margin-top: 2%; */
   /* margin-bottom: 2%; */
-  width: 35%;
+  width: 30%;
+  margin-right: 2%;
+  margin-top: 0px;
   /* align-self: center; */
-}
-
-.damnimageText img {
-  width: 60%;
 }
 
 .damnimageText p{
   /* margin-top: 2%; */
   /* margin-bottom: 2%; */
   width: 50%;
+  margin-left: 3%;
   
   /* align-self: center; */
 }
@@ -218,9 +211,7 @@
   /* margin-top: 2%; */
   /* margin-bottom: 6%; */
   width: 30%;
-  height: 30%;
   margin-right: 3%;
-  justify-content: center;
 }
 
 .damnlogoimage {
@@ -271,13 +262,9 @@
   padding-left: 8%;
   padding-right: 8%;
 }
-.damthirMianDiv{
-  margin-top: 5%;
-}
-/* style={{ marginTop: '5%', alignContent: 'flex-end', }} */
 
 .damnImgcontent img {
-  width: 80%;
+  width: 100%;
   align-items: center;
   align-self: center;
   justify-content: center;
@@ -375,16 +362,11 @@
   .damnParagraph {
     color: #FFFFFF;
     font-family: 'Josefin Sans';
-    font-size: 16px;
+    font-size: 14px;
     letter-spacing: 1px;
     font-weight: 100;
     text-align: center;
     margin-top: 5%;
-  }
-
-  .damnRowContent p {
-    font-size: 1.2rem;
-    text-align: center;
   }
   .damnThirdDivContent {
     padding-left: 1%;
@@ -468,12 +450,6 @@
   margin-top: 10%;
   margin-bottom: 85%;
 }
-
-.damnsecondRowContent p {
-  font-size: 1.2rem;
-  text-align: center;
-}
-
 .logoImgTextCont{
   background-image: url('../../../../Assets/Products/Liquor/DamnScotch/smallImgLogo.png');
   height: 150px;
@@ -499,7 +475,7 @@
   /* align-self: center; */
 }
 
-.damnlogoimage { 
+.damnlogoimage {
   margin-right: 2%;
   margin-bottom: 10%;
 }
@@ -507,7 +483,7 @@
 
 }
 
-  
+ 
 @media (max-width: 1024px){
   .damnimageText, .damnlogodrumsimage {
   align-items: center;
@@ -515,32 +491,27 @@
   width: 45%;
 }
 .damnThirdDivContent {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  /* padding-left: 10%; */
-  /* padding-right: 20%; */
-}
-.damnrowdiv {
-  margin-top: 2%;
-  margin-right: 50%;
-  padding-left: -20%;
-  margin-left: auto;
-  align-items: flex-start;
+  display: block;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding-left: 10%;
+  padding-right: 20%;
 }
 } 
-/* //1351 X 768 */
-@media screen and (max-width: 15in) {
+
+@media screen and (max-width: 14in) {
+  .logoImgTextCont{
+    height: 150px;
+    background-size: contain;
+    object-fit: cover;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
   .logoImgTextCont{
     background-image: url('../../../../Assets/Products/Liquor/DamnScotch/largimglogo.png');
     height: 150px;
     background-size: contain;
     object-fit: cover;
   }
-  .damnrowdiv {
-    margin-top: 2%;
-    align-self: center;
-    justify-content: flex-end;
-  }
-  
 }
