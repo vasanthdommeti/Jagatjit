@@ -69,11 +69,11 @@ export const DamnScotch = () => {
                     </div> */}
           <div style={{ marginTop: '5%', alignContent: 'flex-end' }}>
             <h1 className="damnthirdDivLine">
-              Our Smoothest
+              Our Smoothest <br/> Blend Yet
             </h1>
-            <h1 className="damnthirdDivLine">
+            {/* <h1 className="damnthirdDivLine">
               Blend Yet
-            </h1>
+            </h1> */}
 
             <div className="damnrowdiv">
               <div className="damncandleimagesingle" style={{ marginLeft: '2%' }}>
@@ -93,7 +93,7 @@ export const DamnScotch = () => {
                 <p>Malt, vanilla, fruity, lightly smoky and peaty</p>
               </div>
             </div>
-          </div>
+          </div> 
         </div>
       </div>
       {/* //4 */}
