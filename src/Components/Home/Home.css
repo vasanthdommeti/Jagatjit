@@ -856,6 +856,9 @@
         width: 150px;
         height: auto;
     }
+    .imageContainer1 {
+        height: 80vh;
+    }
   }
   
 
