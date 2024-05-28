@@ -103,7 +103,7 @@ export const AcDryGin = () => {
                 <div className="acpNewarrowDiv">
                     <Link to={'/products/liquor/iicevodka'} className="acppremiumleftArrowDiv">
                         <div className="acpNewLeftDiv">
-                            <h1 className="acpNpremiumarrowHeading">Iice Vodka</h1>
+                            <h1 className="acpNpremiumarrowHeading">IICE Vodka</h1>
                             <HiArrowLongLeft className="leftIconImg" />
                         </div>
                         <div className="acpNewleftSmallImg">

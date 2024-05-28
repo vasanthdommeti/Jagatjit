@@ -79,7 +79,7 @@ export const DamnScotch = () => {
             <div className="damnrowdiv">
               <div className="damncandleimagesingle" style={{ marginLeft: '2%' }}>
                 <img src={candle} alt="block" />
-                <p>Amber</p>
+                <p>Amber</p> 
               </div>
               <div className="damncandleimagesingle" style={{ marginTop: '0.5%'}}>
                 <img src={lipglass} alt="block" />
@@ -172,7 +172,7 @@ export const DamnScotch = () => {
                             <img src={iceVodka} alt="block" />
                         </div>
                         <div className="acpNewRightDiv">
-                            <h1 className="acpNpremiumarrowHeading">Iice Vodka</h1>
+                            <h1 className="acpNpremiumarrowHeading">IICE Vodka</h1>
                             <HiOutlineArrowLongRight className="leftIconImg" />
                         </div>
                     </Link>
