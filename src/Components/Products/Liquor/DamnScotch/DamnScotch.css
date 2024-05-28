@@ -516,8 +516,8 @@
   padding-right: 20%;
 }
 } 
-
-@media screen and (max-width: 14in) {
+/* //1351 X 768 */
+@media screen and (max-width: 15in) {
   .logoImgTextCont{
     background-image: url('../../../../Assets/Products/Liquor/DamnScotch/largimglogo.png');
     height: 150px;
