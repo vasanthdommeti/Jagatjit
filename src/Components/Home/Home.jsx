@@ -180,6 +180,8 @@ function Home() {
     const [data, setData] = useState(section[0]);
     const [content, setContent] = useState("");
     const [activeId, setActiveId] = useState(section[0]?.id);
+    const [isMarkerBlinking, setMarkerBlinking] = useState(true);
+    const [isHovered, setIsHovered] = useState(false);
 
     const secondSectionRef = useRef(null);
 
@@ -188,6 +190,16 @@ function Home() {
             setData(section[0]);
         }
     }, [section, setData]);
+
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+            if (!isHovered) {
+                setMarkerBlinking((prev) => !prev);
+            }
+        }, 1000);
+
+        return () => clearInterval(intervalId);
+    }, [isHovered]);
 
     const handleClick = (id) => {
         setActiveId(id);
@@ -258,7 +270,7 @@ function Home() {
                 const vh = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
                 if (vh < 768) {
                     return '15vh';
-                } else if (vh >= 768 && vh < 800){
+                } else if (vh >= 768 && vh < 800) {
                     return '35vh';
                 }
                 else if (vh >= 768 && vh < 1024) {
@@ -294,7 +306,7 @@ function Home() {
     };
 
     return (
-        <div className="App" ref={wrapperRef} style={{overflow:'hidden'}}>
+        <div className="App" ref={wrapperRef} style={{ overflow: 'hidden' }}>
             {/* //1 */}
             <section className="main" data-pin="true"  >
                 <div id='sectionImage1' className='sectionBottleDiv'>
@@ -359,7 +371,7 @@ function Home() {
                 {/* <div Name='sectionThreeMainDiv'> */}
                 <div className='section3GroupHeaderDiv'>
                     <h1 className='section3Header sec3headwidth'>We've sold over <br /><span style={{ color: '#ECA533' }} className='section3Header spansec3head'>30 Billion Cases </span>
-                    <br/> of our premium Whiskey.</h1>
+                        <br /> of our premium Whiskey.</h1>
                     <p className='section3Paragraph'>Explore our history to find out how we did it.</p>
                     <Link to={'/aboutus/heritage'}>
                         <button className='section3Button'>HERITAGE</button>
@@ -518,7 +530,7 @@ function Home() {
                 </div>
                 {/* </div> */}
             </section>
-            {/* //6 */} 
+            {/* //6 */}
 
             <div className="lastsecmainDiv">
                 <h1 className='section6Header'>JIL's Presence & Reach</h1>
@@ -556,7 +568,13 @@ function Home() {
                                 }
                             </Geographies>
                             {markers.map(({ name, coordinates }) => (
-                                <Marker key={name} coordinates={coordinates}>
+                                <Marker
+                                    key={name}
+                                    coordinates={coordinates}
+                                    className={isMarkerBlinking && !isHovered ? 'blink' : ''}
+                                    onMouseEnter={() => setIsHovered(true)}
+                                    onMouseLeave={() => setIsHovered(false)}
+                                >
                                     <a data-tooltip-id="my-tooltip" data-tooltip-content={name}>
                                         <circle r={5} fill="#fff" />
                                     </a>
