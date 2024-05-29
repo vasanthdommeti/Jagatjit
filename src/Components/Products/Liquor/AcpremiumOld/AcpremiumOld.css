@@ -111,7 +111,8 @@
 }
 
 .favBotGroupImg {
-    margin-bottom: -15%
+    margin-bottom: -15%;
+    margin-top: 5%;
 }
 
 .acpoldpagesRowDiv {
@@ -728,7 +729,7 @@
         width: 100%;
         height: auto;
     }
-
+ 
     .bottleImgfirst {
         margin-right: 0%;
     }

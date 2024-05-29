@@ -1,6 +1,6 @@
 
 
-import { Route, Routes, useLocation } from "react-router-dom";
+import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import './index.css';
 import './fonts/JosefinSans-Light.ttf';
@@ -42,6 +42,7 @@ function App() {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [loading, setLoading] = useState(true);
   const [previousPathname, setPreviousPathname] = useState('');
+  const navitage = useNavigate();
 
 
   const controlNavbar = () => {
@@ -54,7 +55,21 @@ function App() {
   };
 
   useEffect(() => {
-    console.log('das',pathname);
+    try {
+      const data = localStorage.getItem("date");
+      const dates = JSON.parse(data)
+      console.log('ddd',dates);
+      if(dates?.day != '' && dates?.month != '' && dates?.year != '' && dates){
+          navitage('/home')
+      }
+      else{
+        navitage('/')
+      }
+  } catch (error) {
+      console.error("Error parsing data from localStorage:", error);
+      // Handle the error (e.g., provide default values, notify the user)
+  }
+
     if (pathname !== previousPathname) {
       setLoading(true);
       setPreviousPathname(pathname);
@@ -69,6 +84,7 @@ function App() {
     return () => {
       window.removeEventListener('scroll', controlNavbar);
     };
+    
   }, [lastScrollY,pathname]);
 
   return (

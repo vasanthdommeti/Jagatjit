@@ -133,7 +133,7 @@ export const RoyalPride = () => {
                             <p>Best Enjoyed How You Like Your Whiskey</p>
                         </div>
                         <div className="royalimageText">
-                            <img src={bottle} alt="block" className="royallogoimage" style={{ marginRight: '12%', marginLeft: '3%' }} />
+                            <img src={bottle} alt="block" className="royallogoimage"/>
                             <p>Bottled With Care By State Of The Art Bottling Facilities</p>
                         </div>
                         <div className="royalimageText">

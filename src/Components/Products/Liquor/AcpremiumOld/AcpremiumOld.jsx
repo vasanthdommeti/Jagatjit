@@ -49,7 +49,7 @@ export const AcpremiumOld = () => {
                 <div className="flavourDiv">
                     <h1 className="flavourDivHeader">FLAVOUR PROFILE</h1>
                     <img src={flavourGroup} alt="groupBtl" className="image favBotGroupImg" />
-                    {/* <img src={flavourImg} alt="flavours" className="image" /> */}
+                    {/* <img src={flavourImg} alt="flavours" className="image" /> */} 
                     <div className="profile-icon-wrap">
                         <div className="profile-icon-1">Elegant and Long Lasting</div>
                         <div className="profile-icon-2">Sweet, Floral with a touch of spices</div>

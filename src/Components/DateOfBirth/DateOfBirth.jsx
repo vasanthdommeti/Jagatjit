@@ -5,8 +5,15 @@ import logo from '../../Assets/LogoIcon.png'
 import { Link, useNavigate } from 'react-router-dom';
 
 function DateOfBirth() {
-    const data = localStorage.getItem("date");
-    const dates = JSON.parse(data)
+    let dates = {};
+    try {
+        const data = localStorage.getItem("date");
+        if (data) {
+            dates = JSON.parse(data);
+        }
+    } catch (error) {
+        console.error("Error parsing data from localStorage:", error);
+    }
     const [day, setDay] = useState(dates?.day || '');
     const [month, setMonth] = useState(dates?.month || '');
     const [year, setYear] = useState(dates?.year || '');
@@ -19,7 +26,7 @@ function DateOfBirth() {
 
     useEffect(() => {
         const value = parseInt(years) - parseInt(year)
-        if ( value >= 18 && year.length === 4 && month.length === 2 && day.length === 2) {
+        if ( value >= 21 && year.length === 4 && month.length === 2 && day.length === 2) {
         const data ={'day':day, 'month': month, 'year': year}
         localStorage.setItem("date",JSON.stringify(data));
             navitage('/home')
@@ -61,20 +68,66 @@ function DateOfBirth() {
                     max="31"
                     value={day}
                     className='dateDiv'
-                    onChange={(e) => setDay(e.target.value.slice(0, 2))}
+                    onChange={(e) => {
+                        const inputValue = e.target.value.slice(0, 2);
+                        if (/^\d*$/.test(inputValue) && parseInt(inputValue) >= 0 && parseInt(inputValue) <= 31) {
+                            setDay(inputValue);
+                        } else if (inputValue === '') {
+                            setDay('');
+                        }
+                    }}
+                    onKeyDown={(e) => {
+                        // Allow numeric characters, backspace, and delete keys
+                        if (
+                            !(
+                                (e.key >= '0' && e.key <= '9') ||
+                                e.key === 'Backspace' ||
+                                e.key === 'Delete' ||
+                                e.key === 'ArrowLeft' ||
+                                e.key === 'ArrowRight' ||
+                                e.key === 'Tab'
+                            )
+                        ) {
+                            e.preventDefault();
+                        }
+                    }}
+                    // onChange={(e) => setDay(e.target.value.slice(0, 2))}
                 />
                 <input
                     type='number'
                     ref={monthInputRef}
                     id='month'
                     required
-                    autoComplete='off'
+                    autoComplete='on'
                     placeholder='MM'
                     min="01"
                     max="12"
                     value={month}
                     className='dateDiv'
-                    onChange={(e) => setMonth(e.target.value.slice(0, 2))}
+                    onChange={(e) => {
+                        const inputValue = e.target.value.slice(0, 2);
+                        if (/^\d*$/.test(inputValue) && parseInt(inputValue) >= 0 && parseInt(inputValue) <= 12) {
+                            setMonth(inputValue);
+                        } else if (inputValue === '') {
+                            setMonth('');
+                        }
+                    }}
+                    onKeyDown={(e) => {
+                        // Allow numeric characters, backspace, and delete keys
+                        if (
+                            !(
+                                (e.key >= '0' && e.key <= '9') ||
+                                e.key === 'Backspace' ||
+                                e.key === 'Delete' ||
+                                e.key === 'ArrowLeft' ||
+                                e.key === 'ArrowRight' ||
+                                e.key === 'Tab'
+                            )
+                        ) {
+                            e.preventDefault();
+                        }
+                    }}
+                    // onChange={(e) => setMonth(e.target.value.slice(0, 2))}
                 />
                 <input
                     type='number'
