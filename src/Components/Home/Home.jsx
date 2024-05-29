@@ -270,7 +270,7 @@ function Home() {
             function getMarginLeftreset() {
                 const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
                 if (vw < 768) {
-                    return '53vw';
+                    return '48vw';
                 } else if (vw >= 768 && vw < 1024) {
                     return '65vw';
                 } else {
@@ -294,7 +294,7 @@ function Home() {
     };
 
     return (
-        <div className="App" ref={wrapperRef}>
+        <div className="App" ref={wrapperRef} style={{overflow:'hidden'}}>
             {/* //1 */}
             <section className="main" data-pin="true"  >
                 <div id='sectionImage1' className='sectionBottleDiv'>

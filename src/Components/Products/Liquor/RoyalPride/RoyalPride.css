@@ -272,7 +272,11 @@
 }
 
 .royallogoimage {
-    margin-right: 10%;
+   margin-left: 5%;
+   margin-right: 5%;
+   align-self: center;
+   width: auto;
+   object-fit: fill;
 }
 
 .royalFourthDiv {
@@ -311,7 +315,7 @@
 .royalarrowHeading {
     font-size: 21px;
     margin-bottom: 0%;
-}
+} 
 
 .pre-next-wrap {
     display: grid !important;
@@ -619,3 +623,8 @@
     }
 
 } 
+
+
+@media screen and (max-width: 15in) {
+    
+}
