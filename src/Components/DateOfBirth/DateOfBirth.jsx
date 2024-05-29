@@ -153,7 +153,7 @@ function DateOfBirth() {
             <div>
             <div className='dobRights'>
                     <p className='firstParagraphdobFooterRights'>All rights reserved. All other trademarks and trade names are properties of their respective owners.</p>
-                    <p className='secondParagraphdobFooterRights'>TO FIND OUT MORE ABOUT RESPONSIBLE CONSUMPTION. VISIT <Link to='https://www.responsibility.org/' className='ancherTag'>RESPONSIBILITY.ORG</Link> AND <Link to='https://ourthinkingaboutdrinking.com/' className='ancherTag'>OURTHINKINGABOUTDRINKING.COM</Link></p>
+                    <p className='secondParagraphdobFooterRights'>TO FIND OUT MORE ABOUT RESPONSIBLE CONSUMPTION. VISIT <Link to='https://www.responsibility.org/' className='ancherTag'>RESPONSIBILITY.ORG</Link></p>
                     <p className='thirdParagraphdobFooterRights'>Please do not share or forward with anyone under the legal drinking age.</p>
                 </div>
             </div>
