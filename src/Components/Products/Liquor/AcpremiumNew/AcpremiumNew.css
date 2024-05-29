@@ -697,7 +697,7 @@
 
     .acpfavsectImg {
         width: 350px;
-        height: 200px;
+        height: 350px;
     }
 
 
@@ -925,8 +925,34 @@
         
         text-align: right;
 }
-.distik {
+/* .distik {
     width: 110%;
     margin-right: -40px;
+} */
 }
-}
+
+@media screen and (max-width: 15in) {
+    .rowIconVisible {
+        height: 50%;
+        width: 35%;
+        align-self: center;
+    }
+    .distik {
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+  }
+
+  @media only screen and (min-width: 991px) and (max-width: 1746px){
+    .rowIconVisible {
+        height: 50%;
+        width: 20%;
+        align-self: center;
+        object-fit: contain;
+    }
+    .distik {
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+    
+  }

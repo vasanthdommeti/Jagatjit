@@ -362,7 +362,7 @@
 .section3GroupImagesDiv {
     width: 100%;
     /* object-fit: contain; */
-
+ 
 }
 
 .section6firstThirdDiv {
@@ -393,7 +393,11 @@
     padding-right: 5%;
     margin-bottom: 2%;
 }
-
+/* style={{ height: '90vh', marginBottom: '5%' }} */
+.lastsecmainDiv{
+    height: 100vh;
+    margin-bottom: 5%;
+} 
 .section6firstrowdiv {
     display: flex;
     width: 80%;
@@ -440,9 +444,6 @@
     background-color: transparent;
 }
 
-.section3MainDiv>.section2img {
-    /* transition: all 0.3s ease-in-out; */
-}
 .section2img{
     height: 450px;
 }
@@ -471,25 +472,6 @@
     }
 } */
 
-/* @media (min-width:961px) {
-
-    tablet, landscape iPad, lo-res laptops ands desktops
-    .section {
-        height: 65vh;
-    }
-    .section3MainDiv {
-        flex-direction: column;
-        justify-content: flex-end;
-    }
-} */
-
-@media (min-width:1025px) {
-
-    /* big landscape tablets, laptops, and desktops */
-    .section {
-        height: 88vh;
-    }
-}
 
 @media (min-width:1281px) {
 
@@ -499,21 +481,15 @@
     }
 }
 
-/* @media (max-width: 641px) {
-    .section3MainDiv {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
 
-} */
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 1024px)  {
 
     .main,
     .sectionBottleDiv {
-        height: 80vh;
+        height: 100vh;
     }
+    
 
     .sectionBottleDiv {
         max-height: unset;
@@ -528,11 +504,11 @@
     }
 
     .section2 {
-        height: 80vh;
+        height: 100vh;
     }
 
     #sectionImage3 {
-        height: 50vh;
+        height: 100vh;
         padding: 7%;
     }
 
@@ -576,7 +552,7 @@
     }
 
     #sectionImage5 {
-        height: 70vh;
+        height: 100vh;
     }
 
     #sectionImage5 .section5MainDiv {
@@ -591,7 +567,8 @@
 
     .App>div,
     .imageMapContainer {
-        height: 45vh !important;
+        height: 80vh !important;
+        width: auto;
     }
 
     .slider-btn-link-1 {
@@ -611,11 +588,15 @@
 }
 
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
 
     .main {
         /* margin-top: 100px; */
         padding-top: 100px;
+    }
+    .imageMapContainer {
+        height: 100%;
+        width: 100%;
     }
 
     .sectionBottleDiv {
@@ -648,7 +629,7 @@
     }
 
     .imageContainer1 {
-        height: 600px;
+        height: 500px;
     }
 
     .secion2TextWrap>.sectionThreeImageDiv {
@@ -741,6 +722,8 @@
         justify-content: space-evenly;
         flex-wrap: wrap-reverse;
         gap: 10px;
+        margin-left: auto;
+        margin-right: auto;
         /* padding: 5px; */
     }
     .smallImgDiv{
@@ -861,4 +844,73 @@
         width: auto;
         object-fit: cover;
     }
+
+    
+
+}
+@media screen and (max-width: 15in) {
+    .section5GroupImagesDiv img {
+        width: 150px;
+        height: auto;
+    }
+    .imageContainer1 {
+        height: 80vh;
+    }
+    .sectionBottleDiv {
+        height: 100vh;
+        background-size: cover;
+        background-position: bottom;
+        max-height: unset;
+    }
+    
+  }
+  
+
+@media (min-width:641px){
+    .section2img{
+        height: 300px;
+        width: auto;
+        object-fit: cover;
+    }
+    .imageMapContainer {
+        height: 100vh;
+    }
+    .lastsecmainDiv {
+        height: 100vh;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    .btnparagraph {
+        font-size: 16px;
+    }
+    .bottle-active {
+        box-shadow: 0px 0px 46.4px 0px rgba(255, 160, 19, 1), inset 0px 0px 100.4px 0px rgba(212, 131, 9, 0.726);
+        transform: scale(0.5);
+    }
+    .inactiveBotle{
+        scale: 0.5;
+    }
+    .sectionThreeImageDiv>.smallImgDiv {
+        gap: 5px;
+        /* padding: 5px; */
+    }
+    .section, 
+    .sectionImage5 {
+        height: 100vh;
+        background-size: cover;
+    }
+    .section5Image {
+        width: 150px;
+        height: 150px;
+        margin: 6px 6px 6px 5px;
+        border-radius: 12px;
+    }
+    .section5GroupImagesDiv {
+        gap: 20px;
+    }
+    .royalsectwo{
+        padding-top: 60px;
+    }
+
 }

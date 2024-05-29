@@ -31,7 +31,7 @@ export const DamnScotch = () => {
         <div className="damnfirstdiveitems">
           <div className="damnImgcontent">
             <img src={firstSecimg} alt="acblack"/>
-          </div>
+          </div> 
           <div className="damnRowContent">
             {/* <h1 className="damnHeading">
               DAMN GOOD SCOTCH 
@@ -67,18 +67,19 @@ export const DamnScotch = () => {
           {/* <div style={{alignItems:'flex-end', display:'flex', paddingTop:'5%',}}>
                         <img src={royalpridethirdImg} alt="image" style={{height:'100vh'}} />
                     </div> */}
-          <div style={{ marginTop: '5%', alignContent: 'flex-end' }}>
+          <div className="damthirMianDiv">
             <h1 className="damnthirdDivLine">
-              Our Smoothest
+              Our Smoothest <br/> Blend Yet
             </h1>
-            <h1 className="damnthirdDivLine">
+            {/* <h1 className="damnthirdDivLine">
               Blend Yet
-            </h1>
+            </h1> */}
+          </div> 
 
             <div className="damnrowdiv">
               <div className="damncandleimagesingle" style={{ marginLeft: '2%' }}>
                 <img src={candle} alt="block" />
-                <p>Amber</p>
+                <p>Amber</p> 
               </div>
               <div className="damncandleimagesingle" style={{ marginTop: '0.5%'}}>
                 <img src={lipglass} alt="block" />
@@ -93,7 +94,6 @@ export const DamnScotch = () => {
                 <p>Malt, vanilla, fruity, lightly smoky and peaty</p>
               </div>
             </div>
-          </div>
         </div>
       </div>
       {/* //4 */}
@@ -134,7 +134,7 @@ export const DamnScotch = () => {
       </div>
       {/* ///5 completed*/}
       <div className="damFifthDiv" >
-        <div style={{ justifyContent: 'center', display: 'flex', height: '70%', marginTop: '5%' }}>
+        <div className='lastSecDivScoth' >
           <img src={lastSecimg} alt="lastImg" />
         </div>
         {/* <div className="acpNewarrowDiv" style={{marginTop:'5%', marginBottom:'0%'}}>
@@ -172,7 +172,7 @@ export const DamnScotch = () => {
                             <img src={iceVodka} alt="block" />
                         </div>
                         <div className="acpNewRightDiv">
-                            <h1 className="acpNpremiumarrowHeading">Iice Vodka</h1>
+                            <h1 className="acpNpremiumarrowHeading">IICE Vodka</h1>
                             <HiOutlineArrowLongRight className="leftIconImg" />
                         </div>
                     </Link>

@@ -228,7 +228,7 @@ function Home() {
                 marginTop: getMarginTop(),
                 marginLeft: getMarginLeft(),
             }, {
-                scale: 0.8,
+                scale: 1,
                 rotate: 0,
                 marginTop: getMarginTopReset(),
                 marginLeft: getMarginLeftreset(),
@@ -257,11 +257,14 @@ function Home() {
             function getMarginTopReset() {
                 const vh = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
                 if (vh < 768) {
-                    return '11vh';
-                } else if (vh >= 768 && vh < 1024) {
+                    return '15vh';
+                } else if (vh >= 768 && vh < 800){
+                    return '35vh';
+                }
+                else if (vh >= 768 && vh < 1024) {
                     return '20vh';
                 } else {
-                    return '15vh';
+                    return '10vh';
                 }
             }
             function getMarginLeftreset() {
@@ -269,9 +272,9 @@ function Home() {
                 if (vw < 768) {
                     return '53vw';
                 } else if (vw >= 768 && vw < 1024) {
-                    return '70vw';
+                    return '65vw';
                 } else {
-                    return '70vw';
+                    return '65vw';
                 }
             }
             tl.add([firstTimeline]);
@@ -515,9 +518,9 @@ function Home() {
                 </div>
                 {/* </div> */}
             </section>
-            {/* //6 */}
+            {/* //6 */} 
 
-            <div style={{ height: '90vh', marginBottom: '5%' }}>
+            <div className="lastsecmainDiv">
                 <h1 className='section6Header'>JIL's Presence & Reach</h1>
                 <div className="mapContainerDiv">
                     <Tooltip id="my-tooltip" />

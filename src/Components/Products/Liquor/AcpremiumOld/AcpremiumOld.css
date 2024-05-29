@@ -168,13 +168,13 @@
 }
 
 .img-dec {
-    height: 80% !important;
+    height: 100% !important;
 }
 
 /* //flavour icon */
 .profile-icon-wrap {
     display: flex;
-    gap: 30px;
+    gap: 20px;
 }
 
 .profile-icon-wrap>div {
@@ -189,7 +189,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    gap: 5px;
 }
 
 .profile-icon-1::before,

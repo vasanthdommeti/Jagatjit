@@ -23,7 +23,7 @@
 
 }
 
-.medalionHeading {
+.medalionHeading { 
     color: #FFFFFF;
     font-family: 'Krona One';
     font-size: calc(35px + 1vw);
@@ -399,12 +399,19 @@
 
     .seconddivimgbot {
         height: 50vh;
-        width: 100vw;
+        width: auto;
         margin-top: 5%;
     }
 
 }
 
+@media (max-width: 760px){
+    .seconddivimgbot {
+        height: 50vh;
+        width: auto;
+        margin-top: 5%;
+    }
+}
 @media (max-width: 992px) and (min-width: 768px) {
     .medalionFirstDiv {
         display: flex;
@@ -452,3 +459,10 @@
         object-fit: contain;
     }
 }
+
+@media screen and (max-width: 15in) {
+    .thirdlogoimg {
+        height: 100px;
+    }
+    
+  }
