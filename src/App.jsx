@@ -58,16 +58,14 @@ function App() {
     try {
       const data = localStorage.getItem("date");
       const dates = JSON.parse(data)
-      console.log('ddd',dates);
-      if(dates?.day != '' && dates?.month != '' && dates?.year != '' && dates){
-          navitage('/home')
+      if(dates?.day != '' && dates?.month != '' && dates?.year != ''){
+          navitage(pathname)
       }
       else{
         navitage('/')
       }
   } catch (error) {
       console.error("Error parsing data from localStorage:", error);
-      // Handle the error (e.g., provide default values, notify the user)
   }
 
     if (pathname !== previousPathname) {
@@ -86,6 +84,7 @@ function App() {
     };
     
   }, [lastScrollY,pathname]);
+
 
   return (
     <>
