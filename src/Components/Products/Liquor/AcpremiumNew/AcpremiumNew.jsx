@@ -28,6 +28,7 @@ export const AcpremiumNew = () => {
     useEffect(() => {
         axios.get('https://api.jagatjit.com/api/videos')
             .then(response => {
+                console.log('ressss',response.data.data);
                 let data = response.data.data.find((el) => {
                     return el.name == "AC PREMIUM NEW"
                 });

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../AcpremiumOld/AcpremiumOld.css";
 import { HiArrowLongLeft, HiOutlineArrowLongRight } from "react-icons/hi2";
 import { Link } from "react-router-dom";
@@ -17,8 +17,24 @@ import acplast from '../../../../Assets/Products/Liquor/AcpremiumNew/acplastImg.
 // import acpNew from '../../../../Assets/Products/Liquor/AcpremiumNew/damnlink.svg';
 import royalMedol from '../../../../Assets/ArrowBottle/royalMedal.svg';
 import acpNew from '../../../../Assets/ArrowBottle/acpNew.svg';
+import axios from "axios";
 
 export const AcpremiumOld = () => {
+    const [scrVideo, setScrVideo] = useState("");
+    useEffect(() => {
+        axios.get('https://api.jagatjit.com/api/videos')
+            .then(response => {
+                console.log('ressss',response.data.data);
+                let data = response.data.data.find((el) => {
+                    return el.name == "acpremiumold"
+                });
+
+                setScrVideo(data.video_file)
+            })
+            .catch(error => {
+                console.error('Error fetching users:', error);
+            });
+    }, []);
     return (
         <div className="acpremium-container">
             {/* //1 */}
@@ -128,6 +144,23 @@ export const AcpremiumOld = () => {
                         </div>
                     </Link>
                 </div> */}
+                <div className="acpvideoDiv">
+                    {scrVideo && (
+                        <video
+                            className="videoContent"
+                            width="100%"
+                            height="100%"
+                            // controls
+                            autoPlay
+                            muted
+                            loop
+                            playsInline
+                        >
+                            <source src={scrVideo} type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
+                    )}
+                </div>
                                <div className="acpNewarrowDiv">
                     <Link to={'/products/liquor/royalmedallion'} className="acppremiumleftArrowDiv">
                         <div className="acpNewLeftDiv">

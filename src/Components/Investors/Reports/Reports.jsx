@@ -167,7 +167,7 @@ const Report = () => {
             <div key={idx} className='reportDiv'>
               <a href={report.file_url} target='_blank' rel='noopener noreferrer' style={{ textDecoration: 'none' }}>
                 <img src={noteImg} alt='report' className='reportImg' />
-                <h1 style={{ marginBottom: '0%', color: 'white', marginRight: '10px' }}>{report.file_name}</h1>
+                <h1 style={{ marginBottom: '0%', color: 'white', marginRight: '15px' }}>{report.file_name}</h1>
                 <p style={{ color: 'white' }}>{report.file_date}</p>
               </a>
             </div>

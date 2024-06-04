@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import '../IceVodka/IceVodka.css';
 
 import vodka1 from '../../../../Assets/Products/Liquor/Vodka/vodka1.svg';
@@ -22,8 +22,24 @@ import { Link } from "react-router-dom";
 import { HiArrowLongLeft, HiOutlineArrowLongRight } from "react-icons/hi2";
 import damnScotch from '../../../../Assets/ArrowBottle/damnScotch.svg';
 import acDryGin from '../../../../Assets/ArrowBottle/acDryGin.svg';
+import axios from "axios";
 
 export const IceVodka = () => {
+  const [scrVideo, setScrVideo] = useState("");
+  useEffect(() => {
+      axios.get('https://api.jagatjit.com/api/videos')
+          .then(response => {
+              console.log('ressss',response.data.data);
+              let data = response.data.data.find((el) => {
+                  return el.name == "IICE VODKA"
+              });
+
+              setScrVideo(data.video_file)
+          })
+          .catch(error => {
+              console.error('Error fetching users:', error);
+          });
+  }, []);
     return (
         <section className="mainVodkaSection">
   <section className="image-container">
@@ -91,6 +107,23 @@ export const IceVodka = () => {
   </section>
 
   <div className="acpNewarrowDiv">
+               {scrVideo != '' && <div className="acpvideoDiv">
+                    {scrVideo && (
+                        <video
+                            className="videoContent"
+                            width="100%"
+                            height="100%"
+                            // controls
+                            autoPlay
+                            muted
+                            loop
+                            playsInline
+                        >
+                            <source src={scrVideo} type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
+                    )}
+                </div>}
                     <Link to={'/products/liquor/damngoodscotch'} className="acppremiumleftArrowDiv">
                         <div className="acpNewLeftDiv">
                             <h1 className="acpNpremiumarrowHeading">Damn Good Scotch</h1>

@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import '../DamnScotch/DamnScotch.css';
 import { HiArrowLongLeft, HiOutlineArrowLongRight } from "react-icons/hi2";
 import firstSecimg from '../../../../Assets/Products/Liquor/DamnScotch/damn1stSecimg.png';
@@ -22,8 +22,24 @@ import drums from '../../../../Assets/Products/Liquor/RoyalPride/drums.png';
 import { Link } from "react-router-dom";
 import RoyalPride from '../../../../Assets/ArrowBottle/royalPride.svg';
 import iceVodka from '../../../../Assets/ArrowBottle/iceVodka.svg';
+import axios from "axios";
 
 export const DamnScotch = () => {
+  const [scrVideo, setScrVideo] = useState("");
+  useEffect(() => {
+      axios.get('https://api.jagatjit.com/api/videos')
+          .then(response => {
+              console.log('ressss',response.data.data);
+              let data = response.data.data.find((el) => {
+                  return el.name == "DAMN GOOD SCOTCH"
+              });
+
+              setScrVideo(data.video_file)
+          })
+          .catch(error => {
+              console.error('Error fetching users:', error);
+          });
+  }, []);
   return (
     <section>
       {/* //1st cursive pending */}
@@ -133,10 +149,27 @@ export const DamnScotch = () => {
         </div> 
       </div>
       {/* ///5 completed*/}
-      <div className="damFifthDiv" >
-        <div className='lastSecDivScoth' >
+      <div>
+        {/* <div className='lastSecDivScoth' >
           <img src={lastSecimg} alt="lastImg" />
-        </div>
+        </div> */}
+                        <div className="acpvideoDiv">
+                    {scrVideo && (
+                        <video
+                            className="videoContent"
+                            width="100%"
+                            height="100%"
+                            // controls
+                            autoPlay
+                            muted
+                            loop
+                            playsInline
+                        >
+                            <source src={scrVideo} type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
+                    )}
+                </div>
         {/* <div className="acpNewarrowDiv" style={{marginTop:'5%', marginBottom:'0%'}}>
           <Link to={'/products/liquor/RoyalPride'} className="acppremiumleftArrowDiv">
             <div className="acpNewLeftDiv">

@@ -27,8 +27,8 @@ function DateOfBirth() {
     useEffect(() => {
         const value = parseInt(years) - parseInt(year)
         if ( value >= 21 && year.length === 4 && month.length === 2 && day.length === 2) {
-        const data ={'day':day, 'month': month, 'year': year}
-        localStorage.setItem("date",JSON.stringify(data));
+        // const data ={'day':day, 'month': month, 'year': year}
+        // localStorage.setItem("date",JSON.stringify(data));
             navitage('/home')
         }
         if (day.length === 2) {
