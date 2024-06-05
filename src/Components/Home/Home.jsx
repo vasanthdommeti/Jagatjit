@@ -530,7 +530,7 @@ function Home() {
                 </div>
                 {/* </div> */}
             </section>
-            {/* //6 */}
+            {/* //6 */} 
 
             <div className="lastsecmainDiv">
                 <h1 className='section6Header'>JIL's Presence & Reach</h1>

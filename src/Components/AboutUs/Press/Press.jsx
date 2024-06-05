@@ -10,7 +10,7 @@ const Press = () => {
     const [news, setNews] = useState([]);
     const [achievement, setAchievement] = useState([]);
 
-    useEffect(() => {
+    useEffect(() => { 
         axios.get(`https://api.jagatjit.com/api/news`)
         .then(response => {
             setNews(response.data.news)

@@ -33,6 +33,7 @@ function Navbar({ show }) {
                 </div>
             </div>
             <div>
+                <div className='navmainDiv'>
                 <ul className={menuOpen ? "open" : "close"}>
                     <li className='dropdown-li'>
                         <Link to={'/home'} onClick={closeNav}>HOME</Link>
@@ -80,7 +81,7 @@ function Navbar({ show }) {
                                 <Dropdown.Item as={Link} to="/products/liquor/royalmedallion" onClick={closeNav}>
                                     ROYAL MEDALLION
                                 </Dropdown.Item>
-                            </DropdownButton>
+                            </DropdownButton> 
                             {/* <Dropdown.Item as={Link} to="/products/mff" onClick={closeNav}>
                                 MFF
                             </Dropdown.Item> */}
@@ -125,6 +126,7 @@ function Navbar({ show }) {
                         <Link to="/contactus" onClick={closeNav}>CONTACT US</Link>
                     </li>
                 </ul>
+                </div>
                 <div className="menu" style={{ zIndex: 2, marginRight: '7%' }} id="nav-close" onClick={closeNav}>
                     {menuOpen && <IoClose fontSize={75} />}
                 </div>

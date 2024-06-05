@@ -37,14 +37,17 @@
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
+    /* margin-left: 2%; */
+    /* margin-right: 2%; */
 }
 
 .reportDiv { 
     display: flex;
-    /* align-self: center; */
-    margin-top: 5%;
-    width: 200px;
-    /* width: 15%; */
+    align-self: center;
+    justify-content: center;
+    margin-top: 5%; 
+    margin-right: 2%;
+    width: 190px;
 } 
 
 .reportHeading {
