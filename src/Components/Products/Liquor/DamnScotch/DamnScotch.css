@@ -135,7 +135,13 @@
   justify-content: space-around;
   align-self: center;
 }
-
+.glassDiv{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
 .damncandleimagesingle {
   display: flex;
   flex-direction: column;
@@ -197,39 +203,33 @@
 
 .damnimageText { 
   display: flex;
+  justify-content: flex-end;
+  /* background-color: #FFFFFF; */
+  margin: 1%;
   flex-direction: row;
   align-items: center;
   height: 30%;
-  /* margin-top: 2%; */
-  /* margin-bottom: 2%; */
   width: 35%;
-
-  margin-right: 2%;
+  /* margin-right: 2%; */
   margin-top: 0px;
-  /* align-self: center; */
+  margin-bottom: 0%;
 }
 
-.damnimageText p{
-  /* margin-top: 2%; */
-  /* margin-bottom: 2%; */
-  /* width: 50%; */
+/* .damnimageText p{
   margin-left: 1%;
-  
-  /* align-self: center; */
-}
+} */
 
-.damnlogodrumsimage { 
+/* .damnlogodrumsimage { 
   display: flex;
   flex-direction: row;
   align-items: center;
-  /* margin-top: 2%; */
-  /* margin-bottom: 6%; */
   width: 30%;
   margin-right: 3%;
-}
+} */
 
 .damnlogoimage {
   margin-right: 10%;
+  /* background-color: #FFFFFF; */
 
 }
 
