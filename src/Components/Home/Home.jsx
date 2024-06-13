@@ -530,7 +530,7 @@ function Home() {
                 </div>
                 {/* </div> */}
             </section>
-            {/* //6 */} 
+            {/* //6 */}
 
             <div className="lastsecmainDiv">
                 <h1 className='section6Header'>JIL's Presence & Reach</h1>
@@ -571,12 +571,19 @@ function Home() {
                                 <Marker
                                     key={name}
                                     coordinates={coordinates}
-                                    className={isMarkerBlinking && !isHovered ? 'blink' : ''}
                                     onMouseEnter={() => setIsHovered(true)}
                                     onMouseLeave={() => setIsHovered(false)}
                                 >
                                     <a data-tooltip-id="my-tooltip" data-tooltip-content={name}>
-                                        <circle r={5} fill="#fff" />
+                                        <circle
+                                            className={'pulse'}
+                                            r={6}
+                                            fill="#fff"
+                                        />
+                                        <circle
+                                            r={6}
+                                            fill="#fff"
+                                        />
                                     </a>
                                 </Marker>
                             ))}
