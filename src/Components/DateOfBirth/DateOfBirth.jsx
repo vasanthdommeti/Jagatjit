@@ -151,7 +151,7 @@ function DateOfBirth() {
                         if (e.key === 'Enter') {
                           const currentValue = parseInt(years) - parseInt(year);
                           const currentYear = new Date().getFullYear();
-                          if (currentValue >= 21 && year.length === 4 && 1990 <= parseInt(year) && parseInt(year) <= currentYear) {
+                          if (currentValue >= 21 && year.length === 4 && 1990 <= parseInt(year) && parseInt(year) <= currentYear &&  year.length === 4 && month.length === 2 && day.length === 2) {
                             setYearError('')
                             setYear('')
                             setMonth('')
