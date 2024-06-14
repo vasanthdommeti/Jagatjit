@@ -15,10 +15,10 @@ import candles from '../../../../Assets/Products/Liquor/AcBlack/candles.png';
 import acblack from '../../../../Assets/Products/Liquor/AcBlack/acblack.png';
 import damnscotch from '../../../../Assets/Products/Liquor/AcBlack/damnscotch.png';
 //section4thsmall img
-import bottle from '../../../../Assets/Products/Liquor/DamnScotch/damngoodiconbottle.png';
+import bottle from '../../../../Assets/Products/Liquor/DamnScotch/dagnew/bottles.svg';
 import distik from '../../../../Assets/Products/Liquor/DamnScotch/damngooddrums.png';
-import glasss from '../../../../Assets/Products/Liquor/DamnScotch/damngoodiconglass.png';
-import drums from '../../../../Assets/Products/Liquor/RoyalPride/drums.png';
+import glasss from '../../../../Assets/Products/Liquor/DamnScotch/dagnew/glass.svg';
+import drums from '../../../../Assets/Products/Liquor/DamnScotch/dagnew/drums.svg';
 import { Link } from "react-router-dom";
 import RoyalPride from '../../../../Assets/ArrowBottle/royalPride.svg';
 import iceVodka from '../../../../Assets/ArrowBottle/iceVodka.svg';
@@ -90,7 +90,7 @@ export const DamnScotch = () => {
             {/* <h1 className="damnthirdDivLine">
               Blend Yet
             </h1> */}
-          </div> 
+          </div>  
 
             <div className="damnrowdiv">
               <div className="damncandleimagesingle" style={{ marginLeft: '2%' }}>
@@ -133,7 +133,8 @@ export const DamnScotch = () => {
         <div className="damnForthDivContent" >
           <h1 className="damnSecondDivHeading" >Aged for 3 years in</h1>
           <h1 className="damnSecondDivHeading" >The Scottish Highlands</h1>
-          <div className="damnimageText"> 
+          
+          {/* <div className="damnimageText"> 
             <img src={glasss} alt="block" className="damnlogoimage" />
             <p>Best Enjoyed How You Like Your Scotch</p>
           </div>
@@ -144,8 +145,21 @@ export const DamnScotch = () => {
           <div className="damnimageText">
             <img src={drums} alt="block" className="damnlogoimage"/>
             <p>Stored in Oak Wood Barrels from Scotland</p>
-          </div>
-
+          </div> */}
+            <div className="glassDiv">
+    <div className="damnimageText"> 
+      <img src={glasss} alt="block" className="damnlogoimage" />
+      <p>Best Enjoyed How You Like Your Scotch</p>
+    </div>
+    <div className="damnimageText">
+      <img src={bottle} alt="block" className="damnlogoimage" />
+      <p>Bottled with care by state of the art bottling facilities</p>
+    </div>
+    <div className="damnimageText">
+      <img src={drums} alt="block" className="damnlogoimage" />
+      <p>Stored in Oak Wood Barrels from Scotland</p>
+    </div>
+  </div>
         </div> 
       </div>
       {/* ///5 completed*/}

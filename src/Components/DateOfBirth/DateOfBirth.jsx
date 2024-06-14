@@ -17,6 +17,7 @@ function DateOfBirth() {
     const [day, setDay] = useState(dates?.day || '');
     const [month, setMonth] = useState(dates?.month || '');
     const [year, setYear] = useState(dates?.year || '');
+    const [yearError, setYearError] = useState('');
     const monthInputRef = useRef(null);
     const yearInputRef = useRef(null);
     const navitage = useNavigate();
@@ -25,12 +26,12 @@ function DateOfBirth() {
     const years = ne.getFullYear();
 
     useEffect(() => {
-        const value = parseInt(years) - parseInt(year)
-        if ( value >= 21 && year.length === 4 && month.length === 2 && day.length === 2) {
+        // const value = parseInt(years) - parseInt(year)
+        // if ( value >= 21 && year.length === 4 && month.length === 2 && day.length === 2) {
         // const data ={'day':day, 'month': month, 'year': year}
         // localStorage.setItem("date",JSON.stringify(data));
-            navitage('/home')
-        }
+            // navitage('/home')
+        // }
         if (day.length === 2) {
             monthInputRef.current.focus();
         }
@@ -55,6 +56,11 @@ function DateOfBirth() {
                 <h1 className='dobheading'>consuming alcohol.</h1>
                 
             </div>
+            {yearError && (
+                <div style={{ color: 'red' }}>
+                    {yearError}
+                </div>
+            )}
             <div>
             <h1 className='dobparagraph'>Your Date of Birth:</h1>
                 <div className='dobinputFields'>
@@ -70,7 +76,7 @@ function DateOfBirth() {
                     className='dateDiv'
                     onChange={(e) => {
                         const inputValue = e.target.value.slice(0, 2);
-                        if (/^\d*$/.test(inputValue) && parseInt(inputValue) >= 0 && parseInt(inputValue) <= 31) {
+                        if (/^\d*$/.test(inputValue) && parseInt(inputValue) > 0 && parseInt(inputValue) <= 31) {
                             setDay(inputValue);
                         } else if (inputValue === '') {
                             setDay('');
@@ -106,7 +112,7 @@ function DateOfBirth() {
                     className='dateDiv'
                     onChange={(e) => {
                         const inputValue = e.target.value.slice(0, 2);
-                        if (/^\d*$/.test(inputValue) && parseInt(inputValue) >= 0 && parseInt(inputValue) <= 12) {
+                        if (/^\d*$/.test(inputValue) && parseInt(inputValue) > 0 && parseInt(inputValue) <= 12) {
                             setMonth(inputValue);
                         } else if (inputValue === '') {
                             setMonth('');
@@ -141,6 +147,22 @@ function DateOfBirth() {
                     value={year}
                     className='dateDiv'
                     onChange={(e) => setYear(e.target.value.slice(0,4))}
+                    onKeyDown={(e) => {
+                        if (e.key === 'Enter') {
+                          const currentValue = parseInt(years) - parseInt(year);
+                          const currentYear = new Date().getFullYear();
+                          if (currentValue >= 21 && year.length === 4 && 1990 <= parseInt(year) && parseInt(year) <= currentYear &&  year.length === 4 && month.length === 2 && day.length === 2) {
+                            setYearError('')
+                            setYear('')
+                            setMonth('')
+                            setDay('')
+                            navitage('/home')
+                          } else {
+                            // setYearError(`Invalid DOB. Please enter a year between 1990 and ${currentYear}`);
+                            setYearError('Sorry, you must be at least 21 years old to proceed.');
+                          }
+                        }
+                      }}
                 />
                 </div>
                 <div className='remeberBoxDiv'>

@@ -180,7 +180,6 @@ function Home() {
     const [data, setData] = useState(section[0]);
     const [content, setContent] = useState("");
     const [activeId, setActiveId] = useState(section[0]?.id);
-    const [isMarkerBlinking, setMarkerBlinking] = useState(true);
     const [isHovered, setIsHovered] = useState(false);
 
     const secondSectionRef = useRef(null);
@@ -190,16 +189,6 @@ function Home() {
             setData(section[0]);
         }
     }, [section, setData]);
-
-    useEffect(() => {
-        const intervalId = setInterval(() => {
-            if (!isHovered) {
-                setMarkerBlinking((prev) => !prev);
-            }
-        }, 1000);
-
-        return () => clearInterval(intervalId);
-    }, [isHovered]);
 
     const handleClick = (id) => {
         setActiveId(id);
@@ -530,7 +519,7 @@ function Home() {
                 </div>
                 {/* </div> */}
             </section>
-            {/* //6 */} 
+            {/* //6 */}
 
             <div className="lastsecmainDiv">
                 <h1 className='section6Header'>JIL's Presence & Reach</h1>
@@ -571,12 +560,19 @@ function Home() {
                                 <Marker
                                     key={name}
                                     coordinates={coordinates}
-                                    className={isMarkerBlinking && !isHovered ? 'blink' : ''}
                                     onMouseEnter={() => setIsHovered(true)}
                                     onMouseLeave={() => setIsHovered(false)}
                                 >
                                     <a data-tooltip-id="my-tooltip" data-tooltip-content={name}>
-                                        <circle r={5} fill="#fff" />
+                                        <circle
+                                            className={!isHovered ? 'pulse' : ''}
+                                            r={6}
+                                            fill="#fff"
+                                        />
+                                        <circle
+                                            r={6}
+                                            fill="#fff"
+                                        />
                                     </a>
                                 </Marker>
                             ))}

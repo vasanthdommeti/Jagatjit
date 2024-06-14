@@ -37,10 +37,10 @@ export const RoyalPride = () => {
     }, []);
 
     return (
-        <section>
+        <section >
             {/* //1 completed*/}
             <div className="royalFirstDiv">
-                <div style={{ display: 'flex', alignSelf: 'center', paddingLeft: '7%' }}>
+                <div style={{ display: 'flex', alignSelf: 'center', width:'100%' }}>
 
                     <div className="royalRowContent">
                         <div className="animated"> <h1 className="royalHeading">
@@ -64,40 +64,43 @@ export const RoyalPride = () => {
                 </div>
             </div>
             {/* //2 completed*/}
-            <div className="royalPrideSecondDiv">
-                <div className="royalColumnContent">
-                    {/* <h1 className="royalSecondDivHeading">
-                        Launched in 2022
-                    </h1> */}
-
+            {/* <div className="royalColumnContent">
                     <h1 className="royalSecondDivHeading">
-
                         Made with the
                     </h1>
-
                     <h1 className="royalSecondDivHeading">
-
                         finest grains
-
                     </h1>
-
                     <p className="royalSecondDivParagraph">
                         Launched in 2022, Royal Pride is crafted by our Scottish master blenders with the
                         <span> finest grain spirits</span> and
                         <span> imported Scotch malts.</span>
                     </p>
-
+                </div> */}
+            <div className="royalPrideSecondDiv">
+                <div className="royalColumnContent">
+                    <h1 className="royalSecondDivHeading">
+                        Made with the
+                    </h1>
+                    <h1 className="royalSecondDivHeading">
+                        finest grains
+                    </h1>
+                    <p className="royalSecondDivParagraph">
+                        Launched in 2022, Royal Pride is crafted by our Scottish master blenders with the
+                        <span> finest grain spirits</span> and
+                        <span> imported Scotch malts.</span>
+                    </p>
                 </div>
             </div>
 
             {/* //3 incomplete side image and small images */}
             {/* <img src={candles} alt="block" className="royalcandleimagehide" /> */}
-            <div className="royalPrideThirdDiv">
+            <div className="royalPrideThirdDiv"> 
                 <div className="royalprideThirdDivContent">
                     <div className="royalPride3Img">
                         <img src={royalpridethirdImg} alt="image" style={{ height: '100vh' }} />
                     </div>
-                    <div style={{ padding: '5%' }}>
+                    <div style={{paddingTop:'5%'}}>
                         <h1 className="royalthirdDivLine">
                             Reinvent <span> yourself </span>
                             with every <span> sip.</span>
