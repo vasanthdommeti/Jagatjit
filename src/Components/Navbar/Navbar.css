@@ -1,4 +1,13 @@
-nav {
+
+.linkText {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+
+/* Base styles */
+.headerNavBar {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -7,45 +16,118 @@ nav {
     position:fixed;
     padding-bottom: 0%;
     padding-left: 5%;
-    padding-top: 5px;
+    /* padding-top: 120px; */
     width: 100%;
     background-color: rgba(0, 0, 0, 0.7);
     transition: ease-in-out;
-    top: 0;
     z-index: 2;
-    font-family: 'Regular';
-
-} 
-
-nav .title {
-    font-size: 1.5rem; 
-    margin: 2rem;
-    font-weight: bold;
-    text-decoration: none; 
-    color: white;
+    font-family: 'Montserrat';
 }
 
-nav ul {
+.open:selection{
+    display: none;
+}
+
+.mainNavDiv {
+    padding: 5px 70px;
+    width: 70vw;
     display: flex;
-    align-items: center;
+    justify-content: center;
+}
+
+.navItem {
+    position: relative;
+    text-align: center;
+    flex-grow: 1;
+    align-self: center;
+}
+
+.navItem h4 {
+    cursor: pointer;
+    padding: 10px;
+    margin: 0;
+    font-size: 12px;
+    font-family: 'Montserrat';
     font-weight: bold;
 }
-
-nav ul li {
-    list-style: none;
+.navItem1 h5 {
+    cursor: pointer;
+    padding: 10px;
+    margin: 0;
+    font-size: 12px;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    text-align: left;
 }
-nav ul :hover {
-    color: #D38A14;
 
+.navItem h4:hover {
+    color: #ECA533;
+}
+.linkText:hover {
+    color: #ECA533;
 }
 
-nav ul li a {
+.subItems a:hover {
+    color: #ECA533;
+}
+
+.subItems {
+    display: none;
+    position: absolute;
+    /* background-color: #c21010; */
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    min-width: 150px;
+    top: 100%;
+    left: 0;
+    border: 1px solid;
+    background-color: black;
+}
+
+.liquorSubItems {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    min-width: 150px;
+    left: 100%;
+}
+
+.liquorSubItems a:hover {
+    color: #ECA533;
+}
+
+.navItem:hover .subItems {
+    display: block;
+}
+
+.subItems:hover .liquorSubItems {
+    display: block;
+}
+
+.subItems a {
+    color: white;
+    padding: 10px;
+    text-align: left;
     display: block;
     text-decoration: none;
-    color: white;
-    padding: 1rem;
-    margin: 0.45rem;
-    border-radius: 0.5rem;
+    /* border-bottom: 1px solid #ddd; */
+    font-size: 12px;
+    font-family: 'Montserrat';
+    font-weight: bold;
+}
+
+.subItems a:last-child {
+    border-bottom: none;
+}
+
+.firstLogo {
+    display: none;
+}
+
+.secondLogo {
+    display: flex;
 }
 
 nav .menu {
@@ -58,12 +140,20 @@ nav .menu {
     width: 2.25rem;
     height: 2rem;
 }
- 
-nav .menu span { 
-    height: 0.1rem;
+
+nav .menu span {
+    height: 0.4rem;
     width: 100%;
     background-color: #fff;
     border-radius: 0.2rem;
+}
+
+nav .title {
+    font-size: 1.5rem;
+    margin: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
 }
 
 .close {
@@ -72,325 +162,262 @@ nav .menu span {
     justify-content: space-between;
 }
 
-.firstLogo {
-    display: none;
-}
-
-.show>.btn-primary.dropdown-toggle{
-    /* background-color: black; */
-    border-color: black;
-    border: 0;
-    box-shadow: none;
-
-}
-.show>.btn-primary.dropdown-toggle:hover{
-    /* background-color: black; */
-    border-color: black;
-    box-shadow: none;
-}
-
-.dropdown-about {
-    border: 0;
-    outline: none;
-    box-shadow: unset;
-}
-/* .borderChange:active{
-    border: 0;
-    outline: none;
-    box-shadow: unset;
-} */
-
-.secondLogo {
-    display: flex;
-    margin-left: 1rem;
-    margin-bottom: -1%;
-    filter: brightness(50%);
-    filter: contrast(150%);
-}
-.nav__toggle,
-.nav__close {
-  font-size: 1.5rem;
-  color: var(--title-color);
-  cursor: pointer;
-}
-
-
-.dropdown-toggle:hover{
-    /* background-color: black; */
-    border-color: black;
-}
-
-/* ///dddd */
-.dropdown-about .dropdown-toggle {
-    background-color: transparent;
-    border-color:transparent;
-    display: flex;
-    box-shadow: none;
-    font-weight: bold;
-}
-.dropdown-liquor{
-    display: flex;
-    margin-left: 5%;
-}
-.dropdown-about:focus{
-   border-color: #D38A14;
-   box-shadow: none;
-}
-.dropdown-liquor .dropdown-menu {
-    /* background-color: black; */
-    border-color: #fff;
-    margin-left: 105%;
-    margin-top: -25%;
-}
-
-.dropdown-about .dropdown-toggle:hover {
-    color: #D38A14;
-    box-shadow: none;
-    /* background-color: black; */
-    /* border-color: blacß; */
-
-}
-
-.dropdown-li {
-    background-color: transparent;
-    border-color: black;
-    display: flex;
-}
-
-nav ul.dropdown-li:hover {
-    border-color: white;
-    /* background-color: black; */
-
-}
-
-.dropdown-toggle :hover {
-    border-color: white;
-
-}
-
-.dropdown-about .dropdown-toggle:after {
-    display: none;
-}
- 
-.dropdown-about .dropdown-menu {
-    background-color: black;
-    border-color: #fff;
-}
-
-.dropdown-about .dropdown-item {
-    color: white;
-    text-align: left;
-    border-color: black;
-    font-weight: bold;
-}
-
-.dropdown-about .dropdown-item:hover {
-    background-color:  transparent;
-    color: #D38A14;
-    box-shadow: none;
-    
-}
-/* nav ul .open:active{
-    display: none;
-    background-color: #D38A14;
-} */
-nav ul.open:selection{
-    display: none;
-}
-
-.imagelogo {
-    height: 300px;
-    width: 300px;
-}
-@media (max-width:767px){
-    nav ul.open {
-        position: absolute;
-        top:0;
-        right: 0%;
-        display: flex;
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+    .headerNavBar {
         flex-direction: column;
-        padding-top:30%;
-        padding-bottom: 40%;
-        justify-content: space-around;
-        background-color: transparent;
-        backdrop-filter: blur(16px);
-        -webkit-backdrop-filter: blur(16px);
-        transition: right 0.4s;
-        z-index: 2;
-        height: 100vh;
-        -webkit-text-fill-color: #fff;
-        -webkit-text-stroke: 1;
+        width: 100%;
+        position: relative;
     }
-}
-@media (max-width: 802px){
-    nav .menu {
-        display: flex;
-        top: 30%;
-        height: 1.5rem;
 
+    .mainNavDiv {
+        display: block;
+        align-self: center;
+    }
+
+    .navItem {
+        text-align: center;
+    }
+
+    .navItem h4 {
+        width: 100%;
+    }
+
+    .subItems {
+        position: relative;
+        left: 30%;
+        top: 0;
+        width: 50%;
     }
 
     .firstLogo {
         display: flex;
-        height: 75px;
-        align-items: center;
     }
 
     .secondLogo {
         display: none;
     }
 
-    nav ul {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        margin-bottom: 0.25rem;
+    nav .menu {
+        display: flex;
     }
-
-    nav ul.open {
+    .mainNavDiv{
+        display: none;
+        /* width: 100%; */
+    }
+    .open {
         position: absolute;
         top:0;
         right: 0%;
         display: flex;
         flex-direction: column;
+        width: -webkit-fill-available;
         padding-top:30%;
         padding-bottom: 40%;
+        padding-right: 50%;
         justify-content: space-around;
         background-color: transparent;
         backdrop-filter: blur(16px);
         -webkit-backdrop-filter: blur(16px);
         transition: right 0.4s;
         z-index: 2;
+        width: 100vw;
         height: 100vh;
         -webkit-text-fill-color: #fff;
         -webkit-text-stroke: 1;
     }
-    nav{
-        opacity: 1;
-    }
-
-    .nav__close {
-        position: absolute;
-        top: 1rem;
-        right: 1.5rem;
-      }
-
-    .imagelogo {
-        height: 70px;
-        width: 75px;
-    }
-
-    nav {
-        z-index: 5;
-        padding-left:0;
-    }
-
-    nav ul li {
-        width: 100%;
-        text-align: center;
-    }
-
-    nav ul li a {
-        padding: 0.5rem;
-    }
-}
-
-@media only screen and (max-width: 1200px) {
-    .section3Header {
-        font-size: 30px;
-        font-family: 'Josefin Sans';
-    }
-    .nav__toggle,
-    .nav__close {
-      display: none;
+    .navItem1:hover .subItems1 {
+        display: block;
+        margin-top: -100%;
+        background-color: black;
     }
     
-  }
-
-
-
-  
-
-  /* //for overide the button styling */
-  .btn-primary {
-    color: #fff;
-    background-color: transparent;
-    border-color: transparent
 }
 
-.btn-primary:hover {
-    color: #fff;
-    background-color: transparent;
-    border-color: transparent;
-}
+@media (max-width: 480px) {
+    .headerNavBar {
+        padding: 5px;
+        position: relative;
+    }
 
-.btn-primary:focus,
-.btn-primary.focus {
-    box-shadow: transparent
+    .navItem h4,
+    .subItems a {
+        padding: 8px;
+    }
 }
 
 
-.btn-primary.disabled,
-.btn-primary:disabled {
-    color: #fff;
-    background-color: transparent;
-    border-color: transparent;
+
+
+.navItem2 {
+    position: relative;
+    text-align: center;
+    flex-grow: 1;
+    align-self: center;
 }
 
-.btn-primary:not(:disabled):not(.disabled):active,
-.btn-primary:not(:disabled):not(.disabled).active,
-.show>.btn-primary.dropdown-toggle {
-    color: #fff;
-    background-color: transparent;
-    border-color: transparent
+.navItem2 h4 {
+    cursor: pointer;
+    padding: 10px;
+    margin: 0;
+    font-size: 12px;
+    font-family: 'Montserrat';
+    font-weight: bold;
 }
 
-.btn-primary:not(:disabled):not(.disabled):active:focus,
-.btn-primary:not(:disabled):not(.disabled).active:focus,
-.show>.btn-primary.dropdown-toggle:focus {
-    /* box-shadow: transparent */
-    box-shadow: none;
-
+.navItem2 h4:hover {
+    color: #ECA533;
 }
 
-/* //check this */
-.btn-outline-primary {
-    color: #fff;
-    background-color: transparent;
-    background-image: none;
-    border-color: transparent
+.subItems2 a:hover {
+    color: #ECA533;
 }
 
-.btn-outline-primary:hover {
-    color: #fff;
-    background-color: transparent;
-    border-color: transparent
+.subItems:hover .liquorSubItems{
+    display: block;
+}
+/* //subblockkk */
+.subItem2 :hover .liquorSubItems2{
+    background-color: black;
+    display: block;
+    left: 100%;
+    top: 5%;
+    border: 1px solid;
 }
 
-.btn-outline-primary:focus,
-.btn-outline-primary.focus {
-    /* box-shadow: transparent */
-    box-shadow: none;
 
+.subItems2 {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    min-width: 150px;
+    top: 100%;
+    left: 0;
 }
 
-.btn-outline-primary.disabled,
-.btn-outline-primary:disabled {
-    color: #fff;
-    background-color: transparent
+.liquorSubItems2 {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    min-width: 150px;
+    right: 100%;
 }
 
-.btn-outline-primary:not(:disabled):not(.disabled):active,
-.btn-outline-primary:not(:disabled):not(.disabled).active,
-.show>.btn-outline-primary.dropdown-toggle {
-    color: #fff;
-    background-color: transparent;
-    border-color: transparent
+.liquorSubItems2 a:hover {
+    color: #ECA533;
 }
 
-.btn-outline-primary:not(:disabled):not(.disabled):active:focus,
-.btn-outline-primary:not(:disabled):not(.disabled).active:focus,
-.show>.btn-outline-primary.dropdown-toggle:focus {
-    /* box-shadow: transparent */
-    box-shadow: none;
+.liquorSubItems2:hover {
+    display: block;
+}
+
+.navItem2:hover .subItems2 {
+    display: block;
+}
+
+.subItems2:hover .liquorSubItems2 {
+    display: block;
+}
+
+.subItems2 a {
+    color: black;
+    padding: 10px;
+    text-align: left;
+    display: block;
+    text-decoration: none;
+    /* border-bottom: 1px solid #ddd; */
+    font-size: 12px;
+    font-family: 'Montserrat';
+    font-weight: bold;
+}
+
+.subItems2 a:last-child {
+    border-bottom: none;
+}
+
+
+
+
+.navItem1 {
+    position: relative;
+    text-align: center;
+    flex-grow: 1;
+    align-self: center;
+}
+
+.navItem1 h4 {
+    cursor: pointer;
+    padding: 10px;
+    margin: 0;
+    font-size: 12px;
+    font-family: 'Montserrat';
+    font-weight: bold;
+}
+
+.navItem1 h4:hover {
+    color: #ECA533;
+}
+
+.subItems1 a:hover {
+    color: #ECA533;
+}
+
+.subItems1 {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+   color: wite;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    min-width: 150px;
+    top: 100%;
+    left: 0;
+}
+
+.liquorSubItems1 {
+    display: none;
+    position: absolute;
+    color: white;
+    background-color: #fff;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    min-width: 150px;
+    right: 100%;
+}
+
+.liquorSubItems1 a:hover {
+    color: #ECA533;
+}
+
+.subItems1 :hover .liquorSubItems1 {
+    display: block;
+    left:100%;
+    background-color: black;
+    border: 1px solid;
+}
+
+.navItem1:hover .subItems1 {
+    display: block;
+    /* margin-top: -100%; */
+    background-color: black;
+}
+
+.subItems1 a {
+    color: white;
+    padding: 10px;
+    text-align: left;
+    display: block;
+    text-decoration: none;
+    /* border-bottom: 1px solid #ddd; */
+    font-size: 12px;
+    font-family: 'Montserrat';
+    font-weight: bold;
+}
+
+.subItems1 a:last-child {
+    border-bottom: none;
 }
