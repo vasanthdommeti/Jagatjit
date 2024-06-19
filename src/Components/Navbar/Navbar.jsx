@@ -7,21 +7,23 @@ import logo from '../../Assets/LogoIcon.png'
 // import DropdownButton from 'react-bootstrap/DropdownButton';
 import { IoClose, IoMenu } from "react-icons/io5";
 import { Link } from 'react-router-dom';
-function Navbar({ show }) {
+function Navbar({ show, scrollStop }) {
     const [menuOpen, setMenuOpen] = useState(false);
-
+    const responsive = document.documentElement.clientWidth
     useEffect(() => {
-        setMenuOpen(false)
-    }, [])
+        console.log('document.documentElement.clientWidth',window.innerWidth);
+        responsive > 768 && setMenuOpen(false)
+    },[])
 
     const closeNav = () => {
         setMenuOpen(!menuOpen)
+        scrollStop(!menuOpen)
     };
 
     return (
         <nav style={{display:show ? 'flex' :'none'}}>
             <div className="firstLogo">
-                <Link to="/section" className="title">
+                <Link to="/home" className="title">
                     <img src={logo} alt="logo" />
                 </Link>
             </div>
@@ -45,7 +47,7 @@ function Navbar({ show }) {
                         </div>
                     </div>
                     <div className="navItem1">
-                        <h4>PRODUCTS</h4>
+                        <h4>PRODUCTS</h4> 
                         <div className="subItems1">
                             <div className="menu-link2"><h5>LIQUOR</h5>
                                 <div className="liquorSubItems1">

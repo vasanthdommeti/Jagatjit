@@ -29,7 +29,7 @@ export const DamnScotch = () => {
   useEffect(() => {
       axios.get('https://api.jagatjit.com/api/videos')
           .then(response => {
-              console.log('ressss',response.data.data);
+              // console.log('ressss',response.data.data[3].video_file);
               let data = response.data.data.find((el) => {
                   return el.name == "DAMN GOOD SCOTCH"
               });

@@ -126,13 +126,16 @@
   margin-left: 10%;
   /* margin-bottom: 10%; */
 }
+.damnrowdiv p{
+  font-size: 14px;
+}
 
 .damnrowdiv {
   display: flex;
-  width: 40%;
+  width: 45%;
   flex-wrap: wrap;
   margin-top: 2%;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-self: center;
 }
 .glassDiv{
@@ -140,7 +143,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 .damncandleimagesingle {
   display: flex;
@@ -208,16 +211,17 @@
   margin: 1%;
   flex-direction: row;
   align-items: center;
-  height: 30%;
+  height: 20%;
   width: 35%;
   /* margin-right: 2%; */
   margin-top: 0px;
   margin-bottom: 0%;
 }
 
-/* .damnimageText p{
-  margin-left: 1%;
-} */
+.damnimageText p{
+  /* margin-left: 1%; */
+  font-size: 14px;
+}
 
 /* .damnlogodrumsimage { 
   display: flex;
@@ -327,7 +331,9 @@
     letter-spacing: 3px;  
     text-align: center;
   }
-
+  .damnrowdiv p{
+    font-size: 11px;
+  }
   .damnfirstdiveitems{
     display: flex;
     flex-direction: column-reverse;
@@ -489,6 +495,7 @@
   /* margin-bottom: 2%; */
   width: 60%;
   margin-left: 2%;
+  font-size: 11px;
   
   /* align-self: center; */
 }
@@ -507,6 +514,12 @@
   align-items: center;
   gap: 10px;
   width: 45%;
+}
+.damnimageText p{
+  font-size: 11px;
+}
+.damnrowdiv p{
+  font-size: 11px;
 }
 .damnThirdDivContent {
   display: block;

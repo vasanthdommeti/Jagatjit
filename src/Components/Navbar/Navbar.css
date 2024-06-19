@@ -24,7 +24,7 @@
     font-family: 'Montserrat';
 }
 
-.open:selection{
+.open{
     display: none;
 }
 
@@ -370,11 +370,11 @@ nav .title {
     display: none;
     position: absolute;
     background-color: #fff;
-   color: wite;
+    color: white;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     z-index: 1;
     min-width: 150px;
-    top: 100%;
+    top: 100;
     left: 0;
 }
 
@@ -391,11 +391,12 @@ nav .title {
 
 .liquorSubItems1 a:hover {
     color: #ECA533;
-}
+} 
 
 .subItems1 :hover .liquorSubItems1 {
     display: block;
     left:100%;
+    top: 0;
     background-color: black;
     border: 1px solid;
 }
@@ -404,6 +405,7 @@ nav .title {
     display: block;
     /* margin-top: -100%; */
     background-color: black;
+    border: 1px solid;
 }
 
 .subItems1 a {

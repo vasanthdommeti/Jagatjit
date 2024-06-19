@@ -18,6 +18,7 @@ function DateOfBirth() {
     const [month, setMonth] = useState(dates?.month || '');
     const [year, setYear] = useState(dates?.year || '');
     const [yearError, setYearError] = useState('');
+    const [remember, setRemember] = useState(dates?.remember || false);
     const monthInputRef = useRef(null);
     const yearInputRef = useRef(null);
     const navitage = useNavigate();
@@ -32,6 +33,8 @@ function DateOfBirth() {
         // localStorage.setItem("date",JSON.stringify(data));
             // navitage('/home')
         // }
+        // localStorage.clear();
+        !remember && localStorage.clear();
         if (day.length === 2) {
             monthInputRef.current.focus();
         }
@@ -41,9 +44,17 @@ function DateOfBirth() {
     }, [year,day,month])
 
     const checkBoxClick = () => {
-        const data ={'day':day, 'month': month, 'year': year}
-        localStorage.setItem("date",JSON.stringify(data))
-
+        // const data ={'day':day, 'month': month, 'year': year}
+        // localStorage.setItem("date",JSON.stringify(data))
+        const data = {
+            'day': day,
+            'month': month,
+            'year': year,
+            'remember': true,
+            'expires': Date.now() + (1 * 24 * 60 * 60 * 1000) // expires in 1 day
+          };
+          
+          localStorage.setItem("date", JSON.stringify(data));
     }
 
     return (
@@ -151,7 +162,7 @@ function DateOfBirth() {
                         if (e.key === 'Enter') {
                           const currentValue = parseInt(years) - parseInt(year);
                           const currentYear = new Date().getFullYear();
-                          if (currentValue >= 21 && year.length === 4 && 1990 <= parseInt(year) && parseInt(year) <= currentYear &&  year.length === 4 && month.length === 2 && day.length === 2) {
+                          if (currentValue >= 21 && year.length === 4 && 1900 <= parseInt(year) && parseInt(year) <= currentYear &&  year.length === 4 && month.length === 2 && day.length === 2) {
                             setYearError('')
                             setYear('')
                             setMonth('')
