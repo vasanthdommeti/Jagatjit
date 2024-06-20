@@ -87,7 +87,8 @@ function DateOfBirth() {
                     className='dateDiv'
                     onChange={(e) => {
                         const inputValue = e.target.value.slice(0, 2);
-                        if (/^\d*$/.test(inputValue) && parseInt(inputValue) > 0 && parseInt(inputValue) <= 31) {
+                        const count = inputValue.split('0').length - 1;
+                        if (/^\d*$/.test(inputValue) && parseInt(inputValue) >= 0 && parseInt(inputValue) <= 31 && count < 2) {
                             setDay(inputValue);
                         } else if (inputValue === '') {
                             setDay('');
@@ -123,7 +124,8 @@ function DateOfBirth() {
                     className='dateDiv'
                     onChange={(e) => {
                         const inputValue = e.target.value.slice(0, 2);
-                        if (/^\d*$/.test(inputValue) && parseInt(inputValue) > 0 && parseInt(inputValue) <= 12) {
+                        const count = inputValue.split('0').length - 1;
+                        if (/^\d*$/.test(inputValue) && parseInt(inputValue) >= 0 && parseInt(inputValue) <= 12 && count < 2) {
                             setMonth(inputValue);
                         } else if (inputValue === '') {
                             setMonth('');

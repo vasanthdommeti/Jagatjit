@@ -13,6 +13,21 @@ import royalMedol from '../../../../Assets/ArrowBottle/royalMedal.svg';
 
 
 export const AcDryGin = () => {
+    const [scrVideo, setScrVideo] = useState("");
+    useEffect(() => {
+        axios.get('https://api.jagatjit.com/api/videos')
+            .then(response => {
+                console.log('ressss',response.data.data);
+                let data = response.data.data.find((el) => {
+                    return el.name == "AcDry Gin"
+                });
+  
+                setScrVideo(data.video_file)
+            })
+            .catch(error => {
+                console.error('Error fetching users:', error);
+            });
+    }, []);
     return (
         <section>
             {/* //1 */}
@@ -45,7 +60,7 @@ export const AcDryGin = () => {
 
                     </p>
                 </div>
-            </div>
+            </div> 
 
             {/* //3  clarification*/}
 
@@ -63,23 +78,23 @@ export const AcDryGin = () => {
 
             {/* //4 */}
             <div>
-                {/* <div className="acpvideoDiv">
-                {scrVideo && (
-                    <video
-                        className="videoContent"
-                        width="100%"
-                        height="100%"
-                        // controls
-                        autoPlay
-                        muted
-                        loop
-                        playsInline
-                    >
-                        <source src={scrVideo} type="video/mp4" />
-                        Your browser does not support the video tag.
-                    </video>
-                )}
-                </div> */}
+            {scrVideo != '' && <div className="acpvideoDiv">
+                    {scrVideo && (
+                        <video
+                            className="videoContent"
+                            width="100%"
+                            height="100%"
+                            // controls
+                            autoPlay
+                            muted
+                            loop
+                            playsInline
+                        >
+                            <source src={scrVideo} type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
+                    )}
+                </div>}
                 {/* <div className="acpNewarrowDiv">
                     <Link to={'/products/liquor/DamnGoodScotch'} className="acppremiumleftArrowDiv">
                         <div className="acpNewLeftDiv">

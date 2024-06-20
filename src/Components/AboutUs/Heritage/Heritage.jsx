@@ -183,16 +183,16 @@ export const Heritage = () => {
                         return (
                             <VerticalTimelineElement
                                 key={i}
-                                contentStyle={{ background: "black" }}
+                                contentStyle={{ background: "black",maxHeight:200 }}
                                 contentArrowStyle={{ borderRight: "white" }}
                                 iconStyle={{ background: "white" }}
                                 className="timeLine"
                             >
                                 <div>
-                                    {t.image && <img src={t.image} style={{ height: '90%', width: '90%' }} />}
-                                    <p style={{ color: 'white', fontSize: 32, fontWeight: 'bolder' }}>{t.date}</p>
+                                    {t.image && <img src={t.image} style={{ height: '50%', width: '70%' }} />}
+                                    <p style={{ color: 'white', fontSize: 30, fontWeight: 'bolder' }}>{t.date}</p>
                                     {t.id != 16 ? (
-                                        <p style={{ color: 'white', fontFamily: 'Josefin Sans', fontWeight: '300' }}>{t.desc}</p>
+                                        <p style={{ color: 'white', fontFamily: 'Josefin Sans', fontWeight: '300', fontSize:18 }}>{t.desc}</p>
                                     ) : (
                                         <div>
                                             Ms. Roshini Sanah Jaiswal won the ‘Entrepreneur of the year’ Award at Indspirit 2016 (The mega Alcobev Trade Event). <br />• IICE Vodka won the Gold Award for Standard Product of the Year at Indspirit 2016 (The mega Alcobev Trade Event). <br />• AC Black Whisky in Packaging category won the Gold award at Indspirit 2016 (The mega Alcobev Trade Event).<br /><br /><br /><br /><br />
