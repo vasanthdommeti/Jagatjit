@@ -11,6 +11,32 @@
     text-align: center;
 }
 
+.white-arrow-right {
+    background-image: url('../../Assets/rightImg.png');
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 100px;
+    width: 3em;
+    height: 3em;
+    margin-left: 8px;
+}
+.submit_p {
+    color: white;
+    letter-spacing: 1.18em;
+    text-transform: uppercase;
+    margin-top: auto;
+    text-align: center;
+    /* border-radius: 10px; */
+    text-align: center;
+    flex-direction: row;
+    display: flex;
+    align-self: center;
+    margin-bottom: auto;
+    font-weight: 700;
+    background-color: transparent;
+    font-size: 18px;
+}
 .dobheading{
     font-size: 25px;
     font-weight: 700;

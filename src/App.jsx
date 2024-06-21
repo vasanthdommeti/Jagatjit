@@ -54,6 +54,11 @@ function App() {
     setLastScrollY(window.scrollY);
   };
 
+  const scrollStop = (e) => {
+    // document.body.style.overflow = e ? 'hidden' : 'auto';
+    console.log('stoping for production ');
+  }
+
   useEffect(() => {
     try {
       const data = localStorage.getItem("date");
@@ -88,7 +93,7 @@ function App() {
 
   return (
     <>
-      {pathname !==  '/' && !loading  && <Navbar show={show}/>}
+      {pathname !==  '/' && !loading  && <Navbar show={show} scrollStop={scrollStop}/>}
       {loading ?
       <Loading/>
       :

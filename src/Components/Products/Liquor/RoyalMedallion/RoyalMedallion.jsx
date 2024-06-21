@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import '../RoyalMedallion/RoyalMedallion.css';
 import { HiArrowLongLeft, HiOutlineArrowLongRight } from "react-icons/hi2";
 import medalionfirstImg from '../../../../Assets/Products/Liquor/RoyalMedalon/first.png';
@@ -15,10 +15,26 @@ import glass from '../../../../Assets/Products/Liquor/RoyalMedalon/glass1.png';
 import acDryGin from '../../../../Assets/ArrowBottle/acDryGin.svg';
 import acpOld from '../../../../Assets/ArrowBottle/acpOld.svg';
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 export const RoyalMedallion = () => {
+    const [scrVideo, setScrVideo] = useState("");
+    useEffect(() => {
+        axios.get('https://api.jagatjit.com/api/videos')
+            .then(response => { 
+                // console.log('ressss',response.data.data[3].video_file);
+                let data = response.data.data.find((el) => {
+                    return el.name == "Royal Medallion"
+                });
+  
+                setScrVideo(data.video_file)
+            })
+            .catch(error => {
+                console.error('Error fetching users:', error);
+            });
+    }, []);
     return (
-        <section>
+        <section> 
             {/* //1 */}
             <div className="medalionFirstDiv" style={{ display: 'flex', alignSelf: 'center'}}>
                 <div className="medalionRowContent">
@@ -91,23 +107,23 @@ export const RoyalMedallion = () => {
             </div>
             {/* //4 */}
             <div>
-                {/* <div className="acpvideoDiv">
-                {scrVideo && (
-                    <video
-                        className="videoContent"
-                        width="100%"
-                        height="100%"
-                        // controls
-                        autoPlay
-                        muted
-                        loop
-                        playsInline
-                    >
-                        <source src={scrVideo} type="video/mp4" />
-                        Your browser does not support the video tag.
-                    </video>
-                )}
-                </div> */}
+            {scrVideo != '' && <div className="acpvideoDiv">
+                    {scrVideo && (
+                        <video
+                            className="videoContent"
+                            width="100%"
+                            height="100%"
+                            // controls
+                            autoPlay
+                            muted
+                            loop
+                            playsInline
+                        >
+                            <source src={scrVideo} type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
+                    )}
+                </div>}
                 {/* <div className="acpNewarrowDiv">
                     <Link to={'/products/liquor/AcDryGin'} className="acppremiumleftArrowDiv">
                         <div className="acpNewLeftDiv">
