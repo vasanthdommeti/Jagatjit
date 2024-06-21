@@ -55,7 +55,8 @@ function App() {
   };
 
   const scrollStop = (e) => {
-    document.body.style.overflow = e ? 'hidden' : 'auto';
+    // document.body.style.overflow = e ? 'hidden' : 'auto';
+    console.log('stoping for production ');
   }
 
   useEffect(() => {

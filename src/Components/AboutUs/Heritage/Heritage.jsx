@@ -183,7 +183,7 @@ export const Heritage = () => {
                         return (
                             <VerticalTimelineElement
                                 key={i}
-                                contentStyle={{ background: "black",maxHeight:200 }}
+                                contentStyle={{ background: "black",maxHeight:300 }}
                                 contentArrowStyle={{ borderRight: "white" }}
                                 iconStyle={{ background: "white" }}
                                 className="timeLine"

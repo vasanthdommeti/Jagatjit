@@ -57,6 +57,25 @@ function DateOfBirth() {
           localStorage.setItem("date", JSON.stringify(data));
     }
 
+    const enterPressBtn = () => {
+        // if (e.key === 'Enter') {
+            const currentValue = parseInt(years) - parseInt(year);
+            const currentYear = new Date().getFullYear();
+            if (currentValue >= 21 && year.length === 4 && 
+                1900 <= parseInt(year) && parseInt(year) <= currentYear &&  
+                year.length === 4) {
+              setYearError('')
+              setYear('')
+              setMonth('')
+              setDay('')
+              navitage('/home')
+            } else {
+              // setYearError(`Invalid DOB. Please enter a year between 1990 and ${currentYear}`);
+              setYearError('Sorry, you must be at least 21 years old to proceed.');
+            }
+        //   }
+    }
+
     return (
         <div className='loginMainDivDob'> 
             <div className='loginDiv'>
@@ -75,6 +94,7 @@ function DateOfBirth() {
             <div>
             <h1 className='dobparagraph'>Your Date of Birth:</h1>
                 <div className='dobinputFields'>
+{/* 
                 <input
                     type='number'
                     id='day'
@@ -95,7 +115,6 @@ function DateOfBirth() {
                         }
                     }}
                     onKeyDown={(e) => {
-                        // Allow numeric characters, backspace, and delete keys
                         if (
                             !(
                                 (e.key >= '0' && e.key <= '9') ||
@@ -109,7 +128,6 @@ function DateOfBirth() {
                             e.preventDefault();
                         }
                     }}
-                    // onChange={(e) => setDay(e.target.value.slice(0, 2))}
                 />
                 <input
                     type='number'
@@ -132,7 +150,6 @@ function DateOfBirth() {
                         }
                     }}
                     onKeyDown={(e) => {
-                        // Allow numeric characters, backspace, and delete keys
                         if (
                             !(
                                 (e.key >= '0' && e.key <= '9') ||
@@ -146,8 +163,8 @@ function DateOfBirth() {
                             e.preventDefault();
                         }
                     }}
-                    // onChange={(e) => setMonth(e.target.value.slice(0, 2))}
                 />
+                 */}
                 <input
                     type='number'
                     ref={yearInputRef}
@@ -160,23 +177,30 @@ function DateOfBirth() {
                     value={year}
                     className='dateDiv'
                     onChange={(e) => setYear(e.target.value.slice(0,4))}
-                    onKeyDown={(e) => {
-                        if (e.key === 'Enter') {
-                          const currentValue = parseInt(years) - parseInt(year);
-                          const currentYear = new Date().getFullYear();
-                          if (currentValue >= 21 && year.length === 4 && 1900 <= parseInt(year) && parseInt(year) <= currentYear &&  year.length === 4 && month.length === 2 && day.length === 2) {
-                            setYearError('')
-                            setYear('')
-                            setMonth('')
-                            setDay('')
-                            navitage('/home')
-                          } else {
-                            // setYearError(`Invalid DOB. Please enter a year between 1990 and ${currentYear}`);
-                            setYearError('Sorry, you must be at least 21 years old to proceed.');
-                          }
-                        }
-                      }}
+                    // onKeyDown={(e) => {
+                    //     if (e.key === 'Enter') {
+                    //       const currentValue = parseInt(years) - parseInt(year);
+                    //       const currentYear = new Date().getFullYear();
+                    //       if (currentValue >= 21 && year.length === 4 && 
+                    //           1900 <= parseInt(year) && parseInt(year) <= currentYear &&  
+                    //           year.length === 4 && (month.length === 2 || month.length === 1)&& (day.length === 2 || day.length === 1)) {
+                    //         setYearError('')
+                    //         setYear('')
+                    //         setMonth('')
+                    //         setDay('')
+                    //         navitage('/home')
+                    //       } else {
+                    //         // setYearError(`Invalid DOB. Please enter a year between 1990 and ${currentYear}`);
+                    //         setYearError('Sorry, you must be at least 21 years old to proceed.');
+                    //       }
+                    //     }
+                    //   }}
                 />
+
+                </div>
+                <div style={{display:'flex', alignSelf:'center', justifyContent:'center', marginTop:'3%', marginBottom:'3%'}}>
+                    <label htmlFor='enterId' className='submit_p' style={{textAlign:'center', marginLeft: '15px'}}>ENTER</label>
+                    <button id='enterId' type='button' onClick={() => enterPressBtn()} className='white-arrow-right'/>
                 </div>
                 <div className='remeberBoxDiv'>
                     <input type='checkbox' className='checkbox' id='checkboxId' onClick={() => checkBoxClick()} />

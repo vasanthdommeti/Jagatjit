@@ -1,6 +1,6 @@
 
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import '../AcDryGin/AcDryGin.css';
 import { HiArrowLongLeft, HiOutlineArrowLongRight } from "react-icons/hi2";
 import acDryGinfirstImg from '../../../../Assets/Products/Liquor/AcDryGin/acdryginsec1img.png';
@@ -10,6 +10,7 @@ import royalMedallon from '../../../../Assets/Products/Liquor/RoyalMedalon/royal
 import { Link } from "react-router-dom";
 import iceVodka from '../../../../Assets/ArrowBottle/iceVodka.svg';
 import royalMedol from '../../../../Assets/ArrowBottle/royalMedal.svg';
+import axios from "axios";
 
 
 export const AcDryGin = () => {
