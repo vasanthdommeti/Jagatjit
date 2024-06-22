@@ -15,23 +15,28 @@ function Navbar({ show, scrollStop }) {
         responsive > 768 && setMenuOpen(false)
     },[])
 
-    const closeNav = () => {
+    const closeNav = () => { 
         setMenuOpen(!menuOpen)
         scrollStop(!menuOpen)
     };
-
+    // style={{display:show ? 'flex' :'none'}}
+    //id="mainNavDivBlock"
     return (
-        <nav style={{display:show ? 'flex' :'none'}}>
+        <nav>
             <div className="firstLogo">
                 <Link to="/home" className="title">
                     <img src={logo} alt="logo" />
                 </Link>
             </div>
+            {!menuOpen ?
             <div className="menu" onClick={closeNav}>
-                <span></span>
-                <span></span>
-                <span></span>
+                <IoMenu fontSize={35}/>
             </div>
+            :
+            <div className="menu" id="nav-close" onClick={closeNav}>
+            <IoClose fontSize={35}/>
+            </div>
+            }
             <div className='headerNavBar'>
                 <div className={menuOpen ? "open" : "mainNavDiv"}>
                     <div class="navItem">
@@ -97,9 +102,9 @@ function Navbar({ show, scrollStop }) {
                     <Link to="/contactus" className='linkText' onClick={closeNav}>CONTACT US</Link>
                     </div>
                 </div>
-                <div className="menu" style={{zIndex:2, marginRight:'7%'}} id="nav-close" onClick={closeNav}>
+                {/* <div className="menu" style={{zIndex:2, marginRight:'7%'}} id="nav-close" onClick={closeNav}>
                     {menuOpen &&<IoClose fontSize={75}/>}
-                </div>
+                </div> */}
             </div>
         </nav>
     )
