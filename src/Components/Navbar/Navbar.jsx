@@ -40,7 +40,7 @@ function Navbar({ show, scrollStop }) {
             <div className='headerNavBar'>
                 <div className={menuOpen ? "open" : "mainNavDiv"}>
                     <div class="navItem">
-                    <Link to={'/home'} onClick={closeNav} className='linkText'>HOME</Link>
+                    <Link to={'/home'}  className='linkText'>HOME</Link>
                     </div>
                     <div class="navItem">
                         <h4>ABOUT US</h4>
@@ -71,7 +71,7 @@ function Navbar({ show, scrollStop }) {
                                     <div className="menu-link"><h5>MFF</h5>
                                         <div className="liquorSubItems2">
                                             <Link to="/products/mmf/foodproducts" >FOOD PRODUCTS</Link>
-                                            <Link to='/products/liquor/ACpremiumNew'>MALT EXTRACT</Link>
+                                            <Link to='/products/mmf/maltextract'>MALT EXTRACT</Link>
                                         </div>
                                     </div>
                                 </div>
