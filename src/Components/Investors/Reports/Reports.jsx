@@ -98,7 +98,7 @@ const Report = () => {
           <input placeholder='Search Reports' type="text" value={fileName} onChange={(e) => setFileName(e.target.value)} className='reportinputField searchBar' />
           <i className="icon search-icon"> <IoIosSearch style={{ color: 'black', fontSize: '21px' }} /></i>
         </div>
-        <div style={{ position: 'relative', display: 'inline-block' }} className='reportinputField'>
+        {/* <div style={{ position: 'relative', display: 'inline-block' }} className='reportinputField'>
           <select
             className='reportinputField'
             onChange={handleYearChange}
@@ -114,9 +114,9 @@ const Report = () => {
           <div style={{ position: 'absolute', top: '50%', right: '5px', transform: 'translateY(-60%) translateX(-10%)' }}>
             <CiFilter style={{ color: 'black', fontSize: '21px' }} />
           </div>
-        </div>
-        {yearError && <span style={{ color: 'red' }}>{yearError}</span>}
-        <div style={{ position: 'relative', display: 'inline-block' }} className='reportinputField'>
+        </div> */}
+        {/* {yearError && <span style={{ color: 'red' }}>{yearError}</span>} */}
+        {/* <div style={{ position: 'relative', display: 'inline-block' }} className='reportinputField'>
           <select
             value={month}
             onChange={handleMonthChange}
@@ -140,8 +140,8 @@ const Report = () => {
           <div style={{ position: 'absolute', top: '50%', right: '5px', transform: 'translateY(-60%) translateX(-10%)' }}>
             <CiFilter style={{ color: 'black', fontSize: '21px' }} />
           </div>
-        </div>
-        {monthError && <span style={{ color: 'red' }}>{monthError}</span>}
+        </div> */}
+        {/* {monthError && <span style={{ color: 'red' }}>{monthError}</span>} */}
         <div style={{ position: 'relative', display: 'inline-block' }} className='reportinputField'>
           <select
             value={categoryName}

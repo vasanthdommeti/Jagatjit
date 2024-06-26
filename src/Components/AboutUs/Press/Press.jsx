@@ -9,6 +9,7 @@ const Press = () => {
 
     const [news, setNews] = useState([]);
     const [achievement, setAchievement] = useState([]);
+    const [count, setCount] = useState(6);
 
     useEffect(() => { 
         axios.get(`https://api.jagatjit.com/api/news`)
@@ -29,6 +30,7 @@ const Press = () => {
            </div>
            <div className='newsmainDiv'>
            {news.map((el,index) => (
+                index < count && 
                 <div key={index} className="newsDiv">
                   <img src={el.news_image} alt="image" className="newsImg"/>
                   <p><Link to={el.link} className="newsPara">
@@ -37,6 +39,11 @@ const Press = () => {
                     {/* <h1>{el.name}</h1> */}
                 </div>
             ))}
+           </div>
+           <div style={{display:'flex', justifyContent:'center', margin:'5%'}}>
+            <button className='section3Button' onClick={() => setCount(count + 6)}>
+                    VIEW MORE
+                </button>
            </div>
 
            <div style={{marginTop:'10%'}}>
