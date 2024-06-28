@@ -28,7 +28,6 @@ class ReportPolicyController extends Controller
             'file_name' => $request->file_name,
             'category_id' => $request->category_id,
             'file_description' => $request->file_description,
-            'file_date' => $request->file_date,
         ]);
 
         try {

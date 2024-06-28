@@ -39,7 +39,7 @@ JIL - Award Press
                             <table id="datatable" class="display" style="width:100%">
                                 <thead>
                                     <tr>
-                                        <th>Order</th>
+                                        <th>Date</th>
                                         <th>Name</th>
                                         <th>Link</th>
                                         <th>Image</th>
@@ -50,9 +50,13 @@ JIL - Award Press
                                 <tbody>
                                     @foreach ($achievement as $item)
                                     <tr>
-                                        <td>{{ $item->order }}</td>
+                                        <td>{{ $item->date }}</td>
                                         <td>{{ $item->name }}</td>
-                                        <td>{{ $item->link }}</td>
+                                        <td>
+                                            <a href="{{ $item->link }}" class="btn btn-secondary">
+                                                View
+                                            </a>
+                                        </td>
                                         <td>
                                             @if (!empty($item->achievement_image))
                                             <button class="btn btn-secondary image-btn" data-bs-toggle="modal"

@@ -7,31 +7,25 @@ use Illuminate\Database\Eloquent\Model;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 
-class ReportPolicy extends Model implements HasMedia
+class Video extends Model implements HasMedia
 {
     use HasFactory, InteractsWithMedia;
 
     protected $fillable = [
-        'file_name',
-        'category_id',
-        'file_description',
+        'name',
+        'page_name',
     ];
 
-    protected $appends = ['report_policy_file'];
+    protected $appends = ['video_file'];
 
-    public function getReportPolicyFileAttribute()
+    public function getVideoFileAttribute()
     {
-        if ($this->hasMedia('report_policy_file')) {
-            $mediaItem = $this->getMedia('report_policy_file')->last();
+        if ($this->hasMedia('video_file')) {
+            $mediaItem = $this->getMedia('video_file')->last();
             $path = parse_url($mediaItem->getUrl(), PHP_URL_PATH);
             return config('app.cloudfront_url') . $path;
         }
 
         return asset('frontend/img/logo.png');
-    }
-
-    public function category()
-    {
-        return $this->belongsTo(Category::class);
     }
 }

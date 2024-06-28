@@ -1,7 +1,7 @@
 @extends('backend.layouts.master')
 
 @section('title')
-JIL - Reports Policies Upload
+JIL - Video File Upload
 @endsection
 
 @section('css')
@@ -16,40 +16,29 @@ JIL - Reports Policies Upload
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-header">
-                            <h5 class="card-title">Reports Policies Upload</h5>
+                            <h5 class="card-title">Video File Upload</h5>
                         </div>
                         <div class="card-body">
                             <div class="example-container">
                                 <div class="example-content">
-                                    <form action="{{ route('report.store') }}" method="POST" enctype="multipart/form-data">
+                                    <form action="{{ route('video.store') }}" method="POST" enctype="multipart/form-data">
                                         @csrf
                                         <div class="mb-3 row">
-                                            <label for="inputName" class="col-sm-2 col-form-label">File Name</label>
+                                            <label for="inputName" class="col-sm-2 col-form-label">Video Name</label>
                                             <div class="col-sm-10">
-                                                <input type="text" name="file_name" class="form-control" id="inputName">
+                                                <input type="text" name="name" class="form-control" id="inputName">
                                             </div>
                                         </div>
                                         <div class="mb-3 row">
-                                            <label for="inputName" class="col-sm-2 col-form-label">File Description</label>
+                                            <label for="inputName" class="col-sm-2 col-form-label">Video Page Name</label>
                                             <div class="col-sm-10">
-                                                <input type="text" name="file_description" class="form-control" id="inputName">
-                                            </div>
-                                        </div>
-                                        <div class="mb-3 row">
-                                            <label for="inputName" class="col-sm-2 col-form-label">Category Select</label>
-                                            <div class="col-sm-10">
-                                                <select name="category_id" class="form-control" id="inputName">
-                                                    <option value="">Select Category</option>
-                                                    @foreach ($category as $item)
-                                                    <option value="{{ $item->id }}">{{$item->name}}</option>
-                                                    @endforeach
-                                                </select>
+                                                <input type="text" name="page_name" class="form-control" id="inputName">
                                             </div>
                                         </div>
                                         <div class="mb-3 row">
                                             <label for="inputName" class="col-sm-2 col-form-label">Upload File</label>
                                             <div class="col-sm-10">
-                                                <input type="file" name="report_policy" class="form-control" id="inputName">
+                                                <input type="file" name="video_file" class="form-control" id="inputName">
                                             </div>
                                         </div>
                                         <button type="submit" class="btn btn-success" style="width: 100%">Submit File</button>

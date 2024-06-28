@@ -30,19 +30,19 @@ JIL - Making
 
             <div class="card">
                 <div class="card-body">
-                    <form action="{{ route('new.update',[$news->id])}}" method="POST" enctype="multipart/form-data">
+                    <form action="{{ route('new.update',['new' => $new->id])}}" method="POST" enctype="multipart/form-data">
                         @csrf
                         @method('PUT')
                         <div class="mb-3 row">
                             <label for="inputEmail3" class="col-sm-2 col-form-label">News name</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="inputEmail3" name="name" value="{{ $news->name }}" required>
+                                <input type="text" class="form-control" id="inputEmail3" name="name" value="{{ $new->name }}" required>
                             </div>
                         </div>
                         <div class="mb-3 row">
                             <label class="col-sm-2 col-form-label">link</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="inputEmail3" name="link" value="{{ $news->name }}" >
+                                <input type="text" class="form-control" id="inputEmail3" name="link" value="{{ $new->link }}" >
                             </div>
                         </div>
                         <div class="mb-3 row">
@@ -52,8 +52,8 @@ JIL - Making
                                 <!-- If you want to show the current image -->
                                 <div>
                                     <strong>Current Image:</strong>
-                                    @if($news->news_image)
-                                        <img src="{{ $news->news_image }}" alt="Current Image" style="max-width: 100px; max-height: 100px;">
+                                    @if($new->news_image)
+                                        <img src="{{ $new->news_image }}" alt="Current Image" style="max-width: 100px; max-height: 100px;">
                                     @else
                                         No image available.
                                     @endif
@@ -61,19 +61,19 @@ JIL - Making
                             </div>
                         </div>
                         <div class="mb-3 row">
-                            <label for="inputEmail3" class="col-sm-2 col-form-label">Order</label>
+                            <label for="inputName" class="col-sm-2 col-form-label">Published Date</label>
                             <div class="col-sm-10">
-                                <input type="number" class="form-control" id="inputEmail3" value="{{ $news->order }}" name="order" required>
+                                <input type="date" name="date" class="form-control" value="{{ $achievement->date }}" id="inputName">
                             </div>
                         </div>
                         <div class="mb-3 row">
                             <label for="status" class="col-sm-2 col-form-label">Section</label>
                             <div class="col-sm-10">
                                 <select type="text" class="form-control" id="status" name="status">
-                                    <option @if ($news->status == 'publish')
+                                    <option @if ($new->status == 'publish')
                                         selected
                                     @endif value="publish">Publish</option>
-                                    <option @if ($news->status == 'draft')
+                                    <option @if ($new->status == 'draft')
                                         selected
                                     @endif value="draft">Draft</option>
                                 </select>

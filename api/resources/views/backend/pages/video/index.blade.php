@@ -1,7 +1,7 @@
 @extends('backend.layouts.master')
 
 @section('title')
-JIL - Files
+JIL - Video
 @endsection
 
 @section('css')
@@ -18,31 +18,29 @@ JIL - Files
                     <div class="card">
                         <div class="card-header"
                             style="display: flex; justify-content:space-between; align-items: center;">
-                            <h5 class="card-title">Files Table</h5>
-                            <a href="{{ route('report.create')}}" class="btn btn-primary">Create New Files</a>
+                            <h5 class="card-title">Video Table</h5>
+                            <a href="{{ route('video.create')}}" class="btn btn-primary">Add New Video</a>
                         </div>
                         <div class="card-body">
                             <table id="datatable1" class="display" style="width:100%">
                                 <thead>
                                     <tr>
-                                        <th>Files Name</th>
-                                        <th>Files Link</th>
-                                        <th>Files Description</th>
-                                        <th>Category</th>
+                                        <th>Video Name</th>
+                                        <th>Video Page</th>
+                                        <th>Video Link</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($files as $item)
+                                    @foreach ($videos as $item)
 
                                     <tr>
-                                        <td>{{ $item->file_name }}</td>
-                                        <td>{{ $item->report_policy_file }}</td>
-                                        <td>{{ $item->file_description}}</td>
-                                        <td>{{ $item->category->name }}</td>
+                                        <td>{{ $item->name }}</td>
+                                        <td>{{ $item->page_name }}</td>
+                                        <td>{{ $item->video_file }}</td>
                                         <td class="d-flex">
-                                            {{-- <a href="{{ route('report.edit',[$item->id]) }}"><i class="material-icons">edit</i></a> --}}
-                                            <form action="{{ route('report.destroy',[$item->id]) }}" method="POST">
+                                            {{-- <a href="{{ route('financial.edit',[$item->id]) }}"><i class="material-icons">edit</i></a> --}}
+                                            <form action="{{ route('video.destroy',[$item->id]) }}" method="POST">
                                                 @csrf
                                                 @method('DELETE')
                                                 <button style="padding: 0; border:none; background:none; " type="submit"

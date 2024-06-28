@@ -22,11 +22,11 @@ class AchievementController extends Controller
     {
         $request->validate([
             'name' => 'required',
-            'order' => 'required|integer',
+            'date' => 'required|date',
             'status' => 'required|in:publish,draft',
         ]);
 
-        $achievement = Achievement::create($request->only('name', 'order', 'status', 'link'));
+        $achievement = Achievement::create($request->only('name', 'order', 'status', 'link', 'date'));
 
         if ($request->hasFile('achievement_image')) {
             $achievement->addMedia($request->file('achievement_image'))->toMediaCollection('achievement_image', 's3');
@@ -44,11 +44,11 @@ class AchievementController extends Controller
     {
         $request->validate([
             'name' => 'required',
-            'order' => 'required|integer',
+            'date' => 'required|date',
             'status' => 'required|in:publish,draft',
         ]);
 
-        $achievement->update($request->only('name', 'order', 'status', 'link'));
+        $achievement->update($request->only('name', 'order', 'status', 'link', 'date'));
 
         if ($request->hasFile('achievement_image')) {
             $achievement->clearMediaCollection('achievement_image');

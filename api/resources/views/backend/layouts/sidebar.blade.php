@@ -37,6 +37,10 @@
             </li>
 
             <li>
+                <a href="{{ route('video.index')}}"><i class="material-icons-two-tone">people</i>Video Table</a>
+            </li>
+
+            <li>
                 <a href="{{ route('achievement.index')}}"><i class="material-icons-two-tone">people</i>Achievement Table</a>
             </li>
 

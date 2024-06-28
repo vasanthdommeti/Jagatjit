@@ -17,7 +17,7 @@ class ReportPolicyResource extends JsonResource
         return [
             'id' => $this->id,
             'file_name' => $this->file_name,
-            'category_id' => $this->category_id,
+            'category_name' => $this->category->name,
             'file_description' => $this->file_description,
             'file_date' => $this->file_date,
             'file_url' => $this->report_policy_file,

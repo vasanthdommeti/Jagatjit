@@ -25,11 +25,11 @@ class NewsController extends Controller
     {
         $request->validate([
             'name' => 'required',
-            'order' => 'required|integer',
             'status' => 'required|in:publish,draft',
+            'date' => 'required|date',
         ]);
 
-        $news = News::create($request->only('name', 'order', 'status', 'link'));
+        $news = News::create($request->only('name', 'order', 'status', 'link', 'date'));
 
         if ($request->hasFile('news_image')) {
             $news->addMedia($request->file('news_image'))->toMediaCollection('news_image', 's3');
@@ -38,39 +38,39 @@ class NewsController extends Controller
         return redirect()->route('new.index')->with('success', 'News created successfully');
     }
 
-    public function edit(News $news)
+    public function edit(News $new)
     {
-        return view('backend.pages.news.edit', compact('news'));
+        return view('backend.pages.news.edit', compact('new'));
     }
 
-    public function update(Request $request, News $news)
+    public function update(Request $request, News $new)
     {
         $request->validate([
             'name' => 'required',
-            'order' => 'required|integer',
+            'date' => 'required|date',
             'status' => 'required|in:publish,draft',
         ]);
 
-        $news->update($request->only('name', 'order', 'status', 'link'));
+        $new->update($request->only('name', 'order', 'status', 'link', 'date'));
 
         if ($request->hasFile('news_image')) {
-            $news->clearMediaCollection('news_image');
-            $news->addMedia($request->file('news_image'))->toMediaCollection('news_image', 's3');
+            $new->clearMediaCollection('news_image');
+            $new->addMedia($request->file('news_image'))->toMediaCollection('news_image', 's3');
         }
 
         return redirect()->route('new.index')->with('success', 'Award Press updated successfully');
     }
 
-    public function destroy(News $news)
+    public function destroy(News $new)
     {
-        $news->delete();
+        $new->delete();
         return redirect()->route('new.index')->with('success', 'Award Press deleted successfully');
     }
 
     public function allNews()
     {
-        $news = News::where('status', 'publish')->orderBy('order')->get();
-        $achievement = Achievement::where('status', 'publish')->orderBy('order')->get();
+        $news = News::where('status', 'publish')->orderBy('date')->get();
+        $achievement = Achievement::where('status', 'publish')->orderBy('date')->get();
 
         $newsResource = NewsResource::collection($news);
         $achievementResource = AchievementResource::collection($achievement);

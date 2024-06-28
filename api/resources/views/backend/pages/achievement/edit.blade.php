@@ -34,7 +34,7 @@ JIL - Making
                         @csrf
                         @method('PUT')
                         <div class="mb-3 row">
-                            <label for="inputEmail3" class="col-sm-2 col-form-label">News name</label>
+                            <label for="inputEmail3" class="col-sm-2 col-form-label">Achievement name</label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" id="inputEmail3" name="name" value="{{ $achievement->name }}" required>
                             </div>
@@ -42,11 +42,11 @@ JIL - Making
                         <div class="mb-3 row">
                             <label class="col-sm-2 col-form-label">link</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="inputEmail3" name="link" value="{{ $achievement->name }}" >
+                                <input type="text" class="form-control" id="inputEmail3" name="link" value="{{ $achievement->link }}" >
                             </div>
                         </div>
                         <div class="mb-3 row">
-                            <label for="headerimage" class="col-sm-2 col-form-label">News Image</label>
+                            <label for="headerimage" class="col-sm-2 col-form-label">Achievement Image</label>
                             <div class="col-sm-10">
                                 <input type="file" class="form-control" id="headerimage" name="news_image">
                                 <!-- If you want to show the current image -->
@@ -61,9 +61,9 @@ JIL - Making
                             </div>
                         </div>
                         <div class="mb-3 row">
-                            <label for="inputEmail3" class="col-sm-2 col-form-label">Order</label>
+                            <label for="inputName" class="col-sm-2 col-form-label">Published Date</label>
                             <div class="col-sm-10">
-                                <input type="number" class="form-control" id="inputEmail3" value="{{ $achievement->order }}" name="order" required>
+                                <input type="date" name="date" class="form-control" value="{{ $achievement->date }}" id="inputName">
                             </div>
                         </div>
                         <div class="mb-3 row">
@@ -79,7 +79,7 @@ JIL - Making
                                 </select>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-primary">Update News</button>
+                        <button type="submit" class="btn btn-primary">Update Achievement</button>
                     </form>
                 </div>
             </div>

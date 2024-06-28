@@ -57,7 +57,7 @@ function Navbar({ show, scrollStop }) {
                             <div className="menu-link2"><h5>LIQUOR</h5>
                                 <div className="liquorSubItems1">
                                     <Link to="/products/liquor/acpremiumold" >AC PREMIUM (OLD)</Link>
-                                    <Link to="/products/liquor/acpremium">AC PREMIUM (NEW)</Link>
+                                    <Link to="/products/liquor/acpremium">AC PREMIUM</Link>
                                     <Link to="/products/liquor/acpremiumblack">AC BLACK</Link>
                                     <Link to="/products/liquor/royalpride">ROYAL PRIDE</Link>
                                     <Link to="/products/liquor/damngoodscotch">DAMN GOOD SCOTCH</Link>
@@ -68,7 +68,7 @@ function Navbar({ show, scrollStop }) {
                             </div>
                             <div className='navItem2'>
                                 <div className="subItem2">
-                                    <div className="menu-link"><h5>MFF</h5>
+                                    <div className="menu-link"><h5>MMF</h5>
                                         <div className="liquorSubItems2">
                                             <Link to="/products/mmf/foodproducts" >FOOD PRODUCTS</Link>
                                             <Link to='/products/mmf/maltextract'>MALT EXTRACT</Link>
