@@ -29,7 +29,6 @@ JIL - Files
                                         <th>Files Link</th>
                                         <th>Files Description</th>
                                         <th>Category</th>
-                                        <th>Date</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
@@ -41,7 +40,6 @@ JIL - Files
                                         <td>{{ $item->report_policy_file }}</td>
                                         <td>{{ $item->file_description}}</td>
                                         <td>{{ $item->category->name }}</td>
-                                        <td>{{ $item->file_date}}</td>
                                         <td class="d-flex">
                                             {{-- <a href="{{ route('report.edit',[$item->id]) }}"><i class="material-icons">edit</i></a> --}}
                                             <form action="{{ route('report.destroy',[$item->id]) }}" method="POST">

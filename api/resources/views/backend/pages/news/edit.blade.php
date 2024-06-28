@@ -61,9 +61,9 @@ JIL - Making
                             </div>
                         </div>
                         <div class="mb-3 row">
-                            <label for="inputEmail3" class="col-sm-2 col-form-label">Order</label>
+                            <label for="inputName" class="col-sm-2 col-form-label">Published Date</label>
                             <div class="col-sm-10">
-                                <input type="number" class="form-control" id="inputEmail3" value="{{ $new->order }}" name="order" required>
+                                <input type="date" name="date" class="form-control" value="{{ $achievement->date }}" id="inputName">
                             </div>
                         </div>
                         <div class="mb-3 row">

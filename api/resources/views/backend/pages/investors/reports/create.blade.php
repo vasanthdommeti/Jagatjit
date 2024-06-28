@@ -36,12 +36,6 @@ JIL - Reports Policies Upload
                                             </div>
                                         </div>
                                         <div class="mb-3 row">
-                                            <label for="inputName" class="col-sm-2 col-form-label">File Date</label>
-                                            <div class="col-sm-10">
-                                                <input type="date" name="file_date" class="form-control" id="inputName">
-                                            </div>
-                                        </div>
-                                        <div class="mb-3 row">
                                             <label for="inputName" class="col-sm-2 col-form-label">Category Select</label>
                                             <div class="col-sm-10">
                                                 <select name="category_id" class="form-control" id="inputName">

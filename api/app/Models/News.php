@@ -16,6 +16,7 @@ class News extends Model implements HasMedia
         'order',
         'status',
         'link',
+        'date',
     ];
 
     protected $casts = [

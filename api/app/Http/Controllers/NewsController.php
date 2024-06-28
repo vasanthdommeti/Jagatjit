@@ -25,11 +25,11 @@ class NewsController extends Controller
     {
         $request->validate([
             'name' => 'required',
-            'order' => 'required|integer',
             'status' => 'required|in:publish,draft',
+            'date' => 'required|date',
         ]);
 
-        $news = News::create($request->only('name', 'order', 'status', 'link'));
+        $news = News::create($request->only('name', 'order', 'status', 'link', 'date'));
 
         if ($request->hasFile('news_image')) {
             $news->addMedia($request->file('news_image'))->toMediaCollection('news_image', 's3');
@@ -47,11 +47,11 @@ class NewsController extends Controller
     {
         $request->validate([
             'name' => 'required',
-            'order' => 'required|integer',
+            'date' => 'required|date',
             'status' => 'required|in:publish,draft',
         ]);
 
-        $new->update($request->only('name', 'order', 'status', 'link'));
+        $new->update($request->only('name', 'order', 'status', 'link', 'date'));
 
         if ($request->hasFile('news_image')) {
             $new->clearMediaCollection('news_image');
@@ -69,8 +69,8 @@ class NewsController extends Controller
 
     public function allNews()
     {
-        $news = News::where('status', 'publish')->orderBy('order')->get();
-        $achievement = Achievement::where('status', 'publish')->orderBy('order')->get();
+        $news = News::where('status', 'publish')->orderBy('date')->get();
+        $achievement = Achievement::where('status', 'publish')->orderBy('date')->get();
 
         $newsResource = NewsResource::collection($news);
         $achievementResource = AchievementResource::collection($achievement);

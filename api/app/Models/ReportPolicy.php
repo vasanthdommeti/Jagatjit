@@ -15,7 +15,6 @@ class ReportPolicy extends Model implements HasMedia
         'file_name',
         'category_id',
         'file_description',
-        'file_date',
     ];
 
     protected $appends = ['report_policy_file'];
