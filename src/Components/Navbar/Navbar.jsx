@@ -70,7 +70,7 @@ function Navbar({ show, scrollStop }) {
                                         </div>
                                     </div>
                                 </div>
-                                <Link to="/products/ethnol" >ETHNOL</Link>
+                                <Link to="/products/ethnol" >ETHANOL</Link>
                             </div>
                         </div>
                     </div>
