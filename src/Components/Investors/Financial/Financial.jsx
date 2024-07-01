@@ -17,6 +17,7 @@ const Report = () => {
   const [year, setYear] = useState('');
   const [monthError, setMonthError] = useState('');
   const [yearError, setYearError] = useState('');
+  const [sectionData, setSectionData] = useState([]);
 
   const currentYear = new Date().getFullYear();
 
@@ -32,18 +33,19 @@ const Report = () => {
           const result = data.reduce((acc, item) => {
             let category = acc.find(cat => cat.name === item.category_name);
             if (!category) {
-                category = { name: item.category_name, data: [] };
-                acc.push(category);
+              category = { name: item.category_name, data: [] };
+              acc.push(category);
             }
             category.data.push({
-                id: item.id,
-                file_name: item.file_name,
-                file_description: item.file_description,
-                file_date: item.file_date,
-                file_url: item.file_url
+              id: item.id,
+              file_name: item.file_name,
+              file_description: item.file_description,
+              file_date: item.file_date,
+              file_url: item.file_url
             });
             return acc;
           }, []);
+          setSectionData(result);
 
           console.log("result", result);
 
@@ -181,7 +183,7 @@ const Report = () => {
         {/* {console.log("categories",categories)} */}
       </div>
       <div className='reportmainDiv'>
-        {Array.isArray(filteredReports) && filteredReports.length > 0 ? (
+        {/* {Array.isArray(filteredReports) && filteredReports.length > 0 ? (
           filteredReports.map((report, idx) => (
             <div key={idx} className='reportDiv'>
               <a href={report.file_url} target='_blank' rel='noopener noreferrer' style={{ textDecoration: 'none' }}>
@@ -189,6 +191,21 @@ const Report = () => {
                 <h1 style={{ marginBottom: '0%', color: 'white', marginRight: '10px' }}>{report.file_name}</h1>
                 <p style={{ color: 'white' }}>{report.file_date}</p>
               </a>
+            </div>
+          )) */}
+        {Array.isArray(sectionData) && sectionData.length > 0 ? (
+          sectionData.map((report, idx) => (
+            <div className='reportmainDiv'>
+              <h1>{report.name}</h1>
+              {report.data.map((el, idx) => (
+                <div key={idx} className='reportDiv'>
+                  <a href={el.file_url} target='_blank' rel='noopener noreferrer' style={{ textDecoration: 'none' }}>
+                    <img src={noteImg} alt='report' className='reportImg' />
+                    <h1 style={{ marginBottom: '0%', color: 'white', marginRight: '10px' }}>{el.file_name}</h1>
+                    <p style={{ color: 'white' }}>{el.file_date}</p>
+                  </a>
+                </div>
+              ))}
             </div>
           ))
         ) : (
