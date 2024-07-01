@@ -24,7 +24,6 @@ const Report = () => {
   useEffect(() => {
     axios.get('https://api.jagatjit.com/api/financials')
       .then(response => {
-        console.log("response", response);
         if (response.data && Array.isArray(response.data.data)) {
           let data = response.data.data.sort((a, b) => new Date(b.file_date) - new Date(a.file_date));
           setReports(data);
@@ -46,8 +45,6 @@ const Report = () => {
           }, []);
           setSectionData(result);
           setFilteredReports(result);
-
-          console.log("result", result);
 
           // Extract unique category names
           const uniqueCategories = [...new Set(data.map(report => report.category_name))];
