@@ -29,6 +29,24 @@ const Report = () => {
           setReports(data);
           setFilteredReports(data);
 
+          const result = data.reduce((acc, item) => {
+            let category = acc.find(cat => cat.name === item.category_name);
+            if (!category) {
+                category = { name: item.category_name, data: [] };
+                acc.push(category);
+            }
+            category.data.push({
+                id: item.id,
+                file_name: item.file_name,
+                file_description: item.file_description,
+                file_date: item.file_date,
+                file_url: item.file_url
+            });
+            return acc;
+          }, []);
+
+          console.log("result", result);
+
           // Extract unique category names
           const uniqueCategories = [...new Set(data.map(report => report.category_name))];
           setCategories(uniqueCategories);
@@ -160,6 +178,7 @@ const Report = () => {
             <HiSortDescending style={{ color: 'black', fontSize: '21px' }} />
           </div>
         </div>
+        {/* {console.log("categories",categories)} */}
       </div>
       <div className='reportmainDiv'>
         {Array.isArray(filteredReports) && filteredReports.length > 0 ? (
