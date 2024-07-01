@@ -28,7 +28,6 @@ const Report = () => {
         if (response.data && Array.isArray(response.data.data)) {
           let data = response.data.data.sort((a, b) => new Date(b.file_date) - new Date(a.file_date));
           setReports(data);
-          setFilteredReports(data);
 
           const result = data.reduce((acc, item) => {
             let category = acc.find(cat => cat.name === item.category_name);
@@ -46,6 +45,7 @@ const Report = () => {
             return acc;
           }, []);
           setSectionData(result);
+          setFilteredReports(result);
 
           console.log("result", result);
 
@@ -62,30 +62,41 @@ const Report = () => {
   }, []);
 
   const filterReports = () => {
-    let filtered = reports;
+    let filtered = sectionData.map(category => {
+      let filteredData = category.data;
 
-    if (fileName) {
-      filtered = filtered.filter(report => report.file_name.toLowerCase().includes(fileName.toLowerCase()));
-    }
-    if (categoryName) {
-      filtered = filtered.filter(report => report.category_name === categoryName);
-    }
-    if (month) {
-      filtered = filtered.filter(report => new Date(report.file_date).getMonth() + 1 === parseInt(month));
-    }
-    if (year) {
-      filtered = filtered.filter(report => new Date(report.file_date).getFullYear() === parseInt(year));
-    }
+      if (fileName) {
+        filteredData = filteredData.filter(report => report.file_name.toLowerCase().includes(fileName.toLowerCase()));
+      }
+      if (categoryName && category.name !== categoryName) {
+        return null;
+      }
+      if (month) {
+        filteredData = filteredData.filter(report => new Date(report.file_date).getMonth() + 1 === parseInt(month));
+      }
+      if (year) {
+        filteredData = filteredData.filter(report => new Date(report.file_date).getFullYear() === parseInt(year));
+      }
 
-    // Sort the filtered reports from newest to oldest
-    filtered = filtered.sort((a, b) => new Date(b.file_date) - new Date(a.file_date));
+      // Sort the filtered reports from newest to oldest
+      filteredData = filteredData.sort((a, b) => new Date(b.file_date) - new Date(a.file_date));
+
+      if (filteredData.length === 0) {
+        return null;
+      }
+
+      return {
+        name: category.name,
+        data: filteredData
+      };
+    }).filter(category => category !== null);
 
     setFilteredReports(filtered);
   };
 
   useEffect(() => {
     filterReports();
-  }, [fileName, categoryName, month, year, reports]);
+  }, [fileName, categoryName, month, year, sectionData]);
 
   const handleMonthChange = (e) => {
     const value = parseInt(e.target.value);
@@ -120,11 +131,12 @@ const Report = () => {
         </div>
         <div style={{ position: 'relative', display: 'inline-block' }} className='reportinputField'>
           <select
-            className='reportinputField'
+            value={year}
             onChange={handleYearChange}
+            className='reportinputField'
             style={{ paddingRight: '30px', appearance: 'none' }}
           >
-            <option value="" disabled selected>By Year</option>
+            <option value="" disabled>By Year</option>
             {[...Array(new Date().getFullYear() - 1943).keys()].map((index) => (
               <option key={index} value={new Date().getFullYear() - index}>
                 {new Date().getFullYear() - index}
@@ -143,7 +155,7 @@ const Report = () => {
             className='reportinputField'
             style={{ paddingRight: '30px', appearance: 'none' }}
           >
-            <option value="" disabled selected>By Month</option>
+            <option value="" disabled>By Month</option>
             <option value="1">January</option>
             <option value="2">February</option>
             <option value="3">March</option>
@@ -169,7 +181,7 @@ const Report = () => {
             className='reportinputField'
             style={{ paddingRight: '30px', appearance: 'none' }}
           >
-            <option value="" disabled selected>Category</option>
+            <option value="" disabled>Category</option>
             {categories.map((category, index) => (
               <option key={index} value={category}>
                 {category}
@@ -180,22 +192,11 @@ const Report = () => {
             <HiSortDescending style={{ color: 'black', fontSize: '21px' }} />
           </div>
         </div>
-        {/* {console.log("categories",categories)} */}
       </div>
       <div className='reportmainDiv'>
-        {/* {Array.isArray(filteredReports) && filteredReports.length > 0 ? (
+        {Array.isArray(filteredReports) && filteredReports.length > 0 ? (
           filteredReports.map((report, idx) => (
-            <div key={idx} className='reportDiv'>
-              <a href={report.file_url} target='_blank' rel='noopener noreferrer' style={{ textDecoration: 'none' }}>
-                <img src={noteImg} alt='report' className='reportImg' />
-                <h1 style={{ marginBottom: '0%', color: 'white', marginRight: '10px' }}>{report.file_name}</h1>
-                <p style={{ color: 'white' }}>{report.file_date}</p>
-              </a>
-            </div>
-          )) */}
-        {Array.isArray(sectionData) && sectionData.length > 0 ? (
-          sectionData.map((report, idx) => (
-            <div className='reportmainDiv'>
+            <div key={idx} className='reportmainDiv'>
               <h1>{report.name}</h1>
               {report.data.map((el, idx) => (
                 <div key={idx} className='reportDiv'>
