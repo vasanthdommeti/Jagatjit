@@ -193,8 +193,9 @@ const Report = () => {
       <div className='reportmainDiv'>
         {Array.isArray(filteredReports) && filteredReports.length > 0 ? (
           filteredReports.map((report, idx) => (
+            <>
+            <h1 className='categoryHeading'>{report.name}</h1>
             <div key={idx} className='reportmainDiv'>
-              <h1>{report.name}</h1>
               {report.data.map((el, idx) => (
                 <div key={idx} className='reportDiv'>
                   <a href={el.file_url} target='_blank' rel='noopener noreferrer' style={{ textDecoration: 'none' }}>
@@ -205,6 +206,7 @@ const Report = () => {
                 </div>
               ))}
             </div>
+            </>
           ))
         ) : (
           <h1>No reports found</h1>

@@ -25,6 +25,18 @@
 .searchBar{
     width: 600px;
 } 
+.categoryHeading{
+    font-size: 36px;
+    color: white;
+    font-weight: 600;
+    font-family: 'Josefin Sans';
+    margin: 0;
+    text-align: left;
+    width: 100%;
+    padding-left: 5%;
+    margin-top: 3%;
+    margin-bottom: 0%;
+}
 /* .reportinputField::-webkit-inner-spin-button {
     display: none;
 } */
@@ -32,14 +44,15 @@
 /* style={{ display: 'flex', justifyContent: 'center' }} */
 /* style={{ marginBottom: '5%' }} */
 /* style={{ marginTop: '10%' }} */
-
+.paddingDiv{
+    padding-left: 5%;
+    padding-right: 3%;
+}
 .reportmainDiv {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
-    /* margin-left: 2%; */
-    /* margin-right: 2%; */
 }
 
 .reportDiv { 
@@ -48,6 +61,7 @@
     justify-content: center;
     margin-top: 5%; 
     margin-right: 2%;
+    margin-left: 2%;
     width: 190px;
 } 
 
