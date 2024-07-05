@@ -63,3 +63,12 @@
   transition: transform 0.3s ease;
   /* Add smooth transition for rotation */
 }
+
+#mainDivNavBar {
+  background-color: red;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: block;
+  transition: top 0.3s;
+}

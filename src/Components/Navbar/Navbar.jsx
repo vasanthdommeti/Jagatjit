@@ -11,36 +11,51 @@ function Navbar({ show, scrollStop }) {
     const [menuOpen, setMenuOpen] = useState(false);
     const responsive = document.documentElement.clientWidth
     useEffect(() => {
-        console.log('document.documentElement.clientWidth',window.innerWidth);
         responsive > 768 && setMenuOpen(false)
-    },[])
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+            document.getElementById("navbarScroll").style.top = "0";
+            document.getElementById("mainheaderNavBarSty").style.top = "0";
+        } else if(menuOpen === false) {
+            document.getElementById("navbarScroll").style.top = "-100px";
+            document.getElementById("mainheaderNavBarSty").style.top = "-100px";
+        }
+        prevScrollpos = currentScrollPos;
+        }
+    },[menuOpen])
 
-    const closeNav = () => { 
+    // const closeNav = () => { 
+    //     setMenuOpen(!menuOpen)
+    // };
+    const closeNavMainBar = (e) => {
         setMenuOpen(!menuOpen)
-        scrollStop(!menuOpen)
-    };
+        scrollStop(e)
+    }
     // style={{display:show ? 'flex' :'none'}}
     //id="mainNavDivBlock"
+    // className={show ? 'navbarScroll' : 'hideData'}
     return (
-        <nav>
+        <nav id='navbarScroll'>
             <div className="firstLogo">
                 <Link to="/home" className="title">
-                    <img src={logo} alt="logo" />
+                    <img src={logo} alt="logo" className='navImgLogo' />
                 </Link>
             </div>
             {!menuOpen ?
-            <div className="menu" onClick={closeNav}>
+            <div className="menu" onClick={() => closeNavMainBar(true)}>
                 <IoMenu fontSize={35}/>
             </div>
             :
-            <div className="menu" id="nav-close" onClick={closeNav}>
+            <div className="menu" id="nav-close" onClick={() => closeNavMainBar(false)}>
             <IoClose fontSize={35}/>
             </div>
             }
-            <div className='headerNavBar'>
+            <div className='headerNavBar' id='mainheaderNavBarSty'>
                 <div className={menuOpen ? "open" : "mainNavDiv"}>
                     <div class="navItem">
-                    <Link to={'/home'}  className='linkText'>HOME</Link>
+                    <Link to="/home" onClick={() => closeNavMainBar(false)} className='linkText'>HOME</Link>
                     </div>
                     <div class="navItem">
                         <h4>ABOUT US</h4>
@@ -57,7 +72,7 @@ function Navbar({ show, scrollStop }) {
                             <div className="menu-link2"><h5>LIQUOR</h5>
                                 <div className="liquorSubItems1">
                                     <Link to="/products/liquor/acpremiumold" >AC PREMIUM (OLD)</Link>
-                                    <Link to="/products/liquor/acpremium">AC PREMIUM (NEW)</Link>
+                                    <Link to="/products/liquor/acpremium">AC PREMIUM</Link>
                                     <Link to="/products/liquor/acpremiumblack">AC BLACK</Link>
                                     <Link to="/products/liquor/royalpride">ROYAL PRIDE</Link>
                                     <Link to="/products/liquor/damngoodscotch">DAMN GOOD SCOTCH</Link>
@@ -68,14 +83,14 @@ function Navbar({ show, scrollStop }) {
                             </div>
                             <div className='navItem2'>
                                 <div className="subItem2">
-                                    <div className="menu-link"><h5>MFF</h5>
+                                    <div className="menu-link"><h5>MMF</h5>
                                         <div className="liquorSubItems2">
                                             <Link to="/products/mmf/foodproducts" >FOOD PRODUCTS</Link>
                                             <Link to='/products/mmf/maltextract'>MALT EXTRACT</Link>
                                         </div>
                                     </div>
                                 </div>
-                                <Link to="/products/ethnol" >ETHNOL</Link>
+                                <Link to="/products/ethnol" >ETHANOL</Link>
                             </div>
                         </div>
                     </div>
@@ -85,7 +100,7 @@ function Navbar({ show, scrollStop }) {
                         <img src={logo} alt='logo' />
                     </div>
                     <div class="navItem">
-                    <Link to="/ourprocess" className='linkText' onClick={closeNav}>
+                    <Link to="/ourprocess" className='linkText' onClick={() => closeNavMainBar(false)}>
                             OUR PROCESS
                         </Link>
                     </div>
@@ -99,7 +114,7 @@ function Navbar({ show, scrollStop }) {
                         </div>
                     </div>
                     <div class="navItem">
-                    <Link to="/contactus" className='linkText' onClick={closeNav}>CONTACT US</Link>
+                    <Link to="/contactus" onClick={() => closeNavMainBar(false)} className='linkText'>CONTACT US</Link>
                     </div>
                 </div>
                 {/* <div className="menu" style={{zIndex:2, marginRight:'7%'}} id="nav-close" onClick={closeNav}>

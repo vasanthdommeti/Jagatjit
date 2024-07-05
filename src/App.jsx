@@ -45,17 +45,17 @@ function App() {
   const navitage = useNavigate();
 
 
-  const controlNavbar = () => {
-    if (window.scrollY > lastScrollY) {
-      setShow(false);
-    } else {
-      setShow(true);
-    }
-    setLastScrollY(window.scrollY);
-  };
+  // const controlNavbar = () => {
+  //   if (window.scrollY > lastScrollY) {
+  //     setShow(false);
+  //   } else {
+  //     setShow(true);
+  //   }
+  //   setLastScrollY(window.scrollY);
+  // };
 
   const scrollStop = (e) => {
-    // document.body.style.overflow = e ? 'hidden' : 'auto';
+    document.body.style.overflow = e ? 'hidden' : 'auto';
     console.log('stoping for production ');
   }
 
@@ -83,14 +83,14 @@ function App() {
           setLoading(false);
       }, 1000);
   }
-    window.addEventListener('scroll', controlNavbar);
-    return () => {
-      window.removeEventListener('scroll', controlNavbar);
-    };
+    // window.addEventListener('scroll', controlNavbar);
+    // return () => {
+    //   window.removeEventListener('scroll', controlNavbar);
+    // };
     
-  }, [lastScrollY,pathname]);
+  }, [pathname]);
 
-
+ 
   return (
     <>
       {pathname !==  '/' && !loading  && <Navbar show={show} scrollStop={scrollStop}/>}
