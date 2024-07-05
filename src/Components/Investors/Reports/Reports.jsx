@@ -20,26 +20,26 @@ const Report = () => {
 
   const currentYear = new Date().getFullYear();
 
-  useEffect(() => {
-    axios.get('https://api.jagatjit.com/api/financials')
-      .then(response => {
-        console.log("response", response);
-        if (response.data && Array.isArray(response.data.data)) {
-          let data = response.data.data.sort((a, b) => new Date(b.file_date) - new Date(a.file_date));
-          setReports(data);
-          setFilteredReports(data);
+  // useEffect(() => {
+  //   axios.get('https://api.jagatjit.com/api/financials')
+  //     .then(response => {
+  //       console.log("response", response);
+  //       if (response.data && Array.isArray(response.data.data)) {
+  //         let data = response.data.data.sort((a, b) => new Date(b.file_date) - new Date(a.file_date));
+  //         setReports(data);
+  //         setFilteredReports(data);
 
-          // Extract unique category names
-          const uniqueCategories = [...new Set(data.map(report => report.category_name))];
-          setCategories(uniqueCategories);
-        } else {
-          console.error('API response does not contain an array');
-        }
-      })
-      .catch(error => {
-        console.error('Error fetching data: ', error);
-      });
-  }, []);
+  //         // Extract unique category names
+  //         const uniqueCategories = [...new Set(data.map(report => report.category_name))];
+  //         setCategories(uniqueCategories);
+  //       } else {
+  //         console.error('API response does not contain an array');
+  //       }
+  //     })
+  //     .catch(error => {
+  //       console.error('Error fetching data: ', error);
+  //     });
+  // }, []);
 
   const filterReports = () => {
     let filtered = reports;
